@@ -1,0 +1,47 @@
+@charset "UTF-8";
+/* 針對桌面版進行設定 */
+@media (min-width: 992px) {
+  .navbar .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    /* 避免顯示偏移 */
+  }
+}
+header {
+  position: absolute;
+  z-index: 99;
+  width: 100%;
+}
+
+.banner {
+  /*background: url(../image/bn-bg.png);*/
+  background: #efefef;
+  position: relative;
+}
+.banner .banner01 {
+  position: relative;
+}
+.banner .banner02 {
+  position: absolute;
+  z-index: 4;
+  top: 30%;
+  left: 20%;
+}
+.banner .banner03 {
+  position: absolute;
+  z-index: 3;
+  bottom: 5%;
+  right: 20%;
+}
+
+footer {
+  background: #9C9C9D;
+  color: #fff;
+}
+footer .copyright {
+  background: #004E42;
+  text-align: center;
+  font-size: 12px;
+  padding: 10px;
+  letter-spacing: 1px;
+}/*# sourceMappingURL=style.css.map */
