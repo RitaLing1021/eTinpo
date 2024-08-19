@@ -13,7 +13,7 @@ header =/*html*/`
       
       <!-- 導航選單 -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
+        <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">富邦技術</a>
           </li>

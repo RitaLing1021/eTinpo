@@ -1,4 +1,6 @@
 @charset "UTF-8";
+/*字體*/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap");
 /* 針對桌面版進行設定 */
 @media (min-width: 992px) {
   .navbar .dropdown:hover .dropdown-menu {
@@ -7,6 +9,42 @@
     /* 避免顯示偏移 */
   }
 }
+body {
+  font-family: "Noto Sans TC", sans-serif;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+a:hover {
+  color: #FACD00;
+}
+
+.nav-link {
+  color: #FFF;
+}
+.nav-link:focus, .nav-link:hover {
+  color: #FACD00;
+}
+
+.navbar-brand {
+  margin-right: 10rem;
+}
+
+.dropdown-menu {
+  background: transparent;
+  border: none;
+}
+
+.dropdown-item {
+  color: #FFF;
+}
+.dropdown-item:focus, .dropdown-item:hover {
+  color: #FACD00;
+  background-color: transparent;
+}
+
 header {
   position: absolute;
   z-index: 99;
@@ -34,14 +72,47 @@ header {
   right: 20%;
 }
 
+.feature {
+  background: #C6C6C6;
+  color: #323232;
+}
+.feature .featureTheme {
+  max-width: 500px;
+  margin: auto;
+  letter-spacing: 2px;
+}
+.feature .featurePhoto {
+  padding-right: 3rem;
+}
+.feature h4 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  color: #004E42;
+  font-size: 30px;
+}
+.feature span {
+  color: #FFF;
+  font-size: 13px;
+  padding-left: 5px;
+}
+.feature p {
+  padding-top: 0.1rem;
+  text-align: justify;
+}
+
 footer {
   background: #9C9C9D;
   color: #fff;
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 1px;
 }
-footer .copyright {
+footer .footerLink {
+  letter-spacing: 2px;
+}
+footer .copyRight {
   background: #004E42;
   text-align: center;
-  font-size: 12px;
   padding: 10px;
   letter-spacing: 1px;
 }/*# sourceMappingURL=style.css.map */
