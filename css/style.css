@@ -45,10 +45,19 @@ a:hover {
   background-color: transparent;
 }
 
-header {
-  position: absolute;
+#mainNavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
   z-index: 99;
   width: 100%;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.navbar {
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
 }
 
 .banner {
@@ -75,10 +84,11 @@ header {
 .feature {
   background: #C6C6C6;
   color: #323232;
+  padding: 4rem 0;
 }
 .feature .featureTheme {
   max-width: 500px;
-  margin: auto;
+  margin: 3rem auto;
   letter-spacing: 2px;
 }
 .feature .featurePhoto {
@@ -97,6 +107,25 @@ header {
 }
 .feature p {
   padding-top: 0.1rem;
+  text-align: justify;
+}
+
+.slogan {
+  background: url(../image/bg.png) #C6C6C6;
+  background-size: cover;
+  padding: 4rem 1rem;
+}
+
+.technology {
+  padding: 5rem 0.1rem;
+  letter-spacing: 0.1rem;
+  text-align: justify;
+}
+
+.product {
+  background: #DADADA;
+  padding: 5rem 0.1rem;
+  letter-spacing: 0.1rem;
   text-align: justify;
 }
 

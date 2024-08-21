@@ -1,5 +1,5 @@
 header =/*html*/`
-    <header>
+    <header id="mainNavbar">
           <!-- Header with Navbar -->
   <nav class="container navbar navbar-expand-lg">
     <div class="container-fluid">
