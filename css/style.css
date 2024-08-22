@@ -28,8 +28,10 @@ a:hover {
   color: #FACD00;
 }
 
-.navbar-brand {
-  margin-right: 10rem;
+@media (min-width: 768px) {
+  .navbar-brand {
+    margin-right: 10rem;
+  }
 }
 
 .dropdown-menu {
@@ -60,25 +62,110 @@ a:hover {
   transition: background-color 0.3s ease;
 }
 
+.navbar-nav .nav-item {
+  padding: 0 0.5rem;
+}
+.navbar-nav .nav-link {
+  position: relative;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.navbar-nav .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #FACD00;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+  border: none;
+}
+.navbar-nav .nav-link:hover::after, .navbar-nav .nav-link.focus::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+.navbar-nav .dropdown-menu {
+  background-color: transparent;
+  -webkit-transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+.navbar-nav .dropdown-menu .dropdown-item {
+  position: relative;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+.navbar-nav .dropdown-menu .dropdown-item::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background-color: #FACD00;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.3s ease;
+  transition: -webkit-transform 0.3s ease;
+  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
+}
+.navbar-nav .dropdown-menu .dropdown-item:hover::after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
 .banner {
   /*background: url(../image/bn-bg.png);*/
-  background: #efefef;
+  background: url(../image/bn.png) #efefef;
   position: relative;
+  height: 30rem;
 }
 .banner .banner01 {
   position: relative;
 }
 .banner .banner02 {
   position: absolute;
-  z-index: 4;
-  top: 30%;
-  left: 20%;
+  max-width: 13rem;
+  top: 15rem;
+  left: 1rem;
+}
+@media (min-width: 768px) {
+  .banner .banner02 {
+    position: absolute;
+    z-index: 4;
+    top: 30%;
+    left: 20%;
+    max-width: 37rem;
+  }
 }
 .banner .banner03 {
   position: absolute;
-  z-index: 3;
-  bottom: 5%;
-  right: 20%;
+  max-width: 5rem;
+  left: 1rem;
+  bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .banner .banner03 {
+    position: absolute;
+    z-index: 3;
+    bottom: 5%;
+    left: 80rem;
+    max-width: 17rem;
+  }
 }
 
 .feature {
@@ -87,18 +174,28 @@ a:hover {
   padding: 4rem 0;
 }
 .feature .featureTheme {
-  max-width: 500px;
+  max-width: 50rem;
   margin: 3rem auto;
   letter-spacing: 2px;
 }
 .feature .featurePhoto {
-  padding-right: 3rem;
+  padding-right: 1rem;
+}
+@media (min-width: 768px) {
+  .feature .featurePhoto {
+    padding-right: 3rem;
+  }
 }
 .feature h4 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 700;
   color: #004E42;
-  font-size: 30px;
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  .feature h4 {
+    font-size: 2rem;
+  }
 }
 .feature span {
   color: #FFF;
@@ -108,6 +205,12 @@ a:hover {
 .feature p {
   padding-top: 0.1rem;
   text-align: justify;
+  font-size: 0.8rem;
+}
+@media (min-width: 768px) {
+  .feature p {
+    font-size: 1rem;
+  }
 }
 
 .slogan {
@@ -115,11 +218,43 @@ a:hover {
   background-size: cover;
   padding: 4rem 1rem;
 }
+.slogan img {
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .slogan img {
+    max-width: 495rem;
+  }
+}
 
 .technology {
   padding: 5rem 0.1rem;
   letter-spacing: 0.1rem;
   text-align: justify;
+}
+.technology img {
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .technology img {
+    max-width: 434rem;
+  }
+}
+.technology .technologyPhoto {
+  padding-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .technology .technologyPhoto {
+    padding-bottom: 0;
+  }
+}
+.technology .technologyText {
+  font-size: 0.8rem;
+}
+@media (min-width: 768px) {
+  .technology .technologyText {
+    font-size: 1rem;
+  }
 }
 
 .product {
@@ -128,6 +263,14 @@ a:hover {
   letter-spacing: 0.1rem;
   text-align: justify;
 }
+.product img {
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .product img {
+    max-width: 414rem;
+  }
+}
 
 footer {
   background: #9C9C9D;
@@ -135,6 +278,12 @@ footer {
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 1px;
+}
+footer .footerBtn {
+  padding-bottom: 1rem;
+}
+footer .footerBtn a {
+  padding: 0 0.5rem;
 }
 footer .footerLink {
   letter-spacing: 2px;

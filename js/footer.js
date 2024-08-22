@@ -10,10 +10,11 @@ footer =/*html*/`
             No. 16, Chuangye Rd., Xinshi Dist., Tainan City 74144 , Taiwan
         </div>
         <div class="text-end">
+        <div class="footerBtn">
             <a href="#"><img src="image/icon-fb.png" alt="facebook"></a>
             <a href="#"><img src="image/icon-line.png" alt="Line"></a>
             <a href="#"><img src="image/icon-ig.png" alt="ig"></a>
-
+</div>
             <div class="footerLink">
                 <a href="#">富邦技術</a>
                 <a href="#">關於我們</a>
@@ -28,18 +29,5 @@ footer =/*html*/`
     </div>
 </footer>
 `;
-
-// navbar
-const navHrefs = document.querySelectorAll('.navbar-nav .nav-link');
-navHrefs.forEach((navHref, index) => {
-    hrefURL = navHref.getAttribute('href');
-    if (location.href.includes(hrefURL)) {
-        navHref.classList.add('active');
-        console.log('ture');
-    } else {
-        navHref.classList.remove('active');
-        console.log('false');
-    }
-});
 
 document.currentScript.insertAdjacentHTML('beforebegin', footer);

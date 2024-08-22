@@ -1,5 +1,9 @@
     /*字體*/
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+    // mixins
+    @import 'mixins/breakpoint';
+    @import 'mixins/color';
+
     /* 針對桌面版進行設定 */
     @media (min-width: 992px) {
         .navbar .dropdown:hover .dropdown-menu {
@@ -18,7 +22,7 @@
         text-decoration: none;
 
         &:hover {
-            color: #FACD00;
+            color: $yellow;
         }
     }
 
@@ -27,12 +31,14 @@
 
         &:focus,
         &:hover {
-            color: #FACD00;
+            color: $yellow;
         }
     }
 
     .navbar-brand {
+        @include b768{
         margin-right: 10rem;
+    }
     }
 
     .dropdown-menu {
@@ -45,7 +51,7 @@
 
         &:focus,
         &:hover {
-            color: #FACD00;
+            color: $yellow;
             background-color: transparent;
         }
 
@@ -59,13 +65,77 @@
         width: 100%;
         transition: background-color 0.3s ease;
     }
+
     .navbar {
         transition: background-color 0.3s ease;
-      }
+    }
+
+    .navbar-nav {
+        .nav-item {
+
+            padding: 0 .5rem;
+        }
+
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 2px;
+                background-color: $yellow;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.3s ease;
+                border: none;
+            }
+
+            &:hover::after,
+            &.focus::after {
+                // 如果下拉選單打開，保持下底線
+                transform: scaleX(1);
+                transform-origin: left;
+            }
+        }
+
+        .dropdown-menu {
+            background-color: transparent; // 初始狀態為透明
+            transition: background-color 0.3s ease;
+
+            .dropdown-item {
+                position: relative;
+                transition: color 0.3s ease;
+
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    height: 2px;
+                    background-color: $yellow;
+                    transform: scaleX(0);
+                    transform-origin: right;
+                    transition: transform 0.3s ease;
+                }
+
+                &:hover::after {
+                    transform: scaleX(1);
+                    transform-origin: left;
+                }
+            }
+        }
+    }
+
     .banner {
         /*background: url(../image/bn-bg.png);*/
-        background: #efefef;
+        background: url(../image/bn.png) #efefef;
         position: relative;
+        height: 30rem;
 
         .banner01 {
             position: relative;
@@ -73,16 +143,31 @@
 
         .banner02 {
             position: absolute;
-            z-index: 4;
-            top: 30%;
-            left: 20%;
+            max-width: 13rem;
+            top: 15rem;
+            left: 1rem;
+            @include b768 {
+                position: absolute;
+                z-index: 4;
+                top: 30%;
+                left: 20%;
+                max-width: 37rem;
+            }
         }
 
         .banner03 {
             position: absolute;
-            z-index: 3;
-            bottom: 5%;
-            right: 20%;
+            max-width: 5rem;
+            left: 1rem;
+            bottom: 3rem;
+
+            @include b768 {
+                position: absolute;
+                z-index: 3;
+                bottom: 5%;
+                left: 80rem;
+                max-width: 17rem;
+            }
         }
     }
 
@@ -92,20 +177,28 @@
         padding: 4rem 0;
 
         .featureTheme {
-            max-width: 500px;
+            max-width: 50rem;
             margin: 3rem auto;
             letter-spacing: 2px;
         }
 
         .featurePhoto {
-            padding-right: 3rem;
+            padding-right: 1rem;
+
+            @include b768 {
+                padding-right: 3rem;
+            }
         }
 
         h4 {
             font-family: Arial, Helvetica, sans-serif;
             font-weight: 700;
-            color: #004E42;
-            font-size: 30px;
+            color: $green;
+            font-size: 1.5rem;
+
+            @include b768 {
+                font-size: 2rem;
+            }
         }
 
         span {
@@ -117,24 +210,72 @@
         p {
             padding-top: .1rem;
             text-align: justify;
+            font-size: .8rem;
+
+            @include b768 {
+                font-size: 1rem;
+            }
         }
     }
 
     .slogan {
+
         background: url(../image/bg.png) #C6C6C6;
         background-size: cover;
         padding: 4rem 1rem;
+
+        img {
+            max-width: 100%;
+
+            @include b768 {
+                max-width: 495rem;
+            }
+        }
     }
+
     .technology {
         padding: 5rem .1rem;
         letter-spacing: .1rem;
         text-align: justify;
+
+        img {
+            max-width: 100%;
+
+            @include b768 {
+                max-width: 434rem;
+            }
+        }
+
+        .technologyPhoto {
+            padding-bottom: 3rem;
+
+            @include b768 {
+                padding-bottom: 0;
+            }
+        }
+
+        .technologyText {
+            font-size: .8rem;
+
+            @include b768 {
+                font-size: 1rem;
+            }
+        }
     }
+
     .product {
         background: #DADADA;
         padding: 5rem .1rem;
         letter-spacing: .1rem;
         text-align: justify;
+
+        img {
+            max-width: 100%;
+
+            @include b768 {
+                max-width: 414rem;
+            }
+        }
     }
 
     footer {
@@ -144,13 +285,21 @@
         line-height: 20px;
         letter-spacing: 1px;
 
+        .footerBtn {
+            padding-bottom: 1rem;
+
+            a {
+                padding: 0 .5rem;
+            }
+        }
+
         .footerLink {
             letter-spacing: 2px;
 
         }
 
         .copyRight {
-            background: #004E42;
+            background: $green;
             text-align: center;
             padding: 10px;
             letter-spacing: 1px;
