@@ -15,7 +15,7 @@ header =/*html*/`
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">富邦技術</a>
+            <a class="nav-link" aria-current="page" href="#">富邦技術</a>
           </li>
           <!-- 下拉選單 -->
           <li class="nav-item dropdown">

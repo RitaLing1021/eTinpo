@@ -56,7 +56,15 @@
         }
 
     }
-
+    .navbar-toggler{
+        border:none;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+      }
     #mainNavbar {
         position: fixed;
         top: 0;
@@ -150,6 +158,10 @@
                 position: absolute;
                 z-index: 4;
                 top: 30%;
+                left: 5%;
+                max-width: 20rem;
+            }
+            @include b1024{
                 left: 20%;
                 max-width: 37rem;
             }
@@ -165,7 +177,11 @@
                 position: absolute;
                 z-index: 3;
                 bottom: 5%;
-                left: 80rem;
+                left: 70%;
+                max-width: 10rem;
+            }
+            @include b1024{
+                left: 70%;
                 max-width: 17rem;
             }
         }
@@ -238,13 +254,13 @@
         letter-spacing: .1rem;
         text-align: justify;
 
-        img {
+        /*img {
             max-width: 100%;
 
             @include b768 {
                 max-width: 434rem;
             }
-        }
+        }*/
 
         .technologyPhoto {
             padding-bottom: 3rem;
@@ -256,9 +272,10 @@
 
         .technologyText {
             font-size: .8rem;
-
+            text-align: center;
             @include b768 {
                 font-size: 1rem;
+                text-align: justify;
             }
         }
     }
@@ -267,15 +284,21 @@
         background: #DADADA;
         padding: 5rem .1rem;
         letter-spacing: .1rem;
-        text-align: justify;
+        text-align: center;
+        font-size: .8rem;
+        @include b768 {
+            max-width: 414rem;
+            text-align: justify;
+            font-size: 1rem;
+        }
 
-        img {
+        /*img {
             max-width: 100%;
 
             @include b768 {
                 max-width: 414rem;
             }
-        }
+        }*/
     }
 
     footer {
@@ -287,15 +310,23 @@
 
         .footerBtn {
             padding-bottom: 1rem;
-
+            padding-top: 1rem;
+            @include b768 {
+                padding-bottom: 1rem;
+            }
             a {
                 padding: 0 .5rem;
+            }
+        }
+        .footerLocation{
+            border-bottom: 1px solid #fff;
+            @include b768 {
+                border: none;
             }
         }
 
         .footerLink {
             letter-spacing: 2px;
-
         }
 
         .copyRight {
