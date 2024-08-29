@@ -22,7 +22,7 @@ a:hover {
 }
 
 .nav-link {
-  color: #FFF;
+  color: #004E42;
 }
 .nav-link:focus, .nav-link:hover {
   color: #FACD00;
@@ -40,7 +40,7 @@ a:hover {
 }
 
 .dropdown-item {
-  color: #FFF;
+  color: #004E42;
 }
 .dropdown-item:focus, .dropdown-item:hover {
   color: #FACD00;
@@ -230,11 +230,6 @@ a:hover {
   padding-top: 0.1rem;
   text-align: justify;
   font-size: 0.8rem;
-}
-@media (min-width: 768px) {
-  .feature p {
-    font-size: 1rem;
-  }
 }
 
 .slogan {

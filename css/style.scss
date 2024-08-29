@@ -27,7 +27,7 @@
     }
 
     .nav-link {
-        color: #FFF;
+        color: $green;
 
         &:focus,
         &:hover {
@@ -47,7 +47,7 @@
     }
 
     .dropdown-item {
-        color: #FFF;
+        color: $green;
 
         &:focus,
         &:hover {
@@ -228,9 +228,6 @@
             text-align: justify;
             font-size: .8rem;
 
-            @include b768 {
-                font-size: 1rem;
-            }
         }
     }
 
