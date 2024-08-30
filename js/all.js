@@ -33,3 +33,18 @@ window.addEventListener('scroll', function () {
     dropdownMenus.forEach(menu => menu.style.backgroundColor = 'transparent'); // 當回到頂部時，下拉選單也保持透明
   }
 });
+
+document.addEventListener('scroll', function() {
+  var scrollPosition = window.scrollY;
+  var logoSVG = document.querySelector('#logoSVG');
+
+  if (scrollPosition > 80) {
+      logoSVG.querySelectorAll('.cls-1').forEach(function(path) {
+          path.style.fill = '#FFF'; // 滾動超過 80px 時變白色
+      });
+  } else {
+      logoSVG.querySelectorAll('.cls-1').forEach(function(path) {
+          path.style.fill = '#004E42'; // 初始時綠色
+      });
+  }
+});

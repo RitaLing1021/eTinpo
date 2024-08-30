@@ -25,7 +25,6 @@
             color: $yellow;
         }
     }
-
     .nav-link {
         color: $green;
 
@@ -36,9 +35,9 @@
     }
 
     .navbar-brand {
-        @include b768{
-        margin-right: 10rem;
-    }
+        @include b768 {
+            margin-right: 10rem;
+        }
     }
 
     .dropdown-menu {
@@ -56,15 +55,19 @@
         }
 
     }
-    .navbar-toggler{
-        border:none;
+
+    .navbar-toggler {
+        border: none;
+
         &:focus {
             box-shadow: none;
         }
     }
+
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-      }
+    }
+
     #mainNavbar {
         position: fixed;
         top: 0;
@@ -72,6 +75,15 @@
         z-index: 99;
         width: 100%;
         transition: background-color 0.3s ease;
+        
+    svg {
+        fill: $green;
+    }
+
+    .cls-1 {
+        transition: fill .5s ease;
+        /* 添加動畫效果 */
+    }
     }
 
     .navbar {
@@ -154,6 +166,7 @@
             max-width: 13rem;
             top: 15rem;
             left: 1rem;
+
             @include b768 {
                 position: absolute;
                 z-index: 4;
@@ -161,7 +174,8 @@
                 left: 5%;
                 max-width: 20rem;
             }
-            @include b1024{
+
+            @include b1024 {
                 left: 20%;
                 max-width: 37rem;
             }
@@ -180,8 +194,10 @@
                 left: 70%;
                 max-width: 10rem;
             }
-            @include b1024{
-                left: 70%;
+
+            @include b1024 {
+                left: 60%;
+                bottom: 10%;
                 max-width: 17rem;
             }
         }
@@ -270,6 +286,7 @@
         .technologyText {
             font-size: .8rem;
             text-align: center;
+
             @include b768 {
                 font-size: 1rem;
                 text-align: justify;
@@ -283,6 +300,7 @@
         letter-spacing: .1rem;
         text-align: center;
         font-size: .8rem;
+
         @include b768 {
             max-width: 414rem;
             text-align: justify;
@@ -308,15 +326,19 @@
         .footerBtn {
             padding-bottom: 1rem;
             padding-top: 1rem;
+
             @include b768 {
                 padding-bottom: 1rem;
             }
+
             a {
                 padding: 0 .5rem;
             }
         }
-        .footerLocation{
+
+        .footerLocation {
             border-bottom: 1px solid #fff;
+
             @include b768 {
                 border: none;
             }

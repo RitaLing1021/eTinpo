@@ -68,6 +68,14 @@ a:hover {
   -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
+#mainNavbar svg {
+  fill: #004E42;
+}
+#mainNavbar .cls-1 {
+  -webkit-transition: fill 0.5s ease;
+  transition: fill 0.5s ease;
+  /* 添加動畫效果 */
+}
 
 .navbar {
   -webkit-transition: background-color 0.3s ease;
@@ -187,7 +195,8 @@ a:hover {
 }
 @media (min-width: 1024px) {
   .banner .banner03 {
-    left: 70%;
+    left: 60%;
+    bottom: 10%;
     max-width: 17rem;
   }
 }
