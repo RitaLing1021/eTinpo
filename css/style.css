@@ -308,6 +308,61 @@ a:hover {
   }
 }
 
+.contact {
+  background: #C6C6C6;
+  color: #004E42;
+  padding-top: 80px;
+}
+.contact .contactTheme {
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (min-width: 768px) {
+  .contact .contactTheme {
+    height: 70vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: left;
+  }
+}
+.contact .contactTheme .contactText {
+  padding: 3rem 0;
+}
+@media (min-width: 768px) {
+  .contact .contactTheme .contactText {
+    position: relative;
+    height: 35vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0;
+  }
+}
+.contact .contactTheme .contactText p {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
 footer {
   background: #9C9C9D;
   color: #fff;

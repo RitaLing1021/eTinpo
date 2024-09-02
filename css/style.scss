@@ -25,6 +25,7 @@
             color: $yellow;
         }
     }
+
     .nav-link {
         color: $green;
 
@@ -75,15 +76,15 @@
         z-index: 99;
         width: 100%;
         transition: background-color 0.3s ease;
-        
-    svg {
-        fill: $green;
-    }
 
-    .cls-1 {
-        transition: fill .5s ease;
-        /* 添加動畫效果 */
-    }
+        svg {
+            fill: $green;
+        }
+
+        .cls-1 {
+            transition: fill .5s ease;
+            /* 添加動畫效果 */
+        }
     }
 
     .navbar {
@@ -314,6 +315,45 @@
                 max-width: 414rem;
             }
         }*/
+    }
+
+    .contact {
+        background: $gray;
+        color: $green;
+        padding-top: 80px;
+
+        .contactTheme {
+            text-align: center;
+            flex-direction: column;
+            
+            @include b768 {
+                height: 70vh;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                text-align: left;
+            }
+
+            .contactText {
+                padding: 3rem 0;
+                @include b768 {
+                    position: relative;
+                    height: 35vh;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    padding: 0;
+                }
+
+                p {
+                    font-size: .8rem;
+                    margin-bottom: .5rem;
+                }
+
+
+            }
+        }
     }
 
     footer {
