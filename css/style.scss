@@ -317,6 +317,95 @@
         }*/
     }
 
+    .bannerTechs {
+        background-image: url('../image/techs-bg.png');
+        min-height: 45vh;
+        position: relative;
+        overflow: hidden;
+        .bannerText{
+            position: relative;
+        }
+
+        .banner02 {
+            position: absolute;
+            left: 6rem;
+            top: 6rem;
+        }
+
+        .banner03 {
+            position: absolute;
+            right: 13rem;
+            top: 7rem;
+        }
+    }
+
+    .technologies {
+        background: $gray;
+        padding: 5rem 0;
+
+        .techsTheme {
+            text-align: center;
+
+            h4 {
+                color: $green;
+                display: flex;
+                flex-direction: column;
+                font-size: 1.7rem;
+                padding: 2rem 0 1rem 0;
+
+                span {
+                    font-size: .9rem;
+                    color: #FFF;
+                    letter-spacing: 1px;
+                }
+            }
+
+            p {
+                font-size: .8rem;
+                font-weight: 600;
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+    .advantage {
+        background: $gray2;
+        padding: 5rem 0;
+        text-align: center;
+
+        h4 {
+            color: $green;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.7rem;
+            padding: 2rem 0 2rem 0;
+
+            span {
+                font-size: .9rem;
+                color: #FFF;
+                letter-spacing: 1px;
+            }
+        }
+
+        .techItem {
+            margin: 2rem 0;
+
+            h5 {
+                color: $green;
+                padding: .5rem 0 .2rem;
+            }
+
+            p {
+                font-size: .8rem;
+                font-weight: 600;
+                letter-spacing: 2px;
+                max-width: 230px;
+                margin: auto;
+                text-align: justify;
+            }
+        }
+    }
+
     .contact {
         background: $gray;
         color: $green;
@@ -325,8 +414,8 @@
         .contactTheme {
             text-align: center;
             flex-direction: column;
-            
-            @include b768 {
+
+            @include b1024 {
                 height: 70vh;
                 display: flex;
                 flex-direction: row;
@@ -337,7 +426,8 @@
 
             .contactText {
                 padding: 3rem 0;
-                @include b768 {
+
+                @include b1024 {
                     position: relative;
                     height: 35vh;
                     display: flex;
