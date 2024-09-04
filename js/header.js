@@ -55,7 +55,7 @@ header =/*html*/`
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="#">富邦技術</a>
+            <a class="nav-link" aria-current="page" href="technologies.html">富邦技術</a>
           </li>
           <!-- 下拉選單 -->
           <li class="nav-item dropdown">
@@ -74,7 +74,7 @@ header =/*html*/`
             <a class="nav-link" href="#">產品總覽</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">聯絡我們</a>
+            <a class="nav-link" href="contact.html">聯絡我們</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">合作案例</a>
