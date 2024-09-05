@@ -201,6 +201,46 @@ a:hover {
   }
 }
 
+.bannerTechs {
+  background-image: url("../image/techs-bg.png");
+  min-height: 45vh;
+  position: relative;
+  overflow: hidden;
+}
+.bannerTechs .bannerText {
+  position: relative;
+}
+.bannerTechs .banner02 {
+  position: absolute;
+  left: 6rem;
+  top: 6rem;
+}
+.bannerTechs .banner03 {
+  position: absolute;
+  right: 13rem;
+  top: 7rem;
+}
+
+.bannerProduct {
+  background-image: url("../image/prod-bn.png");
+  min-height: 45vh;
+  position: relative;
+  overflow: hidden;
+}
+.bannerProduct .bannerText {
+  position: relative;
+}
+.bannerProduct .banner02 {
+  position: absolute;
+  left: 6rem;
+  top: 6rem;
+}
+.bannerProduct .banner03 {
+  position: absolute;
+  right: 13rem;
+  top: 7rem;
+}
+
 .feature {
   background: #C6C6C6;
   color: #323232;
@@ -306,26 +346,6 @@ a:hover {
     text-align: justify;
     font-size: 1rem;
   }
-}
-
-.bannerTechs {
-  background-image: url("../image/techs-bg.png");
-  min-height: 45vh;
-  position: relative;
-  overflow: hidden;
-}
-.bannerTechs .bannerText {
-  position: relative;
-}
-.bannerTechs .banner02 {
-  position: absolute;
-  left: 6rem;
-  top: 6rem;
-}
-.bannerTechs .banner03 {
-  position: absolute;
-  right: 13rem;
-  top: 7rem;
 }
 
 .technologies {
@@ -449,6 +469,25 @@ a:hover {
 .contact .contactTheme .contactText p {
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
+}
+
+.Material {
+  background: #C6C6C6;
+}
+
+.purpose {
+  background: #C6C6C6;
+}
+.purpose .purposeitem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 footer {

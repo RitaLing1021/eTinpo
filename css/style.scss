@@ -204,6 +204,49 @@
         }
     }
 
+    .bannerTechs {
+        background-image: url('../image/techs-bg.png');
+        min-height: 45vh;
+        position: relative;
+        overflow: hidden;
+        .bannerText{
+            position: relative;
+        }
+
+        .banner02 {
+            position: absolute;
+            left: 6rem;
+            top: 6rem;
+        }
+
+        .banner03 {
+            position: absolute;
+            right: 13rem;
+            top: 7rem;
+        }
+    }
+
+    .bannerProduct {
+        background-image: url('../image/prod-bn.png');
+        min-height: 45vh;
+        position: relative;
+        overflow: hidden;
+        .bannerText{
+            position: relative;
+        }
+
+        .banner02 {
+            position: absolute;
+            left: 6rem;
+            top: 6rem;
+        }
+
+        .banner03 {
+            position: absolute;
+            right: 13rem;
+            top: 7rem;
+        }
+    }
     .feature {
         background: #C6C6C6;
         color: #323232;
@@ -317,28 +360,6 @@
         }*/
     }
 
-    .bannerTechs {
-        background-image: url('../image/techs-bg.png');
-        min-height: 45vh;
-        position: relative;
-        overflow: hidden;
-        .bannerText{
-            position: relative;
-        }
-
-        .banner02 {
-            position: absolute;
-            left: 6rem;
-            top: 6rem;
-        }
-
-        .banner03 {
-            position: absolute;
-            right: 13rem;
-            top: 7rem;
-        }
-    }
-
     .technologies {
         background: $gray;
         padding: 5rem 0;
@@ -445,7 +466,17 @@
             }
         }
     }
-
+    .Material{
+        background: $gray;
+    }
+    .purpose{
+        background: $gray;
+        .purposeitem{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
     footer {
         background: #9C9C9D;
         color: #fff;
