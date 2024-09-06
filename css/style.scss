@@ -209,7 +209,8 @@
         min-height: 45vh;
         position: relative;
         overflow: hidden;
-        .bannerText{
+
+        .bannerText {
             position: relative;
         }
 
@@ -227,26 +228,33 @@
     }
 
     .bannerProduct {
-        background-image: url('../image/prod-bn.png');
+        background: url('../image/product-bg-100.jpg') right bottom;
+        background-size: cover;
         min-height: 45vh;
-        position: relative;
-        overflow: hidden;
-        .bannerText{
+
+        .ProductSlogan {
             position: relative;
+            overflow: hidden;
+            color: #FFF;
         }
 
-        .banner02 {
+        .bannerText {
+            display: flex;
+            flex-direction: column;
+            align-content: flex-start;
+            align-items: flex-start;
             position: absolute;
-            left: 6rem;
-            top: 6rem;
-        }
+            bottom: 0;
+            margin-left: 5rem;
+            margin-bottom: 2rem;
 
-        .banner03 {
-            position: absolute;
-            right: 13rem;
-            top: 7rem;
+            p {
+                font-size: .8rem;
+                padding-top: 1rem;
+            }
         }
     }
+
     .feature {
         background: #C6C6C6;
         color: #323232;
@@ -466,17 +474,89 @@
             }
         }
     }
-    .Material{
+
+    .Material {
         background: $gray;
+        padding: 5rem 0;
+        position: relative;
+
+        h4 {
+            color: $green;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            letter-spacing: 1px;
+            font-weight: 700;
+
+            span {
+                color: #FFF;
+                font-size: .8rem;
+                font-weight: 400;
+                letter-spacing: 1px;
+
+            }
+        }
+        p{
+            font-size: .9rem;
+            text-align: center;
+            font-weight: 500;
+            line-height: 1.5rem;
+            padding: 2rem 0;
+        }
+        .matFab{
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .fatLevel{
+                margin-bottom: 4rem;
+                p{
+                    padding:0 0 .5rem 0;
+                    margin: 0;
+                }
+                .fatLv1,.fatLv2,.fatLv3{
+                    background:url(../image/fatLevel-border.png) center left no-repeat;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    padding-left: 8rem;
+                    padding-bottom: 2rem;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        .matIconbg{
+            max-width: 60rem;
+            margin: auto;
+        }
+        .matIcon{
+            text-align: center;
+            p{
+                font-size: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        .arrowicon{
+            position: absolute;
+            bottom: -15px;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
     }
-    .purpose{
+
+    .purpose {
         background: $gray;
-        .purposeitem{
+
+        .purposeitem {
             display: flex;
             justify-content: center;
             align-items: center;
         }
     }
+
     footer {
         background: #9C9C9D;
         color: #fff;

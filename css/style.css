@@ -222,23 +222,36 @@ a:hover {
 }
 
 .bannerProduct {
-  background-image: url("../image/prod-bn.png");
+  background: url("../image/product-bg-100.jpg") right bottom;
+  background-size: cover;
   min-height: 45vh;
+}
+.bannerProduct .ProductSlogan {
   position: relative;
   overflow: hidden;
+  color: #FFF;
 }
 .bannerProduct .bannerText {
-  position: relative;
-}
-.bannerProduct .banner02 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   position: absolute;
-  left: 6rem;
-  top: 6rem;
+  bottom: 0;
+  margin-left: 5rem;
+  margin-bottom: 2rem;
 }
-.bannerProduct .banner03 {
-  position: absolute;
-  right: 13rem;
-  top: 7rem;
+.bannerProduct .bannerText p {
+  font-size: 0.8rem;
+  padding-top: 1rem;
 }
 
 .feature {
@@ -473,6 +486,98 @@ a:hover {
 
 .Material {
   background: #C6C6C6;
+  padding: 5rem 0;
+  position: relative;
+}
+.Material h4 {
+  color: #004E42;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+.Material h4 span {
+  color: #FFF;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.Material p {
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 500;
+  line-height: 1.5rem;
+  padding: 2rem 0;
+}
+.Material .matFab {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.Material .matFab .fatLevel {
+  margin-bottom: 4rem;
+}
+.Material .matFab .fatLevel p {
+  padding: 0 0 0.5rem 0;
+  margin: 0;
+}
+.Material .matFab .fatLevel .fatLv1, .Material .matFab .fatLevel .fatLv2, .Material .matFab .fatLevel .fatLv3 {
+  background: url(../image/fatLevel-border.png) center left no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-left: 8rem;
+  padding-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+.Material .matIconbg {
+  max-width: 60rem;
+  margin: auto;
+}
+.Material .matIcon {
+  text-align: center;
+}
+.Material .matIcon p {
+  font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.Material .arrowicon {
+  position: absolute;
+  bottom: -15px;
+  right: 0;
+  left: 0;
+  margin: auto;
 }
 
 .purpose {
