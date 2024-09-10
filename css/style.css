@@ -401,17 +401,51 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1rem;
+  padding: 2rem 0 2rem 0;
+}
+.advantage h4 span {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 0 0.8rem;
+}
+.advantage .featurePhoto img {
+  border-radius: 50%;
+  max-height: 630px;
+}
+.advantage .featureItem h5 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  font-size: 1.7rem;
-  padding: 2rem 0 2rem 0;
+  font-size: 1.8rem;
+  color: #004E42;
+  line-height: 2.5rem;
 }
-.advantage h4 span {
-  font-size: 0.9rem;
-  color: #FFF;
-  letter-spacing: 1px;
+.advantage .featureItem h5 span {
+  color: #fff;
+  font-size: 1rem;
+  line-height: 1rem;
+}
+.advantage .featureItem p {
+  color: #000;
+  font-size: 1rem;
+  max-width: 30rem;
+  margin: 3rem auto;
 }
 .advantage .techItem {
   margin: 2rem 0;
@@ -529,29 +563,6 @@ a:hover {
       -ms-flex-pack: center;
           justify-content: center;
 }
-.Material .matFab .fatLevel {
-  margin-bottom: 4rem;
-}
-.Material .matFab .fatLevel p {
-  padding: 0 0 0.5rem 0;
-  margin: 0;
-}
-.Material .matFab .fatLevel .fatLv1, .Material .matFab .fatLevel .fatLv2, .Material .matFab .fatLevel .fatLv3 {
-  background: url(../image/fatLevel-border.png) center left no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  padding-left: 8rem;
-  padding-bottom: 2rem;
-  margin-bottom: 1rem;
-}
 .Material .matIconbg {
   max-width: 60rem;
   margin: auto;
@@ -582,6 +593,38 @@ a:hover {
 
 .purpose {
   background: #C6C6C6;
+  padding-top: 8rem;
+}
+.purpose h4 {
+  color: #004E42;
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 420px;
+  margin: auto;
+}
+.purpose h4 span {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 1.5rem;
+}
+.purpose p {
+  padding: 3rem 0;
+  max-width: 520px;
+  margin: auto;
+  font-weight: 500;
 }
 .purpose .purposeitem {
   display: -webkit-box;
@@ -593,6 +636,21 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+.purpose .purposeitem .purposeText {
+  margin-left: 2rem;
+}
+.purpose .purposeitem .purposeText p {
+  padding: 1rem 0;
+}
+.purpose .purposeitem .purposeBtn button {
+  background: #004E42;
+  color: #fff;
+  border-radius: 25px;
+  padding: 0.5rem 1rem;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
 }
 
 footer {
