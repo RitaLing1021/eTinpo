@@ -63,7 +63,7 @@ header =/*html*/`
               關於我們
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="#">概述</a></li>
+              <li><a class="dropdown-item" href="about.html">概述</a></li>
               <li><a class="dropdown-item" href="#">責任</a></li>
               <li><a class="dropdown-item" href="#">發展</a></li>
               <li><a class="dropdown-item" href="#">環境</a></li>
@@ -71,7 +71,7 @@ header =/*html*/`
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">產品總覽</a>
+            <a class="nav-link" href="product-features.html">產品總覽</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">聯絡我們</a>

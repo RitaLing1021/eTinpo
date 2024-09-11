@@ -254,6 +254,39 @@ a:hover {
   padding-top: 1rem;
 }
 
+.bannerAbout {
+  background: url("../image/about-bn-bg.png") right bottom;
+  background-size: cover;
+  min-height: 45vh;
+}
+.bannerAbout .AboutSlogan {
+  position: relative;
+  overflow: hidden;
+  color: #FFF;
+}
+.bannerAbout .bannerText {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: absolute;
+  bottom: 0;
+  margin-left: 3rem;
+  margin-bottom: 15rem;
+}
+.bannerAbout .bannerText p {
+  font-size: 0.8rem;
+  padding-top: 1rem;
+}
+
 .feature {
   background: #C6C6C6;
   color: #323232;
@@ -636,12 +669,25 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 2rem 0;
+}
+.purpose .purposeitem:nth-child(odd) {
+  margin-left: 30%;
+}
+.purpose .purposeitem:nth-child(even) {
+  margin-right: 30%;
 }
 .purpose .purposeitem .purposeText {
   margin-left: 2rem;
 }
+.purpose .purposeitem .purposeText h5 {
+  letter-spacing: 2px;
+  font-size: 1.2rem;
+}
 .purpose .purposeitem .purposeText p {
-  padding: 1rem 0;
+  padding: 0.7rem 0;
+  max-width: 290px;
+  font-size: 0.9rem;
 }
 .purpose .purposeitem .purposeBtn button {
   background: #004E42;
@@ -651,6 +697,75 @@ a:hover {
   -webkit-box-shadow: none;
           box-shadow: none;
   border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.purpose .purposeitem .purposeBtn button .arrow {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background-color: #FACD00;
+  /* 定義圖標的顏色 */
+  -webkit-mask-image: url("../image/more-arrow.svg");
+          mask-image: url("../image/more-arrow.svg");
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+
+.garment {
+  background: #DADADA;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+.garment .container {
+  max-width: 600px;
+}
+.garment h4 {
+  color: #004E42;
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  padding: 1.5rem 0;
+}
+.garment p {
+  font-size: 0.9rem;
+}
+.garment img {
+  margin: 0 0.5rem;
+  padding-bottom: 2rem;
+}
+.garment .clean {
+  text-align: left;
+}
+.garment .clean h5 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-top: 2rem;
 }
 
 footer {

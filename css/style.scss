@@ -254,7 +254,33 @@
             }
         }
     }
+    .bannerAbout {
+        background: url('../image/about-bn-bg.png') right bottom;
+        background-size: cover;
+        min-height: 45vh;
 
+        .AboutSlogan {
+            position: relative;
+            overflow: hidden;
+            color: #FFF;
+        }
+
+        .bannerText {
+            display: flex;
+            flex-direction: column;
+            align-content: flex-start;
+            align-items: flex-start;
+            position: absolute;
+            bottom: 0;
+            margin-left: 3rem;
+            margin-bottom: 15rem;
+
+            p {
+                font-size: .8rem;
+                padding-top: 1rem;
+            }
+        }
+    }
     .feature {
         background: #C6C6C6;
         color: #323232;
@@ -430,23 +456,25 @@
                 display: flex;
                 flex-direction: column;
                 font-size: 1.8rem;
-                color:$green;
+                color: $green;
                 line-height: 2.5rem;
+
                 span {
                     color: #fff;
                     font-size: 1rem;
                     line-height: 1rem;
                 }
             }
-            p{
+
+            p {
                 color: #000;
                 font-size: 1rem;
                 max-width: 30rem;
-                margin:3rem auto;
+                margin: 3rem auto;
 
             }
 
-            
+
         }
 
         .techItem {
@@ -573,7 +601,8 @@
     .purpose {
         background: $gray;
         padding-top: 8rem;
-        h4{
+
+        h4 {
             color: $green;
             font-size: 1.8rem;
             display: flex;
@@ -582,14 +611,16 @@
             justify-content: center;
             max-width: 420px;
             margin: auto;
-            span{
-                color:#fff;
+
+            span {
+                color: #fff;
                 font-size: 1rem;
                 font-weight: 400;
                 margin-top: 1.5rem;
             }
         }
-        p{
+
+        p {
             padding: 3rem 0;
             max-width: 520px;
             margin: auto;
@@ -601,20 +632,87 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            .purposeText{
+            padding:2rem 0;
+            &:nth-child(odd) {
+                margin-left: 30%;
+              }
+            
+              &:nth-child(even) {
+                margin-right: 30%;
+              }
+
+            .purposeText {
                 margin-left: 2rem;
-                p{
-                    padding: 1rem 0;
+                h5{
+                    letter-spacing: 2px;
+                    font-size: 1.2rem;
+
+                }
+
+                p {
+                    padding: .7rem 0;
+                    max-width: 290px;
+                    font-size: .9rem;
                 }
             }
-            .purposeBtn 
-            button{
+
+            .purposeBtn button {
                 background: $green;
-                color:#fff;
+                color: #fff;
                 border-radius: 25px;
                 padding: .5rem 1rem;
                 box-shadow: none;
                 border: none;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .arrow {
+                    display: inline-block;
+                    width: 24px;
+                    height: 24px;
+                    background-color: $yellow;
+                    /* 定義圖標的顏色 */
+                    mask-image: url('../image/more-arrow.svg');
+                    mask-size: contain;
+                    mask-repeat: no-repeat;
+                    mask-position: center;
+                }
+            }
+        }
+    }
+    .garment{
+        background: $gray2;
+        padding-top: 100px;
+        padding-bottom: 100px;
+        text-align: center;
+        letter-spacing: 1px;
+        .container{
+            max-width: 600px;
+        }
+        h4 {
+            color: $green;
+            font-size: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+            padding: 1.5rem 0;
+        }
+        p{
+            font-size: .9rem;
+        }
+        img{
+            margin:0 .5rem;
+            padding-bottom: 2rem;
+        }
+        .clean{
+            text-align: left;
+            h5{
+                font-size: 1.5rem;
+                font-weight: 600;
+                padding-top: 2rem;
             }
         }
     }
