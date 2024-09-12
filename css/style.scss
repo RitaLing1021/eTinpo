@@ -254,6 +254,7 @@
             }
         }
     }
+
     .bannerAbout {
         background: url('../image/about-bn-bg.png') right bottom;
         background-size: cover;
@@ -281,6 +282,7 @@
             }
         }
     }
+
     .feature {
         background: #C6C6C6;
         color: #323232;
@@ -632,18 +634,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding:2rem 0;
+            padding: 2rem 0;
+
             &:nth-child(odd) {
                 margin-left: 30%;
-              }
-            
-              &:nth-child(even) {
+            }
+
+            &:nth-child(even) {
                 margin-right: 30%;
-              }
+            }
 
             .purposeText {
                 margin-left: 2rem;
-                h5{
+
+                h5 {
                     letter-spacing: 2px;
                     font-size: 1.2rem;
 
@@ -681,15 +685,18 @@
             }
         }
     }
-    .garment{
+
+    .garment {
         background: $gray2;
         padding-top: 100px;
         padding-bottom: 100px;
         text-align: center;
         letter-spacing: 1px;
-        .container{
+
+        .container {
             max-width: 600px;
         }
+
         h4 {
             color: $green;
             font-size: 1.8rem;
@@ -700,21 +707,148 @@
             margin: auto;
             padding: 1.5rem 0;
         }
-        p{
+
+        p {
             font-size: .9rem;
         }
-        img{
-            margin:0 .5rem;
+
+        img {
+            margin: 0 .5rem;
             padding-bottom: 2rem;
         }
-        .clean{
+
+        .clean {
             text-align: left;
-            h5{
+
+            h5 {
                 font-size: 1.5rem;
                 font-weight: 600;
                 padding-top: 2rem;
             }
         }
+    }
+
+    .newtechnology {
+        background: $gray2;
+        padding: 4rem 0;
+
+        .new-technology {
+            align-items: center
+        }
+
+        h4 {
+            color: $green;
+            font-size: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 430px;
+            margin: auto;
+
+            span {
+                color: #fff;
+                font-size: 1rem;
+                font-weight: 400;
+            }
+        }
+
+        p {
+            padding: .7rem 0;
+            max-width: 430px;
+            font-size: .9rem;
+            margin: auto;
+            font-weight: 500;
+            text-align: justify;
+        }
+
+        .overviewPhoto {
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    .eco {
+        background: $gray;
+        padding: 8rem 1rem 6rem;
+
+        h4 {
+            color: $green;
+            font-size: 1.8rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            max-width: 430px;
+            margin: auto;
+
+            span {
+                padding-top: 1rem;
+                color: #fff;
+                font-size: 1rem;
+                font-weight: 400;
+            }
+        }
+
+        p {
+            padding: 3rem 0;
+            max-width: 430px;
+            font-size: .9rem;
+            margin: auto;
+            font-weight: 500;
+            text-align: justify;
+        }
+    }
+
+    .principles {
+        background: $gray2;
+        padding: 8rem 0 2rem;
+
+        .principlesitem {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h4 {
+                color: $green;
+                font-size: 1.8rem;
+                font-weight: 700;
+                padding-top: .5rem;
+            }
+
+            p {
+                font-size: .9rem;
+                font-weight: 500;
+                text-align: justify;
+                padding-top: .5rem;
+                max-width: 290px;
+            }
+        }
+    }
+
+    .fiveActions {
+        background: $gray;
+        color:#fff;
+        h4 {
+            color: $green;
+            font-size: 1.8rem;
+            font-weight: 700;
+            text-align: center;
+        }
+        .operation{
+            text-align: center;
+            position: relative;
+            
+            p{
+                font-weight: 300;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        
     }
 
     footer {

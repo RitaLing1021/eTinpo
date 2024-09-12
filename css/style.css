@@ -768,6 +768,145 @@ a:hover {
   padding-top: 2rem;
 }
 
+.newtechnology {
+  background: #DADADA;
+  padding: 4rem 0;
+}
+.newtechnology .new-technology {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.newtechnology h4 {
+  color: #004E42;
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 430px;
+  margin: auto;
+}
+.newtechnology h4 span {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.newtechnology p {
+  padding: 0.7rem 0;
+  max-width: 430px;
+  font-size: 0.9rem;
+  margin: auto;
+  font-weight: 500;
+  text-align: justify;
+}
+.newtechnology .overviewPhoto img {
+  border-radius: 50%;
+}
+
+.eco {
+  background: #C6C6C6;
+  padding: 8rem 1rem 6rem;
+}
+.eco h4 {
+  color: #004E42;
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 430px;
+  margin: auto;
+}
+.eco h4 span {
+  padding-top: 1rem;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+}
+.eco p {
+  padding: 3rem 0;
+  max-width: 430px;
+  font-size: 0.9rem;
+  margin: auto;
+  font-weight: 500;
+  text-align: justify;
+}
+
+.principles {
+  background: #DADADA;
+  padding: 8rem 0 2rem;
+}
+.principles .principlesitem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.principles .principlesitem h4 {
+  color: #004E42;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding-top: 0.5rem;
+}
+.principles .principlesitem p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  text-align: justify;
+  padding-top: 0.5rem;
+  max-width: 290px;
+}
+
+.fiveActions {
+  background: #C6C6C6;
+  color: #fff;
+}
+.fiveActions h4 {
+  color: #004E42;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+.fiveActions .operation {
+  text-align: center;
+  position: relative;
+}
+.fiveActions .operation p {
+  font-weight: 300;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
 footer {
   background: #9C9C9D;
   color: #fff;
