@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .swiper {
+            width: 80%;
+            height: 200px;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            transition: transform 0.5s, filter 0.5s;
+        }
+
+        .swiper-slide-active .icon {
+            transform: scale(1.5);
+            filter: grayscale(0);
+        }
+
+        .swiper-slide .icon {
+            filter: grayscale(100%);
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img src="image/mat-car-icon01.svg" class="icon">
+          </div>
+          <div class="swiper-slide">
+            <img src="image/mat-car-icon02.svg" class="icon">
+          </div>
+          <div class="swiper-slide">
+            <img src="image/mat-car-icon03.svg" class="icon">
+          </div>
+          <div class="swiper-slide">
+            <img src="image/mat-car-icon04.svg" class="icon">
+          </div>
+          <div class="swiper-slide">
+            <img src="image/mat-car-icon05.svg" class="icon">
+          </div>
+        </div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+      <script>
+        var swiper = new Swiper('.swiper', {
+          slidesPerView: 3,
+          centeredSlides: true,
+          loop: true,
+          spaceBetween: 30,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+        });
+      </script>
+</body>
+</html>

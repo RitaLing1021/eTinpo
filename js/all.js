@@ -48,3 +48,14 @@ document.addEventListener('scroll', function() {
       });
   }
 });
+
+var swiper = new Swiper('.swiper', {
+  slidesPerView: 3,
+  centeredSlides: true,
+  loop: true,
+  spaceBetween: 30,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+});

@@ -325,8 +325,36 @@
             font-size: .8rem;
 
         }
+
     }
 
+    
+    .swiper {
+        width: 80%;
+        height: 200px;
+    }
+
+    .swiper-slide {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .icon {
+        width: 80px;
+        height: 80px;
+        transition: transform 0.5s, filter 0.5s;
+    }
+
+    .swiper-slide-active .icon {
+        transform: scale(1.5);
+        filter: grayscale(0);
+    }
+
+    .swiper-slide .icon {
+        filter: grayscale(100%);
+    }
+    
     .slogan {
 
         background: url(../image/bg.png) #C6C6C6;
@@ -829,26 +857,71 @@
 
     .fiveActions {
         background: $gray;
-        color:#fff;
+        color: #fff;
+        padding: 5rem 0;
+
         h4 {
             color: $green;
             font-size: 1.8rem;
             font-weight: 700;
             text-align: center;
         }
-        .operation{
+
+        .operation {
             text-align: center;
             position: relative;
-            
-            p{
+            margin: 2rem 0;
+
+            p {
                 font-weight: 300;
                 display: flex;
                 flex-direction: column;
+                justify-content: center;
                 text-align: center;
+                margin-bottom: 0;
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+        }
+    }
+
+    .YearinReview {
+        text-align: center;
+        padding: 5rem 0;
+        p{
+            font-size: .8rem;
+            padding-top: 3rem;
+        }
+
+        .year {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left;
+
+            .yearimg {
+                border-radius: 50%;
+            }
+
+            h5 {
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: 700;
+                font-size: 1.8rem;
             }
         }
 
-        
+        .arrow-left,
+        .arrow-right {
+            margin: 0 2rem;
+        }
+
+        .arrow-left {
+            transform: rotate(180deg);
+        }
     }
 
     footer {

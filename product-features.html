@@ -7,8 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/all.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
     <title>eTINPO-產品介紹</title>
     <link href="image/favicon.ico" rel="shortcut icon" />
 </head>
@@ -92,6 +91,26 @@
                         </p>
                     </div>
                     <!--這邊放輪播-->
+
+                    <!--<div class="swiper-container">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide">
+                            <img src="image/mat-car-icon01.svg" class="icon">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="image/mat-car-icon02.svg" class="icon">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="image/mat-car-icon03.svg" class="icon central-icon">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="image/mat-car-icon04.svg" class="icon">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="image/mat-car-icon05.svg" class="icon">
+                          </div>
+                        </div>
+                      </div>-->
                 </div>
             </div>
         </div>
@@ -185,7 +204,21 @@
     </section>
     <!-- footer.js -->
     <script charset="utf-8" src="js/footer.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/all.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper', {
+          slidesPerView: 3,
+          centeredSlides: true,
+          loop: true,
+          spaceBetween: 30,
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          },
+        });
+      </script>
 </body>
 
 </html>

@@ -327,6 +327,44 @@ a:hover {
   font-size: 0.8rem;
 }
 
+.swiper {
+  width: 80%;
+  height: 200px;
+}
+
+.swiper-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.icon {
+  width: 80px;
+  height: 80px;
+  -webkit-transition: -webkit-transform 0.5s, -webkit-filter 0.5s;
+  transition: -webkit-transform 0.5s, -webkit-filter 0.5s;
+  transition: transform 0.5s, filter 0.5s;
+  transition: transform 0.5s, filter 0.5s, -webkit-transform 0.5s, -webkit-filter 0.5s;
+}
+
+.swiper-slide-active .icon {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.swiper-slide .icon {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
 .slogan {
   background: url(../image/bg.png) #C6C6C6;
   background-size: cover;
@@ -884,6 +922,7 @@ a:hover {
 .fiveActions {
   background: #C6C6C6;
   color: #fff;
+  padding: 5rem 0;
 }
 .fiveActions h4 {
   color: #004E42;
@@ -894,6 +933,7 @@ a:hover {
 .fiveActions .operation {
   text-align: center;
   position: relative;
+  margin: 2rem 0;
 }
 .fiveActions .operation p {
   font-weight: 300;
@@ -904,7 +944,54 @@ a:hover {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   text-align: center;
+  margin-bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.YearinReview {
+  text-align: center;
+  padding: 5rem 0;
+}
+.YearinReview p {
+  font-size: 0.8rem;
+  padding-top: 3rem;
+}
+.YearinReview .year {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: left;
+}
+.YearinReview .year .yearimg {
+  border-radius: 50%;
+}
+.YearinReview .year h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.8rem;
+}
+.YearinReview .arrow-left,
+.YearinReview .arrow-right {
+  margin: 0 2rem;
+}
+.YearinReview .arrow-left {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 footer {
