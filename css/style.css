@@ -224,12 +224,31 @@ a:hover {
 .bannerProduct {
   background: url("../image/product-bg-100.jpg") right bottom;
   background-size: cover;
-  min-height: 45vh;
 }
 .bannerProduct .ProductSlogan {
   position: relative;
   overflow: hidden;
   color: #FFF;
+  min-height: 45vh;
+}
+.bannerProduct .ProductSlogan .ProductBn {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: -74rem;
+  width: auto;
+}
+@media (min-width: 768px) {
+  .bannerProduct .ProductSlogan .ProductBn {
+    top: 0;
+    left: -50rem;
+  }
+}
+@media (min-width: 1024px) {
+  .bannerProduct .ProductSlogan .ProductBn {
+    top: 0;
+    left: 0;
+  }
 }
 .bannerProduct .bannerText {
   display: -webkit-box;
@@ -328,8 +347,9 @@ a:hover {
 }
 
 .swiper {
-  width: 80%;
-  height: 200px;
+  width: 100%;
+  height: auto;
+  padding-top: 2rem;
 }
 
 .swiper-slide {
@@ -517,6 +537,28 @@ a:hover {
   font-size: 1rem;
   max-width: 30rem;
   margin: 3rem auto;
+}
+.advantage .feature-swiper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.advantage .feature-swiper h4 {
+  padding: 2rem 0 0 0;
+}
+.advantage .feature-swiper p {
+  margin: 0.8rem auto;
+  font-size: 0.8rem;
+  max-width: 35rem;
 }
 .advantage .techItem {
   margin: 2rem 0;
@@ -709,11 +751,13 @@ a:hover {
           align-items: center;
   padding: 2rem 0;
 }
-.purpose .purposeitem:nth-child(odd) {
-  margin-left: 30%;
-}
-.purpose .purposeitem:nth-child(even) {
-  margin-right: 30%;
+@media (min-width: 768px) {
+  .purpose .purposeitem:nth-child(odd) {
+    margin-left: 30%;
+  }
+  .purpose .purposeitem:nth-child(even) {
+    margin-right: 30%;
+  }
 }
 .purpose .purposeitem .purposeText {
   margin-left: 2rem;
@@ -744,6 +788,12 @@ a:hover {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 0.8rem;
+}
+@media (min-width: 768px) {
+  .purpose .purposeitem .purposeBtn button {
+    font-size: 1rem;
+  }
 }
 .purpose .purposeitem .purposeBtn button .arrow {
   display: inline-block;

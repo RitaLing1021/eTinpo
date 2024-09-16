@@ -230,12 +230,30 @@
     .bannerProduct {
         background: url('../image/product-bg-100.jpg') right bottom;
         background-size: cover;
-        min-height: 45vh;
+
 
         .ProductSlogan {
             position: relative;
             overflow: hidden;
             color: #FFF;
+            min-height: 45vh;
+
+            .ProductBn {
+                overflow: hidden;
+                position: absolute;
+                top: 0;
+                left: -74rem;
+                width: auto;
+
+                @include b768 {
+                    top: 0;
+                    left: -50rem;
+                }
+                @include b1024 {
+                    top: 0;
+                    left:0;
+                }
+            }
         }
 
         .bannerText {
@@ -328,10 +346,11 @@
 
     }
 
-    
+
     .swiper {
-        width: 80%;
-        height: 200px;
+        width: 100%;
+        height: auto;
+        padding-top: 2rem;
     }
 
     .swiper-slide {
@@ -354,7 +373,7 @@
     .swiper-slide .icon {
         filter: grayscale(100%);
     }
-    
+
     .slogan {
 
         background: url(../image/bg.png) #C6C6C6;
@@ -505,6 +524,23 @@
             }
 
 
+        }
+
+        .feature-swiper {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+
+            h4 {
+                padding: 2rem 0 0 0;
+            }
+
+            p {
+                margin: .8rem auto;
+                font-size: .8rem;
+                max-width: 35rem;
+            }
         }
 
         .techItem {
@@ -664,12 +700,15 @@
             align-items: center;
             padding: 2rem 0;
 
-            &:nth-child(odd) {
-                margin-left: 30%;
-            }
 
-            &:nth-child(even) {
-                margin-right: 30%;
+            @include b768 {
+                &:nth-child(odd) {
+                    margin-left: 30%;
+                }
+
+                &:nth-child(even) {
+                    margin-right: 30%;
+                }
             }
 
             .purposeText {
@@ -698,6 +737,10 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                font-size: .8rem;
+                @include b768{                    
+                    font-size: 1rem;
+                }
 
                 .arrow {
                     display: inline-block;
@@ -892,7 +935,8 @@
     .YearinReview {
         text-align: center;
         padding: 5rem 0;
-        p{
+
+        p {
             font-size: .8rem;
             padding-top: 3rem;
         }
