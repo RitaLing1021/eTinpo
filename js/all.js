@@ -49,6 +49,33 @@ document.addEventListener('scroll', function() {
   }
 });
 
+window.addEventListener("resize", updateNavLinkColors);
+window.addEventListener("scroll", updateNavLinkColors);
+
+// 頁面載入時執行一次
+document.addEventListener("DOMContentLoaded", updateNavLinkColors);
+
+function updateNavLinkColors() {
+  const navLinks = document.querySelectorAll(".nav-link");
+  const isMobile = window.innerWidth <= 768;
+  const scrollHeight = window.scrollY;
+
+  navLinks.forEach(link => {
+    if (isMobile) {
+      // 手機視圖：無論滾動高度，顏色都應該是白色
+      link.style.color = "#FFF";
+    } else {
+      // 桌面視圖：根據滾動高度改變顏色
+      if (scrollHeight > 80) {
+        link.style.color = "#FFF";
+      } else {
+        link.style.color = "#004E42";
+      }
+    }
+  });
+}
+
+
 var swiper = new Swiper('.swiper', {
   slidesPerView: 3,
   centeredSlides: true,
