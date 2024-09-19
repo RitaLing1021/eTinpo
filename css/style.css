@@ -149,19 +149,33 @@ a:hover {
 }
 
 .banner {
-  /*background: url(../image/bn-bg.png);*/
-  background: url(../image/bn.png) #efefef;
+  background: url(../image/bn-bg.png) right;
   position: relative;
   height: 30rem;
+  overflow: hidden;
+}
+.banner .eTINPO-bn {
+  position: absolute;
+  left: -230%;
+  top: 0;
+  z-index: 1;
+}
+@media (min-width: 768px) {
+  .banner .eTINPO-bn {
+    left: 0;
+    top: 0;
+  }
 }
 .banner .banner01 {
   position: relative;
+  z-index: 2;
 }
 .banner .banner02 {
   position: absolute;
   max-width: 13rem;
   top: 15rem;
   left: 1rem;
+  z-index: 3;
 }
 @media (min-width: 768px) {
   .banner .banner02 {

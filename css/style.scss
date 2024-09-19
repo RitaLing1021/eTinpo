@@ -153,13 +153,26 @@
     }
 
     .banner {
-        /*background: url(../image/bn-bg.png);*/
-        background: url(../image/bn.png) #efefef;
+        background: url(../image/bn-bg.png) right;
         position: relative;
         height: 30rem;
+        overflow: hidden;
+
+        .eTINPO-bn {
+            position: absolute;
+            left: -230%;
+            top: 0;
+            z-index: 1;
+
+            @include b768 {
+                left: 0;
+                top: 0;
+            }
+        }
 
         .banner01 {
             position: relative;
+            z-index: 2;
         }
 
         .banner02 {
@@ -167,6 +180,7 @@
             max-width: 13rem;
             top: 15rem;
             left: 1rem;
+            z-index: 3;
 
             @include b768 {
                 position: absolute;
@@ -563,19 +577,22 @@
         .techItem {
             margin: 2rem 0;
             display: flex;
-                text-align: left;
-                justify-content: center;
-                .techItemText{
-                    padding-left: 2rem;
-                    @include b768{
-                        padding-left: 0;
-                        
-                    }
+            text-align: left;
+            justify-content: center;
+
+            .techItemText {
+                padding-left: 2rem;
+
+                @include b768 {
+                    padding-left: 0;
+
                 }
-            @include b768{
+            }
+
+            @include b768 {
                 display: block;
                 text-align: center;
-                
+
             }
 
             h5 {
