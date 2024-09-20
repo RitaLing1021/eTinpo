@@ -718,11 +718,13 @@ p{
                 font-size: 1.8rem;
                 color: $green;
                 line-height: 2.5rem;
+                align-items: center;
 
                 span {
                     color: #fff;
                     font-size: 1rem;
                     line-height: 1rem;
+                    padding-top: .5rem;
                 }
             }
 
