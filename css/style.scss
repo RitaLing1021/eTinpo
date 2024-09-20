@@ -630,7 +630,7 @@
             }
 
             .contactText {
-                padding: 3rem 0;
+                padding: 1rem 0 3rem;
 
                 @include b1024 {
                     position: relative;
@@ -644,6 +644,9 @@
                 p {
                     font-size: .8rem;
                     margin-bottom: .5rem;
+                }
+                .contact-bottom{
+                    padding-top: 2rem;
                 }
 
 

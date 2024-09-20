@@ -659,7 +659,7 @@ a:hover {
   }
 }
 .contact .contactTheme .contactText {
-  padding: 3rem 0;
+  padding: 1rem 0 3rem;
 }
 @media (min-width: 1024px) {
   .contact .contactTheme .contactText {
@@ -681,6 +681,9 @@ a:hover {
 .contact .contactTheme .contactText p {
   font-size: 0.8rem;
   margin-bottom: 0.5rem;
+}
+.contact .contactTheme .contactText .contact-bottom {
+  padding-top: 2rem;
 }
 
 .Material {
