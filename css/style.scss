@@ -230,14 +230,38 @@
 
         .banner02 {
             position: absolute;
-            left: 6rem;
+            left: 2rem;
             top: 6rem;
+            width: 50%;
+
+            @include b768 {
+                left: 2rem;
+                top: 6rem;
+                width: auto;
+            }
+
+            @include b1140 {
+                right: 6rem;
+                top: 6rem;
+            }
         }
 
         .banner03 {
             position: absolute;
-            right: 13rem;
-            top: 7rem;
+            right: 2rem;
+            top: 9rem;
+            width: 300px;
+
+            @include b768 {
+                right: 2rem;
+                top: 4rem;
+                width: auto;
+            }
+
+            @include b1140 {
+                right: 13rem;
+                top: 7rem;
+            }
         }
     }
 
@@ -477,7 +501,11 @@
 
     .technologies {
         background: $gray;
-        padding: 5rem 0;
+        padding: 5rem 4rem;
+        
+        @include b768{
+            padding: 5rem 0;
+        }
 
         .techsTheme {
             text-align: center;
@@ -500,14 +528,23 @@
                 font-size: .8rem;
                 font-weight: 600;
                 letter-spacing: 2px;
+                text-align: justify;
+                @include b768{
+                    text-align: center;
+                }
+                
             }
         }
     }
 
     .advantage {
         background: $gray2;
-        padding: 5rem 0;
+        padding: 5rem 4rem;
         text-align: center;
+        @include b768{
+            padding: 5rem 0;
+
+        }
 
         h4 {
             color: $green;
@@ -579,6 +616,7 @@
             display: flex;
             text-align: left;
             justify-content: center;
+            align-items: center;
 
             .techItemText {
                 padding-left: 2rem;
@@ -645,7 +683,8 @@
                     font-size: .8rem;
                     margin-bottom: .5rem;
                 }
-                .contact-bottom{
+
+                .contact-bottom {
                     padding-top: 2rem;
                 }
 
