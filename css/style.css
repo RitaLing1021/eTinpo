@@ -334,7 +334,7 @@ a:hover {
 @media (min-width: 768px) {
   .bannerAbout .bannerText {
     margin-left: 3rem;
-    margin-bottom: 5rem;
+    margin-bottom: 10rem;
   }
 }
 .bannerAbout .bannerText p {
