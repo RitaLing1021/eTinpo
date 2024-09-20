@@ -156,13 +156,19 @@ a:hover {
 }
 .banner .eTINPO-bn {
   position: absolute;
-  left: -230%;
+  right: -186%;
   top: 0;
   z-index: 1;
 }
 @media (min-width: 768px) {
   .banner .eTINPO-bn {
-    left: 0;
+    right: -60%;
+    top: 0;
+  }
+}
+@media (min-width: 992px) {
+  .banner .eTINPO-bn {
+    right: 0;
     top: 0;
   }
 }
@@ -172,7 +178,7 @@ a:hover {
 }
 .banner .banner02 {
   position: absolute;
-  max-width: 13rem;
+  max-width: 90%;
   top: 15rem;
   left: 1rem;
   z-index: 3;
@@ -452,15 +458,19 @@ a:hover {
 }
 .slogan img {
   max-width: 100%;
+  -webkit-filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5));
+          filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5));
 }
 @media (min-width: 768px) {
   .slogan img {
     max-width: 495rem;
+    -webkit-filter: none;
+            filter: none;
   }
 }
 
 .technology {
-  padding: 5rem 0.1rem;
+  padding: 5rem 4rem;
   letter-spacing: 0.1rem;
   text-align: justify;
   /*img {
@@ -470,6 +480,11 @@ a:hover {
           max-width: 434rem;
       }
   }*/
+}
+@media (min-width: 768px) {
+  .technology {
+    padding: 5rem 0.1rem;
+  }
 }
 .technology .technologyPhoto {
   padding-bottom: 3rem;
@@ -483,6 +498,9 @@ a:hover {
   font-size: 0.8rem;
   text-align: center;
 }
+.technology .technologyText p {
+  font-size: 0.8rem;
+}
 @media (min-width: 768px) {
   .technology .technologyText {
     font-size: 1rem;
@@ -492,7 +510,7 @@ a:hover {
 
 .product {
   background: #DADADA;
-  padding: 5rem 0.1rem;
+  padding: 5rem 4rem;
   letter-spacing: 0.1rem;
   text-align: center;
   font-size: 0.8rem;
@@ -506,10 +524,14 @@ a:hover {
 }
 @media (min-width: 768px) {
   .product {
+    padding: 5rem 0.1rem;
     max-width: 414rem;
     text-align: justify;
     font-size: 1rem;
   }
+}
+.product .productText p {
+  font-size: 0.8rem;
 }
 
 .technologies {
