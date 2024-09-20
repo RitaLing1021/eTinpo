@@ -328,8 +328,8 @@ a:hover {
 }
 
 .bannerAbout {
-  background: url("../image/about-bn-bg.png") right bottom;
-  background-size: cover;
+  background: url("../image/about-bn-bg.png") right bottom #DADADA;
+  background-size: 100%;
   min-height: 45vh;
 }
 .bannerAbout .AboutSlogan {
@@ -1068,7 +1068,7 @@ a:hover {
   .garment img {
     margin: 0 0.5rem;
     padding-bottom: 2rem;
-    width: auto;
+    width: 60px;
   }
 }
 .garment .clean {
