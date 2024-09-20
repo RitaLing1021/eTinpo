@@ -324,8 +324,8 @@
     }
 
     .bannerAbout {
-        background: url('../image/about-bn-bg.png') right bottom;
-        background-size: cover;
+        background: url('../image/about-bn-bg.png') right bottom $gray2;
+        background-size: 100%;
         min-height: 45vh;
 
         .AboutSlogan {
@@ -1002,7 +1002,7 @@
             @include b768 {
                 margin: 0 .5rem;
                 padding-bottom: 2rem;
-                width: auto;
+                width: 60px;
             }
         }
 
