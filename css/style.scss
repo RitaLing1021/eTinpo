@@ -324,9 +324,10 @@
     }
 
     .bannerAbout {
-        background: url('../image/about-bn-bg.png') right bottom $gray2;
-        background-size: 100%;
+        background: url('../image/about-bn-bg.png') right top $gray2;
+        background-size: cover;
         min-height: 45vh;
+        max-height: 560px;
 
         .AboutSlogan {
             position: relative;
@@ -357,7 +358,7 @@
             margin-bottom: 1rem;
             @include b768{
                 margin-left: 3rem;
-                margin-bottom: 15rem;
+                margin-bottom: 5rem;
             }
 
             p {

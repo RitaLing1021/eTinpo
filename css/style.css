@@ -51,8 +51,7 @@ a:hover {
   border: none;
 }
 .navbar-toggler:focus {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .navbar-toggler-icon {
@@ -65,20 +64,17 @@ a:hover {
   left: 0;
   z-index: 99;
   width: 100%;
-  -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 #mainNavbar svg {
   fill: #004E42;
 }
 #mainNavbar .cls-1 {
-  -webkit-transition: fill 0.5s ease;
   transition: fill 0.5s ease;
   /* 添加動畫效果 */
 }
 
 .navbar {
-  -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 
@@ -87,7 +83,6 @@ a:hover {
 }
 .navbar-nav .nav-link {
   position: relative;
-  -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 .navbar-nav .nav-link::after {
@@ -98,30 +93,21 @@ a:hover {
   bottom: 0;
   height: 2px;
   background-color: #FACD00;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: right;
   transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
   border: none;
 }
 .navbar-nav .nav-link:hover::after, .navbar-nav .nav-link.focus::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transform-origin: left;
-          transform-origin: left;
+  transform: scaleX(1);
+  transform-origin: left;
 }
 .navbar-nav .dropdown-menu {
   background-color: transparent;
-  -webkit-transition: background-color 0.3s ease;
   transition: background-color 0.3s ease;
 }
 .navbar-nav .dropdown-menu .dropdown-item {
   position: relative;
-  -webkit-transition: color 0.3s ease;
   transition: color 0.3s ease;
 }
 .navbar-nav .dropdown-menu .dropdown-item::after {
@@ -132,20 +118,13 @@ a:hover {
   bottom: 0;
   height: 2px;
   background-color: #FACD00;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transform-origin: right;
-          transform-origin: right;
-  -webkit-transition: -webkit-transform 0.3s ease;
-  transition: -webkit-transform 0.3s ease;
+  transform: scaleX(0);
+  transform-origin: right;
   transition: transform 0.3s ease;
-  transition: transform 0.3s ease, -webkit-transform 0.3s ease;
 }
 .navbar-nav .dropdown-menu .dropdown-item:hover::after {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transform-origin: left;
-          transform-origin: left;
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .banner {
@@ -299,18 +278,10 @@ a:hover {
   }
 }
 .bannerProduct .bannerText {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: flex-start;
   position: absolute;
   bottom: 0;
   margin-left: 1rem;
@@ -328,9 +299,10 @@ a:hover {
 }
 
 .bannerAbout {
-  background: url("../image/about-bn-bg.png") right bottom #DADADA;
-  background-size: 100%;
+  background: url("../image/about-bn-bg.png") right top #DADADA;
+  background-size: cover;
   min-height: 45vh;
+  max-height: 560px;
 }
 .bannerAbout .AboutSlogan {
   position: relative;
@@ -350,18 +322,10 @@ a:hover {
   }
 }
 .bannerAbout .bannerText {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: start;
-      align-content: flex-start;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-direction: column;
+  align-content: flex-start;
+  align-items: flex-start;
   position: absolute;
   bottom: 0;
   margin-left: 1rem;
@@ -370,7 +334,7 @@ a:hover {
 @media (min-width: 768px) {
   .bannerAbout .bannerText {
     margin-left: 3rem;
-    margin-bottom: 15rem;
+    margin-bottom: 5rem;
   }
 }
 .bannerAbout .bannerText p {
@@ -446,36 +410,24 @@ a:hover {
 }
 
 .swiper-slide {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon {
   width: 80px;
   height: 80px;
-  -webkit-transition: -webkit-transform 0.5s, -webkit-filter 0.5s;
-  transition: -webkit-transform 0.5s, -webkit-filter 0.5s;
   transition: transform 0.5s, filter 0.5s;
-  transition: transform 0.5s, filter 0.5s, -webkit-transform 0.5s, -webkit-filter 0.5s;
 }
 
 .swiper-slide-active .icon {
-  -webkit-transform: scale(1.5);
-          transform: scale(1.5);
-  -webkit-filter: grayscale(0);
-          filter: grayscale(0);
+  transform: scale(1.5);
+  filter: grayscale(0);
 }
 
 .swiper-slide .icon {
-  -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .swiper-button-prev,
@@ -500,14 +452,12 @@ a:hover {
 }
 .slogan img {
   max-width: 100%;
-  -webkit-filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5));
-          filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5));
+  filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, 0.5));
 }
 @media (min-width: 768px) {
   .slogan img {
     max-width: 495rem;
-    -webkit-filter: none;
-            filter: none;
+    filter: none;
   }
 }
 
@@ -556,13 +506,8 @@ a:hover {
 }
 .application h4 {
   color: #004E42;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   font-size: 1.7rem;
   padding: 2rem 0 1rem 0;
   line-height: 2rem;
@@ -585,16 +530,10 @@ a:hover {
 }
 .application .techItem {
   margin: 2rem 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   text-align: left;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 .application .techItem .techItemText {
   padding-left: 2rem;
@@ -663,13 +602,8 @@ a:hover {
 }
 .technologies .techsTheme h4 {
   color: #004E42;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   font-size: 1.7rem;
   padding: 2rem 0 1rem 0;
 }
@@ -702,19 +636,10 @@ a:hover {
 }
 .advantage h4 {
   color: #004E42;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   font-size: 1.8rem;
   padding: 2rem 0 2rem 0;
 }
@@ -737,19 +662,12 @@ a:hover {
   max-height: 630px;
 }
 .advantage .featureItem h5 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   font-size: 1.8rem;
   color: #004E42;
   line-height: 2.5rem;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .advantage .featureItem h5 span {
   color: #fff;
@@ -764,18 +682,10 @@ a:hover {
   margin: 3rem auto;
 }
 .advantage .feature-swiper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
 }
 .advantage .feature-swiper h4 {
   padding: 2rem 0 0 0;
@@ -793,26 +703,15 @@ a:hover {
 }
 .contact .contactTheme {
   text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 @media (min-width: 1024px) {
   .contact .contactTheme {
     height: 70vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     text-align: left;
   }
 }
@@ -823,16 +722,9 @@ a:hover {
   .contact .contactTheme .contactText {
     position: relative;
     height: 35vh;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-between;
     padding: 0;
   }
 }
@@ -854,16 +746,9 @@ a:hover {
 }
 .Material h4 {
   color: #004E42;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   letter-spacing: 1px;
   font-weight: 700;
   font-size: 1.8rem;
@@ -888,15 +773,9 @@ a:hover {
 }
 .Material .matFab {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   overflow: hidden;
   height: 385px;
 }
@@ -921,16 +800,9 @@ a:hover {
 }
 .Material .matIcon p {
   font-size: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   padding-top: 0.5rem;
 }
 .Material .arrowicon {
@@ -953,19 +825,10 @@ a:hover {
 .purpose h4 {
   color: #004E42;
   font-size: 1.8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   max-width: 420px;
   margin: auto;
 }
@@ -982,15 +845,9 @@ a:hover {
   font-weight: 500;
 }
 .purpose .purposeitem {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   padding: 2rem 0;
 }
 .purpose .purposeitem .img-fluid {
@@ -1026,18 +883,11 @@ a:hover {
   color: #fff;
   border-radius: 25px;
   padding: 0.5rem 1rem;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   border: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   font-size: 0.8rem;
 }
 @media (min-width: 768px) {
@@ -1078,19 +928,10 @@ a:hover {
 .garment h4 {
   color: #004E42;
   font-size: 1.8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: auto;
   padding: 1.5rem 0;
 }
@@ -1123,9 +964,7 @@ a:hover {
   padding: 4rem 0;
 }
 .newtechnology .new-technology {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 0 2rem;
 }
 @media (min-width: 768px) {
@@ -1136,19 +975,10 @@ a:hover {
 .newtechnology h4 {
   color: #004E42;
   font-size: 1.8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   max-width: 430px;
   margin: auto;
 }
@@ -1180,19 +1010,10 @@ a:hover {
 .eco h4 {
   color: #004E42;
   font-size: 1.8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   max-width: 430px;
   margin: auto;
 }
@@ -1217,16 +1038,9 @@ a:hover {
   padding: 8rem 0 2rem;
 }
 .principles .principlesitem {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   padding-bottom: 2rem;
 }
 .principles .principlesitem h4 {
@@ -1262,16 +1076,9 @@ a:hover {
 }
 .fiveActions .operation p {
   font-weight: 300;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
   margin-bottom: 0;
   position: absolute;
@@ -1298,15 +1105,9 @@ a:hover {
   line-height: 1.5rem;
 }
 .YearinReview .year {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   text-align: left;
   padding-bottom: 2rem;
 }
@@ -1344,8 +1145,7 @@ a:hover {
   }
 }
 .YearinReview .arrow-left {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 footer {
