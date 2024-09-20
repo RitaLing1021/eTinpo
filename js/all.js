@@ -77,13 +77,27 @@ function updateNavLinkColors() {
 
 
 var swiper = new Swiper('.swiper', {
-  slidesPerView: 3,
   centeredSlides: true,
   loop: true,
   spaceBetween: 30,
-  autoplay: false,
-  //{
-  //  delay: 2500,
-  //  disableOnInteraction: false,
-  //},
+  autoplay: 
+  {
+   delay: 2500,
+  disableOnInteraction: false,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',  // 設置下一個按鈕
+    prevEl: '.swiper-button-prev',  // 設置上一個按鈕
+  },
+  breakpoints: {
+    // 當螢幕寬度小於768px，顯示一張
+    768: {
+      slidesPerView: 1,
+      centeredSlides: false, // 如果不需要居中
+    },
+    // 當螢幕寬度大於等於768px，顯示三張
+    1024: {
+      slidesPerView: 3,
+    }
+  },
 });

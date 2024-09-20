@@ -283,19 +283,19 @@ a:hover {
   overflow: hidden;
   position: absolute;
   top: 0;
-  left: -74rem;
+  right: -100%;
   width: auto;
 }
 @media (min-width: 768px) {
   .bannerProduct .ProductSlogan .ProductBn {
     top: 0;
-    left: -50rem;
+    right: 0;
   }
 }
 @media (min-width: 1024px) {
   .bannerProduct .ProductSlogan .ProductBn {
     top: 0;
-    left: 0;
+    right: 0;
   }
 }
 .bannerProduct .bannerText {
@@ -341,7 +341,7 @@ a:hover {
 .bannerAbout .AboutSlogan .AboutBn {
   position: absolute;
   top: 0;
-  left: -50%;
+  left: -25%;
   height: auto;
 }
 @media (min-width: 768px) {
@@ -364,8 +364,14 @@ a:hover {
           align-items: flex-start;
   position: absolute;
   bottom: 0;
-  margin-left: 3rem;
-  margin-bottom: 15rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .bannerAbout .bannerText {
+    margin-left: 3rem;
+    margin-bottom: 15rem;
+  }
 }
 .bannerAbout .bannerText p {
   font-size: 0.8rem;
@@ -375,12 +381,25 @@ a:hover {
 .feature {
   background: #C6C6C6;
   color: #323232;
-  padding: 4rem 0;
+  padding: 4rem 2rem;
+}
+@media (min-width: 768px) {
+  .feature {
+    padding: 4rem 0;
+  }
 }
 .feature .featureTheme {
   max-width: 50rem;
   margin: 3rem auto;
   letter-spacing: 2px;
+}
+.feature .featureTheme .featureText h4 {
+  font-size: 1.2rem;
+}
+@media (min-width: 768px) {
+  .feature .featureTheme .featureText h4 {
+    font-size: 1.5rem;
+  }
 }
 .feature .featurePhoto {
   padding-right: 1rem;
@@ -388,6 +407,14 @@ a:hover {
 @media (min-width: 768px) {
   .feature .featurePhoto {
     padding-right: 3rem;
+  }
+}
+.feature .featurePhoto img {
+  width: 70px;
+}
+@media (min-width: 768px) {
+  .feature .featurePhoto img {
+    width: auto;
   }
 }
 .feature h4 {
@@ -449,6 +476,21 @@ a:hover {
 .swiper-slide .icon {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  width: 10px;
+  /* 設定箭頭的寬度 */
+  height: 40px;
+  /* 設定箭頭的高度 */
+  background-size: 100% 100%;
+  /* 確保背景圖充滿容器 */
+  color: #004E42;
+}
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 20px !important;
 }
 
 .slogan {
@@ -577,7 +619,7 @@ a:hover {
 
 .advantage {
   background: #DADADA;
-  padding: 5rem 4rem;
+  padding: 5rem 2rem;
   text-align: center;
 }
 @media (min-width: 768px) {
@@ -590,23 +632,32 @@ a:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   padding: 2rem 0 2rem 0;
 }
 .advantage h4 span {
-  font-size: 0.9rem;
-  color: #FFF;
+  font-size: 1.2rem;
+  color: #004E42;
   letter-spacing: 1px;
+  font-weight: 800;
+}
+.advantage h4 span.left {
+  padding-bottom: 2rem;
+  padding-right: 1rem;
+}
+.advantage h4 span.right {
+  padding-top: 2rem;
+  padding-left: 1rem;
 }
 .advantage .featurePhoto img {
   border-radius: 50%;
@@ -777,6 +828,7 @@ a:hover {
           align-items: center;
   letter-spacing: 1px;
   font-weight: 700;
+  font-size: 1.8rem;
 }
 .Material h4 span {
   color: #FFF;
@@ -789,7 +841,12 @@ a:hover {
   text-align: center;
   font-weight: 500;
   line-height: 1.5rem;
-  padding: 2rem 0;
+  padding: 2rem 2rem;
+}
+@media (min-width: 768px) {
+  .Material p {
+    padding: 2rem 0;
+  }
 }
 .Material .matFab {
   position: relative;
@@ -836,6 +893,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-top: 0.5rem;
 }
 .Material .arrowicon {
   position: absolute;
@@ -847,7 +905,12 @@ a:hover {
 
 .purpose {
   background: #C6C6C6;
-  padding-top: 8rem;
+  padding: 8rem 2rem 0;
+}
+@media (min-width: 768px) {
+  .purpose {
+    padding-top: 8rem;
+  }
 }
 .purpose h4 {
   color: #004E42;
@@ -902,10 +965,10 @@ a:hover {
 }
 @media (min-width: 768px) {
   .purpose .purposeitem:nth-child(odd) {
-    margin-left: 30%;
+    margin-left: 10%;
   }
   .purpose .purposeitem:nth-child(even) {
-    margin-right: 30%;
+    margin-right: 10%;
   }
 }
 .purpose .purposeitem .purposeText {
@@ -962,10 +1025,14 @@ a:hover {
 
 .garment {
   background: #DADADA;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding: 2rem 2rem 100px 2rem;
   text-align: center;
   letter-spacing: 1px;
+}
+@media (min-width: 768px) {
+  .garment {
+    padding: 100px 0;
+  }
 }
 .garment .container {
   max-width: 600px;
@@ -990,11 +1057,19 @@ a:hover {
   padding: 1.5rem 0;
 }
 .garment p {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 .garment img {
-  margin: 0 0.5rem;
+  margin: 0 0.3rem;
   padding-bottom: 2rem;
+  width: 34px;
+}
+@media (min-width: 768px) {
+  .garment img {
+    margin: 0 0.5rem;
+    padding-bottom: 2rem;
+    width: auto;
+  }
 }
 .garment .clean {
   text-align: left;
@@ -1013,6 +1088,12 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 2rem;
+}
+@media (min-width: 768px) {
+  .newtechnology .new-technology {
+    padding: 0;
+  }
 }
 .newtechnology h4 {
   color: #004E42;
@@ -1045,6 +1126,10 @@ a:hover {
   margin: auto;
   font-weight: 500;
   text-align: justify;
+  line-height: 1.5rem;
+}
+.newtechnology .overviewPhoto {
+  padding: 0 2rem 2rem;
 }
 .newtechnology .overviewPhoto img {
   border-radius: 50%;
@@ -1086,6 +1171,7 @@ a:hover {
   margin: auto;
   font-weight: 500;
   text-align: justify;
+  line-height: 1.5rem;
 }
 
 .principles {
@@ -1103,6 +1189,7 @@ a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-bottom: 2rem;
 }
 .principles .principlesitem h4 {
   color: #004E42;
@@ -1116,6 +1203,7 @@ a:hover {
   text-align: justify;
   padding-top: 0.5rem;
   max-width: 290px;
+  line-height: 1.5rem;
 }
 
 .fiveActions {
@@ -1159,11 +1247,17 @@ a:hover {
 
 .YearinReview {
   text-align: center;
-  padding: 5rem 0;
+  padding: 3rem 2rem;
+}
+@media (min-width: 768px) {
+  .YearinReview {
+    padding: 5rem 0;
+  }
 }
 .YearinReview p {
   font-size: 0.8rem;
   padding-top: 3rem;
+  line-height: 1.5rem;
 }
 .YearinReview .year {
   display: -webkit-box;
@@ -1176,6 +1270,7 @@ a:hover {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: left;
+  padding-bottom: 2rem;
 }
 .YearinReview .year .yearimg {
   border-radius: 50%;
@@ -1197,11 +1292,18 @@ a:hover {
 @media (min-width: 768px) {
   .YearinReview .year p {
     padding-top: 3rem;
+    width: 160px;
   }
 }
 .YearinReview .arrow-left,
 .YearinReview .arrow-right {
-  margin: 0 2rem;
+  margin: 0 1rem;
+}
+@media (min-width: 768px) {
+  .YearinReview .arrow-left,
+  .YearinReview .arrow-right {
+    margin: 0 2rem;
+  }
 }
 .YearinReview .arrow-left {
   -webkit-transform: rotate(180deg);
