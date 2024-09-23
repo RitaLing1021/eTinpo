@@ -3,8 +3,8 @@ footer =/*html*/`
     <div class="container d-flex flex-md-row flex-column justify-content-around align-items-center p-3">
         <div><img src="image/footer-logo.png" alt="eTinpo-footerlogo"></div>
         <div class="text-center text-md-start py-3 footerLocation">
-            聯絡電話 / +886-6505-1179<br>
-            電子信箱 / sales@foresight-web.com.tw <br>
+            聯絡電話 / +886-6-505-1179<br>
+            電子信箱 / info@etinpo.com.tw <br>
             服務時間 / 週一至週五 9:30 A.M. to 5 P.M.<br>
             聯絡地址/74144台南市新市區創業路10號2樓<br>
             No. 10, Chuangye Rd., Xinshi Dist., Tainan City 74144 , Taiwan
