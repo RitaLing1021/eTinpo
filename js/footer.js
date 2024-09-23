@@ -10,11 +10,11 @@ footer =/*html*/`
             No. 10, Chuangye Rd., Xinshi Dist., Tainan City 74144 , Taiwan
         </div>
         <div class="text-center text-md-end">
-        <div class="footerBtn">
+        <!--<div class="footerBtn">
             <a href="#"><img src="image/icon-fb.png" alt="facebook"></a>
             <a href="#"><img src="image/icon-line.png" alt="Line"></a>
             <a href="#"><img src="image/icon-ig.png" alt="ig"></a>
-</div>
+</div>-->
             <div class="footerLink">
                 <a href="#">富邦技術</a>
                 <a href="#">關於我們</a>
