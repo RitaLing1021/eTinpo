@@ -84,6 +84,7 @@ header =/*html*/`
           </li>
         </ul>
       </div>
+      <div class="languageBox"><a href="https://etinpo.com.tw/">中</a>｜<a href="https://etinpo.com.tw/en/">EN</a></div>
     </div>
   </nav>
     </header>

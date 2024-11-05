@@ -1,7 +1,7 @@
 footer =/*html*/`
 <footer>
     <div class="container d-flex flex-md-row flex-column justify-content-around align-items-center p-3">
-        <div><img src="image/footer-logo.png" alt="eTinpo-footerlogo"></div>
+        <div><img src="https://etinpo.com.tw/image/footer-logo.png" alt="eTinpo-footerlogo"></div>
         <div class="text-center text-md-start py-3 footerLocation">
             聯絡電話 / +886-6-505-1179<br>
             電子信箱 / info@etinpo.com.tw <br>
