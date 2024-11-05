@@ -69,12 +69,14 @@
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='white' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     }
 
-    .languageBox{
+    .languageBox {
         color: #fff;
-        a{
-            color:#FFF;
+
+        a {
+            color: #FFF;
             transition: color 0.3s ease;
-            &:hover{
+
+            &:hover {
                 color: $yellow;
             }
         }
@@ -367,7 +369,8 @@
             bottom: 0;
             margin-left: 1rem;
             margin-bottom: 1rem;
-            @include b768{
+
+            @include b768 {
                 margin-left: 3rem;
                 margin-bottom: 10rem;
             }
@@ -442,6 +445,8 @@
         p {
             padding-top: .1rem;
             text-align: justify;
+            hyphens: auto;
+            word-break: break-word;
             font-size: .8rem;
 
         }
@@ -485,7 +490,8 @@
         background-size: 100% 100%;
         /* 確保背景圖充滿容器 */
         color: $green;
-        &::after{
+
+        &::after {
             font-size: 20px !important;
         }
     }
@@ -512,6 +518,8 @@
         padding: 5rem 4rem;
         letter-spacing: .1rem;
         text-align: justify;
+        hyphens: auto;
+        word-break: break-word;
 
         @include b768 {
             padding: 5rem .1rem;
@@ -545,71 +553,82 @@
             @include b768 {
                 font-size: 1rem;
                 text-align: justify;
+                hyphens: auto;
+                word-break: break-word;
             }
         }
     }
-    .application{
+
+    .application {
         background: $gray2;
         padding: 2rem;
-h4{
-    color:$green;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.7rem;
-    padding: 2rem 0 1rem 0;
-    line-height: 2rem;
-    span{
-        font-size: 0.9rem;
-        color: #FFF;
-        letter-spacing: 1px;
-    }
-}
-p{
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    text-align: justify;
-    @include b768{
-        text-align: center;
-    }
-}
 
-.techItem {
-    margin: 2rem 0;
-    display: flex;
-    text-align: left;
-    justify-content: center;
-    align-items: center;
+        h4 {
+            color: $green;
+            display: flex;
+            flex-direction: column;
+            font-size: 1.7rem;
+            padding: 2rem 0 1rem 0;
+            line-height: 2rem;
 
-    .techItemText {
-        padding-left: 2rem;
-
-        @include b768 {
-            padding-left: 0;
-
+            span {
+                font-size: 0.9rem;
+                color: #FFF;
+                letter-spacing: 1px;
+            }
         }
-    }
 
-    @include b768 {
-        display: block;
-        text-align: center;
+        p {
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-align: justify;
+            hyphens: auto;
+            word-break: break-word;
 
-    }
+            @include b768 {
+                text-align: center;
+            }
+        }
 
-    h5 {
-        color: $green;
-        padding: .5rem 0 .2rem;
-    }
+        .techItem {
+            margin: 2rem 0;
+            display: flex;
+            text-align: left;
+            justify-content: center;
+            align-items: center;
 
-    p {
-        font-size: .8rem;
-        font-weight: 600;
-        letter-spacing: 2px;
-        max-width: 230px;
-        margin: auto;
-        text-align: justify;
-    }
-}
+            .techItemText {
+                padding-left: 2rem;
+
+                @include b768 {
+                    padding-left: 0;
+
+                }
+            }
+
+            @include b768 {
+                display: block;
+                text-align: center;
+
+            }
+
+            h5 {
+                color: $green;
+                padding: .5rem 0 .2rem;
+            }
+
+            p {
+                font-size: .8rem;
+                font-weight: 600;
+                letter-spacing: 2px;
+                max-width: 230px;
+                margin: auto;
+                text-align: justify;
+                hyphens: auto;
+                word-break: break-all;
+            }
+        }
     }
 
     .product {
@@ -623,6 +642,8 @@ p{
             padding: 5rem .1rem;
             max-width: 414rem;
             text-align: justify;
+            hyphens: auto;
+            word-break: break-word;
             font-size: 1rem;
         }
 
@@ -671,6 +692,8 @@ p{
                 font-weight: 600;
                 letter-spacing: 2px;
                 text-align: justify;
+                hyphens: auto;
+                word-break: break-word;
 
                 @include b768 {
                     text-align: center;
@@ -1065,7 +1088,8 @@ p{
         .new-technology {
             align-items: center;
             padding: 0 2rem;
-            @include b768{
+
+            @include b768 {
                 padding: 0;
             }
         }
@@ -1094,11 +1118,14 @@ p{
             margin: auto;
             font-weight: 500;
             text-align: justify;
+            hyphens: auto;
+            word-break: break-word;
             line-height: 1.5rem;
         }
 
         .overviewPhoto {
             padding: 0 2rem 2rem;
+
             img {
                 border-radius: 50%;
             }
@@ -1134,6 +1161,8 @@ p{
             margin: auto;
             font-weight: 500;
             text-align: justify;
+            hyphens: auto;
+            word-break: break-word;
             line-height: 1.5rem;
         }
     }
@@ -1159,6 +1188,8 @@ p{
                 font-size: .9rem;
                 font-weight: 500;
                 text-align: justify;
+                hyphens: auto;
+                word-break: break-word;
                 padding-top: .5rem;
                 max-width: 290px;
                 line-height: 1.5rem;
@@ -1204,7 +1235,8 @@ p{
     .YearinReview {
         text-align: center;
         padding: 3rem 2rem;
-        @include b768{
+
+        @include b768 {
             padding: 5rem 0;
         }
 
@@ -1251,7 +1283,8 @@ p{
         .arrow-left,
         .arrow-right {
             margin: 0 1rem;
-            @include b768{
+
+            @include b768 {
                 margin: 0 2rem;
             }
         }

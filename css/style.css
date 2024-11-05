@@ -411,6 +411,9 @@ a:hover {
 .feature p {
   padding-top: 0.1rem;
   text-align: justify;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  word-break: break-word;
   font-size: 0.8rem;
 }
 
@@ -476,6 +479,9 @@ a:hover {
   padding: 5rem 4rem;
   letter-spacing: 0.1rem;
   text-align: justify;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  word-break: break-word;
   /*img {
       max-width: 100%;
 
@@ -508,6 +514,9 @@ a:hover {
   .technology .technologyText {
     font-size: 1rem;
     text-align: justify;
+    -webkit-hyphens: auto;
+            hyphens: auto;
+    word-break: break-word;
   }
 }
 
@@ -533,6 +542,9 @@ a:hover {
   font-weight: 600;
   letter-spacing: 2px;
   text-align: justify;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  word-break: break-word;
 }
 @media (min-width: 768px) {
   .application p {
@@ -571,6 +583,9 @@ a:hover {
   max-width: 230px;
   margin: auto;
   text-align: justify;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  word-break: break-all;
 }
 
 .product {
@@ -592,6 +607,9 @@ a:hover {
     padding: 5rem 0.1rem;
     max-width: 414rem;
     text-align: justify;
+    -webkit-hyphens: auto;
+            hyphens: auto;
+    word-break: break-word;
     font-size: 1rem;
   }
 }
@@ -628,6 +646,9 @@ a:hover {
   font-weight: 600;
   letter-spacing: 2px;
   text-align: justify;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  word-break: break-word;
 }
 @media (min-width: 768px) {
   .technologies .techsTheme p {
@@ -1005,6 +1026,9 @@ a:hover {
   margin: auto;
   font-weight: 500;
   text-align: justify;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  word-break: break-word;
   line-height: 1.5rem;
 }
 .newtechnology .overviewPhoto {
@@ -1041,6 +1065,9 @@ a:hover {
   margin: auto;
   font-weight: 500;
   text-align: justify;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  word-break: break-word;
   line-height: 1.5rem;
 }
 
@@ -1064,6 +1091,9 @@ a:hover {
   font-size: 0.9rem;
   font-weight: 500;
   text-align: justify;
+  -webkit-hyphens: auto;
+          hyphens: auto;
+  word-break: break-word;
   padding-top: 0.5rem;
   max-width: 290px;
   line-height: 1.5rem;

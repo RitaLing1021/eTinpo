@@ -1,0 +1,16 @@
+    // mixins
+    @import '../css/mixins/breakpoint';
+    @import '../css/mixins/color';
+  .YearinReview {
+  .year {
+      p {
+
+          @include b768 {
+              padding-top: .5rem;
+              width: 160px;
+
+          }
+
+      }
+  }
+}
