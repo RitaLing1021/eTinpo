@@ -1,6 +1,21 @@
     // mixins
-    @import '../css/mixins/breakpoint';
-    @import '../css/mixins/color';
+    @import 'mixins/breakpoint';
+    @import 'mixins/color';
+    * {
+        letter-spacing: 0.5px!important;
+      }
+    .newtechnology {
+        p{
+            text-align: left;
+        }
+    }
+    .principles {
+        .principlesitem{
+            p{
+                text-align: left;
+            }
+        }
+    }
   .YearinReview {
   .year {
       p {

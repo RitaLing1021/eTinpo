@@ -1,3 +1,15 @@
+* {
+  letter-spacing: 0.5px !important;
+}
+
+.newtechnology p {
+  text-align: left;
+}
+
+.principles .principlesitem p {
+  text-align: left;
+}
+
 @media (min-width: 768px) {
   .YearinReview .year p {
     padding-top: 0.5rem;

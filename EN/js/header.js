@@ -52,7 +52,7 @@ header =/*html*/`
       </button>
       
       <!-- 導航選單 -->
-      <div class="collapse navbar-collapse" id="navbarNav">
+      <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="technologies.html">Technologies</a>
@@ -83,8 +83,9 @@ header =/*html*/`
             <a class="nav-link" href="#">Our Partners</a>
           </li>
         </ul>
+              <div class="languageBox"><a href="https://etinpo.com.tw/">中</a>｜<a href="https://etinpo.com.tw/en/">EN</a></div>
       </div>
-      <div class="languageBox"><a href="https://etinpo.com.tw/">中</a>｜<a href="https://etinpo.com.tw/en/">EN</a></div>
+
     </div>
   </nav>
     </header>
