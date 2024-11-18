@@ -1,31 +1,37 @@
     // mixins
     @import 'mixins/breakpoint';
     @import 'mixins/color';
+
     * {
-        letter-spacing: 0.5px!important;
-      }
+        letter-spacing: 0.5px !important;
+    }
+
     .newtechnology {
-        p{
+        p {
             text-align: left;
         }
     }
-    .principles {
-        .principlesitem{
-            p{
-                text-align: left;
+
+    .YearinReview {
+        .year {
+            p {
+
+                @include b768 {
+                    padding-top: .5rem;
+                    width: 160px;
+
+                }
+
             }
         }
     }
-  .YearinReview {
-  .year {
-      p {
 
-          @include b768 {
-              padding-top: .5rem;
-              width: 160px;
-
-          }
-
-      }
-  }
-}
+    .application {
+        .techItem {
+            p {
+                word-wrap: break-word;
+                overflow-wrap: break-word;
+                white-space: normal;
+            }
+        }
+    }

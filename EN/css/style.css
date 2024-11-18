@@ -6,13 +6,15 @@
   text-align: left;
 }
 
-.principles .principlesitem p {
-  text-align: left;
-}
-
 @media (min-width: 768px) {
   .YearinReview .year p {
     padding-top: 0.5rem;
     width: 160px;
   }
+}
+
+.application .techItem p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
 }/*# sourceMappingURL=style.css.map */

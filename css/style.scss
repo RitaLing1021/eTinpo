@@ -445,8 +445,6 @@
         p {
             padding-top: .1rem;
             text-align: justify;
-            hyphens: auto;
-            word-break: break-word;
             font-size: .8rem;
 
         }
@@ -518,8 +516,6 @@
         padding: 5rem 4rem;
         letter-spacing: .1rem;
         text-align: justify;
-        hyphens: auto;
-        word-break: break-word;
 
         @include b768 {
             padding: 5rem .1rem;
@@ -553,8 +549,6 @@
             @include b768 {
                 font-size: 1rem;
                 text-align: justify;
-                hyphens: auto;
-                word-break: break-word;
             }
         }
     }
@@ -583,8 +577,6 @@
             font-weight: 600;
             letter-spacing: 2px;
             text-align: justify;
-            hyphens: auto;
-            word-break: break-word;
 
             @include b768 {
                 text-align: center;
@@ -625,8 +617,6 @@
                 max-width: 230px;
                 margin: auto;
                 text-align: justify;
-                hyphens: auto;
-                word-break: break-all;
             }
         }
     }
@@ -642,8 +632,6 @@
             padding: 5rem .1rem;
             max-width: 414rem;
             text-align: justify;
-            hyphens: auto;
-            word-break: break-word;
             font-size: 1rem;
         }
 
@@ -692,8 +680,6 @@
                 font-weight: 600;
                 letter-spacing: 2px;
                 text-align: justify;
-                hyphens: auto;
-                word-break: break-word;
 
                 @include b768 {
                     text-align: center;
@@ -1118,8 +1104,6 @@
             margin: auto;
             font-weight: 500;
             text-align: justify;
-            hyphens: auto;
-            word-break: break-word;
             line-height: 1.5rem;
         }
 
@@ -1161,8 +1145,6 @@
             margin: auto;
             font-weight: 500;
             text-align: justify;
-            hyphens: auto;
-            word-break: break-word;
             line-height: 1.5rem;
         }
     }
@@ -1189,8 +1171,6 @@
                 font-size: .9rem;
                 font-weight: 500;
                 text-align: justify;
-                hyphens: auto;
-                word-break: break-word;
                 padding-top: .5rem;
                 max-width: 290px;
                 line-height: 1.5rem;
