@@ -6,7 +6,7 @@ footer =/*html*/`
             Phone / +886-6-505-1179<br>
             Email / info@etinpo.com.tw <br>
             Monday to Friday 9:30 A.M. to 5 P.M.<br>
-            2F., No. 10, Chuangye Rd., Xinshi Dist., Tainan City 74144
+            2F., No. 10, Chuangye Rd., Xinshi Dist., Tainan City 74144, Taiwan
         </div>
         <div class="text-center text-md-end">
         <!--<div class="footerBtn">
