@@ -1,0 +1,94 @@
+.application {
+  background: linear-gradient(180deg, #D5DEE1, #7C9E98);
+  padding-bottom: 25rem;
+
+
+  .applicationBanner {
+    position: relative;
+
+    .applicationBanner_bg {
+      position: relative;
+    }
+
+    .applicationBanner_clothes {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 80px;
+      margin: auto;
+    }
+
+    .applicationBanner_text {
+      position: absolute;
+      bottom: 18rem;
+      left: 5rem;
+    }
+  }
+
+
+  h4 {
+    color: $green;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.7rem;
+    padding: 2rem 0 1rem 0;
+    line-height: 2rem;
+
+    span {
+      font-size: 0.9rem;
+      color: #FFF;
+      letter-spacing: 1px;
+    }
+  }
+
+  p {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-align: justify;
+
+    @include b768 {
+      text-align: center;
+    }
+  }
+
+  .techItem {
+    margin: 2rem 0;
+
+    .techPhoto {
+      position: relative;
+      margin: 2rem 0;
+
+      .techPhoto02 {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 7rem;
+        margin: auto;
+        text-align: center;
+      }
+    }
+
+    .techItemText {
+      padding-left: 2rem;
+
+      p {
+        font-size: .8rem;
+        font-weight: 400;
+        letter-spacing: 2px;
+        margin: auto;
+        text-align: left;
+        color: #595757;
+        font-family: "Noto Sans TC", sans-serif;
+
+        .en {
+          font-family: "Inter", sans-serif;
+
+        }
+      }
+    }
+
+
+  }
+
+}

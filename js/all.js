@@ -7,14 +7,14 @@ window.addEventListener('scroll', function () {
     navbar.style.backgroundColor = navbar.offsetHeight > 80 ? '#004E42' : '#004E42';
     navLinks.forEach(link => {
       if (navbar.offsetHeight > 80) {
-        link.style.color = '#004E42'; // 當高度超過 80px 時，連結文字顏色變為白色
+        link.style.color = '#fff'; // 當高度超過 80px 時，連結文字顏色變為白色
       } else {
         link.style.color = '#FFF'; // 高度未超過 80px 時，連結文字顏色變為 #004E42
       }
     });
     dropDown.forEach(link => {
       if (navbar.offsetHeight > 80) {
-        link.style.color = '#004E42'; // 當高度超過 80px 時，連結文字顏色變為白色
+        link.style.color = '#fff'; // 當高度超過 80px 時，連結文字顏色變為白色
       } else {
         link.style.color = '#FFF'; // 高度未超過 80px 時，連結文字顏色變為 #004E42
       }
@@ -27,9 +27,9 @@ window.addEventListener('scroll', function () {
       }
     });
   } else {
-    navbar.style.backgroundColor = 'transparent';
-    navLinks.forEach(link => {link.style.color = '#004E42';}); // 連結文字顏色變為 #004E42
-    dropDown.forEach(link => {link.style.color = '#004E42';}); // 連結文字顏色變為 #004E42
+    navbar.style.backgroundColor = '#004E42';
+    navLinks.forEach(link => {link.style.color = '#fff';}); // 連結文字顏色變為 #004E42
+    dropDown.forEach(link => {link.style.color = '#fff';}); // 連結文字顏色變為 #004E42
     dropdownMenus.forEach(menu => menu.style.backgroundColor = 'transparent'); // 當回到頂部時，下拉選單也保持透明
   }
 });
@@ -44,7 +44,7 @@ document.addEventListener('scroll', function() {
       });
   } else {
       logoSVG.querySelectorAll('.cls-1').forEach(function(path) {
-          path.style.fill = '#004E42'; // 初始時綠色
+          path.style.fill = '#fff'; // 初始時綠色
       });
   }
 });
@@ -69,7 +69,7 @@ function updateNavLinkColors() {
       if (scrollHeight > 80) {
         link.style.color = "#FFF";
       } else {
-        link.style.color = "#004E42";
+        link.style.color = "#fff";
       }
     }
   });

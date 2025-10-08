@@ -1,0 +1,101 @@
+    .contact {
+      background: url('../image/contact/cloth-w.png') no-repeat top right,
+        linear-gradient(180deg, #D5DEE1 0%, #A7AFB4 100%);
+      color: $green;
+      padding-top: 80px;
+
+      .title {
+        text-align: center;
+      }
+
+      h3 {
+        padding-top: 3rem;
+        color: $green;
+        font-size: 2rem;
+        font-weight: 500;
+        letter-spacing: 3px;
+
+      }
+
+      h4 {
+        color: #fff;
+        font-size: 4rem;
+        font-weight: 600;
+        letter-spacing: 3px;
+        font-family: "Inter", sans-serif;
+        padding-bottom: 5rem;
+
+      }
+
+      .contactTheme {
+        text-align: center;
+        flex-direction: column;
+        padding-top: 5rem;
+
+        @include b1024 {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+          text-align: left;
+        }
+
+        .contactPhoto {
+          .pic1 {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: -5rem;
+            z-index: 9;
+            position: relative;
+          }
+
+          .pic2 {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+          }
+        }
+
+        .contactText {
+          padding: 1rem 0 3rem;
+
+          @include b1024 {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0;
+          }
+
+          p {
+            font-size: .8rem;
+            margin-bottom: .5rem;
+          }
+
+
+          .contactInformation {
+            display: flex;
+            flex-direction: column;
+            padding-left: 2rem;
+          }
+        }
+      }
+
+      .contactFooter {
+        background: url('../image/contact/cloth-w2.png') no-repeat top left;
+        background-size: 100%;
+        padding-top: 20rem;
+        padding-bottom: 25rem;
+        margin-top: -10rem;
+
+        .companyIcon {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+        }
+        
+          .nanke{
+            margin-right: 20rem;
+          }
+      }
+    }

@@ -1,8 +1,18 @@
     /*字體*/
     @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Tenor+Sans&display=swap');
     // mixins
     @import 'mixins/breakpoint';
     @import 'mixins/color';
+    // 分頁
+    @import 'pages/partners';
+    @import 'pages/responsibility';
+    @import 'pages/clean';
+    @import 'pages/develop';
+    @import 'pages/contact';
+    @import 'pages/application';
+    @import 'pages/technologies';
+
 
     /* 針對桌面版進行設定 */
     @media (min-width: 992px) {
@@ -15,6 +25,7 @@
 
     body {
         font-family: "Noto Sans TC", sans-serif;
+        position: relative;
     }
 
     a {
@@ -89,9 +100,10 @@
         z-index: 99;
         width: 100%;
         transition: background-color 0.3s ease;
+        background: $green;
 
         svg {
-            fill: $green;
+            fill: #fff;
         }
 
         .cls-1 {
@@ -143,6 +155,7 @@
             .dropdown-item {
                 position: relative;
                 transition: color 0.3s ease;
+                color: #fff;
 
                 &::after {
                     content: '';
@@ -166,26 +179,37 @@
     }
 
     .banner {
-        background: url(../image/bn-bg.png) right;
+        background: linear-gradient(180deg, #004632, #001A12);
         position: relative;
         height: 30rem;
-        overflow: hidden;
+        overflow: initial;
 
-        .eTINPO-bn {
+        .eTINPO-bn-w {
             position: absolute;
-            right: -186%;
-            top: 0;
-            z-index: 1;
+            max-width: 100%;
+            top: -10%;
+            z-index: 4;
 
-            @include b768 {
-                right: -60%;
-                top: 0;
-            }
+            @include b768 {}
 
-            @include b992 {
-                right: 0;
-                top: 0;
-            }
+            @include b992 {}
+
+        }
+
+        .eTINPO-bn-g {
+            position: absolute;
+            max-width: 100%;
+            top: 5%;
+            z-index: 3;
+
+            @include b768 {}
+
+            @include b992 {}
+
+        }
+
+        .bannerTextGroup {
+            position: relative;
 
         }
 
@@ -196,93 +220,23 @@
 
         .banner02 {
             position: absolute;
-            max-width: 90%;
-            top: 15rem;
-            left: 1rem;
-            z-index: 3;
-
-            @include b768 {
-                position: absolute;
-                z-index: 4;
-                top: 30%;
-                left: 5%;
-                max-width: 20rem;
-            }
-
-            @include b1024 {
-                left: 20%;
-                max-width: 37rem;
-            }
+            top: 70px;
+            left: 52%;
+            z-index: 10;
         }
 
         .banner03 {
             position: absolute;
-            max-width: 5rem;
-            left: 1rem;
-            bottom: 3rem;
+            z-index: 10;
+            bottom: 5%;
+            left: 60%;
 
-            @include b768 {
-                position: absolute;
-                z-index: 3;
-                bottom: 5%;
-                left: 70%;
-                max-width: 10rem;
-            }
+            @include b768 {}
 
-            @include b1024 {
-                left: 60%;
-                bottom: 10%;
-                max-width: 17rem;
-            }
+            @include b1024 {}
         }
     }
 
-    .bannerTechs {
-        background-image: url('../image/techs-bg.png');
-        min-height: 45vh;
-        position: relative;
-        overflow: hidden;
-
-        .bannerText {
-            position: relative;
-        }
-
-        .banner02 {
-            position: absolute;
-            left: 2rem;
-            top: 6rem;
-            width: 50%;
-
-            @include b768 {
-                left: 2rem;
-                top: 6rem;
-                width: auto;
-            }
-
-            @include b1140 {
-                right: 6rem;
-                top: 6rem;
-            }
-        }
-
-        .banner03 {
-            position: absolute;
-            right: 2rem;
-            top: 9rem;
-            width: 300px;
-
-            @include b768 {
-                right: 2rem;
-                top: 4rem;
-                width: auto;
-            }
-
-            @include b1140 {
-                right: 13rem;
-                top: 7rem;
-            }
-        }
-    }
 
     .bannerProduct {
         background: url('../image/product-bg-100.jpg') right bottom;
@@ -382,38 +336,46 @@
         }
     }
 
+    .technologyFeature {
+        background: linear-gradient(180deg, #D5DEE1 0%, #D5DEE1 70%, #004632 100%);
+        position: relative;
+
+    }
+
     .feature {
-        background: #C6C6C6;
         color: #323232;
         padding: 4rem 2rem;
 
+        .container {
+            max-width: 980px;
+        }
+
         @include b768 {
-            padding: 4rem 0;
+            padding: 4rem 0 32rem 0;
         }
 
         .featureTheme {
             max-width: 50rem;
-            margin: 3rem auto;
             letter-spacing: 2px;
+
+            &:nth-child(even) {
+                margin-top: 10rem;
+            }
 
             .featureText {
                 h4 {
                     font-size: 1.2rem;
+                    display: flex;
+                    flex-direction: column;
 
                     @include b768 {
-                        font-size: 1.5rem;
+                        font-size: 2rem;
                     }
                 }
             }
         }
 
         .featurePhoto {
-            padding-right: 1rem;
-
-            @include b768 {
-                padding-right: 3rem;
-            }
-
             img {
 
                 width: 70px;
@@ -426,31 +388,59 @@
         }
 
         h4 {
-            font-family: Arial, Helvetica, sans-serif;
-            font-weight: 700;
+            font-family: "Inter", sans-serif;
+            font-style: italic;
+            font-weight: 500;
             color: $green;
-            font-size: 1.5rem;
+            font-size: 4rem;
+
 
             @include b768 {
-                font-size: 2rem;
+                font-size: 3rem;
             }
         }
 
         span {
-            color: #FFF;
-            font-size: 13px;
-            padding-left: 5px;
+            font-family: "Noto Sans", sans-serif;
+            font-style: normal;
+            color: $green;
+            font-weight: 400;
+            font-size: 2rem;
         }
 
         p {
             padding-top: .1rem;
             text-align: justify;
-            font-size: .8rem;
+            font-size: .7rem;
+            color: #fff;
+            letter-spacing: 1px;
 
         }
 
     }
 
+    .featureCloth {
+        position: absolute;
+        bottom: -22rem;
+
+        .photo_01 {
+            position: absolute;
+            max-width: 100%;
+            height: auto;
+            right: 0;
+            bottom: 0rem;
+            z-index: 2;
+        }
+
+        .photo_02 {
+            position: relative;
+            max-width: 100%;
+            height: auto;
+            left: 0;
+            bottom: 10rem;
+            z-index: 1;
+        }
+    }
 
     .swiper {
         width: 100%;
@@ -495,32 +485,13 @@
     }
 
 
-    .slogan {
-
-        background: url(../image/bg.png) #C6C6C6;
-        background-size: cover;
-        padding: 4rem 1rem;
-
-        img {
-            max-width: 100%;
-            filter: drop-shadow(0px 0px 3px rgba(0, 0, 0, .5));
-
-            @include b768 {
-                max-width: 495rem;
-                filter: none;
-            }
-        }
-    }
 
     .technology {
-        padding: 5rem 4rem;
         letter-spacing: .1rem;
         text-align: justify;
+        padding-bottom: 10rem;
 
-        @include b768 {
-            padding: 5rem .1rem;
-
-        }
+        @include b768 {}
 
         /*img {
             max-width: 100%;
@@ -531,106 +502,80 @@
         }*/
 
         .technologyPhoto {
-            padding-bottom: 3rem;
+            position: relative;
 
             @include b768 {
                 padding-bottom: 0;
             }
+
+            .photo_01 {
+                position: absolute;
+                max-width: 100%;
+                right: 0;
+                top: -10rem;
+                z-index: 2;
+            }
+
+            .photo_02 {
+                position: relative;
+                max-width: 100%;
+                left: 0;
+                top: 10rem;
+                z-index: 1;
+            }
+
+            .technologySlogan {
+                position: absolute;
+                top: 14rem;
+                left: 15rem;
+                z-index: 9;
+                display: flex;
+                flex-direction: column;
+            }
         }
+
 
         .technologyText {
+            position: absolute;
+            bottom: 3rem;
+            right: 15rem;
+            background: rgba($color: #FFC200, $alpha: 0.7);
+            max-width: 380px;
+            z-index: 10;
             font-size: .8rem;
-            text-align: center;
-
-            p {
-                font-size: .8rem;
-            }
-
-            @include b768 {
-                font-size: 1rem;
-                text-align: justify;
-            }
-        }
-    }
-
-    .application {
-        background: $gray2;
-        padding: 2rem;
-
-        h4 {
-            color: $green;
-            display: flex;
-            flex-direction: column;
-            font-size: 1.7rem;
-            padding: 2rem 0 1rem 0;
-            line-height: 2rem;
-
-            span {
-                font-size: 0.9rem;
-                color: #FFF;
-                letter-spacing: 1px;
-            }
-        }
-
-        p {
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 2px;
             text-align: justify;
+            padding: 30px 15px;
+            color: #fff;
 
-            @include b768 {
-                text-align: center;
-            }
-        }
-
-        .techItem {
-            margin: 2rem 0;
-            display: flex;
-            text-align: left;
-            justify-content: center;
-            align-items: center;
-
-            .techItemText {
-                padding-left: 2rem;
-
-                @include b768 {
-                    padding-left: 0;
-
-                }
+            h3 {
+                font-family: "Inter", sans-serif;
+                font-weight: 700;
+                padding-bottom: 1rem;
             }
 
-            @include b768 {
-                display: block;
-                text-align: center;
-
-            }
-
-            h5 {
-                color: $green;
-                padding: .5rem 0 .2rem;
+            h4 {
+                font-size: 1.1rem;
+                font-weight: 600;
             }
 
             p {
                 font-size: .8rem;
-                font-weight: 600;
-                letter-spacing: 2px;
-                max-width: 230px;
-                margin: auto;
-                text-align: justify;
+                font-weight: 500;
             }
+
+
         }
     }
 
     .product {
-        background: #DADADA;
+        background: #DCE4E5;
         padding: 5rem 4rem;
         letter-spacing: .1rem;
         text-align: center;
         font-size: .8rem;
 
         @include b768 {
-            padding: 5rem .1rem;
-            max-width: 414rem;
+            padding: 5rem .1rem 15rem;
             text-align: justify;
             font-size: 1rem;
         }
@@ -648,46 +593,169 @@
                 max-width: 414rem;
             }
         }*/
-    }
+        .product_01 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
 
-    .technologies {
-        background: $gray;
-        padding: 5rem 4rem;
+            .productPhoto {
+                position: relative;
+                max-width: 570px;
 
-        @include b768 {
-            padding: 5rem 0;
-        }
-
-        .techsTheme {
-            text-align: center;
-
-            h4 {
-                color: $green;
-                display: flex;
-                flex-direction: column;
-                font-size: 1.7rem;
-                padding: 2rem 0 1rem 0;
-
-                span {
-                    font-size: .9rem;
-                    color: #FFF;
-                    letter-spacing: 1px;
+                .productText {
+                    position: absolute;
+                    bottom: 5rem;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
                 }
             }
 
             p {
                 font-size: .8rem;
+                color: #595857;
                 font-weight: 600;
-                letter-spacing: 2px;
-                text-align: justify;
 
-                @include b768 {
-                    text-align: center;
+            }
+
+            a {
+                display: flex;
+            }
+        }
+
+        .product_02 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-top: 15rem;
+
+            .productPhoto {
+                position: relative;
+                max-width: 570px;
+
+                .productText {
+                    position: absolute;
+                    bottom: 5rem;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
                 }
+            }
+
+            p {
+                font-size: .8rem;
+                color: #595857;
+                font-weight: 600;
 
             }
         }
+
+        .product_03 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+
+            .productPhoto {
+                position: relative;
+                max-width: 570px;
+
+                .productText {
+                    position: absolute;
+                    bottom: 5rem;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+            }
+
+            .gloves {
+                padding-left: 20rem;
+                margin-top: -4rem;
+                z-index: 9;
+            }
+
+            p {
+                font-size: .8rem;
+                color: #595857;
+                font-weight: 600;
+
+            }
+
+            a {
+                display: flex;
+            }
+        }
+
+        .product_04 {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-top: 15rem;
+
+            .productPhoto {
+                position: relative;
+                max-width: 570px;
+
+                .productText {
+                    position: absolute;
+                    bottom: 2rem;
+                    left: 0;
+                    right: 0;
+                    margin: auto;
+                }
+            }
+
+            p {
+                font-size: .8rem;
+                color: #595857;
+                font-weight: 600;
+            }
+        }
     }
+
+    .partner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-left: 20rem;
+        margin-top: -10rem;
+        padding-bottom: 5rem;
+        z-index: 10;
+
+        img {
+            margin-bottom: 1rem;
+        }
+
+        .partnerText {
+            background: rgba($color: #FFC200, $alpha: 0.7);
+            max-width: 420px;
+            z-index: 10;
+            font-size: .8rem;
+            text-align: justify;
+            margin-top: 2rem;
+            padding: 30px 15px;
+            color: #fff;
+
+            h3 {
+                font-family: "Inter", sans-serif;
+                font-weight: 700;
+                padding-bottom: 1rem;
+            }
+
+            h4 {
+                font-size: 1.1rem;
+                font-weight: 600;
+            }
+
+            p {
+                font-size: .8rem;
+                font-weight: 500;
+            }
+
+        }
+    }
+
+
 
     .advantage {
         background: $gray2;
@@ -779,49 +847,6 @@
 
     }
 
-    .contact {
-        background: $gray;
-        color: $green;
-        padding-top: 80px;
-
-        .contactTheme {
-            text-align: center;
-            flex-direction: column;
-
-            @include b1024 {
-                height: 70vh;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-                text-align: left;
-            }
-
-            .contactText {
-                padding: 1rem 0 3rem;
-
-                @include b1024 {
-                    position: relative;
-                    height: 35vh;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    padding: 0;
-                }
-
-                p {
-                    font-size: .8rem;
-                    margin-bottom: .5rem;
-                }
-
-                .contact-bottom {
-                    padding-top: 2rem;
-                }
-
-
-            }
-        }
-    }
 
     .Material {
         background: $gray;
@@ -1014,59 +1039,6 @@
             }
         }
     }
-
-    .garment {
-        background: $gray2;
-        padding: 2rem 2rem 100px 2rem;
-        text-align: center;
-        letter-spacing: 1px;
-
-        @include b768 {
-            padding: 100px 0;
-        }
-
-        .container {
-            max-width: 600px;
-        }
-
-        h4 {
-            color: $green;
-            font-size: 1.8rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-            padding: 1.5rem 0;
-        }
-
-        p {
-            font-size: .8rem;
-        }
-
-        img {
-            margin: 0 0.3rem;
-            padding-bottom: 2rem;
-            width: 34px;
-
-            @include b768 {
-                margin: 0 .5rem;
-                padding-bottom: 2rem;
-                width: 60px;
-            }
-        }
-
-        .clean {
-            text-align: left;
-
-            h5 {
-                font-size: 1.5rem;
-                font-weight: 600;
-                padding-top: 2rem;
-            }
-        }
-    }
-
     .newtechnology {
         background: $gray2;
         padding: 4rem 0;
@@ -1213,74 +1185,29 @@
         }
     }
 
-    .YearinReview {
-        text-align: center;
-        padding: 3rem 2rem;
-
-        @include b768 {
-            padding: 5rem 0;
-        }
-
-        p {
-            font-size: .8rem;
-            padding-top: 3rem;
-            line-height: 1.5rem;
-        }
-
-        .year {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: left;
-            padding-bottom: 2rem;
-
-            .yearimg {
-                border-radius: 50%;
-                width: 50%;
-
-                @include b768 {
-                    width: auto;
-                }
-            }
-
-            h5 {
-                font-family: Arial, Helvetica, sans-serif;
-                font-weight: 700;
-                font-size: 1.8rem;
-            }
-
-            p {
-                padding-top: 0;
-
-                @include b768 {
-                    padding-top: 3rem;
-                    width: 160px;
-
-                }
-
-            }
-        }
-
-        .arrow-left,
-        .arrow-right {
-            margin: 0 1rem;
-
-            @include b768 {
-                margin: 0 2rem;
-            }
-        }
-
-        .arrow-left {
-            transform: rotate(180deg);
-        }
-    }
 
     footer {
-        background: #9C9C9D;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
         color: #fff;
         font-size: 12px;
         line-height: 20px;
         letter-spacing: 1px;
+
+        .footer {
+            background: $green;
+        }
+
+        .footerBg {
+            position: absolute;
+            top: -21rem;
+            width: 100%;
+
+            img {
+                width: 100%;
+            }
+        }
 
         .footerBtn {
             padding-bottom: 1rem;
@@ -1305,10 +1232,16 @@
 
         .footerLink {
             letter-spacing: 2px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
         }
 
         .copyRight {
-            background: $green;
+            background: $gray3;
+            color: $green;
             text-align: center;
             padding: 10px;
             letter-spacing: 1px;

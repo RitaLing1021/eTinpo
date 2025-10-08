@@ -55,32 +55,34 @@ header =/*html*/`
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="technologies.html">富邦技術</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="about.html">關於我們</a>
+            <a class="nav-link" aria-current="page" href="technologies.html">TECHNOLOGY</a>
           </li>
           <!-- 下拉選單 -->
-          <!--<li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              關於我們
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="about.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              ABOUT US
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="about.html">概述</a></li>
-              <li><a class="dropdown-item" href="#">責任</a></li>
-              <li><a class="dropdown-item" href="#">發展</a></li>
-              <li><a class="dropdown-item" href="#">環境</a></li>
-              <li><a class="dropdown-item" href="#">研發(特別研發對象)</a></li>
+              <li><a class="dropdown-item" href="responsibility.html">責任</a></li>
+              <li><a class="dropdown-item" href="develop.html">發展</a></li>
             </ul>
-          </li>-->
-          <li class="nav-item">
-            <a class="nav-link" href="product-features.html">產品總覽</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="about.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              PRODUCT
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="about.html">功能與機能</a></li>
+              <li><a class="dropdown-item" href="application.html">應用類別</a></li>
+              <li><a class="dropdown-item" href="clean.html">清潔與保養</a></li>
+            </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">聯絡我們</a>
+            <a class="nav-link" href="contact.html">CONTACT</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">合作案例</a>
+            <a class="nav-link" href="partners.html">PARTNERS</a>
           </li>
         </ul>
       </div>
