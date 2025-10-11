@@ -98,6 +98,7 @@ var swiper = new Swiper('.swiper', {
     // 當螢幕寬度大於等於768px，顯示三張
     1024: {
       slidesPerView: 3,
+      slidesPerGroup: 1,
     }
   },
 });

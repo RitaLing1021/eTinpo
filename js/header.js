@@ -73,7 +73,7 @@ header =/*html*/`
               PRODUCT
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="about.html">功能與機能</a></li>
+              <li><a class="dropdown-item" href="product.html">功能與機能</a></li>
               <li><a class="dropdown-item" href="application.html">應用類別</a></li>
               <li><a class="dropdown-item" href="clean.html">清潔與保養</a></li>
             </ul>

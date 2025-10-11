@@ -12,6 +12,8 @@
     @import 'pages/contact';
     @import 'pages/application';
     @import 'pages/technologies';
+    @import 'pages/about';
+    @import 'pages/product';
 
 
     /* 針對桌面版進行設定 */
@@ -53,7 +55,7 @@
     }
 
     .dropdown-menu {
-        background: transparent;
+        background: $green;
         border: none;
     }
 
@@ -149,7 +151,7 @@
         }
 
         .dropdown-menu {
-            background-color: transparent; // 初始狀態為透明
+            background-color: $green;
             transition: background-color 0.3s ease;
 
             .dropdown-item {
@@ -290,51 +292,6 @@
         }
     }
 
-    .bannerAbout {
-        background: url('../image/about-bn-bg.png') right top $gray2;
-        background-size: cover;
-        min-height: 45vh;
-        max-height: 560px;
-
-        .AboutSlogan {
-            position: relative;
-            overflow: hidden;
-            color: #FFF;
-            height: 60vh;
-
-            .AboutBn {
-                position: absolute;
-                top: 0;
-                left: -25%;
-                height: auto;
-
-                @include b768 {
-                    left: 0;
-                }
-            }
-        }
-
-        .bannerText {
-            display: flex;
-            flex-direction: column;
-            align-content: flex-start;
-            align-items: flex-start;
-            position: absolute;
-            bottom: 0;
-            margin-left: 1rem;
-            margin-bottom: 1rem;
-
-            @include b768 {
-                margin-left: 3rem;
-                margin-bottom: 10rem;
-            }
-
-            p {
-                font-size: .8rem;
-                padding-top: 1rem;
-            }
-        }
-    }
 
     .technologyFeature {
         background: linear-gradient(180deg, #D5DEE1 0%, #D5DEE1 70%, #004632 100%);
@@ -567,32 +524,11 @@
         }
     }
 
-    .product {
-        background: #DCE4E5;
-        padding: 5rem 4rem;
-        letter-spacing: .1rem;
-        text-align: center;
-        font-size: .8rem;
+    .homeproduct {
+        background: #D5DEE1;
+        padding-top: 60px;
+        padding-bottom: 25rem;
 
-        @include b768 {
-            padding: 5rem .1rem 15rem;
-            text-align: justify;
-            font-size: 1rem;
-        }
-
-        .productText {
-            p {
-                font-size: .8rem;
-            }
-        }
-
-        /*img {
-            max-width: 100%;
-
-            @include b768 {
-                max-width: 414rem;
-            }
-        }*/
         .product_01 {
             display: flex;
             flex-direction: column;
@@ -754,7 +690,6 @@
 
         }
     }
-
 
 
     .advantage {
@@ -1039,151 +974,6 @@
             }
         }
     }
-    .newtechnology {
-        background: $gray2;
-        padding: 4rem 0;
-
-        .new-technology {
-            align-items: center;
-            padding: 0 2rem;
-
-            @include b768 {
-                padding: 0;
-            }
-        }
-
-        h4 {
-            color: $green;
-            font-size: 1.8rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            max-width: 430px;
-            margin: auto;
-
-            span {
-                color: #fff;
-                font-size: 1rem;
-                font-weight: 400;
-            }
-        }
-
-        p {
-            padding: .7rem 0;
-            max-width: 430px;
-            font-size: .9rem;
-            margin: auto;
-            font-weight: 500;
-            text-align: justify;
-            line-height: 1.5rem;
-        }
-
-        .overviewPhoto {
-            padding: 0 2rem 2rem;
-
-            img {
-                border-radius: 50%;
-            }
-        }
-    }
-
-    .eco {
-        background: $gray;
-        padding: 8rem 1rem 6rem;
-
-        h4 {
-            color: $green;
-            font-size: 1.8rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            max-width: 430px;
-            margin: auto;
-
-            span {
-                padding-top: 1rem;
-                color: #fff;
-                font-size: 1rem;
-                font-weight: 400;
-            }
-        }
-
-        p {
-            padding: 3rem 0;
-            max-width: 430px;
-            font-size: .9rem;
-            margin: auto;
-            font-weight: 500;
-            text-align: justify;
-            line-height: 1.5rem;
-        }
-    }
-
-    .principles {
-        background: $gray2;
-        padding: 8rem 0 2rem;
-
-        .principlesitem {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            padding-bottom: 2rem;
-
-            h4 {
-                color: $green;
-                font-size: 1.8rem;
-                font-weight: 700;
-                padding-top: .5rem;
-                text-align: center;
-            }
-
-            p {
-                font-size: .9rem;
-                font-weight: 500;
-                text-align: justify;
-                padding-top: .5rem;
-                max-width: 290px;
-                line-height: 1.5rem;
-            }
-        }
-    }
-
-    .fiveActions {
-        background: $gray;
-        color: #fff;
-        padding: 5rem 0;
-
-        h4 {
-            color: $green;
-            font-size: 1.8rem;
-            font-weight: 700;
-            text-align: center;
-        }
-
-        .operation {
-            text-align: center;
-            position: relative;
-            margin: 2rem 0;
-
-            p {
-                font-weight: 300;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                text-align: center;
-                margin-bottom: 0;
-                position: absolute;
-                left: 0;
-                right: 0;
-                top: 0;
-                bottom: 0;
-                margin: auto;
-                max-width: 290px;
-            }
-        }
-    }
 
 
     footer {
@@ -1194,6 +984,7 @@
         font-size: 12px;
         line-height: 20px;
         letter-spacing: 1px;
+        z-index: 99;
 
         .footer {
             background: $green;

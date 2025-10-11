@@ -1,0 +1,185 @@
+.bannerAbout {
+  background: linear-gradient(180deg, #004632 0%, #001A12 100%);
+
+  .AboutSlogan {
+    background: url("../image/about/cloth.png") left 15rem no-repeat;
+    background-size: 100%;
+    position: relative;
+    overflow: initial;
+    color: #FFF;
+
+  }
+
+  .bannerText {
+    padding-top: 5rem;
+    display: flex;
+    flex-direction: column;
+
+    .bannerText01 {
+      padding-top: 5rem;
+      z-index: 10;
+
+    }
+
+    .bannerText02 {
+      padding-top: 3rem;
+      z-index: 10;
+
+    }
+
+    .bannerText03 {
+      padding-top: 8rem;
+      margin-left: 10rem;
+      z-index: 10;
+    }
+
+    .bannerText04 {
+      position: absolute;
+      bottom: 10rem;
+      left: 0;
+      right: 0;
+      z-index: 10;
+      margin: auto;
+      padding-left: 10rem;
+    }
+
+
+    p {
+      font-size: .8rem;
+      padding-top: 1rem;
+    }
+  }
+}
+
+
+.newtechnology {
+  background: linear-gradient(90deg, #001A12 7%, #D5DEE1 7%, #D5DEE1 100%);
+  padding: 4rem 0 10rem;
+  position: relative;
+
+  .new-technology {
+    align-items: center;
+    padding: 0 2rem;
+
+    @include b768 {
+      padding: 0;
+    }
+  }
+
+  p {
+    padding: .7rem 0;
+    max-width: 430px;
+    font-size: .9rem;
+    margin: auto;
+    font-weight: 500;
+    text-align: justify;
+    line-height: 1.5rem;
+    color: #595757;
+  }
+
+  .overviewPhoto {
+    padding: 0 2rem 2rem;
+
+    img {
+      border-radius: 50%;
+    }
+  }
+}
+
+.AboutBn02 {
+  position: absolute;
+  bottom: 5rem;
+  height: auto;
+  width: 100%;
+  z-index: 4;
+
+  @include b768 {
+    left: 0;
+  }
+}
+
+.AboutBn03 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: auto;
+  z-index: 3;
+
+}
+
+.eco {
+  background: linear-gradient(180deg, #001A12 0%, #004632 100%);
+  padding-bottom: 11rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  .ecoTop {
+    width: 100%;
+    margin-top: -125px;
+    position: relative;
+    z-index: 2;
+
+  }
+
+  .ecoText {
+    z-index: 6;
+  }
+
+  .colth5 {
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
+
+}
+
+.principles {
+  background: linear-gradient(180deg, #CFE9ED 0%, #386A6E 100%);
+  position: relative;
+  padding-bottom: 20rem;
+
+  .smallItems {
+    display: flex;
+    position: absolute;
+    top: 5%;
+    right: 25%;
+    z-index: 9;
+    align-items: flex-end;
+  }
+
+  .principlesitem {
+    padding-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-end;
+
+    .itemText {
+      padding-bottom: 10rem;
+      padding-right: 3rem;
+    }
+
+
+    p {
+      font-size: .9rem;
+      font-weight: 500;
+      text-align: justify;
+      padding-top: .5rem;
+      max-width: 360px;
+      line-height: 1.5rem;
+      color: #595757;
+    }
+  }
+
+  .colth3 {
+    position: relative;
+    z-index: 4;
+    width: 100%;
+    margin-top: -16rem;
+  }
+}
