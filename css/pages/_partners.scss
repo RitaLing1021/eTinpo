@@ -1,0 +1,61 @@
+.partners {
+  background: linear-gradient(180deg, #D5DEE1 0%, #9AA2A8 100%);
+  padding-bottom: 21rem;
+
+  .partnersPhoto {
+    position: relative;
+
+    .partnersBanner {
+      position: relative;
+      min-width: 100%;
+    }
+  }
+
+  .partnersTheme {
+    position: absolute;
+    bottom: 0;
+
+    h3 {
+      font-family: "Inter", sans-serif;
+      font-size: 6rem;
+      color: #fff;
+      font-weight: 400;
+    }
+
+    p {
+      background: linear-gradient(to right, white 0%, white 50%, transparent 100%);
+      font-family: "Noto Sans", sans-serif;
+      color: #595757;
+      font-size: .8rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      max-width: 655px;
+      padding: 1rem 4rem;
+    }
+  }
+
+  .partnersGroup {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .partnersElement {
+      max-width: 230px;
+      margin: 1rem 5rem;
+      h4{
+        color:$green;
+        font-size: 1.1rem;
+        font-weight: 600;
+        padding-top: .5rem;
+      }
+      p{
+        font-size: .8rem;
+        font-weight: 400;
+        color: #595757;
+
+      }
+    }
+
+  }
+}

@@ -1,0 +1,99 @@
+.clean {
+  .cleanBanner {
+    position: relative;
+
+    .cleanBanner_bg {
+      width: 100%;
+    }
+
+    .cleanBanner_gray {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+
+  .garment {
+    background: linear-gradient(180deg, #A3ABB0, #D4DCDF);
+    text-align: center;
+    letter-spacing: 1px;
+
+    .container {
+      max-width: 650px;
+    }
+
+    h3 {
+      color: $green;
+      font-size: 2rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+
+    }
+
+    h4 {
+      color: #fff;
+      font-size: 4.5rem;
+      font-weight: 300;
+      letter-spacing: 2px;
+      font-family: "Inter", sans-serif;
+
+    }
+
+    p {
+      font-size: .8rem;
+      color: #595757;
+      text-align: justify;
+
+      .en {
+        font-family: "Inter", sans-serif;
+
+      }
+    }
+
+    .cleanIcon {
+      display: flex;
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .wash {
+      text-align: left;
+      padding-bottom: 30rem;
+
+      h5 {
+        color: $green;
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        font-family: "Inter", sans-serif;
+
+        span {
+          padding-top: 0.3rem;
+          font-size: 1rem;
+          font-weight: 400;
+          font-family: "Noto Sans", sans-serif;
+          letter-spacing: 2px;
+
+        }
+      }
+
+      p {
+        color: #595757;
+        font-size: 0.8rem;
+      }
+
+      ol {
+        padding-left: 1rem;
+        li {
+          color: #595757;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}

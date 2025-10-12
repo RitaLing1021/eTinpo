@@ -1,0 +1,133 @@
+.YearinReview {
+    position: relative;
+
+    .year01 {
+        background: url('../image/develop/cloth.png') no-repeat top right,
+            linear-gradient(180deg, #D5DEE1, #B3BBC0);
+        padding-top: 15rem;
+        text-align: center;
+
+        .yearIntroduction {
+
+            max-width: 815px;
+            margin: 5rem auto 8rem;
+            padding-bottom: 1rem;
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 20%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 80%, rgba(255, 255, 255, 0) 100%);
+
+            p {
+                padding: 1rem;
+                margin-bottom: 0;
+                color: #595757;
+                text-align: center;
+            }
+
+        }
+    }
+
+
+    .year {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+        padding-bottom: 2rem;
+        max-width: 700px;
+        margin: auto;
+
+        &:nth-child(odd) {
+            justify-content: flex-start;
+        }
+
+        &:nth-child(even) {
+            justify-content: flex-end;
+
+        }
+
+        .yearimg {
+            border-radius: 50%;
+            width: 50%;
+
+            @include b768 {
+                width: auto;
+            }
+        }
+
+        h5 {
+            font-family: "Inter", sans-serif;
+            font-weight: 500;
+            font-size: 2.5rem;
+            color: $green;
+            letter-spacing: 3px;
+            margin: 0;
+
+        }
+
+        p {
+            padding-top: 0;
+            color: $green;
+            font-size: .8rem;
+            font-weight: 600;
+
+            @include b768 {
+                width: 160px;
+
+            }
+
+        }
+    }
+
+    .year02 {
+        background:linear-gradient(180deg, #CFE9ED, #7EA5A9);
+        padding: 4rem 1rem;
+
+        h5 {
+            color: #fff;
+        }
+
+        p {
+            color: #fff;
+        }
+    }
+
+    .year03 {
+        background: linear-gradient(180deg, #004632, #001A12);
+        padding: 4rem 1rem 30rem;
+
+        h5 {
+            color: #fff;
+        }
+
+        p {
+            color: #fff;
+        }
+    }
+
+    .arrow-left,
+    .arrow-right {
+        margin: 0 1rem;
+
+        @include b768 {
+            margin: 0 2rem;
+        }
+    }
+
+    .arrow-left {
+        transform: rotate(180deg);
+    }
+
+    .circle1 {
+        position: absolute;
+        top: 45rem;
+        right: 0;
+        z-index: 9;
+        width: 250px;
+    }
+
+    .circle2 {
+        position: absolute;
+        bottom: 45rem;
+        left: 0;
+        z-index: 9;
+        width: 450px;
+    }
+}
