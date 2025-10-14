@@ -2,11 +2,16 @@
   background: linear-gradient(180deg, #004632 0%, #001A12 100%);
 
   .AboutSlogan {
-    background: url("../image/about/cloth.png") left 15rem no-repeat;
-    background-size: 100%;
+    background: url("../image/about/cloth.png") left bottom no-repeat;
+    background-size: cover;
     position: relative;
     overflow: initial;
     color: #FFF;
+
+    @include b768 {
+      background: url("../image/about/cloth.png") left 15rem no-repeat;
+      background-size: 100%;
+    }
 
   }
 
@@ -18,19 +23,27 @@
     .bannerText01 {
       padding-top: 5rem;
       z-index: 10;
+      max-width: 96%;
 
     }
 
     .bannerText02 {
       padding-top: 3rem;
       z-index: 10;
+      max-width: 96%;
 
     }
 
     .bannerText03 {
       padding-top: 8rem;
-      margin-left: 10rem;
+      margin-left: 0;
       z-index: 10;
+      max-width: 96%;
+
+
+      @include b768 {
+        margin-left: 10rem;
+      }
     }
 
     .bannerText04 {
@@ -53,9 +66,13 @@
 
 
 .newtechnology {
-  background: linear-gradient(90deg, #001A12 7%, #D5DEE1 7%, #D5DEE1 100%);
+  background: #D5DEE1 100%;
   padding: 4rem 0 10rem;
   position: relative;
+
+  @include b768 {
+    background: linear-gradient(90deg, #001A12 7%, #D5DEE1 7%, #D5DEE1 100%);
+  }
 
   .new-technology {
     align-items: center;
@@ -63,6 +80,11 @@
 
     @include b768 {
       padding: 0;
+    }
+
+    .overviewItem {
+      position: relative;
+      z-index: 9;
     }
   }
 
@@ -117,14 +139,26 @@
 
   .ecoTop {
     width: 100%;
-    margin-top: -125px;
+    margin-top: -10vw;
     position: relative;
     z-index: 2;
+    height: 15vw;
+    object-fit: cover;
+    object-position: center;
+
+    @include b768 {
+      margin-top: -125px;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: top;
+    }
 
   }
 
   .ecoText {
     z-index: 6;
+    max-width: 90%;
   }
 
   .colth5 {
@@ -146,22 +180,56 @@
   .smallItems {
     display: flex;
     position: absolute;
-    top: 5%;
-    right: 25%;
+    top: -7%;
+    right: 5%;
     z-index: 9;
-    align-items: flex-end;
+    align-items: center;
+    flex-direction: column;
+
+    @include b768 {
+      flex-direction: row;
+      align-items: flex-end;
+      top: 5%;
+      right: 25%;
+
+    }
   }
 
   .principlesitem {
     padding-bottom: 2rem;
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    align-items: flex-end;
+    flex-direction: column;
+    align-items: center;
+
+    @include b768 {
+      flex-direction: row;
+      align-items: flex-end;
+    }
 
     .itemText {
+      padding-bottom: 2rem;
+      padding-right: 0;
+
+      @include b768 {
+        padding-bottom: 10rem;
+        padding-right: 3rem;
+      }
+    }
+
+    .itemPhoto {
       padding-bottom: 10rem;
-      padding-right: 3rem;
+      text-align: center;
+
+
+      img {
+        max-width: 90%;
+
+        @include b768 {
+          max-width: 98%;
+        }
+      }
+
     }
 
 
@@ -180,6 +248,16 @@
     position: relative;
     z-index: 4;
     width: 100%;
-    margin-top: -16rem;
+    margin-top: -18rem;
+    height: 125vw;
+    object-fit: cover;
+    object-position: right;
+
+
+    @include b768 {
+      height: auto;
+      object-fit: contain;
+      object-position: top;
+    }
   }
 }

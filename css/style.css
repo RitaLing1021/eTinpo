@@ -4,7 +4,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Tenor+Sans&display=swap");
 .partners {
   background: linear-gradient(180deg, #D5DEE1 0%, #9AA2A8 100%);
-  padding-bottom: 21rem;
+  padding-bottom: 30rem;
+}
+@media (min-width: 768px) {
+  .partners {
+    padding-bottom: 21rem;
+  }
 }
 .partners .partnersPhoto {
   position: relative;
@@ -12,16 +17,38 @@
 .partners .partnersPhoto .partnersBanner {
   position: relative;
   min-width: 100%;
+  height: 140vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (min-width: 768px) {
+  .partners .partnersPhoto .partnersBanner {
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: top;
+       object-position: top;
+  }
 }
 .partners .partnersTheme {
   position: absolute;
   bottom: 0;
 }
+.partners .partnersTheme img {
+  max-width: 90%;
+}
 .partners .partnersTheme h3 {
   font-family: "Inter", sans-serif;
-  font-size: 6rem;
+  font-size: 3.5rem;
   color: #fff;
   font-weight: 400;
+}
+@media (min-width: 768px) {
+  .partners .partnersTheme h3 {
+    font-size: 6rem;
+  }
 }
 .partners .partnersTheme p {
   background: linear-gradient(to right, white 0%, white 50%, transparent 100%);
@@ -31,7 +58,12 @@
   font-weight: 300;
   letter-spacing: 2px;
   max-width: 655px;
-  padding: 1rem 4rem;
+  padding: 1rem;
+}
+@media (min-width: 768px) {
+  .partners .partnersTheme p {
+    padding: 1rem 4rem;
+  }
 }
 .partners .partnersGroup {
   display: flex;
@@ -41,7 +73,12 @@
 }
 .partners .partnersGroup .partnersElement {
   max-width: 230px;
-  margin: 1rem 5rem;
+  margin: 1rem 0;
+}
+@media (min-width: 768px) {
+  .partners .partnersGroup .partnersElement {
+    margin: 1rem 5rem;
+  }
 }
 .partners .partnersGroup .partnersElement h4 {
   color: #004632;
@@ -130,13 +167,36 @@
   font-weight: 300;
   letter-spacing: 2px;
   font-family: "Inter", sans-serif;
+  text-align: center;
 }
 .values .actionGroup {
   padding-top: 2rem;
+  padding-bottom: 10rem;
+}
+@media (min-width: 768px) {
+  .values .actionGroup {
+    padding-bottom: 1rem;
+  }
 }
 .values .action {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+.values .action:nth-child(even) {
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .values .action {
+    flex-direction: row;
+  }
+  .values .action:nth-child(even) {
+    flex-direction: row-reverse;
+    justify-content: end;
+  }
+  .values .action:nth-child(even) .actionText {
+    background: linear-gradient(90deg, #FFF, rgba(0, 0, 0, 0));
+  }
 }
 .values .action .actionText {
   display: flex;
@@ -144,9 +204,6 @@
   justify-content: center;
   padding: 1rem;
   background: linear-gradient(90deg, rgba(0, 0, 0, 0), #FFF);
-}
-.values .action .actionText:nth-child(even) {
-  background: linear-gradient(90deg, #FFF, rgba(0, 0, 0, 0));
 }
 .values .action .actionText h4 {
   font-family: "Inter", sans-serif;
@@ -192,10 +249,15 @@
 }
 .clean .garment h4 {
   color: #fff;
-  font-size: 4.5rem;
+  font-size: 2.5rem;
   font-weight: 300;
   letter-spacing: 2px;
   font-family: "Inter", sans-serif;
+}
+@media (min-width: 768px) {
+  .clean .garment h4 {
+    font-size: 4.5rem;
+  }
 }
 .clean .garment p {
   font-size: 0.8rem;
@@ -249,8 +311,13 @@
 }
 .YearinReview .year01 {
   background: url("../image/develop/cloth.png") no-repeat top right, linear-gradient(180deg, #D5DEE1, #B3BBC0);
-  padding-top: 15rem;
+  padding-top: 8rem;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .YearinReview .year01 {
+    padding-top: 15rem;
+  }
 }
 .YearinReview .year01 .yearIntroduction {
   max-width: 815px;
@@ -291,10 +358,15 @@
 .YearinReview .year h5 {
   font-family: "Inter", sans-serif;
   font-weight: 500;
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: #004632;
   letter-spacing: 3px;
   margin: 0;
+}
+@media (min-width: 768px) {
+  .YearinReview .year h5 {
+    font-size: 2.5rem;
+  }
 }
 .YearinReview .year p {
   padding-top: 0;
@@ -352,13 +424,20 @@
   bottom: 45rem;
   left: 0;
   z-index: 9;
-  width: 450px;
+  max-width: 450px;
+  min-width: 350px;
+}
+@media (min-width: 768px) {
+  .YearinReview .circle2 {
+    width: 450px;
+  }
 }
 
 .contact {
   background: url("../image/contact/cloth-w.png") no-repeat top right, linear-gradient(180deg, #D5DEE1 0%, #A7AFB4 100%);
   color: #004632;
   padding-top: 80px;
+  overflow: hidden;
 }
 .contact .title {
   text-align: center;
@@ -398,11 +477,31 @@
   margin-bottom: -5rem;
   z-index: 9;
   position: relative;
+  margin-right: 10%;
+}
+@media (min-width: 768px) {
+  .contact .contactTheme .contactPhoto .pic1 {
+    margin-right: 0;
+  }
 }
 .contact .contactTheme .contactPhoto .pic2 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .contact .contactTheme .contactPhoto .pic2 {
+    flex-direction: row;
+  }
+}
+.contact .contactTheme .contactPhoto .pic2 img {
+  margin-left: 20%;
+}
+@media (min-width: 768px) {
+  .contact .contactTheme .contactPhoto .pic2 img {
+    margin-left: 0;
+  }
 }
 .contact .contactTheme .contactText {
   padding: 1rem 0 3rem;
@@ -423,7 +522,12 @@
 .contact .contactTheme .contactText .contactInformation {
   display: flex;
   flex-direction: column;
-  padding-left: 2rem;
+  padding-left: 0;
+}
+@media (min-width: 768px) {
+  .contact .contactTheme .contactText .contactInformation {
+    padding-left: 2rem;
+  }
 }
 .contact .contactFooter {
   background: url("../image/contact/cloth-w2.png") no-repeat top left;
@@ -443,13 +547,32 @@
 
 .application {
   background: linear-gradient(180deg, #D5DEE1, #7C9E98);
-  padding-bottom: 25rem;
+  padding-bottom: 30rem;
+}
+@media (min-width: 768px) {
+  .application {
+    padding-bottom: 25rem;
+  }
 }
 .application .applicationBanner {
   position: relative;
 }
 .application .applicationBanner .applicationBanner_bg {
   position: relative;
+  height: 150vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (min-width: 768px) {
+  .application .applicationBanner .applicationBanner_bg {
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: top;
+       object-position: top;
+  }
 }
 .application .applicationBanner .applicationBanner_clothes {
   position: absolute;
@@ -461,7 +584,12 @@
 .application .applicationBanner .applicationBanner_text {
   position: absolute;
   bottom: 18rem;
-  left: 5rem;
+  left: 0rem;
+}
+@media (min-width: 768px) {
+  .application .applicationBanner .applicationBanner_text {
+    left: 5rem;
+  }
 }
 .application h4 {
   color: #004632;
@@ -490,6 +618,9 @@
 .application .techItem {
   margin: 2rem 0;
 }
+.application .techItem img {
+  max-width: 90%;
+}
 .application .techItem .techPhoto {
   position: relative;
   margin: 2rem 0;
@@ -498,9 +629,14 @@
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 7rem;
+  bottom: 2rem;
   margin: auto;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .application .techItem .techPhoto .techPhoto02 {
+    bottom: 7rem;
+  }
 }
 .application .techItem .techItemText {
   padding-left: 2rem;
@@ -525,21 +661,47 @@
 }
 .bannerTechs img {
   width: 100%;
+  height: 120vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (min-width: 768px) {
+  .bannerTechs img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: top;
+       object-position: top;
+  }
 }
 .bannerTechs .bannerText {
   position: absolute;
-  bottom: 7rem;
+  bottom: 0;
   width: 100%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+}
+@media (min-width: 768px) {
+  .bannerTechs .bannerText {
+    bottom: 4rem;
+    flex-direction: row;
+  }
+}
+.bannerTechs .bannerText img {
+  max-width: 100%;
 }
 .bannerTechs .bannerText .b-left {
   max-width: 380px;
+  height: auto;
 }
 .bannerTechs .bannerText .b-right {
   max-width: 645px;
   margin-left: 3rem;
+  height: auto;
 }
 
 .technologies {
@@ -565,15 +727,32 @@
 
 .features {
   background: linear-gradient(180deg, #DCE6E8 60%, #90AFA9 100%);
-  padding-bottom: 8rem;
+  padding-bottom: 0;
+}
+@media (min-width: 768px) {
+  .features {
+    padding-bottom: 8rem;
+  }
 }
 .features .featuresTitle {
-  background: url("../image/technolgy/fearures.svg") bottom right no-repeat;
+  background: url("../image/technolgy/fearures.svg") top right no-repeat;
   background-size: 100%;
   height: 300px;
 }
+@media (min-width: 768px) {
+  .features .featuresTitle {
+    background: url("../image/technolgy/fearures.svg") bottom right no-repeat;
+    background-size: 100%;
+  }
+}
 .features .featuresTitle .adventures {
-  margin-left: 15rem;
+  margin-left: 0;
+  max-width: 90%;
+}
+@media (min-width: 768px) {
+  .features .featuresTitle .adventures {
+    margin-left: 15rem;
+  }
 }
 .features .featuresTitle h4 {
   color: #004632;
@@ -621,21 +800,47 @@
 .technologiesFooter {
   background: #90AFA9;
   width: 100%;
-  padding-bottom: 200px;
+  padding-bottom: 40vh;
+}
+@media (min-width: 768px) {
+  .technologiesFooter {
+    padding-bottom: 200px;
+  }
 }
 .technologiesFooter img {
   width: 100%;
+  height: 60vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (min-width: 768px) {
+  .technologiesFooter img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: top;
+       object-position: top;
+  }
 }
 
 .bannerAbout {
   background: linear-gradient(180deg, #004632 0%, #001A12 100%);
 }
 .bannerAbout .AboutSlogan {
-  background: url("../image/about/cloth.png") left 15rem no-repeat;
-  background-size: 100%;
+  background: url("../image/about/cloth.png") left bottom no-repeat;
+  background-size: cover;
   position: relative;
   overflow: initial;
   color: #FFF;
+}
+@media (min-width: 768px) {
+  .bannerAbout .AboutSlogan {
+    background: url("../image/about/cloth.png") left 15rem no-repeat;
+    background-size: 100%;
+  }
 }
 .bannerAbout .bannerText {
   padding-top: 5rem;
@@ -645,15 +850,23 @@
 .bannerAbout .bannerText .bannerText01 {
   padding-top: 5rem;
   z-index: 10;
+  max-width: 96%;
 }
 .bannerAbout .bannerText .bannerText02 {
   padding-top: 3rem;
   z-index: 10;
+  max-width: 96%;
 }
 .bannerAbout .bannerText .bannerText03 {
   padding-top: 8rem;
-  margin-left: 10rem;
+  margin-left: 0;
   z-index: 10;
+  max-width: 96%;
+}
+@media (min-width: 768px) {
+  .bannerAbout .bannerText .bannerText03 {
+    margin-left: 10rem;
+  }
 }
 .bannerAbout .bannerText .bannerText04 {
   position: absolute;
@@ -670,9 +883,14 @@
 }
 
 .newtechnology {
-  background: linear-gradient(90deg, #001A12 7%, #D5DEE1 7%, #D5DEE1 100%);
+  background: #D5DEE1 100%;
   padding: 4rem 0 10rem;
   position: relative;
+}
+@media (min-width: 768px) {
+  .newtechnology {
+    background: linear-gradient(90deg, #001A12 7%, #D5DEE1 7%, #D5DEE1 100%);
+  }
 }
 .newtechnology .new-technology {
   align-items: center;
@@ -682,6 +900,10 @@
   .newtechnology .new-technology {
     padding: 0;
   }
+}
+.newtechnology .new-technology .overviewItem {
+  position: relative;
+  z-index: 9;
 }
 .newtechnology p {
   padding: 0.7rem 0;
@@ -731,12 +953,29 @@
 }
 .eco .ecoTop {
   width: 100%;
-  margin-top: -125px;
+  margin-top: -10vw;
   position: relative;
   z-index: 2;
+  height: 15vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (min-width: 768px) {
+  .eco .ecoTop {
+    margin-top: -125px;
+    width: 100%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: top;
+       object-position: top;
+  }
 }
 .eco .ecoText {
   z-index: 6;
+  max-width: 90%;
 }
 .eco .colth5 {
   position: absolute;
@@ -754,21 +993,54 @@
 .principles .smallItems {
   display: flex;
   position: absolute;
-  top: 5%;
-  right: 25%;
+  top: -7%;
+  right: 5%;
   z-index: 9;
-  align-items: flex-end;
+  align-items: center;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .principles .smallItems {
+    flex-direction: row;
+    align-items: flex-end;
+    top: 5%;
+    right: 25%;
+  }
 }
 .principles .principlesitem {
   padding-bottom: 2rem;
   display: flex;
   justify-content: center;
-  flex-direction: row;
-  align-items: flex-end;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .principles .principlesitem {
+    flex-direction: row;
+    align-items: flex-end;
+  }
 }
 .principles .principlesitem .itemText {
+  padding-bottom: 2rem;
+  padding-right: 0;
+}
+@media (min-width: 768px) {
+  .principles .principlesitem .itemText {
+    padding-bottom: 10rem;
+    padding-right: 3rem;
+  }
+}
+.principles .principlesitem .itemPhoto {
   padding-bottom: 10rem;
-  padding-right: 3rem;
+  text-align: center;
+}
+.principles .principlesitem .itemPhoto img {
+  max-width: 90%;
+}
+@media (min-width: 768px) {
+  .principles .principlesitem .itemPhoto img {
+    max-width: 98%;
+  }
 }
 .principles .principlesitem p {
   font-size: 0.9rem;
@@ -783,7 +1055,21 @@
   position: relative;
   z-index: 4;
   width: 100%;
-  margin-top: -16rem;
+  margin-top: -18rem;
+  height: 125vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right;
+     object-position: right;
+}
+@media (min-width: 768px) {
+  .principles .colth3 {
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: top;
+       object-position: top;
+  }
 }
 
 .product {
@@ -792,10 +1078,15 @@
 }
 .product .productTop {
   background: url("../image/product/product-bn.png") top right no-repeat;
-  min-height: 640px;
+  min-height: 340px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+@media (min-width: 768px) {
+  .product .productTop {
+    min-height: 640px;
+  }
 }
 .product .productTopText {
   display: flex;
@@ -803,6 +1094,7 @@
 }
 .product .productTopText img {
   margin-top: 2rem;
+  max-width: 100%;
 }
 .product .productSwiper {
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
@@ -843,18 +1135,34 @@
   color: #595757;
   font-size: 0.8rem;
   text-align: center;
-  padding-top: 2rem;
+  padding: 2rem 1rem 0;
 }
 .product .product2L3L {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
-  align-items: flex-start;
-  max-width: 900px;
+  align-items: center;
+  max-width: 96%;
   margin: auto;
 }
+@media (min-width: 768px) {
+  .product .product2L3L {
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 900px;
+  }
+}
+.product .product2L3L .product2L {
+  max-width: 90%;
+}
 .product .product2L3L .product3L {
-  padding-top: 10rem;
+  padding-top: 5rem;
+  max-width: 90%;
+}
+@media (min-width: 768px) {
+  .product .product2L3L .product3L {
+    padding-top: 10rem;
+  }
 }
 .product .product_01 {
   display: flex;
@@ -967,25 +1275,60 @@
   align-items: center;
 }
 .productSlogan .SloganText .slogan01 {
-  padding-top: 4rem;
-  padding-bottom: 5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  max-width: 90%;
+}
+@media (min-width: 768px) {
+  .productSlogan .SloganText .slogan01 {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+  }
 }
 .productSlogan .SloganText .slogan02 {
-  padding-top: 14rem;
+  padding-top: 2rem;
+}
+@media (min-width: 768px) {
+  .productSlogan .SloganText .slogan02 {
+    padding-top: 14rem;
+  }
 }
 .productSlogan .SloganText .slogan03 {
   padding-top: 3rem;
+  max-width: 90%;
 }
 .productSlogan .SloganText .SloganText01 {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 768px) {
+  .productSlogan .SloganText .SloganText01 {
+    display: flex;
+    flex-direction: row;
+  }
 }
 .productSlogan .sloganCloth {
   position: absolute;
   right: 0;
-  bottom: -10rem;
+  bottom: -5rem;
   width: 100%;
   z-index: 5;
+  height: 120vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (min-width: 768px) {
+  .productSlogan .sloganCloth {
+    bottom: -10rem;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: top;
+       object-position: top;
+  }
 }
 .productSlogan .sloganPeople {
   position: absolute;
@@ -996,11 +1339,16 @@
 
 .functionText {
   background: url("../image/product/productBg.svg") top center no-repeat;
-  background-size: 100%;
+  background-size: 380vw;
   min-height: 190px;
   z-index: 9;
   position: relative;
   margin-top: -5rem;
+}
+@media (min-width: 768px) {
+  .functionText {
+    background-size: 100%;
+  }
 }
 .functionText p {
   color: #595757;
@@ -1014,7 +1362,12 @@
   background: #D5DEE1;
   position: relative;
   z-index: 10;
-  padding-bottom: 5rem;
+  padding-bottom: 0rem;
+}
+@media (min-width: 768px) {
+  .function {
+    padding-bottom: 5rem;
+  }
 }
 .function .functionGroup .functionSwiper {
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
@@ -1054,20 +1407,48 @@
   padding-top: 3rem;
   justify-content: center;
 }
+.function .functionGroup .slogan04 img {
+  max-width: 90%;
+}
 .function .functionGroup .slogan04 p {
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
   color: #fff;
-  padding: 2rem 5rem;
+  padding: 1rem 2rem;
   margin: 2rem 0;
   line-height: 1.8rem;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .function .functionGroup .slogan04 p {
+    padding: 2rem 5rem;
+  }
+}
 
 .productFooter {
   background: #D5DEE1;
+  padding-bottom: 20rem;
+}
+@media (min-width: 768px) {
+  .productFooter {
+    padding-bottom: 0;
+  }
 }
 .productFooter img {
   width: 100%;
+  height: 90vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (min-width: 768px) {
+  .productFooter img {
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: top;
+       object-position: top;
+  }
 }
 
 /* 針對桌面版進行設定 */
@@ -1081,6 +1462,12 @@
 body {
   font-family: "Noto Sans TC", sans-serif;
   position: relative;
+}
+
+svg,
+img {
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 
 a {
@@ -1219,14 +1606,43 @@ a:hover {
 .banner .eTINPO-bn-w {
   position: absolute;
   max-width: 100%;
-  top: -10%;
+  top: 0;
   z-index: 4;
+  height: 135vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (min-width: 768px) {
+  .banner .eTINPO-bn-w {
+    top: -10%;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: top;
+       object-position: top;
+  }
 }
 .banner .eTINPO-bn-g {
   position: absolute;
   max-width: 100%;
   top: 5%;
   z-index: 3;
+  height: 135vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (min-width: 768px) {
+  .banner .eTINPO-bn-g {
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: top;
+       object-position: top;
+  }
 }
 .banner .bannerTextGroup {
   position: relative;
@@ -1236,16 +1652,32 @@ a:hover {
   z-index: 2;
 }
 .banner .banner02 {
-  position: absolute;
+  position: relative;
   top: 70px;
-  left: 52%;
+  left: 1%;
   z-index: 10;
 }
+@media (min-width: 768px) {
+  .banner .banner02 {
+    position: absolute;
+    top: 70px;
+    left: 52%;
+  }
+}
 .banner .banner03 {
-  position: absolute;
+  position: relative;
   z-index: 10;
   bottom: 5%;
-  left: 60%;
+  right: 0;
+  display: none;
+}
+@media (min-width: 768px) {
+  .banner .banner03 {
+    position: absolute;
+    z-index: 10;
+    bottom: 5%;
+    left: 60%;
+  }
 }
 .bannerProduct {
   background: url("../image/product-bg-100.jpg") right bottom;
@@ -1304,15 +1736,15 @@ a:hover {
 
 .feature {
   color: #323232;
-  padding: 4rem 2rem;
-}
-.feature .container {
-  max-width: 980px;
+  padding: 2rem 2rem 8rem;
 }
 @media (min-width: 768px) {
   .feature {
     padding: 4rem 0 32rem 0;
   }
+}
+.feature .container {
+  max-width: 980px;
 }
 .feature .featureTheme {
   max-width: 50rem;
@@ -1368,7 +1800,12 @@ a:hover {
 
 .featureCloth {
   position: absolute;
-  bottom: -22rem;
+  bottom: -6rem;
+}
+@media (min-width: 768px) {
+  .featureCloth {
+    bottom: -22rem;
+  }
 }
 .featureCloth .photo_01 {
   position: absolute;
@@ -1383,8 +1820,13 @@ a:hover {
   max-width: 100%;
   height: auto;
   left: 0;
-  bottom: 10rem;
+  bottom: 3rem;
   z-index: 1;
+}
+@media (min-width: 768px) {
+  .featureCloth .photo_02 {
+    bottom: 10rem;
+  }
 }
 
 .swiper {
@@ -1432,7 +1874,7 @@ a:hover {
 .technology {
   letter-spacing: 0.1rem;
   text-align: justify;
-  padding-bottom: 10rem;
+  padding-bottom: 1rem;
   /*img {
       max-width: 100%;
 
@@ -1440,6 +1882,11 @@ a:hover {
           max-width: 434rem;
       }
   }*/
+}
+@media (min-width: 768px) {
+  .technology {
+    padding-bottom: 10rem;
+  }
 }
 .technology .technologyPhoto {
   position: relative;
@@ -1450,38 +1897,77 @@ a:hover {
   }
 }
 .technology .technologyPhoto .photo_01 {
-  position: absolute;
+  position: relative;
   max-width: 100%;
+  height: 140vw;
   right: 0;
-  top: -10rem;
+  top: -5rem;
   z-index: 2;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (min-width: 768px) {
+  .technology .technologyPhoto .photo_01 {
+    position: absolute;
+    right: 0;
+    top: -10rem;
+  }
 }
 .technology .technologyPhoto .photo_02 {
   position: relative;
   max-width: 100%;
   left: 0;
-  top: 10rem;
+  top: 0;
   z-index: 1;
+  display: none;
+}
+@media (min-width: 768px) {
+  .technology .technologyPhoto .photo_02 {
+    position: relative;
+    left: 0;
+    top: 10rem;
+  }
 }
 .technology .technologyPhoto .technologySlogan {
   position: absolute;
-  top: 14rem;
-  left: 15rem;
+  top: 4rem;
+  left: 5px;
   z-index: 9;
   display: flex;
   flex-direction: column;
 }
+.technology .technologyPhoto .technologySlogan img {
+  max-width: 100%;
+}
+@media (min-width: 768px) {
+  .technology .technologyPhoto .technologySlogan {
+    position: absolute;
+    top: 14rem;
+    left: 15rem;
+  }
+}
 .technology .technologyText {
-  position: absolute;
+  position: relative;
   bottom: 3rem;
-  right: 15rem;
+  right: 0;
   background: rgba(255, 194, 0, 0.7);
   max-width: 380px;
+  width: 95%;
+  margin: auto;
   z-index: 10;
   font-size: 0.8rem;
   text-align: justify;
   padding: 30px 15px;
   color: #fff;
+}
+@media (min-width: 768px) {
+  .technology .technologyText {
+    position: absolute;
+    bottom: 3rem;
+    right: 15rem;
+  }
 }
 .technology .technologyText h3 {
   font-family: "Inter", sans-serif;
@@ -1500,7 +1986,12 @@ a:hover {
 .homeproduct {
   background: #D5DEE1;
   padding-top: 60px;
-  padding-bottom: 25rem;
+  padding-bottom: 30rem;
+}
+@media (min-width: 768px) {
+  .homeproduct {
+    padding-bottom: 25rem;
+  }
 }
 .homeproduct .product_01 {
   display: flex;
@@ -1510,6 +2001,9 @@ a:hover {
 .homeproduct .product_01 .productPhoto {
   position: relative;
   max-width: 570px;
+}
+.homeproduct .product_01 .productPhoto img {
+  max-width: 100%;
 }
 .homeproduct .product_01 .productPhoto .productText {
   position: absolute;
@@ -1530,11 +2024,19 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-top: 15rem;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .homeproduct .product_02 {
+    padding-top: 15rem;
+  }
 }
 .homeproduct .product_02 .productPhoto {
   position: relative;
   max-width: 570px;
+}
+.homeproduct .product_02 .productPhoto img {
+  max-width: 100%;
 }
 .homeproduct .product_02 .productPhoto .productText {
   position: absolute;
@@ -1551,11 +2053,19 @@ a:hover {
 .homeproduct .product_03 {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
+}
+@media (min-width: 768px) {
+  .homeproduct .product_03 {
+    align-items: flex-start;
+  }
 }
 .homeproduct .product_03 .productPhoto {
   position: relative;
   max-width: 570px;
+}
+.homeproduct .product_03 .productPhoto img {
+  max-width: 100%;
 }
 .homeproduct .product_03 .productPhoto .productText {
   position: absolute;
@@ -1565,9 +2075,15 @@ a:hover {
   margin: auto;
 }
 .homeproduct .product_03 .gloves {
-  padding-left: 20rem;
-  margin-top: -4rem;
+  padding-left: 1rem;
+  margin-top: 0rem;
   z-index: 9;
+}
+@media (min-width: 768px) {
+  .homeproduct .product_03 .gloves {
+    padding-left: 20rem;
+    margin-top: -4rem;
+  }
 }
 .homeproduct .product_03 p {
   font-size: 0.8rem;
@@ -1581,7 +2097,15 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-top: 15rem;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .homeproduct .product_04 {
+    padding-top: 15rem;
+  }
+}
+.homeproduct .product_04 img {
+  max-width: 100%;
 }
 .homeproduct .product_04 .productPhoto {
   position: relative;
@@ -1604,13 +2128,25 @@ a:hover {
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-left: 20rem;
-  margin-top: -10rem;
+  margin-left: 0;
+  margin-top: -2rem;
   padding-bottom: 5rem;
   z-index: 10;
 }
+@media (min-width: 768px) {
+  .partner {
+    margin-left: 20rem;
+    margin-top: -10rem;
+  }
+}
 .partner img {
   margin-bottom: 1rem;
+  width: 98%;
+}
+@media (min-width: 768px) {
+  .partner img {
+    margin-bottom: 1rem;
+  }
 }
 .partner .partnerText {
   background: rgba(255, 194, 0, 0.7);
@@ -1618,9 +2154,14 @@ a:hover {
   z-index: 10;
   font-size: 0.8rem;
   text-align: justify;
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 30px 15px;
   color: #fff;
+}
+@media (min-width: 768px) {
+  .partner .partnerText {
+    margin-top: 2rem;
+  }
 }
 .partner .partnerText h3 {
   font-family: "Inter", sans-serif;

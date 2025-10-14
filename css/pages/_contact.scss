@@ -3,6 +3,7 @@
         linear-gradient(180deg, #D5DEE1 0%, #A7AFB4 100%);
       color: $green;
       padding-top: 80px;
+      overflow: hidden;
 
       .title {
         text-align: center;
@@ -47,12 +48,31 @@
             margin-bottom: -5rem;
             z-index: 9;
             position: relative;
+            margin-right: 10%;
+
+            @include b768 {
+              margin-right: 0;
+            }
           }
 
           .pic2 {
             display: flex;
             justify-content: flex-start;
             align-items: center;
+            flex-direction: column;
+
+            @include b768 {
+              flex-direction: row;
+
+            }
+
+            img {
+              margin-left: 20%;
+
+              @include b768 {
+                margin-left: 0;
+              }
+            }
           }
         }
 
@@ -76,7 +96,10 @@
           .contactInformation {
             display: flex;
             flex-direction: column;
+            padding-left: 0;
+            @include b768{
             padding-left: 2rem;
+            }
           }
         }
       }
@@ -93,9 +116,9 @@
           flex-direction: row;
           justify-content: space-between;
         }
-        
-          .nanke{
-            margin-right: 20rem;
-          }
+
+        .nanke {
+          margin-right: 20rem;
+        }
       }
     }
