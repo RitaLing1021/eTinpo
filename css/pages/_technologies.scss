@@ -5,23 +5,48 @@
 
   img {
     width: 100%;
+    height: 120vw;
+    object-fit: cover;
+    object-position: center;
+
+    @include b768 {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: top;
+
+    }
   }
 
   .bannerText {
     position: absolute;
-    bottom: 7rem;
+    bottom: 0;
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
+
+    @include b768 {
+      bottom: 4rem;
+      flex-direction: row;
+
+    }
+
+    img {
+      max-width: 100%;
+
+    }
 
     .b-left {
       max-width: 380px;
+      height: auto;
     }
 
     .b-right {
       max-width: 645px;
       margin-left: 3rem;
+      height: auto;
+
     }
   }
 }
@@ -53,15 +78,31 @@
 
 .features {
   background: linear-gradient(180deg, #DCE6E8 60%, #90AFA9 100%);
-  padding-bottom: 8rem;
+  padding-bottom: 0;
+
+  @include b768 {
+    padding-bottom: 8rem;
+
+  }
 
   .featuresTitle {
-    background: url("../image/technolgy/fearures.svg")bottom right no-repeat;
+    background: url("../image/technolgy/fearures.svg")top right no-repeat;
     background-size: 100%;
     height: 300px;
 
+    @include b768 {
+      background: url("../image/technolgy/fearures.svg")bottom right no-repeat;
+      background-size: 100%;
+
+    }
+
     .adventures {
-      margin-left: 15rem;
+      margin-left: 0;
+      max-width: 90%;
+
+      @include b768 {
+        margin-left: 15rem;
+      }
     }
 
     h4 {
@@ -119,9 +160,23 @@
 .technologiesFooter {
   background: #90AFA9;
   width: 100%;
-  padding-bottom: 200px;
+  padding-bottom: 40vh;
+  @include b768 {
+    padding-bottom: 200px;
+  }
 
   img {
     width: 100%;
+    height: 60vw; 
+    object-fit: cover;
+    object-position: center;
+    
+
+    @include b768 {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: top;
+    }
   }
 }

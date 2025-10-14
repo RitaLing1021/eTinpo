@@ -1,6 +1,9 @@
 .application {
   background: linear-gradient(180deg, #D5DEE1, #7C9E98);
+  padding-bottom: 30rem;
+  @include b768{
   padding-bottom: 25rem;
+  }
 
 
   .applicationBanner {
@@ -8,6 +11,15 @@
 
     .applicationBanner_bg {
       position: relative;
+      height: 150vw;
+      object-fit: cover;
+      object-position: center;
+
+      @include b768 {
+        height: auto;
+        object-fit: contain;
+        object-position: top;
+      }
     }
 
     .applicationBanner_clothes {
@@ -21,7 +33,10 @@
     .applicationBanner_text {
       position: absolute;
       bottom: 18rem;
+      left: 0rem;
+      @include b768{
       left: 5rem;
+      }
     }
   }
 
@@ -54,6 +69,9 @@
 
   .techItem {
     margin: 2rem 0;
+    img{
+      max-width: 90%;
+    }
 
     .techPhoto {
       position: relative;
@@ -63,9 +81,12 @@
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 7rem;
+        bottom: 2rem;
         margin: auto;
         text-align: center;
+        @include b768{
+        bottom: 7rem;
+        }
       }
     }
 
