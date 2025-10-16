@@ -124,7 +124,6 @@
   position: absolute;
   left: 0;
   top: 0;
-  height: auto;
   z-index: 3;
 
 }
@@ -149,7 +148,6 @@
     @include b768 {
       margin-top: -125px;
       width: 100%;
-      height: auto;
       object-fit: contain;
       object-position: top;
     }
@@ -255,9 +253,10 @@
 
 
     @include b768 {
-      height: auto;
       object-fit: contain;
       object-position: top;
+          height: auto;
+
     }
   }
 }

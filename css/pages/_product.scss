@@ -292,9 +292,9 @@
 
         @include b768 {
           bottom: -10rem;
-          height: auto;
           object-fit: contain;
           object-position: top;
+          height: auto;
         }
       }
 
@@ -421,9 +421,9 @@
         object-position: center;
 
         @include b768 {
-          height: auto;
           object-fit: contain;
           object-position: top;
+          height: auto;
         }
       }
     }
