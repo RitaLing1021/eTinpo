@@ -25,11 +25,11 @@
 }
 @media (min-width: 768px) {
   .partners .partnersPhoto .partnersBanner {
-    height: auto;
     -o-object-fit: contain;
        object-fit: contain;
     -o-object-position: top;
        object-position: top;
+    height: auto;
   }
 }
 .partners .partnersTheme {
@@ -230,7 +230,7 @@
 .clean .cleanBanner .cleanBanner_gray {
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   width: 100%;
 }
 .clean .garment {
@@ -567,11 +567,11 @@
 }
 @media (min-width: 768px) {
   .application .applicationBanner .applicationBanner_bg {
-    height: auto;
     -o-object-fit: contain;
        object-fit: contain;
     -o-object-position: top;
        object-position: top;
+    height: auto;
   }
 }
 .application .applicationBanner .applicationBanner_clothes {
@@ -939,7 +939,6 @@
   position: absolute;
   left: 0;
   top: 0;
-  height: auto;
   z-index: 3;
 }
 
@@ -966,7 +965,6 @@
   .eco .ecoTop {
     margin-top: -125px;
     width: 100%;
-    height: auto;
     -o-object-fit: contain;
        object-fit: contain;
     -o-object-position: top;
@@ -1064,11 +1062,11 @@
 }
 @media (min-width: 768px) {
   .principles .colth3 {
-    height: auto;
     -o-object-fit: contain;
        object-fit: contain;
     -o-object-position: top;
        object-position: top;
+    height: auto;
   }
 }
 
@@ -1323,11 +1321,11 @@
 @media (min-width: 768px) {
   .productSlogan .sloganCloth {
     bottom: -10rem;
-    height: auto;
     -o-object-fit: contain;
        object-fit: contain;
     -o-object-position: top;
        object-position: top;
+    height: auto;
   }
 }
 .productSlogan .sloganPeople {
@@ -1443,11 +1441,11 @@
 }
 @media (min-width: 768px) {
   .productFooter img {
-    height: auto;
     -o-object-fit: contain;
        object-fit: contain;
     -o-object-position: top;
        object-position: top;
+    height: auto;
   }
 }
 
@@ -1617,11 +1615,12 @@ a:hover {
 @media (min-width: 768px) {
   .banner .eTINPO-bn-w {
     top: -10%;
-    height: auto;
     -o-object-fit: contain;
        object-fit: contain;
     -o-object-position: top;
        object-position: top;
+    height: auto;
+    width: 100%;
   }
 }
 .banner .eTINPO-bn-g {
@@ -1637,11 +1636,12 @@ a:hover {
 }
 @media (min-width: 768px) {
   .banner .eTINPO-bn-g {
-    height: auto;
     -o-object-fit: contain;
        object-fit: contain;
     -o-object-position: top;
        object-position: top;
+    height: auto;
+    width: 100%;
   }
 }
 .banner .bannerTextGroup {
@@ -1676,7 +1676,8 @@ a:hover {
     position: absolute;
     z-index: 10;
     bottom: 5%;
-    left: 60%;
+    right: 10%;
+    display: block;
   }
 }
 .bannerProduct {
@@ -1801,6 +1802,7 @@ a:hover {
 .featureCloth {
   position: absolute;
   bottom: -6rem;
+  width: 100%;
 }
 @media (min-width: 768px) {
   .featureCloth {
@@ -1810,15 +1812,13 @@ a:hover {
 .featureCloth .photo_01 {
   position: absolute;
   max-width: 100%;
-  height: auto;
   right: 0;
   bottom: 0rem;
   z-index: 2;
 }
 .featureCloth .photo_02 {
   position: relative;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
   left: 0;
   bottom: 3rem;
   z-index: 1;
@@ -1831,7 +1831,6 @@ a:hover {
 
 .swiper {
   width: 100%;
-  height: auto;
   padding-top: 2rem;
 }
 
@@ -1888,6 +1887,18 @@ a:hover {
     padding-bottom: 10rem;
   }
 }
+.technology .technologyContent {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  top: 15rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 80%;
+}
 .technology .technologyPhoto {
   position: relative;
 }
@@ -1903,6 +1914,7 @@ a:hover {
   right: 0;
   top: -5rem;
   z-index: 2;
+  height: 50vw;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -1910,9 +1922,14 @@ a:hover {
 }
 @media (min-width: 768px) {
   .technology .technologyPhoto .photo_01 {
-    position: absolute;
+    position: relative;
     right: 0;
     top: -10rem;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: top;
+       object-position: top;
   }
 }
 .technology .technologyPhoto .photo_02 {
@@ -1925,9 +1942,11 @@ a:hover {
 }
 @media (min-width: 768px) {
   .technology .technologyPhoto .photo_02 {
-    position: relative;
+    position: absolute;
     left: 0;
-    top: 10rem;
+    top: 0;
+    height: auto;
+    display: block;
   }
 }
 .technology .technologyPhoto .technologySlogan {
@@ -1943,9 +1962,9 @@ a:hover {
 }
 @media (min-width: 768px) {
   .technology .technologyPhoto .technologySlogan {
-    position: absolute;
-    top: 14rem;
-    left: 15rem;
+    position: relative;
+    top: auto;
+    left: auto;
   }
 }
 .technology .technologyText {
@@ -1964,9 +1983,9 @@ a:hover {
 }
 @media (min-width: 768px) {
   .technology .technologyText {
-    position: absolute;
-    bottom: 3rem;
-    right: 15rem;
+    position: relative;
+    bottom: auto;
+    right: auto;
   }
 }
 .technology .technologyText h3 {
@@ -2141,7 +2160,7 @@ a:hover {
 }
 .partner img {
   margin-bottom: 1rem;
-  width: 98%;
+  max-width: 98%;
 }
 @media (min-width: 768px) {
   .partner img {
