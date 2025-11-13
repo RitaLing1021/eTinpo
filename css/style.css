@@ -33,11 +33,19 @@
   }
 }
 .partners .partnersTheme {
-  position: absolute;
+  position: relative;
   bottom: 0;
+  margin-top: -18rem;
 }
 .partners .partnersTheme img {
   max-width: 90%;
+}
+.partners .partnersTheme .partners_slogan {
+  position: absolute;
+  right: 0;
+}
+.partners .partnersTheme .title {
+  padding-top: 5rem;
 }
 .partners .partnersTheme h3 {
   font-family: "Inter", sans-serif;
@@ -102,7 +110,7 @@
   align-items: center;
 }
 .responsibility .container {
-  max-width: 980px;
+  max-width: 1280px;
 }
 .responsibility h3 {
   color: #fff;
@@ -113,13 +121,14 @@
   color: #fff;
   font-size: 3rem;
   font-weight: 400;
+  letter-spacing: 5px;
 }
 .responsibility .responsibility-swiper {
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
-  max-width: 250px;
+  max-width: 350px;
 }
 .responsibility .responsibility-swiper h4 {
   padding: 2rem 0 0 0;
@@ -137,7 +146,7 @@
   padding-bottom: 4rem;
 }
 .responsibility .swiper-slide-active p {
-  background: linear-gradient(to right, rgba(0, 102, 51, 0) 0%, rgba(255, 197, 0, 0.5) 50%, rgba(0, 102, 51, 0) 100%);
+  background: linear-gradient(to right, rgba(0, 102, 51, 0) 0%, rgba(255, 197, 0, 0.5) 20%, rgba(255, 197, 0, 0.5) 80%, rgba(0, 102, 51, 0) 100%);
   padding: 1rem 2rem;
 }
 .responsibility .swiper-button-prev,
@@ -164,8 +173,8 @@
 .values h4 {
   color: #fff;
   font-size: 3rem;
-  font-weight: 300;
-  letter-spacing: 2px;
+  font-weight: 400;
+  letter-spacing: 5px;
   font-family: "Inter", sans-serif;
   text-align: center;
 }
@@ -210,11 +219,12 @@
   font-weight: 500;
   color: #004632;
   font-size: 1.1rem;
+  text-align: left;
 }
 .values .action .actionText h4 span {
   display: block;
   font-family: "Noto Sans TC", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
 }
 .values .action .actionText p {
   color: #595757;
@@ -322,7 +332,7 @@
 .YearinReview .year01 .yearIntroduction {
   max-width: 815px;
   margin: 5rem auto 8rem;
-  padding-bottom: 1rem;
+  padding-bottom: 100px;
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 20%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 80%, rgba(255, 255, 255, 0) 100%);
 }
 .YearinReview .year01 .yearIntroduction p {
@@ -336,7 +346,7 @@
   align-items: center;
   justify-content: center;
   text-align: left;
-  padding-bottom: 2rem;
+  padding-bottom: 100px;
   max-width: 700px;
   margin: auto;
 }
@@ -353,6 +363,8 @@
 @media (min-width: 768px) {
   .YearinReview .year .yearimg {
     width: auto;
+    position: relative;
+    z-index: 10;
   }
 }
 .YearinReview .year h5 {
@@ -434,10 +446,34 @@
 }
 
 .contact {
-  background: url("../image/contact/cloth-w.png") no-repeat top right, linear-gradient(180deg, #D5DEE1 0%, #A7AFB4 100%);
+  background: linear-gradient(180deg, #D5DEE1 0%, #A7AFB4 100%);
   color: #004632;
   padding-top: 80px;
   overflow: hidden;
+  position: relative;
+}
+.contact .circle {
+  position: relative;
+}
+.contact .circle .cloth-w {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+.contact .circle .circle1 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  max-width: 40%;
+}
+.contact .circle .circle2 {
+  position: absolute;
+  right: 0;
+  top: 20rem;
+  z-index: 1;
+  max-width: 40%;
 }
 .contact .title {
   text-align: center;
@@ -461,6 +497,7 @@
   text-align: center;
   flex-direction: column;
   padding-top: 5rem;
+  z-index: 9;
 }
 @media (min-width: 1024px) {
   .contact .contactTheme {
@@ -533,7 +570,7 @@
   background: url("../image/contact/cloth-w2.png") no-repeat top left;
   background-size: 100%;
   padding-top: 20rem;
-  padding-bottom: 25rem;
+  padding-bottom: 13rem;
   margin-top: -10rem;
 }
 .contact .contactFooter .companyIcon {
@@ -543,6 +580,14 @@
 }
 .contact .contactFooter .nanke {
   margin-right: 20rem;
+}
+.contact .googleMap {
+  position: relative;
+}
+.contact .googleMap .mapLeft {
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 .application {
@@ -635,7 +680,7 @@
 }
 @media (min-width: 768px) {
   .application .techItem .techPhoto .techPhoto02 {
-    bottom: 7rem;
+    bottom: 2rem;
   }
 }
 .application .techItem .techItemText {
@@ -661,16 +706,16 @@
 }
 .bannerTechs img {
   width: 100%;
-  height: 120vw;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  padding-top: 60px;
 }
 @media (min-width: 768px) {
   .bannerTechs img {
     width: 100%;
-    height: auto;
     -o-object-fit: contain;
        object-fit: contain;
     -o-object-position: top;
@@ -751,21 +796,22 @@
 }
 @media (min-width: 768px) {
   .features .featuresTitle .adventures {
-    margin-left: 15rem;
+    margin-left: 10rem;
   }
 }
 .features .featuresTitle h4 {
   color: #004632;
-  font-size: 2rem;
-  font-weight: 300;
+  font-size: 2.5rem;
+  font-weight: 200;
   padding-top: 4rem;
+  letter-spacing: 5px;
 }
 .features .featuresTitle span {
   display: block;
-  font-size: 1.5rem;
-  font-weight: 500;
-  padding-bottom: 1rem;
-  letter-spacing: 3px;
+  font-size: 2.5rem;
+  font-weight: 450;
+  padding-bottom: 0.5rem;
+  letter-spacing: 6px;
 }
 .features .applicationText {
   justify-content: center;
@@ -818,7 +864,6 @@
 @media (min-width: 768px) {
   .technologiesFooter img {
     width: 100%;
-    height: auto;
     -o-object-fit: contain;
        object-fit: contain;
     -o-object-position: top;
@@ -854,6 +899,7 @@
 }
 .bannerAbout .bannerText .bannerText02 {
   padding-top: 3rem;
+  margin-left: 75px;
   z-index: 10;
   max-width: 96%;
 }
@@ -870,9 +916,9 @@
 }
 .bannerAbout .bannerText .bannerText04 {
   position: absolute;
-  bottom: 10rem;
+  bottom: 20rem;
   left: 0;
-  right: 0;
+  right: 120px;
   z-index: 10;
   margin: auto;
   padding-left: 10rem;
@@ -932,13 +978,14 @@
 @media (min-width: 768px) {
   .AboutBn02 {
     left: 0;
+    bottom: 10rem;
   }
 }
 
 .AboutBn03 {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 100px;
   z-index: 3;
 }
 
@@ -949,6 +996,20 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+}
+.eco::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -98px;
+  width: 100%;
+  height: 100px;
+  background-image: url("../image/about/eco-top.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  pointer-events: none;
+  z-index: 0;
 }
 .eco .ecoTop {
   width: 100%;
@@ -974,12 +1035,13 @@
 .eco .ecoText {
   z-index: 6;
   max-width: 90%;
+  padding-top: 120px;
 }
 .eco .colth5 {
   position: absolute;
   z-index: 5;
   width: 100%;
-  top: 0;
+  top: 50px;
   left: 0;
 }
 
@@ -1001,8 +1063,8 @@
   .principles .smallItems {
     flex-direction: row;
     align-items: flex-end;
-    top: 5%;
-    right: 25%;
+    top: -25%;
+    right: 15%;
   }
 }
 .principles .principlesitem {
@@ -1029,7 +1091,7 @@
   }
 }
 .principles .principlesitem .itemPhoto {
-  padding-bottom: 10rem;
+  padding-bottom: 11rem;
   text-align: center;
 }
 .principles .principlesitem .itemPhoto img {
@@ -1053,7 +1115,7 @@
   position: relative;
   z-index: 4;
   width: 100%;
-  margin-top: -18rem;
+  margin-top: -50rem;
   height: 125vw;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1320,7 +1382,6 @@
 }
 @media (min-width: 768px) {
   .productSlogan .sloganCloth {
-    bottom: -10rem;
     -o-object-fit: contain;
        object-fit: contain;
     -o-object-position: top;
@@ -1330,8 +1391,8 @@
 }
 .productSlogan .sloganPeople {
   position: absolute;
-  right: 8rem;
-  bottom: 5rem;
+  right: 5rem;
+  bottom: 10rem;
   z-index: 5;
 }
 
@@ -1345,7 +1406,7 @@
 }
 @media (min-width: 768px) {
   .functionText {
-    background-size: 100%;
+    background-size: cover;
   }
 }
 .functionText p {
@@ -1389,6 +1450,7 @@
 .function .functionGroup .functionSwiper .function-swiper p {
   font-size: 1rem;
   color: #fff;
+  text-align: center;
 }
 .function .functionGroup .functionSwiper .swiper {
   padding-bottom: 2rem;
@@ -1402,7 +1464,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  padding-top: 3rem;
+  padding-top: 70px;
   justify-content: center;
 }
 .function .functionGroup .slogan04 img {
@@ -1614,7 +1676,6 @@ a:hover {
 }
 @media (min-width: 768px) {
   .banner .eTINPO-bn-w {
-    top: -10%;
     -o-object-fit: contain;
        object-fit: contain;
     -o-object-position: top;
@@ -1741,7 +1802,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   .feature {
-    padding: 4rem 0 32rem 0;
+    padding: 30rem 0 50rem 0;
   }
 }
 .feature .container {
@@ -1811,9 +1872,10 @@ a:hover {
 }
 .featureCloth .photo_01 {
   position: absolute;
-  max-width: 100%;
+  max-width: 90%;
+  width: 90%;
   right: 0;
-  bottom: 0rem;
+  bottom: -5rem;
   z-index: 2;
 }
 .featureCloth .photo_02 {
@@ -1825,7 +1887,7 @@ a:hover {
 }
 @media (min-width: 768px) {
   .featureCloth .photo_02 {
-    bottom: 10rem;
+    bottom: 0;
   }
 }
 
@@ -1851,10 +1913,9 @@ a:hover {
   filter: grayscale(0);
 }
 
-.swiper-slide .icon {
-  filter: grayscale(100%);
-}
-
+/*     .swiper-slide .icon {
+        filter: grayscale(100%);
+    } */
 .swiper-button-prev,
 .swiper-button-next {
   width: 10px;
@@ -1912,7 +1973,7 @@ a:hover {
   max-width: 100%;
   height: 140vw;
   right: 0;
-  top: -5rem;
+  top: -10rem;
   z-index: 2;
   height: 50vw;
   -o-object-fit: cover;
@@ -1924,7 +1985,7 @@ a:hover {
   .technology .technologyPhoto .photo_01 {
     position: relative;
     right: 0;
-    top: -10rem;
+    top: 5rem;
     height: auto;
     -o-object-fit: contain;
        object-fit: contain;
@@ -1944,7 +2005,7 @@ a:hover {
   .technology .technologyPhoto .photo_02 {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 360px;
     height: auto;
     display: block;
   }
@@ -1960,6 +2021,12 @@ a:hover {
 .technology .technologyPhoto .technologySlogan img {
   max-width: 100%;
 }
+.technology .technologyPhoto .technologySlogan img.technologySvg {
+  margin-left: 160px;
+}
+.technology .technologyPhoto .technologySlogan img.sloganSvg {
+  margin-left: 225px;
+}
 @media (min-width: 768px) {
   .technology .technologyPhoto .technologySlogan {
     position: relative;
@@ -1971,6 +2038,7 @@ a:hover {
   position: relative;
   bottom: 3rem;
   right: 0;
+  top: 0;
   background: rgba(255, 194, 0, 0.7);
   max-width: 380px;
   width: 95%;
@@ -1986,6 +2054,7 @@ a:hover {
     position: relative;
     bottom: auto;
     right: auto;
+    top: 400px;
   }
 }
 .technology .technologyText h3 {
@@ -2180,6 +2249,7 @@ a:hover {
 @media (min-width: 768px) {
   .partner .partnerText {
     margin-top: 2rem;
+    margin-left: 50px;
   }
 }
 .partner .partnerText h3 {
@@ -2487,10 +2557,16 @@ footer .footerLocation {
 footer .footerLink {
   letter-spacing: 2px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
+}
+footer .footerLink a {
+  padding-left: 15px;
+}
+footer .footerLink .socialMedia {
+  margin-top: 1rem;
 }
 footer .copyRight {
   background: #D5DEE1;

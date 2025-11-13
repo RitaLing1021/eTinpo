@@ -8,7 +8,7 @@
   align-items: center;
 
   .container {
-    max-width: 980px;
+    max-width: 1280px;
   }
 
   h3 {
@@ -21,6 +21,7 @@
     color: #fff;
     font-size: 3rem;
     font-weight: 400;
+    letter-spacing: 5px;
   }
 
   .responsibility-swiper {
@@ -28,7 +29,7 @@
     flex-direction: column;
     align-content: center;
     align-items: center;
-    max-width: 250px;
+    max-width: 350px;
 
     h4 {
       padding: 2rem 0 0 0;
@@ -51,7 +52,7 @@
 
   .swiper-slide-active {
     p {
-      background: linear-gradient(to right, rgba(0, 102, 51, 0) 0%, rgba(255, 197, 0, 0.5) 50%, rgba(0, 102, 51, 0) 100%);
+      background: linear-gradient(to right, rgba(0, 102, 51, 0) 0%,rgba(255, 197, 0, 0.5) 20%, rgba(255, 197, 0, 0.5) 80%, rgba(0, 102, 51, 0) 100%);
       padding: 1rem 2rem;
 
     }
@@ -83,8 +84,8 @@
   h4 {
     color: #fff;
     font-size: 3rem;
-    font-weight: 300;
-    letter-spacing: 2px;
+    font-weight: 400;
+    letter-spacing: 5px;
     font-family: "Inter", sans-serif;
     text-align: center;
   }
@@ -136,11 +137,12 @@
         font-weight: 500;
         color: $green;
         font-size: 1.1rem;
+        text-align: left;
 
         span {
           display: block;
           font-family: "Noto Sans TC", sans-serif;
-          font-weight: 400;
+          font-weight: 300;
         }
       }
 
