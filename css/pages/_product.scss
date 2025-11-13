@@ -291,7 +291,6 @@
         object-position: center;
 
         @include b768 {
-          bottom: -10rem;
           object-fit: contain;
           object-position: top;
           height: auto;
@@ -300,8 +299,8 @@
 
       .sloganPeople {
         position: absolute;
-        right: 8rem;
-        bottom: 5rem;
+        right: 5rem;
+        bottom: 10rem;
         z-index: 5;
       }
     }
@@ -315,7 +314,7 @@
       margin-top: -5rem;
 
       @include b768 {
-        background-size: 100%;
+        background-size: cover;
       }
 
       p {
@@ -363,6 +362,7 @@
             p {
               font-size: 1rem;
               color: #fff;
+              text-align: center;
             }
 
           }
@@ -383,7 +383,7 @@
           justify-content: center;
           flex-direction: column;
           align-items: center;
-          padding-top: 3rem;
+          padding-top: 70px;
           justify-content: center;
 
           img {

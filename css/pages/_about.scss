@@ -29,6 +29,7 @@
 
     .bannerText02 {
       padding-top: 3rem;
+      margin-left: 75px;
       z-index: 10;
       max-width: 96%;
 
@@ -48,9 +49,9 @@
 
     .bannerText04 {
       position: absolute;
-      bottom: 10rem;
+      bottom: 20rem;
       left: 0;
-      right: 0;
+      right: 120px;
       z-index: 10;
       margin: auto;
       padding-left: 10rem;
@@ -117,13 +118,14 @@
 
   @include b768 {
     left: 0;
+    bottom: 10rem;
   }
 }
 
 .AboutBn03 {
   position: absolute;
   left: 0;
-  top: 0;
+  top: 100px;
   z-index: 3;
 
 }
@@ -135,6 +137,20 @@
   flex-direction: column;
   align-items: center;
   position: relative;
+   &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -98px;
+    width: 100%;
+    height: 100px; // 依你半圓實際高度調整，或下方用 padding-trick
+    background-image: url('../image/about/eco-top.svg');
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    pointer-events: none;
+    z-index: 0;
+  }
 
   .ecoTop {
     width: 100%;
@@ -157,13 +173,14 @@
   .ecoText {
     z-index: 6;
     max-width: 90%;
+    padding-top: 120px;
   }
 
   .colth5 {
     position: absolute;
     z-index: 5;
     width: 100%;
-    top: 0;
+    top: 50px;
     left: 0;
   }
 
@@ -187,8 +204,8 @@
     @include b768 {
       flex-direction: row;
       align-items: flex-end;
-      top: 5%;
-      right: 25%;
+      top: -25%;
+      right: 15%;
 
     }
   }
@@ -216,7 +233,7 @@
     }
 
     .itemPhoto {
-      padding-bottom: 10rem;
+      padding-bottom: 11rem;
       text-align: center;
 
 
@@ -246,7 +263,7 @@
     position: relative;
     z-index: 4;
     width: 100%;
-    margin-top: -18rem;
+    margin-top: -50rem;
     height: 125vw;
     object-fit: cover;
     object-position: right;
@@ -255,7 +272,7 @@
     @include b768 {
       object-fit: contain;
       object-position: top;
-          height: auto;
+      height: auto;
 
     }
   }

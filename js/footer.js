@@ -44,11 +44,18 @@ footer =/*html*/`
             <a href="#"><img src="image/icon-ig.png" alt="ig"></a>
 </div>-->
             <div class="footerLink">
+              <div>
                 <a href="technologies.html">富邦技術</a>
                 <a href="about.html">關於我們</a>
                 <a href="product-features.html">產品總覽</a>
                 <a href="contact.html">聯絡我們</a>
                 <a href="#">合作案例</a>
+                 </div>
+                 <div class="socialMedia">
+                 <a href="#"><img src="image/footer_fb.svg" width="25"></a>
+                 <a href="#"><img src="image/footer_line.svg" width="25"></a>
+                 <a href="#"><img src="image/footer_ig.svg" width="25"></a>
+                 </div>
             </div>
         </div>
     </div>
