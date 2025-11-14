@@ -850,12 +850,12 @@
 }
 @media (min-width: 768px) {
   .technologiesFooter {
-    padding-bottom: 200px;
+    padding-bottom: 0;
   }
 }
 .technologiesFooter img {
   width: 100%;
-  height: 60vw;
+  height: 50vw;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -1509,6 +1509,181 @@
        object-position: top;
     height: auto;
   }
+}
+
+.rd {
+  background: linear-gradient(180deg, #D5DEE1 60%, #004632 100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.rd h3 {
+  padding-top: 2rem;
+  color: #004632;
+  font-size: 2rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+}
+.rd h4 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+}
+.rd .rd_bn {
+  max-width: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 80px;
+}
+.rd .rd_bn .text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10rem;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 2;
+}
+.rd .rd_bn .text .text-w {
+  margin-top: 3rem;
+}
+.rd .rd_bn .circle1 {
+  position: absolute;
+  right: 0;
+  top: -10rem;
+  z-index: 0;
+  max-width: 55%;
+}
+.rd .rd_bn .cloth-w {
+  position: relative;
+  z-index: 1;
+}
+.rd .circle {
+  position: relative;
+}
+.rd .circle .circle2 {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+  max-width: 50%;
+}
+.rd .actionGroup {
+  max-width: 980px;
+  padding-top: 2rem;
+  padding-bottom: 10rem;
+}
+@media (min-width: 768px) {
+  .rd .actionGroup {
+    padding-bottom: 1rem;
+  }
+}
+.rd .action {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 0;
+}
+.rd .action:nth-child(even) {
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .rd .action {
+    flex-direction: row;
+  }
+  .rd .action:nth-child(even) {
+    flex-direction: row-reverse;
+    justify-content: end;
+  }
+}
+.rd .action .actionText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem 2rem 1rem 0.8rem;
+  background: #FFF;
+  width: 350px;
+  max-width: 100%;
+  max-height: 133px;
+}
+.rd .action .actionText h4 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: #004632;
+  font-size: 1.1rem;
+  text-align: left;
+  letter-spacing: 1px;
+  padding-left: 45px;
+  position: relative;
+}
+.rd .action .actionText h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.rd .action .actionText h4 span {
+  display: block;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.rd .action .actionText p {
+  color: #595757;
+  font-size: 0.7rem;
+}
+.rd .action:nth-child(1) .actionText h4::after {
+  background-image: url("../image/rd/rd_icon_01.png");
+}
+.rd .action:nth-child(2) .actionText h4::after {
+  background-image: url("../image/rd/rd_icon_02.png");
+}
+.rd .action:nth-child(3) .actionText h4::after {
+  background-image: url("../image/rd/rd_icon_03.png");
+}
+.rd .action:nth-child(4) .actionText h4::after {
+  background-image: url("../image/rd/rd_icon_04.png");
+}
+.rd .rdFooter {
+  position: relative;
+}
+.rd .rdFooter .clouth1 {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  z-index: 2;
+}
+.rd .rdFooter .clouth2 {
+  position: absolute;
+  right: 0;
+  bottom: 8rem;
+  z-index: 1;
+}
+.rd .rdFooter .rdFooter_text {
+  background: rgba(255, 255, 255, 0.6);
+  color: #595757;
+  font-size: 0.8rem;
+  padding: 2rem 3rem;
+  letter-spacing: 5px;
+  position: absolute;
+  right: 8rem;
+  top: 0;
+  max-width: 337px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 /* 針對桌面版進行設定 */

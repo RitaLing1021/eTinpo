@@ -1,0 +1,204 @@
+.rd {
+  background: linear-gradient(180deg, #D5DEE1 60%, #004632 100%);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+
+  h3 {
+    padding-top: 2rem;
+    color: $green;
+    font-size: 2rem;
+    font-weight: 300;
+    letter-spacing: 2px;
+  }
+
+  h4 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    font-family: "Inter", sans-serif;
+    text-align: center;
+  }
+
+  .rd_bn {
+    max-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 80px;
+
+    .text {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 10rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 2;
+
+      .text-w {
+        margin-top: 3rem;
+      }
+    }
+
+
+    .circle1 {
+      position: absolute;
+      right: 0;
+      top: -10rem;
+      z-index: 0;
+      max-width: 55%;
+    }
+
+    .cloth-w {
+      position: relative;
+      z-index: 1;
+    }
+  }
+
+  .circle {
+    position: relative;
+
+    .circle2 {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 0;
+      max-width: 50%;
+    }
+  }
+
+
+  .actionGroup {
+    max-width: 980px;
+    padding-top: 2rem;
+    padding-bottom: 10rem;
+
+    @include b768 {
+      padding-bottom: 1rem;
+
+    }
+  }
+
+  .action {
+    display: flex;
+    flex-direction: column;
+    margin: 3rem 0;
+
+    &:nth-child(even) {
+      flex-direction: column;
+    }
+
+    @include b768 {
+      flex-direction: row;
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+        justify-content: end;
+
+      }
+    }
+
+
+    .actionText {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 1rem 2rem 1rem .8rem;
+      background: #FFF;
+      width: 350px;
+      max-width: 100%;
+      max-height: 133px;
+
+
+      h4 {
+        font-family: "Inter", sans-serif;
+        font-weight: 700;
+        color: $green;
+        font-size: 1.1rem;
+        text-align: left;
+        letter-spacing: 1px;
+        padding-left: 45px;
+        position: relative;
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 40px;
+          height: 40px;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+
+        span {
+          display: block;
+          font-family: "Noto Sans TC", sans-serif;
+          font-weight: 300;
+          font-size: .9rem;
+        }
+      }
+
+      p {
+        color: #595757;
+        font-size: .7rem;
+      }
+    }
+
+    &:nth-child(1) .actionText h4::after {
+      background-image: url("../image/rd/rd_icon_01.png");
+    }
+
+    &:nth-child(2) .actionText h4::after {
+      background-image: url("../image/rd/rd_icon_02.png");
+    }
+
+    &:nth-child(3) .actionText h4::after {
+      background-image: url("../image/rd/rd_icon_03.png");
+    }
+
+    &:nth-child(4) .actionText h4::after {
+      background-image: url("../image/rd/rd_icon_04.png");
+    }
+  }
+
+  .rdFooter {
+    position: relative;
+
+    .clouth1 {
+      position: relative;
+      left: 0;
+      bottom: 0;
+      z-index: 2;
+    }
+
+    .clouth2 {
+      position: absolute;
+      right: 0;
+      bottom: 8rem;
+      z-index: 1;
+    }
+
+    .rdFooter_text {
+      background: rgba(256, 256, 256, .6);
+      color: #595757;
+      font-size: .8rem;
+      padding: 2rem 3rem;
+      letter-spacing: 5px;
+      position: absolute;
+      right: 8rem;
+      top: 0;
+      max-width: 337px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+}
