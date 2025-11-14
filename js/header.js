@@ -66,6 +66,7 @@ header =/*html*/`
               <li><a class="dropdown-item" href="about.html">概述</a></li>
               <li><a class="dropdown-item" href="responsibility.html">責任</a></li>
               <li><a class="dropdown-item" href="develop.html">發展</a></li>
+              <li><a class="dropdown-item" href="rd.html">研發</a></li>
             </ul>
           </li>
           <li class="nav-item dropdown">

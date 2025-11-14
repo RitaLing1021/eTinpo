@@ -52,9 +52,9 @@ footer =/*html*/`
                 <a href="#">合作案例</a>
                  </div>
                  <div class="socialMedia">
-                 <a href="#"><img src="image/footer_fb.svg" width="25"></a>
-                 <a href="#"><img src="image/footer_line.svg" width="25"></a>
-                 <a href="#"><img src="image/footer_ig.svg" width="25"></a>
+                 <a href="https://www.facebook.com/people/eTINPO-Membrane/61571393983125/"><img src="image/footer_fb.svg" width="25"></a>
+                 <!--<a href="#"><img src="image/footer_line.svg" width="25"></a>
+                 <a href="#"><img src="image/footer_ig.svg" width="25"></a>-->
                  </div>
             </div>
         </div>
