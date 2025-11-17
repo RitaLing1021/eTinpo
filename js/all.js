@@ -80,11 +80,11 @@ var swiper = new Swiper('.swiper', {
   centeredSlides: true,
   loop: true,
   spaceBetween: 30,
-  autoplay: false,
-/*   {
+  autoplay:
+  {
    delay: 2500,
   disableOnInteraction: false,
-  }, */
+  }, 
   navigation: {
     nextEl: '.swiper-button-next',  // 設置下一個按鈕
     prevEl: '.swiper-button-prev',  // 設置上一個按鈕

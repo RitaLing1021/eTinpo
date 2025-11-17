@@ -17,6 +17,9 @@
 
     }
   }
+  .techPic1{
+    padding-top: 57px;
+  }
 
   .bannerText {
     position: absolute;
@@ -27,7 +30,7 @@
     justify-content: center;
 
     @include b768 {
-      bottom: 4rem;
+      bottom: 8rem;
       flex-direction: row;
 
     }
@@ -44,7 +47,8 @@
 
     .b-right {
       max-width: 645px;
-      margin-left: 3rem;
+      margin-left: 2rem;
+      margin-top:-7rem;
       height: auto;
 
     }
