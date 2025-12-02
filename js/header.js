@@ -86,8 +86,9 @@ header =/*html*/`
             <a class="nav-link" href="partners.html">PARTNERS</a>
           </li>
         </ul>
+        <div class="languageBox"><a href="https://etinpo.com.tw/">中</a>｜<a href="https://etinpo.com.tw/en/">EN</a></div>
       </div>
-      <div class="languageBox"><a href="https://etinpo.com.tw/">中</a>｜<a href="https://etinpo.com.tw/en/">EN</a></div>
+      
     </div>
   </nav>
     </header>

@@ -1,5 +1,5 @@
 .bannerAbout {
-  background: linear-gradient(180deg, #001a12 20%,#004632 60%, #d5dee1 100%);
+  background: linear-gradient(180deg, #001a12 20%, #004632 60%, #d5dee1 100%);
 
   .AboutSlogan {
     position: relative;
@@ -17,15 +17,24 @@
       padding-top: 5rem;
       z-index: 10;
       max-width: 96%;
-      margin-left: 5rem;
+      margin-left: 0;
+
+      @include b768 {
+        margin-left: 5rem;
+
+      }
 
     }
 
     .bannerText02 {
       padding-top: 3rem;
-      margin-left: 75px;
+      margin-left: 0;
       z-index: 10;
       max-width: 96%;
+
+      @include b768 {
+        margin-left: 75px;
+      }
 
     }
 
@@ -51,7 +60,7 @@
       padding-left: 10rem;
     }
 
-    .colth_bg{
+    .colth_bg {
       position: absolute;
       z-index: 3;
       top: 8rem;
@@ -113,7 +122,7 @@
 
 .AboutBn02 {
   position: absolute;
-  bottom: 5rem;
+  bottom: 43rem;
   height: auto;
   width: 100%;
   z-index: 4;
@@ -129,17 +138,23 @@
   left: 0;
   top: 100px;
   z-index: 3;
+  display: none;
+
+  @include b768 {
+    display: block;
+  }
 
 }
 
 .eco {
-  background: linear-gradient(180deg, #001a12 20%,#004632 60%, #cfe9ed 95%);
+  background: linear-gradient(180deg, #001a12 20%, #004632 60%, #cfe9ed 95%);
   padding-bottom: 11rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
-   &::before {
+
+  &::before {
     content: "";
     position: absolute;
     left: 0;
@@ -176,14 +191,24 @@
     z-index: 6;
     max-width: 90%;
     padding-top: 10px;
+    margin-bottom: 7rem;
+
+    @include b768 {
+      margin-bottom: 0
+    }
   }
 
   .colth5 {
     position: absolute;
     z-index: 5;
     width: 100%;
-    top: 50px;
+    top: 13rem;
     left: 0;
+
+    @include b768 {
+      top: 50px;
+
+    }
   }
 
 
@@ -198,7 +223,7 @@
   .smallItems {
     display: flex;
     position: absolute;
-    top: -7%;
+    top: -30%;
     right: 5%;
     z-index: 9;
     align-items: center;
@@ -217,16 +242,17 @@
     padding-bottom: 2rem;
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
 
     @include b768 {
       flex-direction: row;
       align-items: flex-end;
+      flex-direction: column;
     }
 
     .itemText {
-      padding-bottom: 2rem;
+      padding-bottom: 13rem;
       padding-right: 0;
 
       @include b768 {
@@ -236,9 +262,14 @@
     }
 
     .itemPhoto {
-      padding-bottom: 11rem;
+      padding-bottom: 0;
       text-align: center;
       z-index: 9;
+
+      @include b768 {
+        padding-bottom: 11rem;
+
+      }
 
 
       img {
@@ -267,7 +298,7 @@
     position: relative;
     z-index: 4;
     width: 100%;
-    margin-top: -50rem;
+    margin-top: -65rem;
     height: 125vw;
     object-fit: cover;
     object-position: right;
@@ -277,6 +308,8 @@
       object-fit: contain;
       object-position: top;
       height: auto;
+      margin-top: -50rem;
+
 
     }
   }
