@@ -249,7 +249,12 @@
   letter-spacing: 1px;
 }
 .clean .garment .container {
-  max-width: 650px;
+  max-width: 95%;
+}
+@media (min-width: 768px) {
+  .clean .garment .container {
+    max-width: 650px;
+  }
 }
 .clean .garment h3 {
   color: #004632;
@@ -283,6 +288,14 @@
   padding-bottom: 3rem;
   flex-wrap: wrap;
   justify-content: space-around;
+}
+.clean .garment .cleanIcon img {
+  max-width: 55px;
+}
+@media (min-width: 768px) {
+  .clean .garment .cleanIcon img {
+    max-width: 65px;
+  }
 }
 .clean .garment .wash {
   text-align: left;
@@ -348,6 +361,8 @@
   padding-bottom: 5rem;
   max-width: 700px;
   margin: auto;
+  z-index: 10;
+  position: relative;
 }
 .YearinReview .year:nth-child(odd) {
   justify-content: flex-start;
@@ -402,7 +417,12 @@
 }
 .YearinReview .year03 {
   background: linear-gradient(180deg, #004632, #001A12);
-  padding: 5rem 1rem 15rem;
+  padding: 5rem 1rem 35rem;
+}
+@media (min-width: 768px) {
+  .YearinReview .year03 {
+    padding: 5rem 1rem 15rem;
+  }
 }
 .YearinReview .year03 h5 {
   color: #fff;
@@ -456,9 +476,16 @@
 }
 .contact .circle .cloth-w {
   position: absolute;
-  top: 0;
+  top: 30px;
   right: 0;
   z-index: 2;
+  width: 254px;
+}
+@media (min-width: 768px) {
+  .contact .circle .cloth-w {
+    top: 0;
+    width: auto;
+  }
 }
 .contact .circle .circle1 {
   position: absolute;
@@ -476,6 +503,8 @@
 }
 .contact .title {
   text-align: center;
+  position: relative;
+  z-index: 9;
 }
 .contact h3 {
   padding-top: 3rem;
@@ -568,14 +597,27 @@
 .contact .contactFooter {
   background: url("../image/contact/cloth-w2.png") no-repeat top left;
   background-size: 100%;
-  padding-top: 25rem;
+  padding-top: 10rem;
   padding-bottom: 8rem;
   margin-top: -10rem;
+}
+@media (min-width: 768px) {
+  .contact .contactFooter {
+    padding-top: 25rem;
+  }
 }
 .contact .contactFooter .companyIcon {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+.contact .contactFooter .companyIcon img {
+  width: 80%;
+}
+@media (min-width: 768px) {
+  .contact .contactFooter .companyIcon img {
+    width: auto;
+  }
 }
 .contact .contactFooter .nanke {
   margin-right: 20rem;
@@ -628,7 +670,8 @@
 .application .applicationBanner .applicationBanner_text {
   position: absolute;
   bottom: 18rem;
-  left: 0rem;
+  left: 1rem;
+  max-width: 90%;
 }
 @media (min-width: 768px) {
   .application .applicationBanner .applicationBanner_text {
@@ -746,10 +789,19 @@
   height: auto;
 }
 .bannerTechs .bannerText .b-right {
-  max-width: 645px;
-  margin-left: 2rem;
-  margin-top: -7rem;
+  max-width: 300px;
+  margin-left: 5rem;
+  margin-top: -2rem;
+  padding-top: 60px;
   height: auto;
+}
+@media (min-width: 768px) {
+  .bannerTechs .bannerText .b-right {
+    max-width: 645px;
+    margin-left: 2rem;
+    margin-top: -7rem;
+    padding-top: 0;
+  }
 }
 
 .technologies {
@@ -786,6 +838,7 @@
   background: url("../image/technolgy/fearures.svg") top right no-repeat;
   background-size: 100%;
   height: 300px;
+  margin-top: -1px;
 }
 @media (min-width: 768px) {
   .features .featuresTitle {
@@ -794,8 +847,8 @@
   }
 }
 .features .featuresTitle .adventures {
-  margin-left: 0;
-  max-width: 90%;
+  margin-left: 20px;
+  max-width: 80%;
 }
 @media (min-width: 768px) {
   .features .featuresTitle .adventures {
@@ -891,13 +944,23 @@
   padding-top: 5rem;
   z-index: 10;
   max-width: 96%;
-  margin-left: 5rem;
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .bannerAbout .bannerText .bannerText01 {
+    margin-left: 5rem;
+  }
 }
 .bannerAbout .bannerText .bannerText02 {
   padding-top: 3rem;
-  margin-left: 75px;
+  margin-left: 0;
   z-index: 10;
   max-width: 96%;
+}
+@media (min-width: 768px) {
+  .bannerAbout .bannerText .bannerText02 {
+    margin-left: 75px;
+  }
 }
 .bannerAbout .bannerText .bannerText03 {
   padding-top: 8rem;
@@ -973,7 +1036,7 @@
 
 .AboutBn02 {
   position: absolute;
-  bottom: 5rem;
+  bottom: 43rem;
   height: auto;
   width: 100%;
   z-index: 4;
@@ -990,6 +1053,12 @@
   left: 0;
   top: 100px;
   z-index: 3;
+  display: none;
+}
+@media (min-width: 768px) {
+  .AboutBn03 {
+    display: block;
+  }
 }
 
 .eco {
@@ -1039,13 +1108,24 @@
   z-index: 6;
   max-width: 90%;
   padding-top: 10px;
+  margin-bottom: 7rem;
+}
+@media (min-width: 768px) {
+  .eco .ecoText {
+    margin-bottom: 0;
+  }
 }
 .eco .colth5 {
   position: absolute;
   z-index: 5;
   width: 100%;
-  top: 50px;
+  top: 13rem;
   left: 0;
+}
+@media (min-width: 768px) {
+  .eco .colth5 {
+    top: 50px;
+  }
 }
 
 .principles {
@@ -1057,7 +1137,7 @@
 .principles .smallItems {
   display: flex;
   position: absolute;
-  top: -7%;
+  top: -30%;
   right: 5%;
   z-index: 9;
   align-items: center;
@@ -1075,17 +1155,18 @@
   padding-bottom: 2rem;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
 }
 @media (min-width: 768px) {
   .principles .principlesitem {
     flex-direction: row;
     align-items: flex-end;
+    flex-direction: column;
   }
 }
 .principles .principlesitem .itemText {
-  padding-bottom: 2rem;
+  padding-bottom: 13rem;
   padding-right: 0;
 }
 @media (min-width: 768px) {
@@ -1095,9 +1176,14 @@
   }
 }
 .principles .principlesitem .itemPhoto {
-  padding-bottom: 11rem;
+  padding-bottom: 0;
   text-align: center;
   z-index: 9;
+}
+@media (min-width: 768px) {
+  .principles .principlesitem .itemPhoto {
+    padding-bottom: 11rem;
+  }
 }
 .principles .principlesitem .itemPhoto img {
   max-width: 90%;
@@ -1120,7 +1206,7 @@
   position: relative;
   z-index: 4;
   width: 100%;
-  margin-top: -50rem;
+  margin-top: -65rem;
   height: 125vw;
   -o-object-fit: cover;
      object-fit: cover;
@@ -1134,6 +1220,7 @@
     -o-object-position: top;
        object-position: top;
     height: auto;
+    margin-top: -50rem;
   }
 }
 
@@ -1143,6 +1230,7 @@
 }
 .product .productTop {
   background: url("../image/product/product-bn.png") top right no-repeat;
+  background-size: cover;
   min-height: 340px;
   display: flex;
   flex-direction: column;
@@ -1151,6 +1239,7 @@
 @media (min-width: 768px) {
   .product .productTop {
     min-height: 640px;
+    background-size: contain;
   }
 }
 .product .productTopText {
@@ -1395,6 +1484,12 @@
   right: 5rem;
   bottom: 10rem;
   z-index: 5;
+  width: 50px;
+}
+@media (min-width: 768px) {
+  .productSlogan .sloganPeople {
+    width: auto;
+  }
 }
 
 .functionText {
@@ -1553,6 +1648,9 @@
   align-items: center;
   z-index: 2;
 }
+.rd .rd_bn .text img {
+  max-width: 100%;
+}
 .rd .rd_bn .text .text-w {
   margin-top: 3rem;
 }
@@ -1566,6 +1664,20 @@
 .rd .rd_bn .cloth-w {
   position: relative;
   z-index: 1;
+  height: 35rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+@media (min-width: 768px) {
+  .rd .rd_bn .cloth-w {
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: top;
+       object-position: top;
+  }
 }
 .rd .circle {
   position: relative;
@@ -1575,12 +1687,17 @@
   left: 0;
   top: 0;
   z-index: 0;
-  max-width: 50%;
+  max-width: 90%;
+}
+@media (min-width: 768px) {
+  .rd .circle .circle2 {
+    max-width: 50%;
+  }
 }
 .rd .actionGroup {
   max-width: 980px;
   padding-top: 2rem;
-  padding-bottom: 10rem;
+  padding-bottom: 0;
 }
 @media (min-width: 768px) {
   .rd .actionGroup {
@@ -1590,7 +1707,8 @@
 .rd .action {
   display: flex;
   flex-direction: column;
-  margin: 3rem 0;
+  margin: 3rem auto;
+  width: 90%;
 }
 .rd .action:nth-child(even) {
   flex-direction: column;
@@ -1598,6 +1716,8 @@
 @media (min-width: 768px) {
   .rd .action {
     flex-direction: row;
+    width: 100%;
+    margin: 3rem 0;
   }
   .rd .action:nth-child(even) {
     flex-direction: row-reverse;
@@ -1610,9 +1730,15 @@
   justify-content: center;
   padding: 1rem 2rem 1rem 0.8rem;
   background: #FFF;
-  width: 350px;
+  width: -moz-max-content;
+  width: max-content;
   max-width: 100%;
   max-height: 133px;
+}
+@media (min-width: 768px) {
+  .rd .action .actionText {
+    width: 350px;
+  }
 }
 .rd .action .actionText h4 {
   font-family: "Inter", sans-serif;
@@ -1659,6 +1785,7 @@
 }
 .rd .rdFooter {
   position: relative;
+  overflow: hidden;
 }
 .rd .rdFooter .clouth1 {
   position: relative;
@@ -1679,12 +1806,18 @@
   padding: 2rem 3rem;
   letter-spacing: 5px;
   position: absolute;
-  right: 8rem;
+  right: 1rem;
   top: 0;
-  max-width: 337px;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+}
+@media (min-width: 768px) {
+  .rd .rdFooter .rdFooter_text {
+    right: 8rem;
+    max-width: 337px;
+  }
 }
 
 /* 針對桌面版進行設定 */
@@ -1712,6 +1845,10 @@ a {
 }
 a:hover {
   color: #FACD00;
+}
+
+.navbar-collapse {
+  justify-content: space-between;
 }
 
 .nav-link {
@@ -1903,11 +2040,10 @@ a:hover {
   }
 }
 .banner .banner03 {
-  position: relative;
+  position: absolute;
   z-index: 10;
-  bottom: 5%;
-  right: 0;
-  display: none;
+  bottom: 2%;
+  right: 2%;
 }
 @media (min-width: 768px) {
   .banner .banner03 {
@@ -1915,7 +2051,6 @@ a:hover {
     z-index: 10;
     bottom: 5%;
     right: 10%;
-    display: block;
   }
 }
 .bannerProduct {
@@ -2049,17 +2184,37 @@ a:hover {
 }
 .featureCloth .photo_01 {
   position: absolute;
-  max-width: 90%;
-  width: 90%;
+  max-width: 100%;
+  width: 100%;
+  transform: scale(1);
+  transform-origin: center;
   right: 0;
   bottom: -5rem;
   z-index: 2;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 20rem;
+}
+@media (min-width: 768px) {
+  .featureCloth .photo_01 {
+    max-width: 90%;
+    width: 90%;
+    transform: scale(1);
+    right: 0;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: top;
+       object-position: top;
+  }
 }
 .featureCloth .photo_02 {
   position: relative;
   width: 100%;
   left: 0;
-  bottom: 3rem;
+  bottom: 0;
   z-index: 1;
 }
 @media (min-width: 768px) {
@@ -2091,8 +2246,8 @@ a:hover {
 }
 
 /*     .swiper-slide .icon {
-        filter: grayscale(100%);
-    } */
+    filter: grayscale(100%);
+} */
 .swiper-button-prev,
 .swiper-button-next {
   width: 10px;
@@ -2127,16 +2282,24 @@ a:hover {
   }
 }
 .technology .technologyContent {
-  position: absolute;
+  position: relative;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 15rem;
+  top: 0;
   left: 0;
   right: 0;
-  margin: auto;
-  max-width: 80%;
+  margin: -20rem auto 0;
+  max-width: 90%;
+}
+@media (min-width: 768px) {
+  .technology .technologyContent {
+    position: absolute;
+    top: 15rem;
+    flex-direction: row;
+    max-width: 80%;
+  }
 }
 .technology .technologyPhoto {
   position: relative;
@@ -2154,14 +2317,15 @@ a:hover {
   right: 0;
   top: -10rem;
   z-index: 2;
-  height: 50vw;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  display: none;
 }
 @media (min-width: 768px) {
   .technology .technologyPhoto .photo_01 {
+    display: block;
     position: relative;
     right: 0;
     top: -15rem;
@@ -2178,7 +2342,6 @@ a:hover {
   left: 0;
   top: 0;
   z-index: 1;
-  display: none;
 }
 @media (min-width: 768px) {
   .technology .technologyPhoto .photo_02 {
@@ -2186,25 +2349,40 @@ a:hover {
     left: 0;
     top: 7rem;
     height: auto;
-    display: block;
   }
 }
 .technology .technologyPhoto .technologySlogan {
-  position: absolute;
+  position: relative;
   top: 4rem;
   left: 5px;
   z-index: 9;
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 768px) {
+  .technology .technologyPhoto .technologySlogan {
+    position: absolute;
+  }
+}
 .technology .technologyPhoto .technologySlogan img {
   max-width: 100%;
 }
 .technology .technologyPhoto .technologySlogan img.technologySvg {
-  margin-left: 160px;
+  margin-left: 0;
+  margin-top: 2rem;
+}
+@media (min-width: 768px) {
+  .technology .technologyPhoto .technologySlogan img.technologySvg {
+    margin-left: 160px;
+  }
 }
 .technology .technologyPhoto .technologySlogan img.sloganSvg {
-  margin-left: 225px;
+  margin-left: 0;
+}
+@media (min-width: 768px) {
+  .technology .technologyPhoto .technologySlogan img.sloganSvg {
+    margin-left: 225px;
+  }
 }
 @media (min-width: 768px) {
   .technology .technologyPhoto .technologySlogan {
@@ -2221,7 +2399,7 @@ a:hover {
   background: rgba(255, 194, 0, 0.7);
   max-width: 380px;
   width: 95%;
-  margin: auto;
+  margin: 10rem auto 0;
   z-index: 10;
   font-size: 0.8rem;
   text-align: justify;
@@ -2231,6 +2409,7 @@ a:hover {
 @media (min-width: 768px) {
   .technology .technologyText {
     position: relative;
+    margin: auto;
     bottom: auto;
     right: auto;
     top: 400px;
@@ -2252,11 +2431,12 @@ a:hover {
 
 .homeproduct {
   background: #D5DEE1;
-  padding-top: 60px;
+  padding-top: 0;
   padding-bottom: 30rem;
 }
 @media (min-width: 768px) {
   .homeproduct {
+    padding-top: 60px;
     padding-bottom: 25rem;
   }
 }

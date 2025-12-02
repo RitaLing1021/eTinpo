@@ -13,7 +13,7 @@
     @import 'pages/application';
     @import 'pages/technologies';
     @import 'pages/about';
-    @import 'pages/product';    
+    @import 'pages/product';
     @import 'pages/rd';
 
 
@@ -44,6 +44,10 @@
         &:hover {
             color: $yellow;
         }
+    }
+
+    .navbar-collapse {
+        justify-content: space-between;
     }
 
     .nav-link {
@@ -207,7 +211,7 @@
                 object-position: top;
                 height: auto;
                 width: 100%;
-                top:3rem;
+                top: 3rem;
             }
 
             @include b992 {}
@@ -259,18 +263,16 @@
         }
 
         .banner03 {
-            position: relative;
+            position: absolute;
             z-index: 10;
-            bottom: 5%;
-            right: 0;
-            display: none;
+            bottom: 2%;
+            right: 2%;
 
             @include b768 {
                 position: absolute;
                 z-index: 10;
                 bottom: 5%;
                 right: 10%;
-                display: block;
             }
 
             @include b1024 {}
@@ -427,18 +429,33 @@
 
         .photo_01 {
             position: absolute;
-            max-width: 90%;
-            width: 90%;
+            max-width: 100%;
+            width: 100%;
+            transform: scale(1);
+            transform-origin: center;
             right: 0;
             bottom: -5rem;
             z-index: 2;
+            object-fit: cover;
+            object-position: center;
+            height: 20rem;
+
+            @include b768 {
+                max-width: 90%;
+                width: 90%;
+                transform: scale(1);
+                right: 0;
+                height: auto;
+                object-fit: contain;
+                object-position: top;
+            }
         }
 
         .photo_02 {
             position: relative;
             width: 100%;
             left: 0;
-            bottom: 3rem;
+            bottom: 0;
             z-index: 1;
 
             @include b768 {
@@ -469,7 +486,7 @@
         filter: grayscale(0);
     }
 
-/*     .swiper-slide .icon {
+    /*     .swiper-slide .icon {
         filter: grayscale(100%);
     } */
 
@@ -508,16 +525,24 @@
             }
         }*/
         .technologyContent {
-            position: absolute;
+            position: relative;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            top: 15rem;
+            top: 0;
             left: 0;
             right: 0;
-            margin: auto;
-            max-width: 80%;
+            margin: -20rem auto 0;
+            max-width: 90%;
+
+            @include b768 {
+                position: absolute;
+                top: 15rem;
+                flex-direction: row;
+                max-width: 80%;
+
+            }
         }
 
         .technologyPhoto {
@@ -535,11 +560,12 @@
                 right: 0;
                 top: -10rem;
                 z-index: 2;
-                height: 50vw;
                 object-fit: cover;
                 object-position: center;
+                display: none;
 
                 @include b768 {
+                    display: block;
                     position: relative;
                     right: 0;
                     top: -15rem;
@@ -555,35 +581,46 @@
                 left: 0;
                 top: 0;
                 z-index: 1;
-                display: none;
 
                 @include b768 {
                     position: absolute;
                     left: 0;
                     top: 7rem;
                     height: auto;
-                    display: block;
 
                 }
             }
 
             .technologySlogan {
-                position: absolute;
+                position: relative;
                 top: 4rem;
                 left: 5px;
                 z-index: 9;
                 display: flex;
                 flex-direction: column;
 
+                @include b768 {
+                    position: absolute;
+                }
+
                 img {
                     max-width: 100%;
 
                     &.technologySvg {
-                        margin-left: 160px;
+                        margin-left: 0;
+                        margin-top: 2rem;
+
+                        @include b768 {
+                            margin-left: 160px;
+                        }
                     }
 
                     &.sloganSvg {
-                        margin-left: 225px;
+                        margin-left: 0;
+
+                        @include b768 {
+                            margin-left: 225px;
+                        }
                     }
 
                 }
@@ -605,7 +642,7 @@
             background: rgba($color: #FFC200, $alpha: 0.7);
             max-width: 380px;
             width: 95%;
-            margin: auto;
+            margin: 10rem auto 0;
             z-index: 10;
             font-size: .8rem;
             text-align: justify;
@@ -614,6 +651,7 @@
 
             @include b768 {
                 position: relative;
+                margin: auto;
                 bottom: auto;
                 right: auto;
                 top: 400px;
@@ -641,10 +679,11 @@
 
     .homeproduct {
         background: #D5DEE1;
-        padding-top: 60px;
+        padding-top: 0;
         padding-bottom: 30rem;
 
         @include b768 {
+            padding-top: 60px;
             padding-bottom: 25rem;
         }
 
@@ -1197,10 +1236,12 @@
             flex-wrap: wrap;
             align-items: flex-end;
             justify-content: space-between;
-            a{
+
+            a {
                 padding-left: 15px;
             }
-            .socialMedia{
+
+            .socialMedia {
                 margin-top: 1rem;
             }
         }

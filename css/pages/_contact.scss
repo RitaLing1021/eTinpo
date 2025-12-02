@@ -1,5 +1,5 @@
     .contact {
-      background:linear-gradient(180deg, #D5DEE1 0%, #A7AFB4 100%);
+      background: linear-gradient(180deg, #D5DEE1 0%, #A7AFB4 100%);
       color: $green;
       padding-top: 80px;
       overflow: hidden;
@@ -8,11 +8,20 @@
       .circle {
         position: relative;
 
-        .cloth-w{
+        .cloth-w {
           position: absolute;
-          top: 0;
-          right:0;
-          z-index:2;
+          top: 30px;
+          right: 0;
+          z-index: 2;
+          width: 254px;
+
+
+          @include b768 {
+            top: 0;
+            width: auto;
+
+
+          }
 
         }
 
@@ -35,6 +44,8 @@
 
       .title {
         text-align: center;
+        position: relative;
+        z-index: 9;
       }
 
       h3 {
@@ -137,14 +148,30 @@
       .contactFooter {
         background: url('../image/contact/cloth-w2.png') no-repeat top left;
         background-size: 100%;
-        padding-top: 25rem;
+        padding-top: 10rem;
         padding-bottom: 8rem;
         margin-top: -10rem;
+
+        @include b768 {
+          padding-top: 25rem;
+
+        }
 
         .companyIcon {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
+
+          img {
+            width: 80%;
+
+            @include b768 {
+              width: auto;
+
+            }
+          }
+
+
         }
 
         .nanke {
