@@ -159,8 +159,17 @@
 
         .companyIcon {
           display: flex;
-          flex-direction: row;
+          flex-direction: column-reverse;
           justify-content: space-between;
+          align-items: flex-start;
+
+          @include b768 {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+          }
+
 
           img {
             width: 80%;
@@ -169,6 +178,11 @@
               width: auto;
 
             }
+          }
+
+          .nanke {
+            max-height: 24px;
+            margin-top: 2rem;
           }
 
 
