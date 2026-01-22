@@ -572,6 +572,7 @@
                     height: auto;
                     object-fit: contain;
                     object-position: top;
+                    z-index: 1;
                 }
             }
 
@@ -587,7 +588,7 @@
                     left: 0;
                     top: 7rem;
                     height: auto;
-
+                    z-index: 2;
                 }
             }
 
@@ -798,6 +799,12 @@
                 font-size: .8rem;
                 color: #595857;
                 font-weight: 600;
+                margin-top: 0;
+
+                @include b768 {
+                    margin-top: 3rem;
+
+                }
 
             }
 
