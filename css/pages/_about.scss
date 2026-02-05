@@ -1,5 +1,11 @@
 .bannerAbout {
-  background: linear-gradient(180deg, #001a12 20%, #004632 60%, #d5dee1 100%);
+  background: linear-gradient(180deg, #001a12 20%, #004632 30%, #d5dee1 70%);
+
+  @include b768 {
+    background: linear-gradient(180deg, #001a12 20%, #004632 60%, #d5dee1 100%);
+
+
+  }
 
   .AboutSlogan {
     position: relative;
@@ -222,8 +228,12 @@
 .principles {
   background: linear-gradient(180deg, #CFE9ED 0%, #386A6E 100%);
   position: relative;
-  padding-bottom: 20rem;
+  padding-bottom: 30rem;
   margin-top: -1px;
+
+  @include b768 {
+    padding-bottom: 20rem;
+  }
 
   .smallItems {
     display: flex;
@@ -249,7 +259,7 @@
     flex-direction: column-reverse;
     align-items: center;
     margin-top: 0;
-    margin-bottom:0;
+    margin-bottom: 0;
 
     @include b768 {
       justify-content: space-around;

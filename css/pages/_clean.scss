@@ -76,7 +76,10 @@
 
     .wash {
       text-align: left;
+      padding-bottom: 35rem;
+      @include b768{
       padding-bottom: 30rem;
+      }
 
       h5 {
         color: $green;
