@@ -20,8 +20,8 @@
   height: 140vw;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: left;
+     object-position: left;
 }
 @media (min-width: 768px) {
   .partners .partnersPhoto .partnersBanner {
@@ -299,7 +299,12 @@
 }
 .clean .garment .wash {
   text-align: left;
-  padding-bottom: 30rem;
+  padding-bottom: 35rem;
+}
+@media (min-width: 768px) {
+  .clean .garment .wash {
+    padding-bottom: 30rem;
+  }
 }
 .clean .garment .wash h5 {
   color: #004632;
@@ -915,7 +920,7 @@
 .technologiesFooter {
   background: #90AFA9;
   width: 100%;
-  padding-bottom: 40vh;
+  padding-bottom: 45vh;
 }
 @media (min-width: 768px) {
   .technologiesFooter {
@@ -941,7 +946,12 @@
 }
 
 .bannerAbout {
-  background: linear-gradient(180deg, #001a12 20%, #004632 60%, #d5dee1 100%);
+  background: linear-gradient(180deg, #001a12 20%, #004632 30%, #d5dee1 70%);
+}
+@media (min-width: 768px) {
+  .bannerAbout {
+    background: linear-gradient(180deg, #001a12 20%, #004632 60%, #d5dee1 100%);
+  }
 }
 .bannerAbout .AboutSlogan {
   position: relative;
@@ -1149,8 +1159,13 @@
 .principles {
   background: linear-gradient(180deg, #CFE9ED 0%, #386A6E 100%);
   position: relative;
-  padding-bottom: 20rem;
+  padding-bottom: 30rem;
   margin-top: -1px;
+}
+@media (min-width: 768px) {
+  .principles {
+    padding-bottom: 20rem;
+  }
 }
 .principles .smallItems {
   display: flex;
@@ -1511,7 +1526,7 @@
 
 .functionText {
   background: url("../image/product/productBg.svg") top center no-repeat;
-  background-size: 380vw;
+  background-size: 450vw;
   min-height: 190px;
   z-index: 9;
   position: relative;
@@ -1520,6 +1535,7 @@
 @media (min-width: 768px) {
   .functionText {
     background-size: cover;
+    background-size: 380vw;
   }
 }
 .functionText p {
@@ -1681,7 +1697,7 @@
 .rd .rd_bn .cloth-w {
   position: relative;
   z-index: 1;
-  height: 35rem;
+  height: 15rem;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
