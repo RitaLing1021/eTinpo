@@ -2012,7 +2012,7 @@ a:hover {
 .banner .eTINPO-bn-w {
   position: absolute;
   max-width: 100%;
-  top: 0;
+  top: 2rem;
   z-index: 4;
   height: 135vw;
   -o-object-fit: cover;
@@ -2034,7 +2034,7 @@ a:hover {
 .banner .eTINPO-bn-g {
   position: absolute;
   max-width: 100%;
-  top: 5%;
+  top: 10%;
   z-index: 3;
   height: 135vw;
   -o-object-fit: cover;
@@ -2061,8 +2061,8 @@ a:hover {
 }
 .banner .banner02 {
   position: relative;
-  top: 70px;
-  left: 1%;
+  top: 90px;
+  left: 3rem;
   z-index: 10;
 }
 @media (min-width: 768px) {
@@ -2075,8 +2075,8 @@ a:hover {
 .banner .banner03 {
   position: absolute;
   z-index: 10;
-  bottom: 2%;
-  right: 2%;
+  bottom: 10%;
+  right: 3rem;
 }
 @media (min-width: 768px) {
   .banner .banner03 {
@@ -2143,7 +2143,7 @@ a:hover {
 
 .feature {
   color: #323232;
-  padding: 2rem 2rem 8rem;
+  padding: 5rem 3rem 8rem;
 }
 @media (min-width: 768px) {
   .feature {
@@ -2156,9 +2156,25 @@ a:hover {
 .feature .featureTheme {
   max-width: 50rem;
   letter-spacing: 2px;
+  text-align: center;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .feature .featureTheme {
+    text-align: left;
+    margin-top: 0;
+  }
 }
 .feature .featureTheme:nth-child(even) {
-  margin-top: 10rem;
+  margin-top: 1rem;
+}
+@media (min-width: 768px) {
+  .feature .featureTheme:nth-child(even) {
+    margin-top: 10rem;
+  }
+}
+.feature .featureTheme .featureText {
+  margin-top: 1rem;
 }
 .feature .featureTheme .featureText h4 {
   font-size: 1.2rem;
@@ -2171,7 +2187,7 @@ a:hover {
   }
 }
 .feature .featurePhoto img {
-  width: 70px;
+  width: 90px;
 }
 @media (min-width: 768px) {
   .feature .featurePhoto img {
@@ -2200,15 +2216,16 @@ a:hover {
 .feature p {
   padding-top: 0.1rem;
   text-align: justify;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
   color: #fff;
   letter-spacing: 1px;
 }
 
 .featureCloth {
   position: absolute;
-  bottom: -6rem;
+  bottom: -13rem;
   width: 100%;
+  overflow-x: clip;
 }
 @media (min-width: 768px) {
   .featureCloth {
@@ -2219,10 +2236,10 @@ a:hover {
   position: absolute;
   max-width: 100%;
   width: 100%;
-  transform: scale(1);
+  transform: scale(1.5);
   transform-origin: center;
   right: 0;
-  bottom: -5rem;
+  bottom: -6rem;
   z-index: 2;
   -o-object-fit: cover;
      object-fit: cover;
@@ -2246,13 +2263,24 @@ a:hover {
 .featureCloth .photo_02 {
   position: relative;
   width: 100%;
+  top: 3rem;
   left: 0;
   bottom: 0;
   z-index: 1;
+  height: 35vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right;
+     object-position: right;
 }
 @media (min-width: 768px) {
   .featureCloth .photo_02 {
     bottom: 0;
+    height: auto;
+    -o-object-fit: contain;
+       object-fit: contain;
+    -o-object-position: top;
+       object-position: top;
   }
 }
 
@@ -2393,10 +2421,12 @@ a:hover {
   z-index: 9;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .technology .technologyPhoto .technologySlogan {
     position: absolute;
+    align-items: normal;
   }
 }
 .technology .technologyPhoto .technologySlogan img {
@@ -2404,11 +2434,12 @@ a:hover {
 }
 .technology .technologyPhoto .technologySlogan img.technologySvg {
   margin-left: 0;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 @media (min-width: 768px) {
   .technology .technologyPhoto .technologySlogan img.technologySvg {
     margin-left: 160px;
+    margin-top: 2rem;
   }
 }
 .technology .technologyPhoto .technologySlogan img.sloganSvg {
@@ -2433,12 +2464,12 @@ a:hover {
   top: 0;
   background: rgba(255, 194, 0, 0.7);
   max-width: 380px;
-  width: 95%;
-  margin: 10rem auto 0;
+  width: 90%;
+  margin: 6rem auto 0;
   z-index: 10;
   font-size: 0.8rem;
   text-align: justify;
-  padding: 30px 15px;
+  padding: 30px 1.5rem;
   color: #fff;
 }
 @media (min-width: 768px) {
@@ -2448,77 +2479,89 @@ a:hover {
     bottom: auto;
     right: auto;
     top: 400px;
+    width: 95%;
   }
 }
 .technology .technologyText h3 {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   padding-bottom: 1rem;
+  font-size: 1.6rem;
 }
 .technology .technologyText h4 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 .technology .technologyText p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
 .homeproduct {
-  background: #D5DEE1;
-  padding-top: 0;
-  padding-bottom: 30rem;
+  background: linear-gradient(180deg, #004632 0%, #004632 5%, #D5DEE1 10%, #D5DEE1 100%);
+  padding: 0 3rem 30rem;
 }
 @media (min-width: 768px) {
   .homeproduct {
-    padding-top: 60px;
-    padding-bottom: 25rem;
+    padding: 60px 0 25rem;
   }
+}
+.homeproduct .productPhoto {
+  position: relative;
+  max-width: 570px;
+  text-align: center;
+}
+.homeproduct .productPhoto img {
+  max-width: 90%;
+}
+.homeproduct .btn {
+  transform: scale(1.5);
+  width: 120px;
+  margin-right: 1rem;
+}
+@media (min-width: 768px) {
+  .homeproduct .btn {
+    transform: scale(1);
+    width: 100px;
+    margin-right: 0;
+  }
+}
+.homeproduct a {
+  text-align: right;
 }
 .homeproduct .product_01 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
-.homeproduct .product_01 .productPhoto {
-  position: relative;
-  max-width: 570px;
-}
-.homeproduct .product_01 .productPhoto img {
-  max-width: 100%;
-}
 .homeproduct .product_01 .productPhoto .productText {
   position: absolute;
   bottom: 5rem;
+  top: 7rem;
   left: 0;
   right: 0;
   margin: auto;
 }
+@media (min-width: 768px) {
+  .homeproduct .product_01 .productPhoto .productText {
+    top: 0rem;
+  }
+}
 .homeproduct .product_01 p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #595857;
   font-weight: 600;
-}
-.homeproduct .product_01 a {
-  display: flex;
 }
 .homeproduct .product_02 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-top: 1rem;
+  padding-top: 5rem;
 }
 @media (min-width: 768px) {
   .homeproduct .product_02 {
     padding-top: 15rem;
   }
-}
-.homeproduct .product_02 .productPhoto {
-  position: relative;
-  max-width: 570px;
-}
-.homeproduct .product_02 .productPhoto img {
-  max-width: 100%;
 }
 .homeproduct .product_02 .productPhoto .productText {
   position: absolute;
@@ -2536,18 +2579,13 @@ a:hover {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  padding-top: 5rem;
 }
 @media (min-width: 768px) {
   .homeproduct .product_03 {
     align-items: flex-start;
+    padding-top: 0;
   }
-}
-.homeproduct .product_03 .productPhoto {
-  position: relative;
-  max-width: 570px;
-}
-.homeproduct .product_03 .productPhoto img {
-  max-width: 100%;
 }
 .homeproduct .product_03 .productPhoto .productText {
   position: absolute;
@@ -2573,19 +2611,11 @@ a:hover {
   font-weight: 600;
   margin-top: 0;
 }
-@media (min-width: 768px) {
-  .homeproduct .product_03 p {
-    margin-top: 3rem;
-  }
-}
-.homeproduct .product_03 a {
-  display: flex;
-}
 .homeproduct .product_04 {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-top: 1rem;
+  padding-top: 5rem;
 }
 @media (min-width: 768px) {
   .homeproduct .product_04 {
@@ -2593,11 +2623,7 @@ a:hover {
   }
 }
 .homeproduct .product_04 img {
-  max-width: 100%;
-}
-.homeproduct .product_04 .productPhoto {
-  position: relative;
-  max-width: 570px;
+  max-width: 90%;
 }
 .homeproduct .product_04 .productPhoto .productText {
   position: absolute;
@@ -2636,6 +2662,21 @@ a:hover {
     margin-bottom: 1rem;
   }
 }
+.partner .partnerGroup {
+  position: relative;
+  padding-top: 3rem;
+}
+@media (min-width: 768px) {
+  .partner .partnerGroup {
+    padding-top: 0;
+  }
+}
+.partner .partnerGroup .partnerSlogan {
+  position: relative;
+}
+.partner .partnerGroup .partnerSloganEn {
+  position: relative;
+}
 .partner .partnerText {
   background: rgba(255, 194, 0, 0.7);
   max-width: 420px;
@@ -2643,26 +2684,28 @@ a:hover {
   font-size: 0.8rem;
   text-align: justify;
   margin-top: 1rem;
-  padding: 30px 15px;
+  padding: 30px 1.5rem;
   color: #fff;
 }
 @media (min-width: 768px) {
   .partner .partnerText {
     margin-top: 2rem;
     margin-left: 50px;
+    padding: 30px 15px;
   }
 }
 .partner .partnerText h3 {
   font-family: "Inter", sans-serif;
   font-weight: 700;
   padding-bottom: 1rem;
+  font-size: 1.6rem;
 }
 .partner .partnerText h4 {
-  font-size: 1.1rem;
+  font-size: 1.2rem;
   font-weight: 600;
 }
 .partner .partnerText p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 500;
 }
 
