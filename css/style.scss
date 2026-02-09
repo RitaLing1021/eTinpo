@@ -334,7 +334,7 @@
 
 
     .technologyFeature {
-        background: linear-gradient(180deg, #D5DEE1 0%, #D5DEE1 70%, #004632 100%);
+        background: linear-gradient(180deg, #001A12 0%, #D5DEE1 10%, #D5DEE1 70%, #004632 100%);
         position: relative;
 
     }
@@ -735,7 +735,7 @@
             }
         }
 
-        a{
+        a {
             text-align: right;
         }
 
@@ -1004,7 +1004,7 @@
                 flex-direction: column;
                 font-size: 1.8rem;
                 color: $green;
-                line-height: 2.5rem;
+                line-height: 1.5rem;
                 align-items: center;
 
                 span {
@@ -1263,24 +1263,28 @@
             }
         }
 
+
         .footerBtn {
-            padding-bottom: 1rem;
-            padding-top: 1rem;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
 
             @include b768 {
                 padding-bottom: 1rem;
             }
 
-            a {
-                padding: 0 .5rem;
-            }
         }
 
         .footerLocation {
             border-bottom: 1px solid #fff;
+            font-size: 10px;
+            padding-bottom: 2.5rem;
 
             @include b768 {
                 border: none;
+                font-size: 12px;
+                padding-bottom: 0;
             }
         }
 
@@ -1291,13 +1295,42 @@
             flex-wrap: wrap;
             align-items: flex-end;
             justify-content: space-between;
+            padding-top: 1.5rem;
+            width: 100%;
+
+            .footerBtn {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
 
             a {
-                padding-left: 15px;
+                padding-left: 0;
+
+                @include b768 {
+                    padding-left: 15px;
+                    text-align: left;
+                    flex: unset;
+                }
             }
 
             .socialMedia {
                 margin-top: 1rem;
+                width: 100%;
+                text-align: right;
+
+                @include b768 {
+                    width: auto;
+                }
+            }
+
+            @include b768 {
+                width: auto;
+
+                .footerBtn {
+                    width: auto;
+                    display: block;
+                }
             }
         }
 
@@ -1307,6 +1340,20 @@
             text-align: center;
             padding: 10px;
             letter-spacing: 1px;
+            font-size: 10px;
+        }
+
+
+        .eTinpoLogo {
+            margin-top: 1rem;
+
+            @include b768 {
+                margin-top: 0;
+            }
+
+            img {
+                max-width: 220px;
+            }
         }
 
     }

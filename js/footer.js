@@ -29,27 +29,21 @@ footer =/*html*/`
 </svg>
 <div class="footer">
     <div class="container d-flex flex-md-row flex-column justify-content-around align-items-center p-3">
-        <div><img src="image/footer_logo.svg" alt="eTinpoLogo" width="234"></div>
-        <div class="text-center text-md-start py-3 footerLocation">
+        <div class="eTinpoLogo"><img src="image/footer_logo.svg" alt="eTinpoLogo" width="234"></div>
+        <div class="text-center text-md-start footerLocation">
             聯絡電話 / +886-6-505-1179<br>
             電子信箱 / info@etinpo.com.tw <br>
             服務時間 / 週一至週五 9:30 A.M. to 5 P.M.<br>
             聯絡地址 / 74144台南市新市區創業路10號2樓<br>
             2F, No. 10, Chuangye Rd., Xinshi Dist., Tainan City 74144 , Taiwan
         </div>
-        <div class="text-center text-md-end">
-        <!--<div class="footerBtn">
-            <a href="#"><img src="image/icon-fb.png" alt="facebook"></a>
-            <a href="#"><img src="image/icon-line.png" alt="Line"></a>
-            <a href="#"><img src="image/icon-ig.png" alt="ig"></a>
-</div>-->
             <div class="footerLink">
-              <div>
+              <div class="footerBtn">
                 <a href="technologies.html">富邦技術</a>
                 <a href="about.html">關於我們</a>
                 <a href="product-features.html">產品總覽</a>
                 <a href="contact.html">聯絡我們</a>
-                <a href="#">合作案例</a>
+                <a href="partners.html">合作案例</a>
                  </div>
                  <div class="socialMedia">
                  <a href="https://www.facebook.com/people/eTINPO-Membrane/61571393983125/"><img src="image/footer_fb.svg" width="25"></a>
@@ -57,9 +51,8 @@ footer =/*html*/`
                  <a href="#"><img src="image/footer_ig.svg" width="25"></a>-->
                  </div>
             </div>
-        </div>
     </div>
-    <div class="text-center copyRight">
+    <div class="copyRight">
         Copyright © 2024 富邦先進材料股份有限公司 All Rights Reserved.
     </div>
     </div>
