@@ -59,7 +59,7 @@ header =/*html*/`
           </li>
           <!-- 下拉選單 -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="about.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               ABOUT US
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -70,7 +70,7 @@ header =/*html*/`
             </ul>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="about.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               PRODUCT
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
