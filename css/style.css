@@ -103,14 +103,20 @@
 .responsibility {
   background: linear-gradient(180deg, #004632, #001A12);
   position: relative;
-  padding-top: 80px;
+  padding: 120px 3rem 5rem;
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .responsibility {
+    padding: 80px 0 0;
+  }
+}
 .responsibility .container {
   max-width: 1280px;
+  padding: 0;
 }
 .responsibility h3 {
   color: #fff;
@@ -119,9 +125,14 @@
 }
 .responsibility h4 {
   color: #fff;
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 400;
   letter-spacing: 5px;
+}
+@media (min-width: 768px) {
+  .responsibility h4 {
+    font-size: 3rem;
+  }
 }
 .responsibility .responsibility-swiper {
   display: flex;
@@ -137,9 +148,14 @@
 }
 .responsibility .responsibility-swiper p {
   margin: 0.8rem auto;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   max-width: 35rem;
   color: #fff;
+}
+@media (min-width: 768px) {
+  .responsibility .responsibility-swiper p {
+    font-size: 0.8rem;
+  }
 }
 .responsibility .swiper {
   margin-top: 2rem;
@@ -152,6 +168,13 @@
 .responsibility .swiper-button-prev,
 .responsibility .swiper-button-next {
   color: #fff;
+  top: 20%;
+}
+@media (min-width: 768px) {
+  .responsibility .swiper-button-prev,
+  .responsibility .swiper-button-next {
+    top: 25%;
+  }
 }
 
 .values {
@@ -163,34 +186,57 @@
   align-content: center;
   align-items: center;
 }
+.values::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: -60px;
+  width: 100%;
+  height: 130px;
+  background-image: url("../image/responsibility/valuesBg.svg");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 250%;
+  pointer-events: none;
+  z-index: 0;
+}
 .values h3 {
-  padding-top: 2rem;
   color: #004632;
   font-size: 2rem;
   font-weight: 300;
   letter-spacing: 2px;
+  z-index: 9;
 }
 .values h4 {
   color: #fff;
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 400;
-  letter-spacing: 5px;
+  letter-spacing: 1px;
   font-family: "Inter", sans-serif;
   text-align: center;
+  margin: 0.8rem 0;
+}
+@media (min-width: 768px) {
+  .values h4 {
+    font-size: 3rem;
+    z-index: 9;
+    letter-spacing: 5px;
+    margin: 0 0 0.8rem 0;
+  }
 }
 .values .actionGroup {
-  padding-top: 2rem;
   padding-bottom: 10rem;
+  padding: 1rem 3rem 10rem 3rem;
 }
 @media (min-width: 768px) {
   .values .actionGroup {
-    padding-bottom: 1rem;
+    padding: 2rem 0 1rem 0;
   }
 }
 .values .action {
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
+  margin: 1rem 0 3rem;
 }
 .values .action:nth-child(even) {
   flex-direction: column;
@@ -198,13 +244,14 @@
 @media (min-width: 768px) {
   .values .action {
     flex-direction: row;
+    margin: 1rem 0;
   }
   .values .action:nth-child(even) {
     flex-direction: row-reverse;
     justify-content: end;
   }
   .values .action:nth-child(even) .actionText {
-    background: linear-gradient(90deg, #FFF, rgba(0, 0, 0, 0));
+    background: linear-gradient(180deg, #FFF, rgba(0, 0, 0, 0));
   }
 }
 .values .action .actionText {
@@ -212,7 +259,12 @@
   flex-direction: column;
   justify-content: center;
   padding: 1rem;
-  background: linear-gradient(90deg, rgba(0, 0, 0, 0), #FFF);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0), #FFF);
+}
+@media (min-width: 768px) {
+  .values .action .actionText {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), #FFF);
+  }
 }
 .values .action .actionText h4 {
   font-family: "Inter", sans-serif;
@@ -225,10 +277,21 @@
   display: block;
   font-family: "Noto Sans TC", sans-serif;
   font-weight: 300;
+  padding-top: 0.3rem;
+}
+@media (min-width: 768px) {
+  .values .action .actionText h4 span {
+    padding-top: 0;
+  }
 }
 .values .action .actionText p {
   color: #595757;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
+}
+@media (min-width: 768px) {
+  .values .action .actionText p {
+    font-size: 0.7rem;
+  }
 }
 
 .clean .cleanBanner {
@@ -339,41 +402,78 @@
 }
 .YearinReview .year01 {
   background: url("../image/develop/cloth.png") no-repeat top right, linear-gradient(180deg, #D5DEE1, #B3BBC0);
-  padding-top: 8rem;
+  background-position-y: 3rem;
+  padding-top: 12rem;
   text-align: center;
 }
 @media (min-width: 768px) {
   .YearinReview .year01 {
     padding-top: 15rem;
+    background-position-y: top;
+  }
+}
+.YearinReview .year01 .yeareTinpoLogo {
+  width: 280px;
+}
+@media (min-width: 768px) {
+  .YearinReview .year01 .yeareTinpoLogo {
+    width: auto;
   }
 }
 .YearinReview .year01 .yearIntroduction {
   max-width: 815px;
-  margin: 5rem auto 5rem;
+  margin: 8rem auto 5rem;
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 20%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 80%, rgba(255, 255, 255, 0) 100%);
 }
+@media (min-width: 768px) {
+  .YearinReview .year01 .yearIntroduction {
+    margin: 5rem auto 5rem;
+  }
+}
 .YearinReview .year01 .yearIntroduction p {
-  padding: 1rem;
+  padding: 1rem 3rem;
   margin-bottom: 0;
   color: #595757;
-  text-align: center;
+  text-align: justify;
+  font-size: 0.9rem;
+}
+@media (min-width: 768px) {
+  .YearinReview .year01 .yearIntroduction p {
+    padding: 1rem;
+    text-align: center;
+  }
 }
 .YearinReview .year {
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: left;
+  text-align: center;
   padding-bottom: 5rem;
   max-width: 700px;
   margin: auto;
   z-index: 10;
   position: relative;
+  padding: 0 3rem 5rem;
+  flex-direction: column;
 }
 .YearinReview .year:nth-child(odd) {
   justify-content: flex-start;
 }
 .YearinReview .year:nth-child(even) {
+  flex-direction: column-reverse;
   justify-content: flex-end;
+}
+@media (min-width: 768px) {
+  .YearinReview .year:nth-child(even) {
+    flex-direction: row;
+  }
+}
+@media (min-width: 768px) {
+  .YearinReview .year {
+    padding: 0;
+    flex-direction: row;
+    text-align: left;
+  }
 }
 .YearinReview .year .yearimg {
   border-radius: 50%;
@@ -393,21 +493,24 @@
   color: #004632;
   letter-spacing: 3px;
   margin: 0;
+  padding-top: 0.5rem;
 }
 @media (min-width: 768px) {
   .YearinReview .year h5 {
     font-size: 2.5rem;
+    padding-top: 0;
   }
 }
 .YearinReview .year p {
   padding-top: 0;
   color: #004632;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 600;
 }
 @media (min-width: 768px) {
   .YearinReview .year p {
     width: 160px;
+    font-size: 0.8rem;
   }
 }
 .YearinReview .year02 {
@@ -438,11 +541,13 @@
 .YearinReview .arrow-left,
 .YearinReview .arrow-right {
   margin: 0 1rem;
+  display: none;
 }
 @media (min-width: 768px) {
   .YearinReview .arrow-left,
   .YearinReview .arrow-right {
     margin: 0 2rem;
+    display: block;
   }
 }
 .YearinReview .arrow-left {
@@ -454,10 +559,16 @@
   right: 0;
   z-index: 9;
   width: 250px;
+  display: none;
+}
+@media (min-width: 768px) {
+  .YearinReview .circle1 {
+    display: block;
+  }
 }
 .YearinReview .circle2 {
   position: absolute;
-  bottom: 45rem;
+  bottom: 34rem;
   left: 0;
   z-index: 9;
   max-width: 450px;
@@ -466,6 +577,7 @@
 @media (min-width: 768px) {
   .YearinReview .circle2 {
     width: 450px;
+    bottom: 45rem;
   }
 }
 
@@ -1728,6 +1840,7 @@
   flex-direction: column;
   align-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .rd h3 {
   padding-top: 2rem;
@@ -1755,18 +1868,46 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 10rem;
+  top: 7rem;
   margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   z-index: 2;
 }
+@media (min-width: 768px) {
+  .rd .rd_bn .text {
+    top: 10rem;
+  }
+}
 .rd .rd_bn .text img {
   max-width: 100%;
 }
+.rd .rd_bn .text .text-g {
+  padding: 3rem;
+  color: #004632;
+  font-size: 1.2rem;
+  font-weight: 300;
+  letter-spacing: 5px;
+  line-height: 2.2rem;
+  text-align: justify;
+}
+.rd .rd_bn .text .text-g span {
+  display: inline;
+}
+@media (min-width: 768px) {
+  .rd .rd_bn .text .text-g span {
+    display: block;
+  }
+}
 .rd .rd_bn .text .text-w {
   margin-top: 3rem;
+  display: none;
+}
+@media (min-width: 768px) {
+  .rd .rd_bn .text .text-w {
+    display: block;
+  }
 }
 .rd .rd_bn .circle1 {
   position: absolute;
@@ -1783,6 +1924,7 @@
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  transform: translate(0, 28%) scale(1.5);
 }
 @media (min-width: 768px) {
   .rd .rd_bn .cloth-w {
@@ -1822,7 +1964,16 @@
   display: flex;
   flex-direction: column;
   margin: 3rem auto;
-  width: 90%;
+  padding: 0 1.5rem;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+}
+@media (min-width: 768px) {
+  .rd .action {
+    padding: 0 1.5rem;
+    width: 90%;
+  }
 }
 .rd .action:nth-child(even) {
   flex-direction: column;
@@ -1842,16 +1993,18 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 1rem 2rem 1rem 0.8rem;
+  padding: 2rem 1.5rem 1rem;
   background: #FFF;
   width: -moz-max-content;
   width: max-content;
   max-width: 100%;
-  max-height: 133px;
+  max-height: 100%;
 }
 @media (min-width: 768px) {
   .rd .action .actionText {
     width: 350px;
+    padding: 1rem 2rem 1rem 0.8rem;
+    max-height: 133px;
   }
 }
 .rd .action .actionText h4 {
@@ -1883,7 +2036,14 @@
 }
 .rd .action .actionText p {
   color: #595757;
-  font-size: 0.7rem;
+  font-size: 0.9rem;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .rd .action .actionText p {
+    font-size: 0.7rem;
+    padding-top: 0;
+  }
 }
 .rd .action:nth-child(1) .actionText h4::after {
   background-image: url("../image/rd/rd_icon_01.png");
@@ -1901,37 +2061,68 @@
   position: relative;
   overflow: hidden;
 }
+.rd .rdFooter .clouth {
+  padding-top: 5rem;
+}
+@media (min-width: 768px) {
+  .rd .rdFooter .clouth {
+    padding-top: 0;
+  }
+}
 .rd .rdFooter .clouth1 {
   position: relative;
-  left: 0;
+  left: -3rem;
   bottom: 0;
   z-index: 2;
 }
 .rd .rdFooter .clouth2 {
   position: absolute;
-  right: 0;
-  bottom: 8rem;
+  right: -13rem;
+  bottom: 24rem;
   z-index: 1;
+  transform: scale(0.7);
+}
+@media (min-width: 768px) {
+  .rd .rdFooter .clouth2 {
+    transform: scale(1);
+    right: 0;
+    bottom: 8rem;
+    width: auto;
+  }
 }
 .rd .rdFooter .rdFooter_text {
   background: rgba(255, 255, 255, 0.6);
   color: #595757;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   padding: 2rem 3rem;
-  letter-spacing: 5px;
+  margin: 0 1.5rem;
+  letter-spacing: 1px;
   position: absolute;
-  right: 1rem;
+  right: 0;
   top: 0;
-  max-width: 320px;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  text-align: justify;
 }
 @media (min-width: 768px) {
   .rd .rdFooter .rdFooter_text {
     right: 8rem;
     max-width: 337px;
+    font-size: 0.9rem;
+    letter-spacing: 5px;
+    max-width: 320px;
+    text-align: left;
   }
+}
+.rd .rdFooter .rdFooter_text p {
+  position: relative;
+  z-index: 9;
+}
+.rd .rdFooter .rdFooter_text .btn {
+  transform: scale(1.5);
+  width: 100px;
 }
 
 /* 針對桌面版進行設定 */
