@@ -35,7 +35,14 @@
 .partners .partnersTheme {
   position: relative;
   bottom: 0;
-  margin-top: -4rem;
+  margin: -4rem auto 0;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .partners .partnersTheme {
+    margin: -23rem auto 0;
+    width: 980px;
+  }
 }
 .partners .partnersTheme img {
   max-width: 90%;
@@ -45,12 +52,26 @@
   position: absolute;
   left: 0;
   right: 0;
-  color: #fff;
-  text-align: center;
+  color: #004632;
+  text-align: right;
   margin: auto;
+  font-size: 1rem;
+}
+@media (min-width: 768px) {
+  .partners .partnersTheme .partners_slogan {
+    text-align: center;
+  }
+}
+.partners .partnersTheme .partners_slogan br {
+  display: block;
+}
+@media (min-width: 768px) {
+  .partners .partnersTheme .partners_slogan br {
+    display: contents;
+  }
 }
 .partners .partnersTheme .title {
-  padding-top: 4.5rem;
+  padding-top: 5.5rem;
 }
 @media (min-width: 768px) {
   .partners .partnersTheme .title {
@@ -63,15 +84,17 @@
   color: #fff;
   font-weight: 400;
   text-align: center;
+  letter-spacing: 0;
 }
 @media (min-width: 768px) {
   .partners .partnersTheme h3 {
     font-size: 6rem;
     text-align: left;
+    letter-spacing: 10px;
   }
 }
 .partners .partnersTheme p {
-  background: linear-gradient(to bottom, white 0%, white 50%, transparent 100%);
+  background: linear-gradient(to bottom, white 0%, transparent 100%);
   font-family: "Noto Sans", sans-serif;
   color: #595757;
   font-size: 0.8rem;
@@ -110,8 +133,8 @@
 }
 @media (min-width: 768px) {
   .partners .partnersGroup .partnersElement {
-    max-width: 230px;
-    margin: 1rem 5rem;
+    max-width: 300px;
+    margin: 5rem 5rem;
     width: auto;
   }
 }
@@ -247,17 +270,19 @@
   .values h4 {
     font-size: 3rem;
     z-index: 9;
-    letter-spacing: 5px;
+    letter-spacing: 2px;
     margin: 0 0 0.8rem 0;
   }
 }
 .values .actionGroup {
   padding-bottom: 10rem;
   padding: 1rem 3rem 10rem 3rem;
+  max-width: 100%;
 }
 @media (min-width: 768px) {
   .values .actionGroup {
     padding: 2rem 0 1rem 0;
+    max-width: 980px;
   }
 }
 .values .action {
@@ -271,7 +296,7 @@
 @media (min-width: 768px) {
   .values .action {
     flex-direction: row;
-    margin: 1rem 0;
+    margin: 5rem 0;
   }
   .values .action:nth-child(even) {
     flex-direction: row-reverse;
@@ -279,6 +304,11 @@
   }
   .values .action:nth-child(even) .actionText {
     background: linear-gradient(180deg, #FFF, rgba(0, 0, 0, 0));
+  }
+}
+@media (min-width: 768px) and (min-width: 768px) {
+  .values .action:nth-child(even) .actionText {
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0), #FFF);
   }
 }
 .values .action .actionText {
@@ -314,6 +344,8 @@
 .values .action .actionText p {
   color: #595757;
   font-size: 0.9rem;
+  text-align: justify;
+  line-height: 1.2rem;
 }
 @media (min-width: 768px) {
   .values .action .actionText p {
@@ -331,6 +363,11 @@
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+@media (min-width: 768px) {
+  .clean .cleanBanner .cleanBanner_bg {
+    height: auto;
+  }
 }
 .clean .cleanBanner .cleanBanner_gray {
   position: absolute;
@@ -374,8 +411,7 @@
 }
 @media (min-width: 768px) {
   .clean .garment h4 {
-    font-size: 4.5rem;
-    padding-bottom: 0;
+    font-size: 2.5rem;
   }
 }
 .clean .garment p {
@@ -413,7 +449,7 @@
 }
 @media (min-width: 768px) {
   .clean .garment .cleanIcon img {
-    max-width: 65px;
+    max-width: 45px;
   }
 }
 .clean .garment .wash {
@@ -457,7 +493,7 @@
   position: relative;
 }
 .YearinReview .year01 {
-  background: url("../image/develop/cloth.png") no-repeat top right, linear-gradient(180deg, #D5DEE1, #B3BBC0);
+  background: url("../image/develop/cloth.png") no-repeat top right, linear-gradient(180deg, #D5DEE1, #B3BBC0, #CFE9ED);
   background-position-y: 3rem;
   padding-top: 12rem;
   text-align: center;
@@ -580,7 +616,7 @@
   color: #fff;
 }
 .YearinReview .year03 {
-  background: linear-gradient(180deg, #004632, #001A12);
+  background: linear-gradient(180deg, #7EA5A9, #004632, #001A12);
   padding: 5rem 1rem 35rem;
 }
 @media (min-width: 768px) {
@@ -685,7 +721,7 @@
 }
 @media (min-width: 768px) {
   .contact .title img {
-    width: auto;
+    width: 270px;
   }
 }
 .contact h3 {
@@ -793,11 +829,11 @@
 }
 @media (min-width: 768px) {
   .contact .contactTheme .contactText .contactInformation .community {
-    padding-top: 0;
+    padding-top: 1rem;
   }
 }
 .contact .contactTheme .contactText .contactInformation .community a {
-  margin: 0 0.4rem;
+  margin: 0 0.8rem 0 0;
 }
 .contact .contactFooter {
   background: url("../image/contact/cloth-w2.png") no-repeat top right;
@@ -819,6 +855,12 @@
   height: 10px;
   transform: translateX(-20%);
   margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .contact .contactFooter .huandong {
+    height: auto;
+    max-height: 100%;
+  }
 }
 .contact .contactFooter .companyIcon {
   display: flex;
@@ -847,6 +889,11 @@
   margin-top: -9rem;
   margin-left: 4rem;
 }
+@media (min-width: 768px) {
+  .contact .contactFooter .companyIcon .house {
+    margin-top: 3rem;
+  }
+}
 .contact .contactFooter .companyIcon .nanke {
   max-height: 24px;
   height: 10px;
@@ -856,7 +903,8 @@
 }
 @media (min-width: 768px) {
   .contact .contactFooter .companyIcon .nanke {
-    width: auto;
+    width: 300px;
+    max-width: 100%;
     max-height: 100%;
     height: auto;
     transform: translateX(0);
@@ -864,7 +912,7 @@
 }
 .contact .googleMap {
   position: relative;
-  padding-bottom: 20rem;
+  padding-bottom: 11rem;
 }
 .contact .googleMap .mapLeft {
   position: absolute;
@@ -922,14 +970,41 @@
   }
 }
 .application .applicationBanner .applicationBanner_text {
+  display: flex;
+  flex-direction: column-reverse;
   position: absolute;
-  bottom: 18rem;
+  bottom: -1rem;
   left: 1rem;
   max-width: 90%;
 }
 @media (min-width: 768px) {
   .application .applicationBanner .applicationBanner_text {
+    bottom: 18rem;
     left: 5rem;
+    flex-direction: row;
+  }
+}
+.application .applicationBanner .applicationBanner_text .application_text01 {
+  width: 700px;
+  max-width: 100%;
+  margin-bottom: 0;
+  filter: drop-shadow(1px 4px 3px rgb(0, 0, 0));
+}
+@media (min-width: 768px) {
+  .application .applicationBanner .applicationBanner_text .application_text01 {
+    margin-bottom: 2rem;
+  }
+}
+.application .applicationBanner .applicationBanner_text .application_text02 {
+  width: 240px;
+  max-width: 100%;
+  margin-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .application .applicationBanner .applicationBanner_text .application_text02 {
+    width: 303px;
+    max-width: 100%;
+    margin-bottom: 0;
   }
 }
 .application h4 {
@@ -958,10 +1033,12 @@
 }
 .application .techItem {
   margin: 8rem 3rem;
+  max-width: 100%;
 }
 @media (min-width: 768px) {
   .application .techItem {
-    margin: 2rem 0;
+    margin: 2rem auto;
+    max-width: 1280px;
   }
 }
 .application .techItem img {
@@ -1042,7 +1119,6 @@
 
 .bannerTechs {
   position: relative;
-  overflow: hidden;
   background: #D5DEE1;
 }
 .bannerTechs img {
@@ -1052,7 +1128,7 @@
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  padding-top: 60px;
+  padding-top: 0;
 }
 @media (min-width: 768px) {
   .bannerTechs img {
@@ -1061,21 +1137,25 @@
        object-fit: contain;
     -o-object-position: top;
        object-position: top;
+    padding-top: 60px;
   }
 }
 .bannerTechs .techPic1 {
   padding-top: 57px;
 }
 .bannerTechs .bannerText {
-  position: absolute;
+  position: relative;
   bottom: 0;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  padding: 0 3rem;
+  filter: drop-shadow(1px 4px 3px rgb(0, 0, 0));
 }
 @media (min-width: 768px) {
   .bannerTechs .bannerText {
+    position: absolute;
     bottom: 8rem;
     flex-direction: row;
   }
@@ -1089,7 +1169,7 @@
 }
 .bannerTechs .bannerText .b-right {
   max-width: 300px;
-  margin-left: 5rem;
+  margin-left: 0;
   margin-top: -2rem;
   padding-top: 60px;
   height: auto;
@@ -1129,14 +1209,23 @@
     font-size: 1rem;
   }
 }
+.technologies .techsTheme p br {
+  display: contents;
+}
+@media (min-width: 768px) {
+  .technologies .techsTheme p br {
+    display: inline;
+  }
+}
 
 .features {
-  background: linear-gradient(180deg, #DCE6E8 60%, #90AFA9 100%);
+  background: #DCE6E8;
   padding-bottom: 0;
 }
 @media (min-width: 768px) {
   .features {
     padding-bottom: 8rem;
+    background: linear-gradient(180deg, #DCE6E8 60%, #90AFA9 100%);
   }
 }
 .features .featuresTitle {
@@ -1144,16 +1233,18 @@
   background-size: 100%;
   height: 200px;
   margin-top: -1px;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .features .featuresTitle {
     background: url("../image/technolgy/fearures.svg") bottom right no-repeat;
     background-size: 100%;
     height: 300px;
+    text-align: left;
   }
 }
 .features .featuresTitle .adventures {
-  margin-left: 20px;
+  margin-left: 0;
   max-width: 80%;
 }
 @media (min-width: 768px) {
@@ -1224,27 +1315,32 @@
   padding-top: 0;
   text-align: center;
   font-weight: 400;
+  letter-spacing: -1px;
 }
 @media (min-width: 768px) {
   .features .applicationText .techItem .techItemText p {
     padding-top: 1rem;
     font-size: 1rem;
+    letter-spacing: 0;
   }
 }
 
 .technologiesFooter {
-  background: #90AFA9;
+  background: #DCE6E8;
   width: 100%;
-  padding-bottom: 40vh;
+  padding-bottom: 52vh;
+  padding-top: 2rem;
 }
 @media (min-width: 768px) {
   .technologiesFooter {
-    padding-bottom: 0;
+    background: #90AFA9;
+    padding-bottom: 10rem;
+    padding-top: 0;
   }
 }
 .technologiesFooter img {
   width: 100%;
-  height: 50vw;
+  height: 40vw;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -1253,6 +1349,7 @@
 @media (min-width: 768px) {
   .technologiesFooter img {
     width: 100%;
+    height: auto;
     -o-object-fit: contain;
        object-fit: contain;
     -o-object-position: top;
@@ -1265,7 +1362,7 @@
 }
 @media (min-width: 768px) {
   .bannerAbout {
-    background: linear-gradient(180deg, #001a12 20%, #004632 60%, #d5dee1 100%);
+    background: linear-gradient(180deg, #001a12 20%, #004632 50%, #d5dee1 80%);
   }
 }
 .bannerAbout .AboutSlogan {
@@ -1420,7 +1517,7 @@
 .AboutBn03 {
   position: absolute;
   left: 0;
-  top: 100px;
+  top: 145px;
   z-index: 3;
   display: none;
 }
@@ -1448,7 +1545,7 @@
   content: "";
   position: absolute;
   left: 0;
-  top: -98px;
+  top: -120px;
   width: 100%;
   height: 130px;
   background-image: url("../image/about/eco-top.svg");
@@ -1533,7 +1630,7 @@
   .principles .smallItems {
     flex-direction: row;
     align-items: flex-end;
-    top: 0;
+    top: 5rem;
     left: auto;
     right: 15%;
   }
@@ -1695,11 +1792,6 @@
   margin-top: 2rem;
   padding-bottom: 2rem;
   padding-top: 3rem;
-}
-@media (min-width: 768px) {
-  .product .productSwiper .swiper {
-    padding-top: 0;
-  }
 }
 .product .productSwiper .swiper-slide-active p {
   background: linear-gradient(to right, rgba(0, 102, 51, 0) 0%, rgba(255, 197, 0, 0.5) 50%, rgba(0, 102, 51, 0) 100%);
@@ -1909,6 +2001,7 @@
 .productSlogan .SloganText .slogan02 {
   padding-top: 2rem;
   width: 70%;
+  filter: drop-shadow(1px 4px 3px rgb(0, 0, 0));
 }
 @media (min-width: 768px) {
   .productSlogan .SloganText .slogan02 {
@@ -2079,6 +2172,7 @@
 }
 .function .functionGroup .slogan04 img {
   max-width: 70%;
+  filter: drop-shadow(1px 4px 5px rgb(0, 0, 0));
 }
 @media (min-width: 768px) {
   .function .functionGroup .slogan04 img {
@@ -2255,7 +2349,7 @@
   }
 }
 .rd .actionGroup {
-  max-width: 980px;
+  max-width: 780px;
   padding-top: 2rem;
   padding-bottom: 0;
 }
@@ -2281,6 +2375,14 @@
 }
 .rd .action:nth-child(even) {
   flex-direction: column;
+}
+.rd .action img {
+  max-height: 100%;
+}
+@media (min-width: 768px) {
+  .rd .action img {
+    max-height: 133px;
+  }
 }
 @media (min-width: 768px) {
   .rd .action {
@@ -2318,7 +2420,7 @@
   font-size: 1.1rem;
   text-align: left;
   letter-spacing: 1px;
-  padding-left: 45px;
+  padding-left: 50px;
   position: relative;
 }
 .rd .action .actionText h4::after {
@@ -2412,7 +2514,7 @@
 }
 @media (min-width: 768px) {
   .rd .rdFooter .rdFooter_text {
-    right: 8rem;
+    right: 23rem;
     max-width: 337px;
     font-size: 0.9rem;
     letter-spacing: 5px;
@@ -2454,6 +2556,10 @@ a {
 }
 a:hover {
   color: #FACD00;
+}
+
+#navbarNav {
+  z-index: 99;
 }
 
 .navbar-collapse {
@@ -2499,6 +2605,12 @@ a:hover {
 
 .languageBox {
   color: #fff;
+  padding: 1rem 0.5rem 0.5rem;
+}
+@media (min-width: 768px) {
+  .languageBox {
+    padding: 0;
+  }
 }
 .languageBox a {
   color: #FFF;
@@ -2644,7 +2756,7 @@ a:hover {
 @media (min-width: 768px) {
   .banner .banner02 {
     position: absolute;
-    top: 70px;
+    top: 80px;
     left: 52%;
   }
 }
@@ -2756,10 +2868,12 @@ a:hover {
   font-size: 1.2rem;
   display: flex;
   flex-direction: column;
+  padding-bottom: 0;
 }
 @media (min-width: 768px) {
   .feature .featureTheme .featureText h4 {
     font-size: 2rem;
+    padding-bottom: 1rem;
   }
 }
 .feature .featurePhoto img {
@@ -3117,10 +3231,12 @@ a:hover {
   left: 0;
   right: 0;
   margin: auto;
+  filter: drop-shadow(1px 4px 3px rgb(0, 0, 0));
 }
 @media (min-width: 768px) {
   .homeproduct .product_01 .productPhoto .productText {
     top: 0rem;
+    bottom: 0;
   }
 }
 .homeproduct .product_01 p {
@@ -3141,10 +3257,12 @@ a:hover {
 }
 .homeproduct .product_02 .productPhoto .productText {
   position: absolute;
-  bottom: 5rem;
+  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
   margin: auto;
+  filter: drop-shadow(1px 4px 3px rgb(0, 0, 0));
 }
 .homeproduct .product_02 p {
   font-size: 0.8rem;
@@ -3165,13 +3283,16 @@ a:hover {
 }
 .homeproduct .product_03 .productPhoto .productText {
   position: absolute;
-  bottom: 5rem;
+  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
   margin: auto;
+  filter: drop-shadow(1px 4px 3px rgb(0, 0, 0));
 }
 .homeproduct .product_03 .gloves {
-  padding-left: 1rem;
+  padding-left: 0;
+  padding-right: 8rem;
   margin-top: 0rem;
   z-index: 9;
 }
@@ -3203,10 +3324,17 @@ a:hover {
 }
 .homeproduct .product_04 .productPhoto .productText {
   position: absolute;
-  bottom: 2rem;
+  bottom: 0;
+  top: 0;
   left: 0;
   right: 0;
   margin: auto;
+  filter: drop-shadow(1px 4px 3px rgb(0, 0, 0));
+}
+@media (min-width: 768px) {
+  .homeproduct .product_04 .productPhoto .productText {
+    top: 10rem;
+  }
 }
 .homeproduct .product_04 p {
   font-size: 0.8rem;
@@ -3540,7 +3668,7 @@ footer {
   font-size: 12px;
   line-height: 20px;
   letter-spacing: 1px;
-  z-index: 99;
+  z-index: 98;
 }
 footer .footer {
   background: #004632;

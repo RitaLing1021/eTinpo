@@ -45,6 +45,9 @@
             color: $yellow;
         }
     }
+    #navbarNav{
+        z-index: 99;
+    }
 
     .navbar-collapse {
         justify-content: space-between;
@@ -95,6 +98,10 @@
 
     .languageBox {
         color: #fff;
+        padding: 1rem 0.5rem 0.5rem;
+        @include b768{
+        padding: 0;
+        }
 
         a {
             color: #FFF;
@@ -257,7 +264,7 @@
 
             @include b768 {
                 position: absolute;
-                top: 70px;
+                top: 80px;
                 left: 52%;
             }
         }
@@ -379,9 +386,11 @@
                     font-size: 1.2rem;
                     display: flex;
                     flex-direction: column;
+                    padding-bottom:0;
 
                     @include b768 {
                         font-size: 2rem;
+                    padding-bottom: 1rem;
                     }
                 }
             }
@@ -754,9 +763,11 @@
                     left: 0;
                     right: 0;
                     margin: auto;
+                    filter: drop-shadow(1px 4px 3px rgb(0, 0, 0));
 
                     @include b768 {
                         top: 0rem;
+                    bottom: 0;
 
                     }
                 }
@@ -786,10 +797,12 @@
 
                 .productText {
                     position: absolute;
-                    bottom: 5rem;
+                    bottom: 0;
+                    top:0;
                     left: 0;
                     right: 0;
                     margin: auto;
+                    filter: drop-shadow(1px 4px 3px rgb(0, 0, 0));
                 }
             }
 
@@ -816,15 +829,18 @@
 
                 .productText {
                     position: absolute;
-                    bottom: 5rem;
+                    bottom: 0;
+                    top: 0;
                     left: 0;
                     right: 0;
                     margin: auto;
+                    filter: drop-shadow(1px 4px 3px rgb(0, 0, 0));
                 }
             }
 
             .gloves {
-                padding-left: 1rem;
+                padding-left: 0;
+                padding-right: 8rem;
                 margin-top: 0rem;
                 z-index: 9;
 
@@ -862,10 +878,16 @@
             .productPhoto {
                 .productText {
                     position: absolute;
-                    bottom: 2rem;
+                    bottom: 0;
+                    top: 0;
                     left: 0;
                     right: 0;
                     margin: auto;
+                    filter: drop-shadow(1px 4px 3px rgb(0, 0, 0));
+                    @include b768{
+                    top: 10rem;
+
+                    }
                 }
             }
 
@@ -1247,7 +1269,7 @@
         font-size: 12px;
         line-height: 20px;
         letter-spacing: 1px;
-        z-index: 99;
+        z-index: 98;
 
         .footer {
             background: $green;

@@ -83,10 +83,7 @@
           padding-bottom: 2rem;
           padding-top: 3rem;
 
-          @include b768 {
-            padding-top: 0;
-
-          }
+          @include b768 {}
         }
 
         .swiper-slide-active {
@@ -294,8 +291,9 @@
       position: relative;
       min-height: 320px;
       overflow: hidden;
-      @include b768{
-      min-height: 545px;
+
+      @include b768 {
+        min-height: 545px;
 
       }
 
@@ -325,8 +323,8 @@
           margin-left: 3rem;
 
           @include b768 {
-           display:block;
-          margin-left: 0;
+            display: block;
+            margin-left: 0;
 
           }
         }
@@ -334,6 +332,7 @@
         .slogan02 {
           padding-top: 2rem;
           width: 70%;
+          filter: drop-shadow(1px 4px 3px rgb(0, 0, 0));
 
           @include b768 {
             padding-top: 14rem;
@@ -344,8 +343,9 @@
         .slogan03 {
           padding-top: 1rem;
           max-width: 90%;
-          @include b768{
-          padding-top: 3rem;
+
+          @include b768 {
+            padding-top: 3rem;
 
           }
         }
@@ -375,7 +375,7 @@
         object-position: right;
 
         @include b768 {
-        bottom: -5rem;
+          bottom: -5rem;
           object-fit: contain;
           object-position: top;
           height: auto;
@@ -418,7 +418,7 @@
         @include b768 {
           font-size: .8rem;
           padding: 3rem 0 0;
-        text-align: center;
+          text-align: center;
         }
       }
     }
@@ -440,8 +440,9 @@
           max-width: 815px;
           margin: auto;
           padding-top: 3rem;
-          @include b768{
-          padding-top: 0;
+
+          @include b768 {
+            padding-top: 0;
           }
 
           .function-swiper {
@@ -476,19 +477,23 @@
             padding-bottom: 2rem;
           }
 
-.swiper-button-prev{
-  padding-left: 3rem;
-            @include b768{
+          .swiper-button-prev {
+            padding-left: 3rem;
 
-  padding-left: 0;
+            @include b768 {
+
+              padding-left: 0;
             }
-}
-.swiper-button-next{
-  padding-right: 3rem;
-            @include b768{
-padding-right: 0;
+          }
+
+          .swiper-button-next {
+            padding-right: 3rem;
+
+            @include b768 {
+              padding-right: 0;
             }
-}
+          }
+
           .swiper-button-prev,
           .swiper-button-next {
             color: #fff;
@@ -506,8 +511,10 @@ padding-right: 0;
 
           img {
             max-width: 70%;
-            @include b768{              
-            max-width: 90%;
+            filter: drop-shadow(1px 4px 5px rgb(0, 0, 0));
+
+            @include b768 {
+              max-width: 90%;
             }
           }
 
@@ -523,14 +530,15 @@ padding-right: 0;
             @include b768 {
               padding: 2rem 5rem;
               font-size: 1rem;
-            text-align: center;
+              text-align: center;
             }
-            
-            br{
+
+            br {
               display: contents;
-              @include b768{
-                
-              display: inline;
+
+              @include b768 {
+
+                display: inline;
               }
             }
           }

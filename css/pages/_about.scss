@@ -2,9 +2,7 @@
   background: linear-gradient(180deg, #001a12 40%, #004632 54%, #d5dee1 90%);
 
   @include b768 {
-    background: linear-gradient(180deg, #001a12 20%, #004632 60%, #d5dee1 100%);
-
-
+    background: linear-gradient(180deg, #001a12 20%, #004632 50%, #d5dee1 80%);
   }
 
   .AboutSlogan {
@@ -171,7 +169,7 @@
 .AboutBn03 {
   position: absolute;
   left: 0;
-  top: 100px;
+  top: 145px;
   z-index: 3;
   display: none;
 
@@ -197,7 +195,7 @@
     content: "";
     position: absolute;
     left: 0;
-    top: -98px;
+    top: -120px;
     width: 100%;
     height: 130px; // 依你半圓實際高度調整，或下方用 padding-trick
     background-image: url('../image/about/eco-top.svg');
@@ -281,7 +279,7 @@
     @include b768 {
       flex-direction: row;
       align-items: flex-end;
-      top: 0;
+      top: 5rem;
       left: auto;
       right: 15%;
 

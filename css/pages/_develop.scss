@@ -3,7 +3,7 @@
 
     .year01 {
         background: url('../image/develop/cloth.png') no-repeat top right,
-            linear-gradient(180deg, #D5DEE1, #B3BBC0);
+            linear-gradient(180deg, #D5DEE1, #B3BBC0,#CFE9ED);
         background-position-y: 3rem;
         padding-top: 12rem;
         text-align: center;
@@ -137,7 +137,7 @@
     }
 
     .year03 {
-        background: linear-gradient(180deg, #004632, #001A12);
+        background: linear-gradient(180deg, #7EA5A9, #004632, #001A12);
         padding: 5rem 1rem 35rem;
 
         @include b768 {
