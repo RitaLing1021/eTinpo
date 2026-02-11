@@ -310,9 +310,16 @@
   background: linear-gradient(180deg, #A3ABB0, #D4DCDF);
   text-align: center;
   letter-spacing: 1px;
+  padding: 0 1.5rem;
+}
+@media (min-width: 768px) {
+  .clean .garment {
+    padding: 0;
+  }
 }
 .clean .garment .container {
-  max-width: 95%;
+  max-width: 100%;
+  padding: 0;
 }
 @media (min-width: 768px) {
   .clean .garment .container {
@@ -327,7 +334,7 @@
 }
 .clean .garment h4 {
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   font-weight: 300;
   letter-spacing: 2px;
   font-family: "Inter", sans-serif;
@@ -338,12 +345,17 @@
   }
 }
 .clean .garment p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #595757;
   text-align: justify;
 }
 .clean .garment p .en {
   font-family: "Inter", sans-serif;
+}
+@media (min-width: 768px) {
+  .clean .garment p {
+    font-size: 0.8rem;
+  }
 }
 .clean .garment .cleanIcon {
   display: flex;
@@ -833,7 +845,12 @@
   }
 }
 .application .techItem {
-  margin: 2rem 0;
+  margin: 2rem 1.5rem;
+}
+@media (min-width: 768px) {
+  .application .techItem {
+    margin: 2rem 0;
+  }
 }
 .application .techItem img {
   max-width: 90%;
@@ -841,25 +858,30 @@
 .application .techItem .techPhoto {
   position: relative;
   margin: 2rem 0;
+  text-align: center;
 }
 .application .techItem .techPhoto .techPhoto02 {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 2rem;
+  bottom: 0;
+  top: 50%;
+  transform: translateY(-50%);
   margin: auto;
   text-align: center;
 }
 @media (min-width: 768px) {
   .application .techItem .techPhoto .techPhoto02 {
     bottom: 2rem;
+    top: 0;
+    transform: translateY(80%);
   }
 }
 .application .techItem .techItemText {
   padding-left: 2rem;
 }
 .application .techItem .techItemText p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   font-weight: 400;
   letter-spacing: 2px;
   margin: auto;
@@ -869,6 +891,11 @@
 }
 .application .techItem .techItemText p .en {
   font-family: "Inter", sans-serif;
+}
+@media (min-width: 768px) {
+  .application .techItem .techItemText p {
+    font-size: 0.8rem;
+  }
 }
 
 .bannerTechs {
@@ -1452,17 +1479,19 @@
 .product {
   background: #D5DEE1;
   padding-top: 60px;
+  overflow: hidden;
 }
 .product .productTop {
-  background: url("../image/product/product-bn.png") top right no-repeat;
-  background-size: cover;
-  min-height: 340px;
+  background: url("../image/product/product-bn.png") top left no-repeat;
+  background-size: 150%;
+  min-height: 530px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 @media (min-width: 768px) {
   .product .productTop {
+    background: url("../image/product/product-bn.png") top right no-repeat;
     min-height: 640px;
     background-size: contain;
   }
@@ -1470,6 +1499,28 @@
 .product .productTopText {
   display: flex;
   flex-direction: column;
+  padding-top: 17rem;
+}
+@media (min-width: 768px) {
+  .product .productTopText {
+    padding-top: 0;
+  }
+}
+.product .productTopText .productText01 {
+  padding: 0 1.5rem;
+}
+@media (min-width: 768px) {
+  .product .productTopText .productText01 {
+    padding: 0;
+  }
+}
+.product .productTopText .productText02 {
+  padding: 0 1.5rem;
+}
+@media (min-width: 768px) {
+  .product .productTopText .productText02 {
+    padding: 0;
+  }
 }
 .product .productTopText img {
   margin-top: 2rem;
@@ -1491,7 +1542,7 @@
   padding: 2rem 0 0 0;
   font-size: 1rem;
   font-weight: 500;
-  color: #fff;
+  color: #999;
   text-align: center;
 }
 .product .productSwiper .product-swiper h4 span {
@@ -1501,10 +1552,22 @@
 .product .productSwiper .swiper {
   margin-top: 2rem;
   padding-bottom: 2rem;
+  padding-top: 3rem;
+}
+@media (min-width: 768px) {
+  .product .productSwiper .swiper {
+    padding-top: 0;
+  }
 }
 .product .productSwiper .swiper-slide-active p {
   background: linear-gradient(to right, rgba(0, 102, 51, 0) 0%, rgba(255, 197, 0, 0.5) 50%, rgba(0, 102, 51, 0) 100%);
   padding: 1rem 2rem;
+}
+.product .productSwiper .swiper-button-prev {
+  padding-left: 1.5rem;
+}
+.product .productSwiper .swiper-button-next {
+  padding-right: 1.5rem;
 }
 .product .productSwiper .swiper-button-prev,
 .product .productSwiper .swiper-button-next {
@@ -1512,9 +1575,16 @@
 }
 .product .productText p {
   color: #595757;
-  font-size: 0.8rem;
-  text-align: center;
-  padding: 2rem 1rem 0;
+  font-size: 0.9rem;
+  text-align: justify;
+  padding: 2rem 3rem 0;
+}
+@media (min-width: 768px) {
+  .product .productText p {
+    padding: 2rem 1rem 0;
+    font-size: 0.8rem;
+    text-align: center;
+  }
 }
 .product .product2L3L {
   display: flex;
@@ -1532,12 +1602,28 @@
   }
 }
 .product .product2L3L .product2L {
-  max-width: 90%;
+  width: 140%;
   padding-top: 3rem;
+  transform: translateX(-16%);
+}
+@media (min-width: 768px) {
+  .product .product2L3L .product2L {
+    width: 50%;
+    transform: translateX(0);
+  }
 }
 .product .product2L3L .product3L {
   padding-bottom: 5rem;
-  max-width: 90%;
+  padding-top: 4rem;
+  width: 140%;
+  transform: translateX(-16%);
+}
+@media (min-width: 768px) {
+  .product .product2L3L .product3L {
+    padding-top: 0;
+    width: 50%;
+    transform: translateX(0);
+  }
 }
 .product .product_01 {
   display: flex;
@@ -1640,7 +1726,13 @@
 .productSlogan {
   background: #DFE8EA;
   position: relative;
-  min-height: 545px;
+  min-height: 320px;
+  overflow: hidden;
+}
+@media (min-width: 768px) {
+  .productSlogan {
+    min-height: 545px;
+  }
 }
 .productSlogan .SloganText {
   position: relative;
@@ -1650,8 +1742,8 @@
   align-items: center;
 }
 .productSlogan .SloganText .slogan01 {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
   max-width: 90%;
 }
 @media (min-width: 768px) {
@@ -1660,17 +1752,36 @@
     padding-bottom: 5rem;
   }
 }
+.productSlogan .SloganText .slogan-02 {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  margin-left: 3rem;
+}
+@media (min-width: 768px) {
+  .productSlogan .SloganText .slogan-02 {
+    display: block;
+    margin-left: 0;
+  }
+}
 .productSlogan .SloganText .slogan02 {
   padding-top: 2rem;
+  width: 70%;
 }
 @media (min-width: 768px) {
   .productSlogan .SloganText .slogan02 {
     padding-top: 14rem;
+    width: 100%;
   }
 }
 .productSlogan .SloganText .slogan03 {
-  padding-top: 3rem;
+  padding-top: 1rem;
   max-width: 90%;
+}
+@media (min-width: 768px) {
+  .productSlogan .SloganText .slogan03 {
+    padding-top: 3rem;
+  }
 }
 .productSlogan .SloganText .SloganText01 {
   display: flex;
@@ -1686,17 +1797,18 @@
 .productSlogan .sloganCloth {
   position: absolute;
   right: 0;
-  bottom: -5rem;
+  bottom: 3rem;
   width: 100%;
   z-index: 5;
-  height: 120vw;
+  height: 63vw;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: right;
+     object-position: right;
 }
 @media (min-width: 768px) {
   .productSlogan .sloganCloth {
+    bottom: -5rem;
     -o-object-fit: contain;
        object-fit: contain;
     -o-object-position: top;
@@ -1733,10 +1845,17 @@
 }
 .functionText p {
   color: #595757;
-  font-size: 0.8rem;
-  text-align: center;
-  padding-top: 3rem;
+  font-size: 0.9rem;
+  text-align: justify;
+  padding: 3rem 3rem 0;
   line-height: 1.5rem;
+}
+@media (min-width: 768px) {
+  .functionText p {
+    font-size: 0.8rem;
+    padding: 3rem 0 0;
+    text-align: center;
+  }
 }
 
 .function {
@@ -1754,6 +1873,12 @@
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.3) 50%, rgba(255, 255, 255, 0) 100%);
   max-width: 815px;
   margin: auto;
+  padding-top: 3rem;
+}
+@media (min-width: 768px) {
+  .function .functionGroup .functionSwiper {
+    padding-top: 0;
+  }
 }
 .function .functionGroup .functionSwiper .function-swiper {
   display: flex;
@@ -1770,12 +1895,33 @@
   text-align: center;
 }
 .function .functionGroup .functionSwiper .function-swiper p {
-  font-size: 1rem;
-  color: #fff;
+  font-size: 0.9rem;
+  color: #999;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .function .functionGroup .functionSwiper .function-swiper p {
+    font-size: 1rem;
+  }
 }
 .function .functionGroup .functionSwiper .swiper {
   padding-bottom: 2rem;
+}
+.function .functionGroup .functionSwiper .swiper-button-prev {
+  padding-left: 3rem;
+}
+@media (min-width: 768px) {
+  .function .functionGroup .functionSwiper .swiper-button-prev {
+    padding-left: 0;
+  }
+}
+.function .functionGroup .functionSwiper .swiper-button-next {
+  padding-right: 3rem;
+}
+@media (min-width: 768px) {
+  .function .functionGroup .functionSwiper .swiper-button-next {
+    padding-right: 0;
+  }
 }
 .function .functionGroup .functionSwiper .swiper-button-prev,
 .function .functionGroup .functionSwiper .swiper-button-next {
@@ -1790,25 +1936,41 @@
   justify-content: center;
 }
 .function .functionGroup .slogan04 img {
-  max-width: 90%;
+  max-width: 70%;
+}
+@media (min-width: 768px) {
+  .function .functionGroup .slogan04 img {
+    max-width: 90%;
+  }
 }
 .function .functionGroup .slogan04 p {
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
-  color: #fff;
-  padding: 1rem 2rem;
+  color: #999;
+  padding: 1rem 3rem;
   margin: 2rem 0;
   line-height: 1.8rem;
-  text-align: center;
+  text-align: justify;
+  font-size: 0.9rem;
 }
 @media (min-width: 768px) {
   .function .functionGroup .slogan04 p {
     padding: 2rem 5rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+.function .functionGroup .slogan04 p br {
+  display: contents;
+}
+@media (min-width: 768px) {
+  .function .functionGroup .slogan04 p br {
+    display: inline;
   }
 }
 
 .productFooter {
   background: #D5DEE1;
-  padding-bottom: 20rem;
+  padding-bottom: 26rem;
 }
 @media (min-width: 768px) {
   .productFooter {
@@ -1817,7 +1979,7 @@
 }
 .productFooter img {
   width: 100%;
-  height: 90vw;
+  height: 60vw;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -3264,12 +3426,14 @@ footer .footerLocation {
   border-bottom: 1px solid #fff;
   font-size: 10px;
   padding-bottom: 2.5rem;
+  width: 100%;
 }
 @media (min-width: 768px) {
   footer .footerLocation {
     border: none;
     font-size: 12px;
     padding-bottom: 0;
+    width: auto;
   }
 }
 footer .footerLink {

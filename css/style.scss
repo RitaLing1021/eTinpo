@@ -1280,11 +1280,13 @@
             border-bottom: 1px solid #fff;
             font-size: 10px;
             padding-bottom: 2.5rem;
+            width: 100%;
 
             @include b768 {
                 border: none;
                 font-size: 12px;
-                padding-bottom: 0;
+                padding-bottom: 0;                
+            width: auto;
             }
         }
 
