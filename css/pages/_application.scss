@@ -1,8 +1,9 @@
 .application {
   background: linear-gradient(180deg, #D5DEE1, #7C9E98);
   padding-bottom: 30rem;
-  @include b768{
-  padding-bottom: 25rem;
+
+  @include b768 {
+    padding-bottom: 25rem;
   }
 
 
@@ -35,8 +36,9 @@
       bottom: 18rem;
       left: 1rem;
       max-width: 90%;
-      @include b768{
-      left: 5rem;
+
+      @include b768 {
+        left: 5rem;
       }
     }
   }
@@ -69,24 +71,35 @@
   }
 
   .techItem {
-    margin: 2rem 0;
-    img{
+    margin: 2rem 1.5rem;
+
+    @include b768 {
+      margin: 2rem 0;
+    }
+
+    img {
       max-width: 90%;
     }
 
     .techPhoto {
       position: relative;
       margin: 2rem 0;
+      text-align: center;
 
       .techPhoto02 {
         position: absolute;
         left: 0;
         right: 0;
-        bottom: 2rem;
+        bottom: 0;
+        top: 50%;
+        transform: translateY(-50%);
         margin: auto;
         text-align: center;
-        @include b768{
-        bottom: 2rem;
+
+        @include b768 {
+          bottom: 2rem;
+          top: 0;
+          transform: translateY(80%);
         }
       }
     }
@@ -95,7 +108,7 @@
       padding-left: 2rem;
 
       p {
-        font-size: .8rem;
+        font-size: .9rem;
         font-weight: 400;
         letter-spacing: 2px;
         margin: auto;
@@ -105,7 +118,10 @@
 
         .en {
           font-family: "Inter", sans-serif;
+        }
 
+        @include b768 {
+          font-size: .8rem;
         }
       }
     }
