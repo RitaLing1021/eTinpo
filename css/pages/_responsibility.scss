@@ -121,7 +121,7 @@
     @include b768{
     font-size: 3rem;
     z-index: 9;
-    letter-spacing: 5px;        
+    letter-spacing: 2px;        
     margin:0 0 0.8rem 0;
 
     }
@@ -130,9 +130,11 @@
   .actionGroup {
     padding-bottom: 10rem;
     padding: 1rem 3rem 10rem 3rem;
+    max-width: 100%;
 
     @include b768{
     padding: 2rem 0 1rem 0;
+    max-width: 980px;
     }
   }
 
@@ -147,7 +149,7 @@
 
     @include b768 {
       flex-direction: row;
-      margin: 1rem 0;
+      margin: 5rem 0;
 
 
       &:nth-child(even) {
@@ -156,6 +158,10 @@
 
         .actionText {
           background: linear-gradient(180deg, #FFF, rgba(0, 0, 0, 0));
+      @include b768{
+      background: linear-gradient(90deg,rgba(0, 0, 0, 0), #FFF);
+      }
+
 
         }
 
@@ -195,6 +201,8 @@
       p {
         color: #595757;
         font-size: .9rem;
+        text-align: justify;
+        line-height: 1.2rem;
         @include b768{
         font-size: .7rem;
         }
