@@ -17,7 +17,7 @@
 .partners .partnersPhoto .partnersBanner {
   position: relative;
   min-width: 100%;
-  height: 140vw;
+  height: 88vw;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: left;
@@ -35,41 +35,56 @@
 .partners .partnersTheme {
   position: relative;
   bottom: 0;
-  margin-top: -18rem;
+  margin-top: -4rem;
 }
 .partners .partnersTheme img {
   max-width: 90%;
 }
 .partners .partnersTheme .partners_slogan {
+  background: transparent;
   position: absolute;
+  left: 0;
   right: 0;
+  color: #fff;
+  text-align: center;
+  margin: auto;
 }
 .partners .partnersTheme .title {
-  padding-top: 5rem;
+  padding-top: 4.5rem;
+}
+@media (min-width: 768px) {
+  .partners .partnersTheme .title {
+    padding-top: 5rem;
+  }
 }
 .partners .partnersTheme h3 {
   font-family: "Inter", sans-serif;
-  font-size: 3.5rem;
+  font-size: 2rem;
   color: #fff;
   font-weight: 400;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .partners .partnersTheme h3 {
     font-size: 6rem;
+    text-align: left;
   }
 }
 .partners .partnersTheme p {
-  background: linear-gradient(to right, white 0%, white 50%, transparent 100%);
+  background: linear-gradient(to bottom, white 0%, white 50%, transparent 100%);
   font-family: "Noto Sans", sans-serif;
   color: #595757;
   font-size: 0.8rem;
   font-weight: 300;
   letter-spacing: 2px;
   max-width: 655px;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
+  margin: 1rem 1.5rem;
 }
 @media (min-width: 768px) {
   .partners .partnersTheme p {
+    background: linear-gradient(to right, white 0%, white 50%, transparent 100%);
+    margin: 0;
     padding: 1rem 4rem;
   }
 }
@@ -78,14 +93,26 @@
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 2rem 3rem 7rem;
+}
+@media (min-width: 768px) {
+  .partners .partnersGroup {
+    padding: 0;
+  }
+}
+.partners .partnersGroup img {
+  width: 100%;
 }
 .partners .partnersGroup .partnersElement {
-  max-width: 230px;
+  max-width: 100%;
+  width: 100%;
   margin: 1rem 0;
 }
 @media (min-width: 768px) {
   .partners .partnersGroup .partnersElement {
+    max-width: 230px;
     margin: 1rem 5rem;
+    width: auto;
   }
 }
 .partners .partnersGroup .partnersElement h4 {
@@ -299,6 +326,11 @@
 }
 .clean .cleanBanner .cleanBanner_bg {
   width: 100%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 .clean .cleanBanner .cleanBanner_gray {
   position: absolute;
@@ -310,7 +342,7 @@
   background: linear-gradient(180deg, #A3ABB0, #D4DCDF);
   text-align: center;
   letter-spacing: 1px;
-  padding: 0 1.5rem;
+  padding: 3rem 3rem;
 }
 @media (min-width: 768px) {
   .clean .garment {
@@ -338,10 +370,12 @@
   font-weight: 300;
   letter-spacing: 2px;
   font-family: "Inter", sans-serif;
+  padding-bottom: 2rem;
 }
 @media (min-width: 768px) {
   .clean .garment h4 {
     font-size: 4.5rem;
+    padding-bottom: 0;
   }
 }
 .clean .garment p {
@@ -349,23 +383,33 @@
   color: #595757;
   text-align: justify;
 }
-.clean .garment p .en {
+.clean .garment p.en {
   font-family: "Inter", sans-serif;
+  text-align: left;
+  letter-spacing: 0;
 }
 @media (min-width: 768px) {
   .clean .garment p {
     font-size: 0.8rem;
   }
 }
+.clean .garment .garment_en {
+  padding-top: 1.5rem;
+}
 .clean .garment .cleanIcon {
   display: flex;
   padding-top: 3rem;
   padding-bottom: 3rem;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+@media (min-width: 768px) {
+  .clean .garment .cleanIcon {
+    justify-content: space-around;
+  }
 }
 .clean .garment .cleanIcon img {
-  max-width: 55px;
+  max-width: 35px;
 }
 @media (min-width: 768px) {
   .clean .garment .cleanIcon img {
@@ -605,14 +649,15 @@
 }
 .contact .circle .cloth-w {
   position: absolute;
-  top: 30px;
-  right: 0;
+  top: -5rem;
+  right: -1rem;
   z-index: 2;
-  width: 254px;
+  width: 180%;
 }
 @media (min-width: 768px) {
   .contact .circle .cloth-w {
     top: 0;
+    right: 0;
     width: auto;
   }
 }
@@ -635,6 +680,14 @@
   position: relative;
   z-index: 9;
 }
+.contact .title img {
+  width: 220px;
+}
+@media (min-width: 768px) {
+  .contact .title img {
+    width: auto;
+  }
+}
 .contact h3 {
   padding-top: 3rem;
   color: #004632;
@@ -644,11 +697,16 @@
 }
 .contact h4 {
   color: #fff;
-  font-size: 4rem;
+  font-size: 2rem;
   font-weight: 600;
   letter-spacing: 3px;
   font-family: "Inter", sans-serif;
-  padding-bottom: 5rem;
+  padding-bottom: 3rem;
+}
+@media (min-width: 768px) {
+  .contact h4 {
+    padding-bottom: 5rem;
+  }
 }
 .contact .contactTheme {
   text-align: center;
@@ -665,16 +723,20 @@
     text-align: left;
   }
 }
+.contact .contactTheme .contactPhoto {
+  padding: 0 3rem;
+}
 .contact .contactTheme .contactPhoto .pic1 {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: -5rem;
+  margin-bottom: 0;
   z-index: 9;
   position: relative;
-  margin-right: 10%;
+  margin-right: 0;
 }
 @media (min-width: 768px) {
   .contact .contactTheme .contactPhoto .pic1 {
+    margin-bottom: -5rem;
     margin-right: 0;
   }
 }
@@ -683,6 +745,7 @@
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
+  margin-top: 1rem;
 }
 @media (min-width: 768px) {
   .contact .contactTheme .contactPhoto .pic2 {
@@ -690,7 +753,7 @@
   }
 }
 .contact .contactTheme .contactPhoto .pic2 img {
-  margin-left: 20%;
+  margin-left: 0;
 }
 @media (min-width: 768px) {
   .contact .contactTheme .contactPhoto .pic2 img {
@@ -717,23 +780,45 @@
   display: flex;
   flex-direction: column;
   padding-left: 0;
+  padding-top: 0.5rem;
 }
 @media (min-width: 768px) {
   .contact .contactTheme .contactText .contactInformation {
     padding-left: 2rem;
+    padding-top: 0;
   }
 }
+.contact .contactTheme .contactText .contactInformation .community {
+  padding-top: 0.5rem;
+}
+@media (min-width: 768px) {
+  .contact .contactTheme .contactText .contactInformation .community {
+    padding-top: 0;
+  }
+}
+.contact .contactTheme .contactText .contactInformation .community a {
+  margin: 0 0.4rem;
+}
 .contact .contactFooter {
-  background: url("../image/contact/cloth-w2.png") no-repeat top left;
-  background-size: 100%;
-  padding-top: 10rem;
+  background: url("../image/contact/cloth-w2.png") no-repeat top right;
+  background-size: 130%;
+  padding-top: 6rem;
   padding-bottom: 8rem;
-  margin-top: -10rem;
+  margin-top: -3rem;
 }
 @media (min-width: 768px) {
   .contact .contactFooter {
+    background: url("../image/contact/cloth-w2.png") no-repeat top left;
+    background-size: 100%;
     padding-top: 25rem;
+    margin-top: -10rem;
   }
+}
+.contact .contactFooter .huandong {
+  max-height: 24px;
+  height: 10px;
+  transform: translateX(-20%);
+  margin-bottom: 1rem;
 }
 .contact .contactFooter .companyIcon {
   display: flex;
@@ -757,20 +842,40 @@
     width: auto;
   }
 }
+.contact .contactFooter .companyIcon .house {
+  width: 30%;
+  margin-top: -9rem;
+  margin-left: 4rem;
+}
 .contact .contactFooter .companyIcon .nanke {
   max-height: 24px;
-  margin-top: 2rem;
-}
-.contact .contactFooter .nanke {
+  height: 10px;
+  margin-top: 8.5rem;
   margin-right: 20rem;
+  transform: translateX(48%);
+}
+@media (min-width: 768px) {
+  .contact .contactFooter .companyIcon .nanke {
+    width: auto;
+    max-height: 100%;
+    height: auto;
+    transform: translateX(0);
+  }
 }
 .contact .googleMap {
   position: relative;
+  padding-bottom: 20rem;
 }
 .contact .googleMap .mapLeft {
   position: absolute;
   left: 0;
   bottom: 0;
+  display: none;
+}
+@media (min-width: 768px) {
+  .contact .googleMap .mapLeft {
+    display: block;
+  }
 }
 
 .application {
@@ -787,7 +892,7 @@
 }
 .application .applicationBanner .applicationBanner_bg {
   position: relative;
-  height: 150vw;
+  height: 95vw;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -806,8 +911,15 @@
   position: absolute;
   left: 0;
   right: 0;
-  top: 80px;
+  top: 7rem;
   margin: auto;
+  width: 80%;
+}
+@media (min-width: 768px) {
+  .application .applicationBanner .applicationBanner_clothes {
+    width: auto;
+    top: 80px;
+  }
 }
 .application .applicationBanner .applicationBanner_text {
   position: absolute;
@@ -845,7 +957,7 @@
   }
 }
 .application .techItem {
-  margin: 2rem 1.5rem;
+  margin: 8rem 3rem;
 }
 @media (min-width: 768px) {
   .application .techItem {
@@ -857,40 +969,70 @@
 }
 .application .techItem .techPhoto {
   position: relative;
-  margin: 2rem 0;
+  margin: 6rem 0 0;
   text-align: center;
+}
+@media (min-width: 768px) {
+  .application .techItem .techPhoto {
+    margin: 2rem 0;
+  }
+}
+.application .techItem .techPhoto .techPhoto01 {
+  display: flex;
+  justify-content: flex-end;
+}
+.application .techItem .techPhoto .techPhoto01 img {
+  max-width: 150%;
 }
 .application .techItem .techPhoto .techPhoto02 {
   position: absolute;
   left: 0;
   right: 0;
   bottom: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
   margin: auto;
   text-align: center;
+  filter: drop-shadow(1px 4px 3px rgb(0, 0, 0));
+  max-width: 70%;
 }
 @media (min-width: 768px) {
   .application .techItem .techPhoto .techPhoto02 {
     bottom: 2rem;
     top: 0;
-    transform: translateY(80%);
+    max-width: 90%;
   }
 }
 .application .techItem .techItemText {
-  padding-left: 2rem;
+  padding-top: 2rem;
+}
+@media (min-width: 768px) {
+  .application .techItem .techItemText {
+    padding-top: 0;
+    padding-left: 2rem;
+  }
 }
 .application .techItem .techItemText p {
   font-size: 0.9rem;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   margin: auto;
-  text-align: left;
+  text-align: justify;
   color: #595757;
   font-family: "Noto Sans TC", sans-serif;
 }
-.application .techItem .techItemText p .en {
+.application .techItem .techItemText p.en {
   font-family: "Inter", sans-serif;
+  padding-top: 1rem;
+  text-align: left;
+  letter-spacing: 0;
+}
+.application .techItem .techItemText p br {
+  display: contents;
+}
+@media (min-width: 768px) {
+  .application .techItem .techItemText p br {
+    display: block;
+  }
 }
 @media (min-width: 768px) {
   .application .techItem .techItemText p {
