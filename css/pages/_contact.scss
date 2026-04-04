@@ -96,19 +96,14 @@
 
         .contactPhoto {
           padding: 0 3rem;
+          max-width: 980px;
 
           .pic1 {
             display: flex;
             justify-content: flex-end;
-            margin-bottom: 0;
             z-index: 9;
             position: relative;
-            margin-right: 0;
 
-            @include b768 {
-              margin-bottom: -5rem;
-              margin-right: 0;
-            }
           }
 
           .pic2 {
@@ -116,7 +111,7 @@
             justify-content: flex-start;
             align-items: center;
             flex-direction: column;
-            margin-top: 1rem;
+            margin-top: 2rem;
 
             @include b768 {
               flex-direction: row;
@@ -124,11 +119,7 @@
             }
 
             img {
-              margin-left: 0;
-
-              @include b768 {
-                margin-left: 0;
-              }
+              max-width: 50%;
             }
           }
         }
@@ -145,8 +136,10 @@
           }
 
           p {
-            font-size: .8rem;
+            font-size: 1rem;
+            color: #595757;
             margin-bottom: .5rem;
+            letter-spacing: 1px;
           }
 
 

@@ -82,11 +82,11 @@
     text-align: center;
 
     p {
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 400;
       letter-spacing: 2px;
       text-align: justify;
-      color: #fff;
+      color: #595757;
       margin-top: 2rem;
 
       @include b768 {
@@ -201,8 +201,8 @@
         }
 
         p {
-          color: #9B9B9C;
-          font-size: 0.9rem;
+          color: #004632;
+          font-size: 1rem;
           padding-top: 0;
           text-align: center;
           font-weight: 400;

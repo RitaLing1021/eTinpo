@@ -14,7 +14,7 @@ window.addEventListener('scroll', function () {
     navbar.style.backgroundColor = '#004E42';
     navLinks.forEach(link => link.style.color = '#fff');
     dropDown.forEach(link => link.style.color = '#fff');
-    dropdownMenus.forEach(menu => menu.style.backgroundColor = 'transparent');
+    dropdownMenus.forEach(menu => menu.style.backgroundColor = '#004E42');
   }
 });
 
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", function () {
       loop: true,
       spaceBetween: 30,
       autoplay: {
-        delay: 2500,
+        delay: 5000,
         disableOnInteraction: false,
       },
       navigation: {
@@ -74,14 +74,12 @@ document.addEventListener("DOMContentLoaded", function () {
           slidesPerGroup: 1,
         },
       },
-      // 🔥 防止 Swiper 阻擋點擊事件
       touchStartPreventDefault: false,
       preventClicks: false,
       preventClicksPropagation: false
     });
   }
 
-  // 🔥 阻止 dropdown toggle 點擊冒泡，保證手機漢堡正常
   document.querySelectorAll('.dropdown-toggle').forEach(dropdown => {
     dropdown.addEventListener('click', e => {
       e.stopPropagation();
