@@ -1,5 +1,11 @@
 .YearinReview {
     position: relative;
+    
+            h3{
+                padding-top: 2rem;
+                font-size: 1.5rem;
+                color: $green;
+            }
 
     .year01 {
         background: url('../image/develop/cloth.png') no-repeat top right,
@@ -11,6 +17,22 @@
         @include b768 {
             padding-top: 15rem;
             background-position-y: top;
+        }
+        .year{
+            
+        &:nth-child(odd) {
+            justify-content: flex-end;
+        }
+
+        &:nth-child(even) {
+            flex-direction: column-reverse;
+            justify-content: flex-start;
+
+            @include b768 {
+                flex-direction: row;
+            }
+
+        }
         }
 
         .yeareTinpoLogo {
@@ -28,7 +50,7 @@
             background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 20%, rgba(255, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0.8) 80%, rgba(255, 255, 255, 0) 100%);
 
             @include b768 {
-                margin: 5rem auto 5rem;
+                margin: 2rem auto 5rem;
             }
 
             p {
@@ -36,7 +58,7 @@
                 margin-bottom: 0;
                 color: #595757;
                 text-align: justify;
-                font-size: 0.9rem;
+                font-size: 1rem;
 
                 @include b768 {
                     padding: 1rem;
@@ -62,19 +84,6 @@
         padding: 0 3rem 5rem;
         flex-direction: column;
 
-        &:nth-child(odd) {
-            justify-content: flex-start;
-        }
-
-        &:nth-child(even) {
-            flex-direction: column-reverse;
-            justify-content: flex-end;
-
-            @include b768 {
-                flex-direction: row;
-            }
-
-        }
 
         @include b768 {
             padding: 0;
@@ -111,12 +120,12 @@
         p {
             padding-top: 0;
             color: $green;
-            font-size: .9rem;
-            font-weight: 600;
+            font-size: 0.9rem;
+            font-weight: 500;
 
             @include b768 {
-                width: 160px;
-                font-size: .8rem;
+                width: 180px;
+                font-size: 1rem;
 
             }
 
@@ -134,6 +143,23 @@
         p {
             color: #fff;
         }
+        
+        .year{
+            
+        &:nth-child(odd) {
+            justify-content: flex-start;
+        }
+
+        &:nth-child(even) {
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+
+            @include b768 {
+                flex-direction: row;
+            }
+
+        }
+        }
     }
 
     .year03 {
@@ -141,7 +167,7 @@
         padding: 5rem 1rem 35rem;
 
         @include b768 {
-            padding: 5rem 1rem 15rem;
+            padding: 5rem 1rem 35rem;
         }
 
         h5 {
@@ -150,6 +176,23 @@
 
         p {
             color: #fff;
+        }
+        
+        .year{
+            
+        &:nth-child(odd) {
+            justify-content: flex-start;
+        }
+
+        &:nth-child(even) {
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+
+            @include b768 {
+                flex-direction: row;
+            }
+
+        }
         }
     }
 

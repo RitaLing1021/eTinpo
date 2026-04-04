@@ -34,8 +34,8 @@ footer =/*html*/`
             聯絡電話 / +886-6-505-1179<br>
             電子信箱 / info@etinpo.com.tw <br>
             服務時間 / 週一至週五 9:30 A.M. to 5 P.M.<br>
-            聯絡地址 / 74144台南市新市區創業路10號2樓<br>
-            2F, No. 10, Chuangye Rd., Xinshi Dist., Tainan City 74144 , Taiwan
+            聯絡地址 / 744092 台南市新市區南科二路10-1號<br>
+            No. 10-1, Nanke 2nd Rd., Xinshi Dist., Tainan City 744092, Taiwan
         </div>
             <div class="footerLink">
               <div class="footerBtn">

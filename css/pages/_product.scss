@@ -112,13 +112,12 @@
       .productText {
         p {
           color: #595757;
-          font-size: 0.9rem;
+          font-size: 1rem;
           text-align: justify;
           padding: 2rem 3rem 0;
 
           @include b768 {
             padding: 2rem 1rem 0;
-            font-size: 0.8rem;
             text-align: center;
 
           }
@@ -136,7 +135,7 @@
         @include b768 {
           flex-direction: row;
           align-items: flex-start;
-          max-width: 900px;
+          max-width: 1200px;
 
         }
 
@@ -144,26 +143,65 @@
           width: 140%;
           padding-top: 3rem;
           transform: translateX(-16%);
+          padding-left: 1rem;
+          padding-right: 1rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
 
           @include b768 {
             width: 50%;
             transform: translateX(0);
+          }
+
+          p {
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+            padding: 2rem 2rem;
+            margin-top: 2rem;
+            color: #595757;
+            font-size: .9rem;
           }
 
         }
 
         .product3L {
-          padding-bottom: 5rem;
-          padding-top: 4rem;
           width: 140%;
           transform: translateX(-16%);
+          padding-left: 1rem;
+          padding-right: 1rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
 
           @include b768 {
-            padding-top: 0;
+            padding-top: 10rem;
             width: 50%;
             transform: translateX(0);
           }
+
+          p {
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+            padding: 2rem 2rem;
+            margin-top: 2rem;
+            color: #595757;
+            font-size: .9rem;
+          }
         }
+      }
+      .productPP{
+        display: flex;    flex-direction: row;
+    align-items: center;
+    max-width: 960px;
+    margin: auto;
+    padding-bottom: 5rem;
+                  p {
+            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+            padding: 2rem 2rem;
+            margin-top: 2rem;
+            color: #595757;
+            font-size: .9rem;
+          }
+
       }
 
       .product_01 {
@@ -410,13 +448,13 @@
 
       p {
         color: #595757;
-        font-size: .9rem;
+        font-size: 1rem;
         text-align: justify;
         padding: 3rem 3rem 0;
         line-height: 1.5rem;
 
         @include b768 {
-          font-size: .8rem;
+          font-size: 1rem;
           padding: 3rem 0 0;
           text-align: center;
         }
@@ -462,7 +500,7 @@
 
 
             p {
-              font-size: 0.9rem;
+              font-size: 1rem;
               color: #999;
               text-align: center;
 
@@ -520,12 +558,12 @@
 
           p {
             background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
-            color: #999;
+            color: #004632;
             padding: 1rem 3rem;
             margin: 2rem 0;
             line-height: 1.8rem;
             text-align: justify;
-            font-size: 0.9rem;
+            font-size: 1rem;
 
             @include b768 {
               padding: 2rem 5rem;

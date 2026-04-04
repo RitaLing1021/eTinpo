@@ -54,24 +54,9 @@ header =/*html*/`
       <!-- 導航選單 -->
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" aria-current="page" href="technologies.html">TECHNOLOGY</a>
-          </li>
-          <!-- 下拉選單 -->
-          <li class="nav-item dropdown">
+                  <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              ABOUT US
-            </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="about.html">概述</a></li>
-              <li><a class="dropdown-item" href="responsibility.html">責任</a></li>
-              <li><a class="dropdown-item" href="develop.html">發展</a></li>
-              <li><a class="dropdown-item" href="rd.html">研發</a></li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              PRODUCT
+              產品特色
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
               <li><a class="dropdown-item" href="product.html">功能與機能</a></li>
@@ -80,10 +65,27 @@ header =/*html*/`
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">CONTACT</a>
+            <a class="nav-link" aria-current="page" href="technologies.html">技術</a>
+          </li>
+          
+          <!-- 下拉選單 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              關於我們
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="about.html">概述</a></li>
+              <li><a class="dropdown-item" href="responsibility.html">責任</a></li>
+              <li><a class="dropdown-item" href="develop.html">發展</a></li>
+              <li><a class="dropdown-item" href="rd.html">研發</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">聯絡我們</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="partners.html">PARTNERS</a>
+            <a class="nav-link" href="partners.html">合作夥伴</a>
           </li>
         </ul>
         <div class="languageBox"><a href="https://etinpo.com.tw/">中</a>｜<a href="https://etinpo.com.tw/en/">EN</a></div>

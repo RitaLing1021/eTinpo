@@ -55,7 +55,7 @@
   color: #004632;
   text-align: right;
   margin: auto;
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 @media (min-width: 768px) {
   .partners .partnersTheme .partners_slogan {
@@ -97,7 +97,7 @@
   background: linear-gradient(to bottom, white 0%, transparent 100%);
   font-family: "Noto Sans", sans-serif;
   color: #595757;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 300;
   letter-spacing: 2px;
   max-width: 655px;
@@ -108,7 +108,7 @@
   .partners .partnersTheme p {
     background: linear-gradient(to right, white 0%, white 50%, transparent 100%);
     margin: 0;
-    padding: 1rem 4rem;
+    padding: 1rem 2rem;
   }
 }
 .partners .partnersGroup {
@@ -145,7 +145,7 @@
   padding-top: 0.5rem;
 }
 .partners .partnersGroup .partnersElement p {
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 400;
   color: #595757;
 }
@@ -345,11 +345,11 @@
   color: #595757;
   font-size: 0.9rem;
   text-align: justify;
-  line-height: 1.2rem;
+  line-height: 1.3rem;
 }
 @media (min-width: 768px) {
   .values .action .actionText p {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
   }
 }
 
@@ -392,7 +392,7 @@
 }
 @media (min-width: 768px) {
   .clean .garment .container {
-    max-width: 650px;
+    max-width: 850px;
   }
 }
 .clean .garment h3 {
@@ -415,7 +415,7 @@
   }
 }
 .clean .garment p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #595757;
   text-align: justify;
 }
@@ -424,33 +424,24 @@
   text-align: left;
   letter-spacing: 0;
 }
-@media (min-width: 768px) {
-  .clean .garment p {
-    font-size: 0.8rem;
-  }
-}
 .clean .garment .garment_en {
   padding-top: 1.5rem;
 }
 .clean .garment .cleanIcon {
-  display: flex;
   padding-top: 3rem;
   padding-bottom: 3rem;
-  flex-wrap: wrap;
+}
+.clean .garment .cleanIcon ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
   justify-content: space-between;
+  align-items: stretch;
 }
-@media (min-width: 768px) {
-  .clean .garment .cleanIcon {
-    justify-content: space-around;
-  }
-}
-.clean .garment .cleanIcon img {
-  max-width: 35px;
-}
-@media (min-width: 768px) {
-  .clean .garment .cleanIcon img {
-    max-width: 45px;
-  }
+.clean .garment .cleanIcon ul li {
+  display: inline-grid;
+  justify-items: center;
+  color: #004632;
 }
 .clean .garment .wash {
   text-align: left;
@@ -479,18 +470,23 @@
 }
 .clean .garment .wash p {
   color: #595757;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 .clean .garment .wash ol {
   padding-left: 1rem;
 }
 .clean .garment .wash ol li {
   color: #595757;
-  font-size: 0.8rem;
+  font-size: 1rem;
 }
 
 .YearinReview {
   position: relative;
+}
+.YearinReview h3 {
+  padding-top: 2rem;
+  font-size: 1.5rem;
+  color: #004632;
 }
 .YearinReview .year01 {
   background: url("../image/develop/cloth.png") no-repeat top right, linear-gradient(180deg, #D5DEE1, #B3BBC0, #CFE9ED);
@@ -502,6 +498,18 @@
   .YearinReview .year01 {
     padding-top: 15rem;
     background-position-y: top;
+  }
+}
+.YearinReview .year01 .year:nth-child(odd) {
+  justify-content: flex-end;
+}
+.YearinReview .year01 .year:nth-child(even) {
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+}
+@media (min-width: 768px) {
+  .YearinReview .year01 .year:nth-child(even) {
+    flex-direction: row;
   }
 }
 .YearinReview .year01 .yeareTinpoLogo {
@@ -519,7 +527,7 @@
 }
 @media (min-width: 768px) {
   .YearinReview .year01 .yearIntroduction {
-    margin: 5rem auto 5rem;
+    margin: 2rem auto 5rem;
   }
 }
 .YearinReview .year01 .yearIntroduction p {
@@ -527,7 +535,7 @@
   margin-bottom: 0;
   color: #595757;
   text-align: justify;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 @media (min-width: 768px) {
   .YearinReview .year01 .yearIntroduction p {
@@ -547,18 +555,6 @@
   position: relative;
   padding: 0 3rem 5rem;
   flex-direction: column;
-}
-.YearinReview .year:nth-child(odd) {
-  justify-content: flex-start;
-}
-.YearinReview .year:nth-child(even) {
-  flex-direction: column-reverse;
-  justify-content: flex-end;
-}
-@media (min-width: 768px) {
-  .YearinReview .year:nth-child(even) {
-    flex-direction: row;
-  }
 }
 @media (min-width: 768px) {
   .YearinReview .year {
@@ -597,12 +593,12 @@
   padding-top: 0;
   color: #004632;
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 500;
 }
 @media (min-width: 768px) {
   .YearinReview .year p {
-    width: 160px;
-    font-size: 0.8rem;
+    width: 180px;
+    font-size: 1rem;
   }
 }
 .YearinReview .year02 {
@@ -615,13 +611,25 @@
 .YearinReview .year02 p {
   color: #fff;
 }
+.YearinReview .year02 .year:nth-child(odd) {
+  justify-content: flex-start;
+}
+.YearinReview .year02 .year:nth-child(even) {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+@media (min-width: 768px) {
+  .YearinReview .year02 .year:nth-child(even) {
+    flex-direction: row;
+  }
+}
 .YearinReview .year03 {
   background: linear-gradient(180deg, #7EA5A9, #004632, #001A12);
   padding: 5rem 1rem 35rem;
 }
 @media (min-width: 768px) {
   .YearinReview .year03 {
-    padding: 5rem 1rem 15rem;
+    padding: 5rem 1rem 35rem;
   }
 }
 .YearinReview .year03 h5 {
@@ -629,6 +637,18 @@
 }
 .YearinReview .year03 p {
   color: #fff;
+}
+.YearinReview .year03 .year:nth-child(odd) {
+  justify-content: flex-start;
+}
+.YearinReview .year03 .year:nth-child(even) {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+@media (min-width: 768px) {
+  .YearinReview .year03 .year:nth-child(even) {
+    flex-direction: row;
+  }
 }
 .YearinReview .arrow-left,
 .YearinReview .arrow-right {
@@ -761,27 +781,20 @@
 }
 .contact .contactTheme .contactPhoto {
   padding: 0 3rem;
+  max-width: 980px;
 }
 .contact .contactTheme .contactPhoto .pic1 {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 0;
   z-index: 9;
   position: relative;
-  margin-right: 0;
-}
-@media (min-width: 768px) {
-  .contact .contactTheme .contactPhoto .pic1 {
-    margin-bottom: -5rem;
-    margin-right: 0;
-  }
 }
 .contact .contactTheme .contactPhoto .pic2 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 @media (min-width: 768px) {
   .contact .contactTheme .contactPhoto .pic2 {
@@ -789,12 +802,7 @@
   }
 }
 .contact .contactTheme .contactPhoto .pic2 img {
-  margin-left: 0;
-}
-@media (min-width: 768px) {
-  .contact .contactTheme .contactPhoto .pic2 img {
-    margin-left: 0;
-  }
+  max-width: 50%;
 }
 .contact .contactTheme .contactText {
   padding: 1rem 0 3rem;
@@ -809,8 +817,10 @@
   }
 }
 .contact .contactTheme .contactText p {
-  font-size: 0.8rem;
+  font-size: 1rem;
+  color: #595757;
   margin-bottom: 0.5rem;
+  letter-spacing: 1px;
 }
 .contact .contactTheme .contactText .contactInformation {
   display: flex;
@@ -1016,7 +1026,7 @@
   line-height: 2rem;
 }
 .application h4 span {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #FFF;
   letter-spacing: 1px;
 }
@@ -1089,7 +1099,7 @@
   }
 }
 .application .techItem .techItemText p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
   letter-spacing: 1px;
   margin: auto;
@@ -1113,7 +1123,7 @@
 }
 @media (min-width: 768px) {
   .application .techItem .techItemText p {
-    font-size: 0.8rem;
+    font-size: 1rem;
   }
 }
 
@@ -1196,11 +1206,11 @@
   text-align: center;
 }
 .technologies .techsTheme p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 400;
   letter-spacing: 2px;
   text-align: justify;
-  color: #fff;
+  color: #595757;
   margin-top: 2rem;
 }
 @media (min-width: 768px) {
@@ -1310,8 +1320,8 @@
   padding-top: 1rem;
 }
 .features .applicationText .techItem .techItemText p {
-  color: #9B9B9C;
-  font-size: 0.9rem;
+  color: #004632;
+  font-size: 1rem;
   padding-top: 0;
   text-align: center;
   font-weight: 400;
@@ -1484,11 +1494,11 @@
 .newtechnology p {
   padding: 0.7rem 0;
   max-width: 430px;
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin: auto;
   font-weight: 500;
   text-align: justify;
-  line-height: 1.5rem;
+  line-height: 2rem;
   color: #595757;
 }
 .newtechnology .overviewPhoto {
@@ -1809,14 +1819,13 @@
 }
 .product .productText p {
   color: #595757;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: justify;
   padding: 2rem 3rem 0;
 }
 @media (min-width: 768px) {
   .product .productText p {
     padding: 2rem 1rem 0;
-    font-size: 0.8rem;
     text-align: center;
   }
 }
@@ -1832,13 +1841,18 @@
   .product .product2L3L {
     flex-direction: row;
     align-items: flex-start;
-    max-width: 900px;
+    max-width: 1200px;
   }
 }
 .product .product2L3L .product2L {
   width: 140%;
   padding-top: 3rem;
   transform: translateX(-16%);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .product .product2L3L .product2L {
@@ -1846,18 +1860,50 @@
     transform: translateX(0);
   }
 }
+.product .product2L3L .product2L p {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+  padding: 2rem 2rem;
+  margin-top: 2rem;
+  color: #595757;
+  font-size: 0.9rem;
+}
 .product .product2L3L .product3L {
-  padding-bottom: 5rem;
-  padding-top: 4rem;
   width: 140%;
   transform: translateX(-16%);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .product .product2L3L .product3L {
-    padding-top: 0;
+    padding-top: 10rem;
     width: 50%;
     transform: translateX(0);
   }
+}
+.product .product2L3L .product3L p {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+  padding: 2rem 2rem;
+  margin-top: 2rem;
+  color: #595757;
+  font-size: 0.9rem;
+}
+.product .productPP {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  max-width: 960px;
+  margin: auto;
+  padding-bottom: 5rem;
+}
+.product .productPP p {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+  padding: 2rem 2rem;
+  margin-top: 2rem;
+  color: #595757;
+  font-size: 0.9rem;
 }
 .product .product_01 {
   display: flex;
@@ -2080,14 +2126,14 @@
 }
 .functionText p {
   color: #595757;
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: justify;
   padding: 3rem 3rem 0;
   line-height: 1.5rem;
 }
 @media (min-width: 768px) {
   .functionText p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 3rem 0 0;
     text-align: center;
   }
@@ -2130,7 +2176,7 @@
   text-align: center;
 }
 .function .functionGroup .functionSwiper .function-swiper p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #999;
   text-align: center;
 }
@@ -2181,12 +2227,12 @@
 }
 .function .functionGroup .slogan04 p {
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
-  color: #999;
+  color: #004632;
   padding: 1rem 3rem;
   margin: 2rem 0;
   line-height: 1.8rem;
   text-align: justify;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 @media (min-width: 768px) {
   .function .functionGroup .slogan04 p {
@@ -2409,7 +2455,7 @@
 @media (min-width: 768px) {
   .rd .action .actionText {
     width: 350px;
-    padding: 1rem 2rem 1rem 0.8rem;
+    padding: 1rem 2rem 0 0.8rem;
     max-height: 133px;
   }
 }
@@ -2447,7 +2493,7 @@
 }
 @media (min-width: 768px) {
   .rd .action .actionText p {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     padding-top: 0;
   }
 }
@@ -2560,6 +2606,10 @@ a:hover {
 
 #navbarNav {
   z-index: 99;
+}
+
+.navbar-expand-lg .navbar-collapse {
+  justify-content: space-around;
 }
 
 .navbar-collapse {
@@ -2906,8 +2956,8 @@ a:hover {
 .feature p {
   padding-top: 0.1rem;
   text-align: justify;
-  font-size: 0.9rem;
-  color: #fff;
+  font-size: 1rem;
+  color: #595757;
   letter-spacing: 1px;
 }
 
@@ -3018,6 +3068,14 @@ a:hover {
   letter-spacing: 0.1rem;
   text-align: justify;
   padding-bottom: 1rem;
+}
+@media (min-width: 768px) {
+  .technology {
+    padding-top: 15rem;
+    padding-bottom: 10rem;
+  }
+}
+.technology {
   /*img {
       max-width: 100%;
 
@@ -3025,12 +3083,6 @@ a:hover {
           max-width: 434rem;
       }
   }*/
-}
-@media (min-width: 768px) {
-  .technology {
-    padding-top: 15rem;
-    padding-bottom: 10rem;
-  }
 }
 .technology .technologyContent {
   position: relative;
@@ -3183,13 +3235,14 @@ a:hover {
   font-weight: 600;
 }
 .technology .technologyText p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
 .homeproduct {
   background: linear-gradient(180deg, #004632 0%, #004632 5%, #D5DEE1 10%, #D5DEE1 100%);
   padding: 0 3rem 30rem;
+  position: relative;
 }
 @media (min-width: 768px) {
   .homeproduct {
@@ -3240,7 +3293,7 @@ a:hover {
   }
 }
 .homeproduct .product_01 p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #595857;
   font-weight: 600;
 }
@@ -3341,6 +3394,126 @@ a:hover {
   color: #595857;
   font-weight: 600;
 }
+.homeproduct .actionGroup {
+  margin: auto;
+  position: relative;
+}
+.homeproduct .actionGroup .photo_01 {
+  position: absolute;
+  right: 0;
+  bottom: 5rem;
+}
+.homeproduct .actionGroup .action {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  width: 100%;
+  position: relative;
+  z-index: 9;
+}
+@media (min-width: 768px) {
+  .homeproduct .actionGroup .action {
+    padding: 0 1.5rem;
+    width: 90%;
+  }
+}
+.homeproduct .actionGroup .action:nth-child(even) {
+  flex-direction: column;
+}
+.homeproduct .actionGroup .action img {
+  max-height: 100%;
+}
+@media (min-width: 768px) {
+  .homeproduct .actionGroup .action img {
+    max-height: 133px;
+  }
+}
+@media (min-width: 768px) {
+  .homeproduct .actionGroup .action {
+    flex-direction: row;
+    width: 100%;
+    margin: 3rem 0;
+  }
+  .homeproduct .actionGroup .action:nth-child(even) {
+    flex-direction: row-reverse;
+    justify-content: end;
+  }
+}
+.homeproduct .actionGroup .action .actionText {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1.5rem 1rem;
+  background: #FFF;
+  width: -moz-max-content;
+  width: max-content;
+  max-width: 100%;
+  max-height: 100%;
+}
+@media (min-width: 768px) {
+  .homeproduct .actionGroup .action .actionText {
+    width: 350px;
+    padding: 1rem 2rem 0 0.8rem;
+    max-height: 133px;
+  }
+}
+.homeproduct .actionGroup .action .actionText .btn {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.homeproduct .actionGroup .action .actionText .btn img {
+  width: 150px;
+}
+.homeproduct .actionGroup .action .actionText h4 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: #004632;
+  font-size: 1.3rem;
+  text-align: left;
+  letter-spacing: 1px;
+  padding-left: 80px;
+  position: relative;
+}
+.homeproduct .actionGroup .action .actionText h4::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 70px;
+  height: 70px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.homeproduct .actionGroup .action .actionText h4 span {
+  display: block;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 300;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.homeproduct .actionGroup .action .actionText p {
+  color: #595757;
+  font-size: 0.9rem;
+  padding-top: 1rem;
+}
+@media (min-width: 768px) {
+  .homeproduct .actionGroup .action .actionText p {
+    font-size: 0.85rem;
+    padding-top: 0;
+  }
+}
+.homeproduct .actionGroup .action:nth-child(1) .actionText h4::after {
+  background-image: url("../image/icon_product.png");
+}
+.homeproduct .actionGroup .action:nth-child(2) .actionText h4::after {
+  background-image: url("../image/icon_technology.png");
+}
+.homeproduct .actionGroup .action:nth-child(3) .actionText h4::after {
+  background-image: url("../image/icon_contact.png");
+}
 
 .partner {
   position: relative;
@@ -3409,7 +3582,7 @@ a:hover {
   font-weight: 600;
 }
 .partner .partnerText p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -3509,7 +3682,7 @@ a:hover {
   letter-spacing: 1px;
 }
 .Material p {
-  font-size: 0.9rem;
+  font-size: 1rem;
   text-align: center;
   font-weight: 500;
   line-height: 1.5rem;
@@ -3625,7 +3798,7 @@ a:hover {
 .purpose .purposeitem .purposeText p {
   padding: 0.7rem 0;
   max-width: 290px;
-  font-size: 0.9rem;
+  font-size: 1rem;
 }
 .purpose .purposeitem .purposeBtn button {
   background: #004632;

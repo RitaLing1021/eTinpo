@@ -7,8 +7,9 @@
       height: 300px;
       object-fit: cover;
       object-position: center;
-      @include b768{
-      height: auto;
+
+      @include b768 {
+        height: auto;
       }
     }
 
@@ -35,7 +36,7 @@
       padding: 0;
 
       @include b768 {
-        max-width: 650px;
+        max-width: 850px;
       }
     }
 
@@ -62,7 +63,7 @@
     }
 
     p {
-      font-size: .9rem;
+      font-size: 1rem;
       color: #595757;
       text-align: justify;
 
@@ -73,9 +74,6 @@
 
       }
 
-      @include b768 {
-        font-size: .8rem;
-      }
     }
 
     .garment_en {
@@ -83,23 +81,26 @@
     }
 
     .cleanIcon {
-      display: flex;
       padding-top: 3rem;
       padding-bottom: 3rem;
-      flex-wrap: wrap;
-      justify-content: space-between;
 
-      @include b768{        
-      justify-content: space-around;
-      }
+      ul {
+        list-style: none;
+        padding-left: 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: stretch;
 
-      img {
-        max-width: 35px;
-
-        @include b768 {
-          max-width: 45px;
+        li {
+          display: inline-grid;
+          justify-items: center;
+          color: $green;
         }
+
       }
+
+      @include b768 {}
+
 
     }
 
@@ -132,7 +133,7 @@
 
       p {
         color: #595757;
-        font-size: 0.8rem;
+        font-size: 1rem;
       }
 
       ol {
@@ -140,7 +141,7 @@
 
         li {
           color: #595757;
-          font-size: 0.8rem;
+          font-size: 1rem;
         }
       }
     }

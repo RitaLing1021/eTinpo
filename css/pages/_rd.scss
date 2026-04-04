@@ -184,7 +184,7 @@
 
       @include b768 {
         width: 350px;
-        padding: 1rem 2rem 1rem .8rem;
+        padding: 1rem 2rem 0 .8rem;
         max-height: 133px;
       }
 
@@ -225,7 +225,7 @@
         padding-top: 1rem;
 
         @include b768 {
-          font-size: .7rem;
+          font-size: .85rem;
           padding-top: 0;
         }
       }
