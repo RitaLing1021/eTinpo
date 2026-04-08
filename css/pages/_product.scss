@@ -458,28 +458,23 @@
     }
 
     .functionText {
-      background: url("../image/product/productBg.svg") top center no-repeat;
-      background-size: 450vw;
-      min-height: 190px;
-      z-index: 9;
-      position: relative;
-      margin-top: -5rem;
+      background: #D5DEE1;
 
-      @include b768 {
-        background-size: cover;
-        background-size: 380vw;
-      }
+      position: relative;
+
+
 
       p {
         color: #595757;
         font-size: 1rem;
         text-align: justify;
-        padding: 3rem 3rem 0;
+        padding: 3rem;
         line-height: 1.5rem;
+        margin-bottom: 0;
 
         @include b768 {
           font-size: 1rem;
-          padding: 3rem 0 0;
+          padding: 3rem 0 3rem;
           text-align: center;
         }
       }
