@@ -81,20 +81,41 @@
     }
 
     .cleanIcon {
-      padding-top: 3rem;
+      padding-top: 1rem;
       padding-bottom: 3rem;
+      @include b768{
+      padding-top: 3rem;
+      }
 
       ul {
         list-style: none;
         padding-left: 0;
         display: flex;
         justify-content: space-between;
-        align-items: stretch;
+        align-items: stretch;flex-wrap: wrap;
 
         li {
           display: inline-grid;
           justify-items: center;
           color: $green;
+          grid-auto-flow: column;
+          text-align: left;
+          align-items: center;
+          justify-content: start;
+          padding-bottom: 1rem;
+          width: 50%;
+            font-size: 0.8rem;
+          
+
+          @include b768 {
+            grid-auto-flow: row;
+            text-align: center;
+            width: auto;
+            font-size: 1rem;
+          }
+          img{
+            padding-right:5px ;
+          }
         }
 
       }

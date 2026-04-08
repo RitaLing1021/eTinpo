@@ -140,18 +140,26 @@
         }
 
         .product2L {
-          width: 140%;
-          padding-top: 3rem;
-          transform: translateX(-16%);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+          width: 100%;
 
           @include b768 {
             width: 50%;
-            transform: translateX(0);
+          }
+
+          img {
+            padding-top: 3rem;
+            transform: translateX(-16%);
+            padding-left: 1rem;
+            padding-right: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 140%;
+
+            @include b768 {
+              max-width: 100%;
+              transform: translateX(0);
+            }
           }
 
           p {
@@ -165,19 +173,28 @@
         }
 
         .product3L {
-          width: 140%;
-          transform: translateX(-16%);
-          padding-left: 1rem;
-          padding-right: 1rem;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
+          width: 100%;
 
           @include b768 {
-            padding-top: 10rem;
             width: 50%;
-            transform: translateX(0);
+            padding-top: 10rem;
           }
+
+          img {
+            max-width: 140%;
+            transform: translateX(-16%);
+            padding-left: 1rem;
+            padding-right: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            @include b768 {
+              max-width: 100%;
+              transform: translateX(0);
+            }
+          }
+
 
           p {
             background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
@@ -188,19 +205,26 @@
           }
         }
       }
-      .productPP{
-        display: flex;    flex-direction: row;
-    align-items: center;
-    max-width: 960px;
-    margin: auto;
-    padding-bottom: 5rem;
-                  p {
-            background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
-            padding: 2rem 2rem;
-            margin-top: 2rem;
-            color: #595757;
-            font-size: .9rem;
-          }
+
+      .productPP {
+        display: flex;
+          flex-direction: column;
+        align-items: center;
+        max-width: 960px;
+        margin: auto;
+        padding: 0 1rem 5rem;
+
+        @include b768 {
+        flex-direction: row;
+        }
+
+        p {
+          background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.5) 50%, rgba(255, 255, 255, 0) 100%);
+          padding: 2rem 2rem;
+          margin-top: 2rem;
+          color: #595757;
+          font-size: .9rem;
+        }
 
       }
 

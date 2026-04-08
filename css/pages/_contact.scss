@@ -95,8 +95,12 @@
         }
 
         .contactPhoto {
-          padding: 0 3rem;
+          padding: 0 1rem;
           max-width: 980px;
+
+          @include b768 {
+            padding: 0 3rem;
+          }
 
           .pic1 {
             display: flex;
@@ -109,29 +113,36 @@
           .pic2 {
             display: flex;
             justify-content: flex-start;
-            align-items: center;
+            align-items: flex-start;
             flex-direction: column;
             margin-top: 2rem;
 
             @include b768 {
               flex-direction: row;
+              align-items: center;
 
             }
 
             img {
-              max-width: 50%;
+              max-width: 100%;
+
+              @include b768 {
+                max-width: 50%;
+              }
             }
           }
         }
 
         .contactText {
           padding: 1rem 0 3rem;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          text-align: left;
 
           @include b1024 {
             position: relative;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
+
             padding: 0;
           }
 
@@ -189,9 +200,10 @@
           height: 10px;
           transform: translateX(-20%);
           margin-bottom: 1rem;
-          @include b768{            
-          height: auto;
-          max-height: 100%;
+
+          @include b768 {
+            height: auto;
+            max-height: 100%;
           }
         }
 
@@ -222,8 +234,9 @@
             width: 30%;
             margin-top: -9rem;
             margin-left: 4rem;
-            @include b768{
-            margin-top: 3rem;
+
+            @include b768 {
+              margin-top: 3rem;
             }
           }
 
@@ -257,7 +270,8 @@
           left: 0;
           bottom: 0;
           display: none;
-          @include b768{
+
+          @include b768 {
             display: block;
           }
         }
