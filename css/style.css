@@ -2170,30 +2170,21 @@
 }
 
 .functionText {
-  background: url("../image/product/productBg.svg") top center no-repeat;
-  background-size: 450vw;
-  min-height: 190px;
-  z-index: 9;
+  background: #D5DEE1;
   position: relative;
-  margin-top: -5rem;
-}
-@media (min-width: 768px) {
-  .functionText {
-    background-size: cover;
-    background-size: 380vw;
-  }
 }
 .functionText p {
   color: #595757;
   font-size: 1rem;
   text-align: justify;
-  padding: 3rem 3rem 0;
+  padding: 3rem;
   line-height: 1.5rem;
+  margin-bottom: 0;
 }
 @media (min-width: 768px) {
   .functionText p {
     font-size: 1rem;
-    padding: 3rem 0 0;
+    padding: 3rem 0 3rem;
     text-align: center;
   }
 }
