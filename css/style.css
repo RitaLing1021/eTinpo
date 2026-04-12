@@ -1892,13 +1892,13 @@
 }
 .product .product2L3L .product2L img {
   padding-top: 3rem;
-  transform: translateX(-16%);
+  transform: translateX(-25%);
   padding-left: 1rem;
   padding-right: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 140%;
+  max-width: 130%;
 }
 @media (min-width: 768px) {
   .product .product2L3L .product2L img {
