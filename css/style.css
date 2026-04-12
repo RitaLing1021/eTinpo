@@ -1923,8 +1923,8 @@
   }
 }
 .product .product2L3L .product3L img {
-  max-width: 140%;
-  transform: translateX(-16%);
+  max-width: 130%;
+  transform: translateX(-25%);
   padding-left: 1rem;
   padding-right: 1rem;
   display: flex;
