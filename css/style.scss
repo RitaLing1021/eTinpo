@@ -351,8 +351,11 @@
 
 
     .technologyFeature {
-        background: linear-gradient(180deg, #001A12 0%, #D5DEE1 10%, #D5DEE1 70%, #004632 100%);
+        background: linear-gradient(180deg, #D5DEE1 0%, #D5DEE1 95%, #004632 100%);
         position: relative;
+        @include b768 {
+        background: linear-gradient(180deg, #001A12 0%, #D5DEE1 10%, #D5DEE1 70%, #004632 100%);
+        }
 
     }
 

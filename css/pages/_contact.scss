@@ -151,6 +151,9 @@
             color: #595757;
             margin-bottom: .5rem;
             letter-spacing: 1px;
+            a{
+              color: #595757;
+            }
           }
 
 
@@ -190,7 +193,7 @@
         @include b768 {
           background: url('../image/contact/cloth-w2.png') no-repeat top left;
           background-size: 100%;
-          padding-top: 25rem;
+          padding-top: 50rem;
           margin-top: -10rem;
 
         }

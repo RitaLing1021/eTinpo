@@ -858,6 +858,9 @@
   margin-bottom: 0.5rem;
   letter-spacing: 1px;
 }
+.contact .contactTheme .contactText p a {
+  color: #595757;
+}
 .contact .contactTheme .contactText .contactInformation {
   display: flex;
   flex-direction: column;
@@ -892,7 +895,7 @@
   .contact .contactFooter {
     background: url("../image/contact/cloth-w2.png") no-repeat top left;
     background-size: 100%;
-    padding-top: 25rem;
+    padding-top: 50rem;
     margin-top: -10rem;
   }
 }
@@ -2926,8 +2929,13 @@ a:hover {
 }
 
 .technologyFeature {
-  background: linear-gradient(180deg, #001A12 0%, #D5DEE1 10%, #D5DEE1 70%, #004632 100%);
+  background: linear-gradient(180deg, #D5DEE1 0%, #D5DEE1 95%, #004632 100%);
   position: relative;
+}
+@media (min-width: 768px) {
+  .technologyFeature {
+    background: linear-gradient(180deg, #001A12 0%, #D5DEE1 10%, #D5DEE1 70%, #004632 100%);
+  }
 }
 
 .feature {
