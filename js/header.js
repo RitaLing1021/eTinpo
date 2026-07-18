@@ -1,3 +1,32 @@
+const headContents = `
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="image/favicon.ico" rel="shortcut icon" />
+`;
+document.head.insertAdjacentHTML('beforeend', headContents);
+
+const bsScript = document.createElement('script');
+bsScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js';
+bsScript.defer = true;
+document.head.appendChild(bsScript);
+
+const allScript = document.createElement('script');
+allScript.src = 'js/all.js';
+allScript.defer = true;
+document.head.appendChild(allScript);
+
+const aosScript = document.createElement('script');
+aosScript.src = 'https://unpkg.com/aos@2.3.1/dist/aos.js';
+document.head.appendChild(aosScript);
+
+aosScript.onload = function () {
+    AOS.init();
+};
+
 header =/*html*/`
     <header id="mainNavbar">
           <!-- Header with Navbar -->
