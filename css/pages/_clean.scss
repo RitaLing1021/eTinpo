@@ -83,8 +83,9 @@
     .cleanIcon {
       padding-top: 1rem;
       padding-bottom: 3rem;
-      @include b768{
-      padding-top: 3rem;
+
+      @include b768 {
+        padding-top: 3rem;
       }
 
       ul {
@@ -92,7 +93,21 @@
         padding-left: 0;
         display: flex;
         justify-content: space-between;
-        align-items: stretch;flex-wrap: wrap;
+        align-items: stretch;
+        flex-wrap: wrap;
+
+        &.en {
+          li {
+
+            @include b768 {
+              width: 25%;
+              align-content: stretch;
+              justify-content: center;
+            }
+          }
+
+        }
+
 
         li {
           display: inline-grid;
@@ -104,8 +119,8 @@
           justify-content: start;
           padding-bottom: 1rem;
           width: 50%;
-            font-size: 0.8rem;
-          
+          font-size: 0.8rem;
+
 
           @include b768 {
             grid-auto-flow: row;
@@ -113,8 +128,9 @@
             width: auto;
             font-size: 1rem;
           }
-          img{
-            padding-right:5px ;
+
+          img {
+            padding-right: 5px;
           }
         }
 

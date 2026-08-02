@@ -444,6 +444,13 @@
   align-items: stretch;
   flex-wrap: wrap;
 }
+@media (min-width: 768px) {
+  .clean .garment .cleanIcon ul.en li {
+    width: 25%;
+    align-content: stretch;
+    justify-content: center;
+  }
+}
 .clean .garment .cleanIcon ul li {
   display: inline-grid;
   justify-items: center;
