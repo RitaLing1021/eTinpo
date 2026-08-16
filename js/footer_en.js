@@ -31,19 +31,19 @@ footer =/*html*/`
     <div class="container d-flex flex-md-row flex-column justify-content-around align-items-center p-3">
         <div class="eTinpoLogo"><img src="image/footer_logo.svg" alt="eTinpoLogo" width="234"></div>
         <div class="text-center text-md-start footerLocation">
-            聯絡電話 / +886-6-505-1179<br>
-            電子信箱 / info@etinpo.com.tw <br>
-            服務時間 / 週一至週五 9:30 A.M. to 5 P.M.<br>
-            聯絡地址 / 744092 台南市新市區南科二路10-1號<br>
-            No. 10-1, Nanke 2nd Rd., Xinshi Dist., Tainan City 744092, Taiwan
+            Phone / +886-6-505-1179<br>
+            Email / info@etinpo.com.tw <br>
+            Monday to Friday 9:30 A.M. to 5 P.M.<br>
+            Address / No. 10-1, Nanke 2nd Rd., Xinshi Dist.,<br>
+             Tainan City 744092, Taiwan (R.O.C.)<br>
         </div>
             <div class="footerLink">
               <div class="footerBtn">
-                <a href="technologies.html">富邦技術</a>
-                <a href="about.html">關於我們</a>
-                <a href="product-features.html">產品總覽</a>
-                <a href="contact.html">聯絡我們</a>
-                <a href="partners.html">合作案例</a>
+                <a href="technologies.html">TECHNOLOGIES</a>
+                <a href="about.html">ABOUT US</a>
+                <a href="product-features.html">APPLICATIONS</a>
+                <a href="contact.html">CONTACT</a>
+                <a href="partners.html">OUR PARTNERS</a>
                  </div>
                  <div class="socialMedia">
                  <a href="https://www.facebook.com/people/eTINPO-Membrane/61571393983125/"><img src="image/footer_fb.svg" width="25"></a>
@@ -53,7 +53,7 @@ footer =/*html*/`
             </div>
     </div>
     <div class="copyRight">
-        Copyright © 2024 富邦先進材料股份有限公司 All Rights Reserved.
+        Copyright © 2024 FOREBOND ADVANCED MATERIAL CO., LTD. All Rights Reserved.
     </div>
     </div>
 </footer>
