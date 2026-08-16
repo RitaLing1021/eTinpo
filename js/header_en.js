@@ -88,9 +88,9 @@ header =/*html*/`
               Products
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="product_en.html">功能與機能</a></li>
-              <li><a class="dropdown-item" href="application_en.html">應用類別</a></li>
-              <li><a class="dropdown-item" href="clean_en.html">清潔與保養</a></li>
+              <li><a class="dropdown-item" href="product_en.html">Features and Functions</a></li>
+              <li><a class="dropdown-item" href="application_en.html">Applications</a></li>
+              <li><a class="dropdown-item" href="clean_en.html">Care and Maintenance</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -103,10 +103,10 @@ header =/*html*/`
               About us
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <li><a class="dropdown-item" href="about_en.html">概述</a></li>
-              <li><a class="dropdown-item" href="responsibility_en.html">責任</a></li>
-              <li><a class="dropdown-item" href="develop_en.html">發展</a></li>
-              <li><a class="dropdown-item" href="rd_en.html">研發</a></li>
+              <li><a class="dropdown-item" href="about_en.html">Our Philosophy</a></li>
+              <li><a class="dropdown-item" href="responsibility_en.html">Commitment and Values</a></li>
+              <li><a class="dropdown-item" href="develop_en.html">Our Milestones</a></li>
+              <li><a class="dropdown-item" href="rd_en.html">Future Concepts</a></li>
             </ul>
           </li>
 
