@@ -1,9 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 677.09 33.77">
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 -40 677.09 113.77" overflow="visible">
   <defs>
     <style>
       .cls-1 {
         fill: #fff;
+      }
+
+      svg {
+        overflow: visible;
+      }
+
+      #text > g > * {
+        --split-y: -30px;
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: split-title 7s cubic-bezier(.45, 0, .2, 1) infinite;
+      }
+
+      #text > g > *:nth-child(10n + 1) { --split-y: -30px; }
+      #text > g > *:nth-child(10n + 2) { --split-y: 18px; }
+      #text > g > *:nth-child(10n + 3) { --split-y: -16px; }
+      #text > g > *:nth-child(10n + 4) { --split-y: 32px; }
+      #text > g > *:nth-child(10n + 5) { --split-y: -23px; }
+      #text > g > *:nth-child(10n + 6) { --split-y: 13px; }
+      #text > g > *:nth-child(10n + 7) { --split-y: -11px; }
+      #text > g > *:nth-child(10n + 8) { --split-y: 25px; }
+      #text > g > *:nth-child(10n + 9) { --split-y: -20px; }
+      #text > g > *:nth-child(10n) { --split-y: 16px; }
+
+      #text > g {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: assembled-float 6s ease-in-out infinite;
+      }
+
+      @keyframes split-title {
+        0%, 100% {
+          opacity: 0;
+          transform: translateY(var(--split-y));
+        }
+        28.6%, 70% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        86% {
+          opacity: 0;
+          transform: translateY(var(--split-y));
+        }
+      }
+
+      @keyframes assembled-float {
+        0%, 100% { transform: translateY(0); }
+        20% { transform: translateY(-7px); }
+        40% { transform: translateY(5px); }
+        60% { transform: translateY(-5px); }
+        80% { transform: translateY(3px); }
       }
     </style>
   </defs>

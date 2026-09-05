@@ -2,29 +2,38 @@
 <html lang="en">
 
 <head>
-  <title>eTINPO-應用類別</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="image/favicon.ico" rel="shortcut icon">
+  <title>eTINPO - Applications</title>
 </head>
 
-<body>
+<body class="application-page">
   <!-- header.js -->
   <script charset="utf-8" src="js/header_en.js"></script>
 
   <section class="application">
-    <div class="applicationBanner">
-      <img src="image/application/banner.png" alt="應用類別" class="col-12 applicationBanner_bg">
-      <img src="image/application/clothes.png" alt="應用類別" class="img-fluid applicationBanner_clothes">
+    <div class="applicationBanner" data-parallax="application-mask" data-parallax-mode="from-top"
+      data-parallax-desktop="120" data-parallax-mobile="46" data-parallax-speed="0.22">
+      <div class="applicationBanner_parallaxMask">
+        <img src="image/application/banner.png" alt="應用類別" class="col-12 applicationBanner_bg" data-parallax-layer>
+      </div>
+      <img src="image/application/clothes.png" alt="應用類別" class="img-fluid applicationBanner_clothes etinpo-float float-application-clothes">
       <div class="applicationBanner_text">
-        <img src="image/application/title-01.svg" alt="" class="application_text01" data-aos="fade-up"
-          data-aos-duration="3000">
+        <img src="image/application/title-01.svg" alt="" class="application_text01">
       </div>
     </div>
     <div class="techItem">
 
       <div class="container">
-        <div class="d-flex flex-column flex-md-row align-items-center">
+        <div class="d-flex flex-column flex-md-row align-items-center application-item application-item--apparel">
           <div class="techPhoto">
             <div class="techPhoto01">
-              <img src="image/application/apparel.png" alt="服裝" class="shake-vertical">
+              <img src="image/application/apparel.png" alt="服裝" class="etinpo-float float-application-apparel">
             </div>
             <img src="image/application/product_text_01-en.svg" alt="服裝文字" width="238" class="techPhoto02">
           </div>
@@ -35,10 +44,10 @@
             </p>
           </div>
         </div>
-        <div class="d-flex flex-column flex-md-row align-items-center justify-content-end">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-end application-item application-item--footwear">
           <div class="techPhoto">
             <div class="techPhoto01">
-              <img src="image/application/footwear.png" alt="鞋類" class="shake-vertical">
+              <img src="image/application/footwear.png" alt="鞋類" class="etinpo-float float-application-footwear">
             </div>
             <img src="image/application/product_text_02-en.svg" alt="鞋類文字" width="304" class="techPhoto02">
           </div>
@@ -47,10 +56,10 @@
               forward!</p>
           </div>
         </div>
-        <div class="d-flex flex-column flex-md-row align-items-center justify-content-end">
+        <div class="d-flex flex-column flex-md-row align-items-center justify-content-end application-item application-item--gloves">
           <div class="techPhoto">
             <div class="techPhoto01">
-              <img src="image/application/gloves.png" alt="手套" class="shake-vertical">
+              <img src="image/application/gloves.png" alt="手套" class="etinpo-float float-application-gloves">
             </div>
             <img src="image/application/product_text_03-en.svg" alt="手套文字" width="210" class="techPhoto02">
           </div>
@@ -58,10 +67,10 @@
             <p>Unbeatable protection blocks coldness and moisture to keep your hands safe and warm.</p>
           </div>
         </div>
-        <div class="d-flex flex-column flex-md-row align-items-center">
+        <div class="d-flex flex-column flex-md-row align-items-center application-item application-item--medical">
           <div class="techPhoto">
             <div class="techPhoto01">
-              <img src="image/application/medical.png" alt="醫療用防護衣" class="shake-vertical">
+              <img src="image/application/medical.png" alt="醫療用防護衣" class="etinpo-float float-application-medical">
             </div>
             <img src="image/application/product_text_04-en.svg" alt="醫療用防護衣文字" width="335" class="techPhoto02">
           </div>
@@ -77,6 +86,7 @@
   </section>
   <!-- footer.js -->
   <script charset="utf-8" src="js/footer_en.js"></script>
+  <script src="js/parallax.js"></script>
 
 </body>
 

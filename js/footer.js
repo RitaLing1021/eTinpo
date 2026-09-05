@@ -41,7 +41,7 @@ footer =/*html*/`
               <div class="footerBtn">
                 <a href="technologies.html">富邦技術</a>
                 <a href="about.html">關於我們</a>
-                <a href="product-features.html">產品總覽</a>
+                <a href="product.html">產品特色</a>
                 <a href="contact.html">聯絡我們</a>
                 <a href="partners.html">合作案例</a>
                  </div>

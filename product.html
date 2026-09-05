@@ -2,11 +2,18 @@
 <html lang="en">
 
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="image/favicon.ico" rel="shortcut icon">
   <title>eTINPO-責任</title>
   <link href="image/favicon.ico" rel="shortcut icon" />
 </head>
 
-<body>
+<body class="product-page">
   <!-- header.js -->
   <script charset="utf-8" src="js/header.js"></script>
 
@@ -16,8 +23,7 @@
         <img src="image/product/productText-01.svg" alt="" width="421" class="productText01" data-aos="fade-up"
           data-aos-duration="3000">
 
-        <img src="image/product/productText-02.svg" alt="" width="561" class="productText02" data-aos="fade-up"
-          data-aos-duration="3000">
+        <img src="image/product/productText-02.svg" alt="" width="561" class="productText02">
       </div>
     </div>
     <div class="productSwiper">
@@ -59,14 +65,14 @@
     </div>
     <div class="product2L3L">
       <div class="product2L">
-        <img src="image/product/2L.svg" alt="" width="600" data-aos="fade-up" data-aos-duration="3000">
+        <img src="image/product/2L.svg" alt="" width="600">
         <p>eTINPO 採用獨創雙層透濕技術，突破傳統2L布料透氣性不足的限制，結合PP膜輕量化設計並實現出色的透濕與透氣表現。<br><br>
           系統性調節體溫與濕度，維持穩定的舒適與高效能狀態，融入更多樣化的機能服飾設計。真正實現「穿著就能自在呼吸」的理想機能！</p>
 
       </div>
 
       <div class="product3L">
-        <img src="image/product/3L.svg" alt="" width="600" data-aos="fade-up" data-aos-duration="3000">
+        <img src="image/product/3L.svg" alt="" width="600">
         <p>經典三層式eTINPO防水薄膜科技，打造層層防護結構，大幅提升防水等級，全面抵禦風雨與兼顧透氣舒適，讓你在嚴峻氣候下依然保持乾爽自在。<br><br>
           無論是高強度戶外運動、登山健行，還是面對專業穿著應用，eTINPO 3L面料都能提供強大保護，是結合機能性與穿著舒適度的理想選擇！</p>
       </div>
@@ -91,7 +97,7 @@
       <img src="image/product/slogan03.svg" alt="" class="slogan03" width="815" data-aos="fade-up"
         data-aos-duration="3000">
     </div>
-    <img src="image/product/cloth.png" alt="" class="sloganCloth shake-vertical">
+    <img src="image/product/cloth.png" alt="" class="sloganCloth product-cloth-float">
   </section>
 
   <div class="functionText">
@@ -129,14 +135,21 @@
             </div>
             <div class="swiper-slide">
               <div class="function-swiper">
-                <img src="image/product/iconB4.png" class="icon">
+                <img src="image/product/iconB6.png" class="icon">
+                <h4>就該耐用</h4>
+                <p>層層測試確保產品壽命，經得起考驗的超強性能！</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="function-swiper">
+                <img src="image/product/iconB5.png" class="icon">
                 <h4>就很環保</h4>
                 <p>全製程不含PFAS，無化學溶劑，燃燒分解後不含環境有害物質。</p>
               </div>
             </div>
             <div class="swiper-slide">
               <div class="function-swiper">
-                <img src="image/product/iconB5.png" class="icon">
+                <img src="image/product/iconB4.png" class="icon">
                 <h4>究強延展</h4>
                 <p>反覆科學拉伸測試，具備適度延展性，降低摩擦和水洗的耗損。</p>
               </div>
@@ -156,13 +169,15 @@
 
   </section>
   <section class="productFooter">
-    <img src="image/product/productFooter.png" alt="">
+    <div id="productFooterParallax" class="etinpoParallaxMask productFooterParallaxMask" data-parallax="product-footer-mask"
+      data-parallax-mode="to-page-end-forward" data-parallax-desktop="130" data-parallax-mobile="52">
+      <img src="image/product/productFooter.png" alt="" data-parallax-layer>
+    </div>
   </section>
   <!-- footer.js -->
   <script charset="utf-8" src="js/footer.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
-  <script src="js/all.js"></script>
+  <script src="js/parallax.js"></script>
 
 </body>
 

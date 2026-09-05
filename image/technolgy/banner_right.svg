@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 642.28 33.75">
+<svg id="_圖層_2" data-name="圖層 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 -15 642.28 63.75" overflow="visible">
   <defs>
     <style>
       .cls-1 {
         fill: #fff;
+      }
+
+      svg {
+        overflow: visible;
+      }
+
+      #text > g > * {
+        --split-y: -14px;
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: split-letter 6.9s ease-in-out infinite;
+      }
+
+      #text > g > *:nth-child(6n + 1) { --split-y: -15px; }
+      #text > g > *:nth-child(6n + 2) { --split-y: 12px; }
+      #text > g > *:nth-child(6n + 3) { --split-y: -9px; }
+      #text > g > *:nth-child(6n + 4) { --split-y: 16px; }
+      #text > g > *:nth-child(6n + 5) { --split-y: -12px; }
+      #text > g > *:nth-child(6n) { --split-y: 9px; }
+
+      #text > g {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: assembled-float 6.9s ease-in-out infinite;
+      }
+
+      @keyframes split-letter {
+        0%, 100% { opacity: 0; transform: translateY(var(--split-y)); }
+        29%, 72% { opacity: 1; transform: translateY(0); }
+        88% { opacity: 0; transform: translateY(var(--split-y)); }
+      }
+
+      @keyframes assembled-float {
+        0%, 100% { transform: translateY(0); }
+        25% { transform: translateY(-5px); }
+        50% { transform: translateY(4px); }
+        75% { transform: translateY(-3px); }
       }
     </style>
   </defs>

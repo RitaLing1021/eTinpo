@@ -1,33 +1,71 @@
-const headContents = `
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <link href="image/favicon.ico" rel="shortcut icon" />
-`;
-document.head.insertAdjacentHTML('beforeend', headContents);
+(function loadSharedAssetsOnce() {
+  const ensureStylesheet = (href) => {
+    const absoluteHref = new URL(href, document.baseURI).href;
+    const exists = Array.from(document.querySelectorAll('link[rel="stylesheet"]'))
+      .some((link) => link.href === absoluteHref);
+    if (exists) return;
 
-const bsScript = document.createElement('script');
-bsScript.src = 'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js';
-bsScript.defer = true;
-document.head.appendChild(bsScript);
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = href;
+    document.head.appendChild(link);
+  };
 
-const allScript = document.createElement('script');
-allScript.src = 'js/all.js';
-allScript.defer = true;
-document.head.appendChild(allScript);
+  const ensureScript = (src, isReady, onReady) => {
+    if (isReady()) {
+      if (onReady) onReady();
+      return;
+    }
 
-const aosScript = document.createElement('script');
-aosScript.src = 'https://unpkg.com/aos@2.3.1/dist/aos.js';
-document.head.appendChild(aosScript);
+    const absoluteSrc = new URL(src, document.baseURI).href;
+    const existing = Array.from(document.scripts).find((script) => script.src === absoluteSrc);
+    if (existing) {
+      if (onReady) existing.addEventListener('load', onReady, { once: true });
+      return;
+    }
 
-aosScript.onload = function () {
-    AOS.init();
-};
+    const script = document.createElement('script');
+    script.src = src;
+    if (onReady) script.addEventListener('load', onReady, { once: true });
+    document.head.appendChild(script);
+  };
 
-header =/*html*/`
+  ensureStylesheet('https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css');
+  ensureStylesheet('https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css');
+  ensureStylesheet('css/style.css');
+  ensureStylesheet('https://unpkg.com/aos@2.3.1/dist/aos.css');
+
+  if (!document.querySelector('link[rel="shortcut icon"], link[rel="icon"]')) {
+    const favicon = document.createElement('link');
+    favicon.rel = 'shortcut icon';
+    favicon.href = 'image/favicon.ico';
+    document.head.appendChild(favicon);
+  }
+
+  ensureScript(
+    'https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js',
+    () => typeof window.bootstrap === 'object'
+  );
+  ensureScript('js/all.js', () => Boolean(window.__etinpoAllInitialized));
+  ensureScript(
+    'https://unpkg.com/aos@2.3.1/dist/aos.js',
+    () => typeof window.AOS === 'object',
+    () => {
+      const initializeAos = () => {
+        if (window.__etinpoAosInitialized || !window.AOS) return;
+        window.__etinpoAosInitialized = true;
+        window.AOS.init();
+      };
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeAos, { once: true });
+      } else {
+        initializeAos();
+      }
+    }
+  );
+})();
+
+const header =/*html*/`
     <header id="mainNavbar">
           <!-- Header with Navbar -->
   <nav class="container navbar navbar-expand-lg">
@@ -38,7 +76,7 @@ header =/*html*/`
   <defs>
     
   </defs>
-  <g id="logoSVG" data-name="eTinpo">
+  <g id="logoMark" data-name="eTinpo">
     <g>
       <g>
         <path class="cls-1" d="M223.65,82.69l1.8,6.23h.02l1.93-6.23h.94l1.94,6.23h.02l1.81-6.23h.75l-2.18,7.12h-.8l-2.01-6.37h-.02l-2,6.37h-.82l-2.19-7.12h.81Z"/>
@@ -84,10 +122,10 @@ header =/*html*/`
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
                   <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               產品特色
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul class="dropdown-menu" aria-labelledby="productsDropdown">
               <li><a class="dropdown-item" href="product.html">功能與機能</a></li>
               <li><a class="dropdown-item" href="application.html">應用類別</a></li>
               <li><a class="dropdown-item" href="clean.html">清潔與保養</a></li>
@@ -99,10 +137,10 @@ header =/*html*/`
           
           <!-- 下拉選單 -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle" href="javascript:void(0)" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               關於我們
             </a>
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <ul class="dropdown-menu" aria-labelledby="aboutDropdown">
               <li><a class="dropdown-item" href="about.html">概述</a></li>
               <li><a class="dropdown-item" href="responsibility.html">責任</a></li>
               <li><a class="dropdown-item" href="develop.html">發展</a></li>
