@@ -39,11 +39,11 @@ footer =/*html*/`
         </div>
             <div class="footerLink">
               <div class="footerBtn">
-                <a href="technologies.html">TECHNOLOGIES</a>
-                <a href="about.html">ABOUT US</a>
-                <a href="product-features.html">APPLICATIONS</a>
-                <a href="contact.html">CONTACT</a>
-                <a href="partners.html">OUR PARTNERS</a>
+                <a href="technologies_en.html">TECHNOLOGIES</a>
+                <a href="about_en.html">ABOUT US</a>
+                <a href="product_en.html">PRODUCTS</a>
+                <a href="contact_en.html">CONTACT</a>
+                <a href="partners_en.html">OUR PARTNERS</a>
                  </div>
                  <div class="socialMedia">
                  <a href="https://www.facebook.com/people/eTINPO-Membrane/61571393983125/"><img src="image/footer_fb.svg" width="25"></a>

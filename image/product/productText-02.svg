@@ -5,6 +5,36 @@
       .cls-1 {
         fill: #fff;
       }
+
+      /* Only the final eTINPO! line (items 23-29) uses the split animation. */
+      #text > g > :nth-child(n + 23) {
+        transform-box: fill-box;
+        transform-origin: center;
+        animation: assemble-etinpo-line 7.1s ease-in-out infinite, assembled-etinpo-float 7.1s ease-in-out infinite;
+      }
+
+      #text > g > :nth-child(23) { --assembled-y: 0px; }
+      #text > g > :nth-child(24) { --assembled-y: -20px; }
+      #text > g > :nth-child(25) { --assembled-y: 20px; }
+      #text > g > :nth-child(26) { --assembled-y: -10px; }
+      #text > g > :nth-child(27) { --assembled-y: -30px; }
+      #text > g > :nth-child(28) { --assembled-y: -15.5px; }
+      #text > g > :nth-child(29) { --assembled-y: 0px; }
+
+      @keyframes assemble-etinpo-line {
+        0% { opacity: 0; transform: translateY(0); }
+        9% { opacity: 1; transform: translateY(0); }
+        28.2%, 72% { opacity: 1; transform: translateY(var(--assembled-y)); }
+        89% { opacity: 1; transform: translateY(0); }
+        100% { opacity: 0; transform: translateY(0); }
+      }
+
+      @keyframes assembled-etinpo-float {
+        0%, 100% { translate: 0 0; }
+        25% { translate: 0 -5px; }
+        50% { translate: 0 4px; }
+        75% { translate: 0 -3px; }
+      }
     </style>
   </defs>
   <g id="text">
