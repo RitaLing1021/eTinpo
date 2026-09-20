@@ -578,7 +578,10 @@
 
 
     .technologyFeature {
-        background: linear-gradient(180deg, #D5DEE1 0%, #D5DEE1 95%, #004632 100%);
+        // Mobile carries the banner's dark green into the pale content area,
+        // then reaches solid brand green before the overlapping partner block.
+        background: linear-gradient(180deg, #001A12 0%, #D5DEE1 8%, #D5DEE1 72%, #004632 96%, #004632 100%);
+        background-color: #004632;
         position: relative;
 
         @include b768 {
@@ -605,7 +608,7 @@
             max-width: 50rem;
             letter-spacing: 2px;
             text-align: center;
-            margin-top: 1rem;
+            margin-top: 2.75rem;
 
             @include b768 {
                 text-align: left;
@@ -613,7 +616,7 @@
             }
 
             &:nth-child(even) {
-                margin-top: 1rem;
+                margin-top: 2.75rem;
 
                 @include b768 {
                     margin-top: 10rem;
@@ -635,6 +638,10 @@
                     }
                 }
             }
+        }
+
+        .row:first-child .featureTheme:first-child {
+            margin-top: 0;
         }
 
         .featurePhoto {
@@ -1928,7 +1935,17 @@
 }
 
 @media (min-width: 768px) {
-  .bannerTechs--en .bannerText .b-left-en { flex: 0 1 42%; width: 42%; max-width: 560px; }
+  .bannerTechs--en .bannerText .b-left-en {
+    flex: 0 1 42%;
+    width: 42%;
+    max-width: 560px;
+    position: relative;
+    z-index: 1;
+    transform: translateZ(0) scale(1.5);
+    transform-origin: left center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
   .bannerTechs--en .bannerText .b-right { flex: 0 1 52%; width: 52%; max-width: 645px; min-width: 0; margin-left: 2%; }
 }
 
@@ -2205,7 +2222,11 @@ footer .footer {
 .application-page .applicationBanner_parallaxMask {
   position: relative;
   z-index: 0;
-  width: 100%;
+  /* Anchor the artwork to the viewport even if a Bootstrap/container wrapper
+     is introduced later.  This mirrors the full-bleed Product footer. */
+  width: 100vw;
+  max-width: none;
+  margin-inline: calc(50% - 50vw);
   height: 95vw;
   overflow: hidden;
   -webkit-mask-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMjgwIDk4Nyc+PHBhdGggZmlsbD0nd2hpdGUnIGQ9J00wIDBIMTI4MEwxMjc5IDk1MUwxMjYzIDk2M0wxMjQ3IDk2OEwxMjMxIDk2N0wxMjE1IDk1OUwxMTk5IDk0NUwxMTgzIDkyOEwxMTY3IDkxMUwxMTUxIDg5N0wxMTM1IDg4N0wxMTE5IDg4MUwxMTAzIDg3OUwxMDg3IDg3OUwxMDcxIDg4MEwxMDU1IDg4NEwxMDM5IDg4OEwxMDIzIDg5MkwxMDA3IDg5N0w5OTEgOTAyTDk3NSA5MDdMOTU5IDkxMUw5NDMgOTE1TDkyNyA5MThMOTExIDkyMUw4OTUgOTIyTDg3OSA5MjNMODYzIDkyM0w4NDcgOTIyTDgzMSA5MTlMODE1IDkxNkw3OTkgOTExTDc4MyA5MDRMNzY3IDg5N0w3NTEgODg4TDczNSA4NzhMNzE5IDg2OUw3MDMgODU5TDY4NyA4NTBMNjcxIDg0MEw2NTUgODMxTDY0MCA4MjJMNjI0IDgxMkw2MDggODAyTDU5MiA3OTFMNTc2IDc4M0w1NjAgNzc2TDU0NCA3NzBMNTI4IDc2NUw1MTIgNzYwTDQ5NiA3NTZMNDgwIDc1Mkw0NjQgNzQ5TDQ0OCA3NDZMNDMyIDc0NUw0MTYgNzQ0TDQwMCA3NDNMMzg0IDc0MkwzNjggNzQyTDM1MiA3NDFMMzM2IDc0MEwzMjAgNzM5TDMwNCA3MzdMMjg4IDczNUwyNzIgNzMyTDI1NiA3MjhMMjQwIDcyM0wyMjQgNzE2TDIwOCA3MDdMMTkyIDY5NkwxNzYgNjg1TDE2MCA2NzZMMTQ0IDY2OUwxMjggNjYyTDExMiA2NTdMOTYgNjUxTDgwIDY0NUw2NCA2MzdMNDggNjI5TDMyIDYxOUwxNiA2MDdMMCA1OTJaJy8+PC9zdmc+');
@@ -2224,7 +2245,7 @@ footer .footer {
   position: absolute;
   inset: 0;
   z-index: 0;
-  background: url('../image/application/banner.png') center / cover no-repeat;
+  background: url('../image/application/banner.jpg') center / cover no-repeat;
   pointer-events: none;
 }
 
@@ -2260,11 +2281,13 @@ footer .footer {
   }
 
   .application-page .applicationBanner_parallaxMask::before {
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center top;
   }
 
   .application-page .applicationBanner .applicationBanner_bg {
-    object-fit: fill;
+    object-fit: cover;
+    object-position: center top;
   }
 }
 
@@ -2341,7 +2364,7 @@ footer .footer {
 
 .product-page .productFooterParallaxMask {
   --etinpo-parallax-mask: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMjgwIDkwOSc+PHBhdGggZmlsbD0nd2hpdGUnIGQ9J00wIDkwOSBMMCAxNjMgTDE5IDE0MiBMMzEgMTA1IEwzOSA5NiBMNDYgOTMgTDYxIDkyIEwxMDEgOTggTDEyMSA5NyBMMTQxIDkzIEwxODYgNzcgTDIyMCA2OSBMMjQ2IDY2IEwyOTQgNjggTDMyOSA3NSBMMzU3IDg0IEwzOTAgOTkgTDQxNiAxMTQgTDQ1NyAxNDUgTDUxMiAxOTkgTDU1MSAyMjcgTDU4NyAyNDEgTDYwNyAyNDQgTDYyOCAyNDQgTDY1MSAyNDEgTDY3MyAyMzUgTDY4OSAyMjggTDcyOCAyMDUgTDc2MiAxOTMgTDgwMCAxODcgTDg4MiAxODQgTDkyMSAxNzUgTDk3MyAxNjggTDEwMTUgMTUwIEwxMTAxIDEwMSBMMTE4NyA0NyBMMTIxMyA0MCBMMTI3OSAzNSBMMTI3OSA5MDkgWicvPjwvc3ZnPg==');
-  --etinpo-parallax-image: url('../image/product/productFooter.png');
+  --etinpo-parallax-image: url('../image/product/productFooter.jpg');
   --etinpo-parallax-mask-size: cover;
   --etinpo-parallax-background-size: cover;
   --etinpo-parallax-scale: 1.34;
@@ -2353,7 +2376,7 @@ footer .footer {
 }
 
 .clean-page .cleanBanner_parallaxWindow {
-  --etinpo-parallax-image: url('../image/clean/banner.png');
+  --etinpo-parallax-image: url('../image/clean/banner.jpg');
   --etinpo-parallax-scale: 1.2;
   height: 300px;
 }
@@ -2364,15 +2387,23 @@ footer .footer {
 
 .technologies-page .techPic1ParallaxMask {
   --etinpo-parallax-mask: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMjgwIDY1OSc+PHBhdGggZmlsbD0nd2hpdGUnIGQ9J00wIDAgTDEyNzkgMCBMMTI3OSA0NTQgTDEyNjUgNDU1IEwxMTgwIDQ3NyBMMTEyOCA0ODUgTDEwNzQgNDg2IEwxMDIwIDQ3NyBMMTAwNSA0ODUgTDk3MyA1MTcgTDk2MCA1MjMgTDkxNyA1MTUgTDg3MyA1MTUgTDgyOCA1MjMgTDc1NSA1NDIgTDcyMSA1NDcgTDY3NiA1NDUgTDYxNiA1MzUgTDU4NCA1MzUgTDU2NSA1NDAgTDU1MyA1NDYgTDUyMSA1NzIgTDQ5NiA1ODAgTDQ1OSA1ODEgTDQwNyA1NzYgTDMzOCA1NzYgTDI5MyA1ODAgTDI1MiA1ODcgTDIxMCA1OTggTDE3MCA2MTMgTDEzOCA2MjkgTDExNCA2MzYgTDg2IDY0MCBMMCA2NDYgWicvPjwvc3ZnPg==');
-  --etinpo-parallax-image: url('../image/technolgy/pic1.png');
+  --etinpo-parallax-image: url('../image/technolgy/pic1.jpg');
   --etinpo-parallax-scale: 1.28;
   aspect-ratio: 1280 / 659;
   margin-top: 57px;
 }
 
+/* Mobile artwork starts directly beneath the navigation.  Desktop keeps the
+   original 57px composition until the separate wide-screen rule takes over. */
+@media (max-width: 767.98px) {
+  .technologies-page .techPic1ParallaxMask {
+    margin-top: 0;
+  }
+}
+
 .technologies-page .techPic2ParallaxMask {
   --etinpo-parallax-mask: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMjgwIDc2Mic+PHBhdGggZmlsbD0nd2hpdGUnIGQ9J00wIDc2MiBMMCAyMCBMMzIgMjEgTDExMCAzNCBMMTQwIDM1IEwxNTcgMjcgTDE4MSA0IEwxOTAgMCBMMTk5IDAgTDI0OCAyNSBMMjg4IDM3IEwzNzMgNTIgTDQzOSA1NCBMNDY5IDU4IEw0OTMgNjQgTDUyMSA3NiBMNTYzIDEwMCBMNjA3IDExMSBMNjU4IDEzNiBMNjc3IDEzNyBMNzU0IDEwNyBMNzcxIDk3IEw4MjMgNTYgTDg0OCA0MSBMODgwIDI2IEw5MDkgMTYgTDk0MSA5IEw5NzIgNiBMMTAwNCA3IEwxMDUyIDE2IEwxMTAwIDMzIEwxMTE5IDM3IEwxMTQ3IDM4IEwxMTc1IDMzIEwxMTk0IDMzIEwxMjAwIDM1IEwxMjExIDQ2IEwxMjIxIDc5IEwxMjI3IDg5IEwxMjQ5IDEwOSBMMTI3OSAxMjYgTDEyNzkgNzYyIFonLz48L3N2Zz4=');
-  --etinpo-parallax-image: url('../image/technolgy/pic2.png');
+  --etinpo-parallax-image: url('../image/technolgy/pic2.jpg');
   --etinpo-parallax-scale: 1.24;
   aspect-ratio: 1280 / 762;
 }
@@ -2383,7 +2414,7 @@ footer .footer {
 
 .partners-page .partnersBannerParallaxMask {
   --etinpo-parallax-mask: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHZpZXdCb3g9JzAgMCAxMjgwIDYwNSc+PHBhdGggZmlsbD0nd2hpdGUnIGQ9J00wIDAgTDEyNzkgMCBMMTI3OSA2MDQgTDEyMzIgNTk0IEwxMTgwIDU3OCBMMTAzMCA1MTYgTDkwMiA0NzQgTDgzMSA0NTYgTDc1NyA0NDEgTDY4NSA0MzAgTDYxOSA0MjMgTDUzMCA0MTggTDQ0MyA0MTggTDMyMCA0MjYgTDI0NyA0MzUgTDE3NSA0NDcgTDkwIDQ2NSBMMCA0ODkgWicvPjwvc3ZnPg==');
-  --etinpo-parallax-image: url('../image/partners/banner.png');
+  --etinpo-parallax-image: url('../image/partners/banner.jpg');
   --etinpo-parallax-mask-size: cover;
   --etinpo-parallax-mask-position: left center;
   --etinpo-parallax-background-size: cover;
@@ -2418,8 +2449,10 @@ footer .footer {
 @media (min-width: 768px) {
   .product-page .productFooterParallaxMask {
     --etinpo-parallax-mask-size: 100% 100%;
-    --etinpo-parallax-background-size: 100% 100%;
-    --etinpo-parallax-fit: fill;
+    --etinpo-parallax-background-size: cover;
+    --etinpo-parallax-background-position: center top;
+    --etinpo-parallax-fit: cover;
+    --etinpo-parallax-position: center top;
     --etinpo-parallax-scale: 1.22;
     height: auto;
     aspect-ratio: 1280 / 909;
@@ -2457,5 +2490,750 @@ footer .footer {
   .etinpoParallaxWindow [data-parallax-layer] {
     transform: none;
     will-change: auto;
+  }
+}
+
+/* English body copy should not use inter-word justification on narrow screens.
+   The shared language hook is present only on the twelve English pages, so the
+   Chinese typography and all non-justified centred labels remain untouched. */
+@media (max-width: 767.98px) {
+  .site-lang-en .values .action .actionText p,
+  .site-lang-en .clean .garment p,
+  .site-lang-en .YearinReview .year01 .yearIntroduction p,
+  .site-lang-en .application p,
+  .site-lang-en .application .techItem .techItemText p,
+  .site-lang-en .technologies .techsTheme p,
+  .site-lang-en .newtechnology p,
+  .site-lang-en .principles .principlesitem p,
+  .site-lang-en .product .productText p,
+  .site-lang-en .functionText p,
+  .site-lang-en .function .functionGroup .slogan04 p,
+  .site-lang-en .rd .rd_bn .text .text-g,
+  .site-lang-en .rd .rdFooter .rdFooter_text,
+  .site-lang-en .feature p,
+  .site-lang-en .technology,
+  .site-lang-en .technology .technologyText,
+  .site-lang-en .partner .partnerText {
+    text-align: left !important;
+    text-align-last: auto !important;
+    word-spacing: normal;
+  }
+}
+
+/* 1280-to-1920 desktop art direction.
+   The original artwork was composed at 1280px. Between 1280 and 1920 its
+   spatial offsets grow with the canvas; after 1920 they stop growing. Text
+   stays in a readable centered content rail while decorative art remains
+   full bleed. */
+@media (min-width: 1280px) {
+  .banner {
+    height: clamp(35rem, 43.75vw, 52.5rem);
+  }
+
+  .banner .eTINPO-bn-w {
+    top: clamp(3rem, 3.75vw, 4.5rem);
+  }
+
+  .banner .banner02 {
+    top: clamp(80px, 6.25vw, 120px);
+  }
+
+  .banner .banner02-lines {
+    width: clamp(244px, 19.0625vw, 366px);
+  }
+
+  .banner .banner03 {
+    width: clamp(189px, 14.765625vw, 283.5px);
+  }
+
+  .technology {
+    padding-top: clamp(15rem, 18.75vw, 22.5rem);
+    padding-bottom: clamp(10rem, 12.5vw, 15rem);
+  }
+
+  .technology .technologyContent {
+    top: clamp(15rem, 18.75vw, 22.5rem);
+    width: 80%;
+    max-width: 1320px;
+  }
+
+  .technology .technologyPhoto .photo_01 {
+    top: max(-22.5rem, -18.75vw);
+  }
+
+  .technology .technologyPhoto .photo_02 {
+    top: clamp(7rem, 8.75vw, 10.5rem);
+    width: clamp(870px, 67.96875vw, 1305px);
+  }
+
+  .technology .technologyPhoto .technologySlogan img.sloganSvg {
+    width: clamp(430px, 33.59375vw, 645px);
+    margin-left: clamp(225px, 17.578125vw, 337.5px);
+  }
+
+  .technology .technologyPhoto .technologySlogan img.technologySvg {
+    width: clamp(597px, 46.640625vw, 895.5px);
+    margin-left: clamp(160px, 12.5vw, 240px);
+    margin-top: clamp(2rem, 2.5vw, 3rem);
+  }
+
+  .technology .technologyText {
+    top: clamp(400px, 31.25vw, 600px);
+    max-width: clamp(380px, 29.6875vw, 500px);
+  }
+
+  .feature {
+    position: relative;
+    z-index: 3;
+    padding-top: clamp(20rem, 25vw, 30rem);
+    /* Reserve breathing room after the copy.  The cloth is returned to the
+       document flow below, so its increasingly large transparent canvas can
+       no longer rise over the NATURE / PROFESSIONAL paragraphs at 1920px. */
+    padding-bottom: clamp(16rem, 20vw, 24rem);
+  }
+
+  .feature .container {
+    position: relative;
+    z-index: 3;
+    max-width: clamp(980px, 76.5625vw, 1320px);
+  }
+
+  .featureCloth {
+    position: relative;
+    bottom: auto;
+    margin-top: max(-4.5rem, -3.75vw);
+    margin-bottom: max(-33rem, -27.5vw);
+    z-index: 2;
+  }
+
+  .featureCloth .photo_01 {
+    bottom: max(-9rem, -7.5vw);
+  }
+
+  .featureCloth .photo_02 {
+    top: clamp(3rem, 3.75vw, 4.5rem);
+  }
+
+  .homeproduct {
+    padding-top: clamp(60px, 4.6875vw, 90px);
+    padding-bottom: clamp(25rem, 31.25vw, 37.5rem);
+  }
+
+  .homeproduct .partner {
+    margin-left: clamp(20rem, 25vw, 30rem);
+    margin-top: max(-15rem, -12.5vw);
+    padding-bottom: clamp(5rem, 6.25vw, 7.5rem);
+  }
+
+  .about-page .bannerAbout .bannerText {
+    padding-top: clamp(5rem, 6.25vw, 7.5rem);
+  }
+
+  .about-page .bannerAbout .bannerText .bannerText01 {
+    padding-top: clamp(5rem, 6.25vw, 7.5rem);
+  }
+
+  .about-page .bannerAbout .bannerText .bannerText02 {
+    padding-top: clamp(3rem, 3.75vw, 4.5rem);
+  }
+
+  .about-page .bannerAbout .bannerText .bannerText03 {
+    padding-top: clamp(8rem, 10vw, 12rem);
+  }
+
+  .about-page .bannerAbout .bannerText .colth_bg {
+    top: clamp(18rem, 22.5vw, 27rem);
+  }
+
+  .about-page .newtechnology {
+    padding-top: clamp(4rem, 5vw, 6rem);
+    padding-bottom: clamp(10rem, 12.5vw, 15rem);
+  }
+
+  .about-page .newtechnology .AboutBn02 {
+    bottom: clamp(12rem, 15vw, 18rem);
+  }
+
+  .about-page--zh .newtechnology .AboutBn02 {
+    bottom: clamp(6rem, 7.5vw, 9rem);
+  }
+
+  .about-page .newtechnology .AboutBn03 {
+    top: clamp(145px, 11.328125vw, 217.5px);
+  }
+
+  .about-page .eco {
+    padding-bottom: clamp(11rem, 13.75vw, 16.5rem);
+  }
+
+  .about-page .eco .colth5 {
+    top: clamp(50px, 3.90625vw, 75px);
+  }
+
+  .about-page .principles {
+    padding-bottom: clamp(20rem, 25vw, 30rem);
+  }
+
+  .about-page .principles .smallItems,
+  .about-page--zh .principles .smallItems {
+    top: clamp(5rem, 6.25vw, 7.5rem);
+  }
+
+  .about-page .principles .principlesitem {
+    margin-bottom: clamp(8rem, 10vw, 12rem);
+  }
+
+  .about-page .principles .colth3 {
+    margin-top: max(-37.5rem, -31.25vw);
+  }
+
+  .product-page .product .productTop {
+    min-height: clamp(640px, 50vw, 960px);
+  }
+
+  .product-page .productSlogan {
+    min-height: clamp(545px, 42.578125vw, 817.5px);
+  }
+
+  .contact .contactFooter {
+    padding-top: clamp(50rem, 62.5vw, 75rem);
+    margin-top: max(-15rem, -12.5vw);
+  }
+}
+
+/* A 1280x987 hero already fills a 1920x1080 desktop viewport vertically.
+   Do not keep deriving its height from viewport width on larger monitors. */
+@media (min-width: 1440px) {
+  .application-page .applicationBanner_parallaxMask {
+    height: 987px;
+    aspect-ratio: auto;
+  }
+
+  .application-page .applicationBanner .applicationBanner_text {
+    left: max(5rem, calc((100vw - 1280px) / 2 + 5rem));
+  }
+}
+
+/* 1920px is the maximum art-direction canvas. Beyond it, backgrounds may
+   continue full bleed but the authored foreground composition stays centered
+   instead of drifting or growing into adjacent copy. */
+@media (min-width: 1920px) {
+  .banner > .col-12 {
+    position: relative;
+    width: 100%;
+    max-width: 1920px;
+    height: 100%;
+    margin-inline: auto;
+  }
+
+  .technology .technologyPhoto {
+    width: 100%;
+    max-width: 1920px;
+    margin-inline: auto;
+  }
+
+  .featureCloth {
+    left: 50%;
+    width: 100%;
+    max-width: 1920px;
+    translate: -50% 0;
+  }
+
+  .about-page .bannerAbout .bannerText .colth_bg,
+  .about-page .newtechnology .AboutBn02,
+  .about-page .eco .colth5 {
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 100%;
+    translate: 0 0;
+  }
+
+  /* At 1920px the authored cloth needs a lower baseline.  Keeping this in the
+     wide-only query preserves the existing 1280px composition. */
+  .about-page .newtechnology .AboutBn02 {
+    bottom: clamp(4rem, 4vw, 5rem);
+  }
+
+  .about-page .eco::before {
+    --about-eco-cap-height: 8.984375vw;
+    left: 50%;
+    top: calc(1px - var(--about-eco-cap-height));
+    width: 100vw;
+    max-width: none;
+    height: var(--about-eco-cap-height);
+    transform: translateX(-50%);
+    background-position: center bottom;
+    background-size: 100% 100%;
+  }
+
+  .about-page .principles .colth3 {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .product-page .productSlogan .sloganCloth {
+    top: calc(100% - 1017px);
+    right: calc((100vw - 1920px) / 2);
+    width: 1920px;
+    max-width: none;
+  }
+
+  .contact .contactFooter {
+    background-position: top center;
+    background-size: 100% auto;
+    padding-top: calc(60.9375vw + 30px);
+    margin-top: -12.5vw;
+  }
+
+  .technologies-page .techPic1ParallaxMask {
+    margin-top: 0;
+  }
+}
+
+/* RD responsive composition and safe stacking. */
+/* About page copy must remain selectable/readable above its decorative cloth. */
+.about-page .principles .principlesitem .itemText {
+  position: relative;
+  z-index: 6;
+}
+
+.about-page .principles .colth3 {
+  pointer-events: none;
+  user-select: none;
+}
+
+@keyframes rd-safe-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -6px; }
+}
+
+.rd-page .rd {
+  /* The mobile footer is taller than the desktop footer.  Reserving the
+     correct amount lets its green arc mask the cloth instead of exposing a
+     rectangular edge. */
+  padding-bottom: 25rem;
+}
+
+.rd-page .rd .rd-decor-float {
+  animation: rd-safe-float 10s ease-in-out infinite;
+  will-change: translate;
+}
+
+.rd-page .rd .rd_bn {
+  position: relative;
+}
+
+.rd-page .rd .rd_bn .text {
+  z-index: 3;
+}
+
+.rd-page .rd .rd_bn .circle1,
+.rd-page .rd .circle .circle2,
+.rd-page .rd .rdFooter .clouth,
+.rd-page .rd .rdBnLabels {
+  pointer-events: none;
+  user-select: none;
+}
+
+.rd-page .rd .rd_bn .cloth-w {
+  transform: none;
+}
+
+.rd-page .rd .rdBnLabels {
+  position: absolute;
+  top: clamp(340px, calc(243.33px + 8.334vw), 350px);
+  bottom: auto;
+  z-index: 2;
+}
+
+.rd-page .rd .rdBnLabels--zh,
+.rd-page .rd .rdBnLabels--en {
+  left: 11.5%;
+  width: min(70%, 895px);
+  aspect-ratio: 895.17 / 178.21;
+}
+
+/* Preserve the 1280px art direction, then move both language label systems
+   toward the fabric's visual centre until the 1920px reference position. */
+@media (min-width: 1280px) {
+  .rd-page .rd .rdBnLabels--zh,
+  .rd-page .rd .rdBnLabels--en {
+    left: max(11.5%, calc(41.5vw - 384px), calc(50vw - 547.2px));
+  }
+}
+
+.rd-page .rd .rdBnLabels--zh {
+  height: auto;
+  filter: drop-shadow(0 2px 2px rgba(0, 70, 50, .18));
+}
+
+.rd-page .rd .rdBnLabels--en {
+  color: #fff;
+  text-transform: uppercase;
+  filter: drop-shadow(0 2px 2px rgba(0, 70, 50, .28));
+}
+
+.rd-page .rd .rdBnLabels--en .rdBnLabel {
+  font-size: clamp(.95rem, 1.65vw, 1.3rem);
+  font-weight: 700;
+}
+
+.rd-page .rd .rdBnLabel {
+  position: absolute;
+  color: inherit;
+  font-family: "Inter", sans-serif;
+  font-size: clamp(.8rem, 1.45vw, 1.15rem);
+  font-weight: 300;
+  line-height: 1.2;
+  letter-spacing: .12em;
+  white-space: nowrap;
+}
+
+.rd-page .rd .rdBnLabels--en .rdBnLetter,
+.rd-page .rd .rdBnLabels--en .rdBnSpace {
+  display: inline-block;
+}
+
+.rd-page .rd .rdBnLetter {
+  opacity: 0;
+  transform: translateY(var(--rd-letter-y));
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: rd-label-letter-cycle 7.3s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+
+.rd-page .rd .rdBnLabels--en .rdBnSpace {
+  width: .34em;
+}
+
+@keyframes rd-label-letter-cycle {
+  0%, 100% {
+    opacity: 0;
+    transform: translateY(var(--rd-letter-y));
+  }
+
+  27.4%, 70% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  86% {
+    opacity: 0;
+    transform: translateY(var(--rd-letter-y));
+  }
+}
+
+.rd-page .rd .rdBnLabel--textile {
+  left: 0;
+  bottom: 0;
+}
+
+.rd-page .rd .rdBnLabel--medical {
+  left: 25%;
+  top: 0;
+}
+
+.rd-page .rd .rdBnLabel--water {
+  left: 52%;
+  top: 52%;
+}
+
+.rd-page .rd .rdBnLabel--home {
+  right: 0;
+  top: 18%;
+}
+
+.rd-page--en .rd .rd_bn .text .text-g {
+  width: 100%;
+  max-width: 950px;
+  text-align: left;
+  font-size: 1rem;
+  letter-spacing: 2px;
+}
+
+.rd-page .rd .rdFooter {
+  isolation: isolate;
+  overflow: visible;
+}
+
+.rd-page .rd .rdFooter .clouth {
+  position: relative;
+  z-index: 1;
+}
+
+/* rd_coluth_03 is the rear white layer; rd_coluth_02 is the foreground
+   green cloth.  Keep these explicit so DOM order can never reverse them. */
+.rd-page .rd .rdFooter .clouth1 {
+  z-index: 2;
+}
+
+.rd-page .rd .rdFooter .clouth2 {
+  z-index: 1;
+}
+
+.rd-page .rd .rdFooter .rdFooter_text {
+  z-index: 3;
+  background: rgba(255, 255, 255, .72);
+}
+
+.rd-page .rd .rdFooter .rdFooter_text p {
+  z-index: auto;
+  margin-bottom: 1rem;
+}
+
+.rd-page--en .rd .rdFooter .rdFooter_text p {
+  letter-spacing: 0;
+}
+
+.rd-page .rd .rdFooter .rdFooter_btnLink {
+  position: relative;
+  z-index: 4;
+  display: block;
+  width: 122px;
+  margin-top: .25rem;
+  padding: .6rem 0;
+  align-self: flex-end;
+}
+
+.rd-page .rd .rdFooter .rdFooter_btn {
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: none;
+}
+
+@media (max-width: 767.98px) {
+  .rd-page .rd .rd_bn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 5.5rem;
+  }
+
+  .rd-page .rd .rd_bn .text {
+    position: relative;
+    inset: auto;
+    width: 100%;
+    margin: 0;
+    z-index: 3;
+  }
+
+  .rd-page .rd .rd_bn .text .text-g {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 1.5rem clamp(2rem, 9vw, 3rem) 0;
+    font-size: 1.05rem;
+    line-height: 2;
+    letter-spacing: .22em;
+    text-align: left;
+  }
+
+  .rd-page--en .rd .rd_bn .text .text-g {
+    font-size: 1rem;
+    line-height: 1.85;
+    letter-spacing: .1em;
+  }
+
+  .rd-page .rd .rd_bn .cloth-w {
+    position: relative;
+    align-self: center;
+    z-index: 1;
+    width: 135%;
+    max-width: none;
+    height: auto;
+    /* 440px = approximately -92px; narrow phones stop at -76px so the
+       artwork approaches the copy without consuming it. */
+    margin-top: clamp(-93px, -21vw, -76px);
+    object-fit: contain;
+    object-position: center;
+    transform: none;
+    pointer-events: none;
+    user-select: none;
+  }
+
+  .rd-page .rd .rdBnLabels--zh,
+  .rd-page .rd .rdBnLabels--en {
+    left: 5%;
+    width: 90%;
+  }
+
+  .rd-page .rd .rdBnLabel {
+    font-size: clamp(.52rem, 2vw, .65rem);
+    letter-spacing: .04em;
+  }
+
+  .rd-page .rd .rdBnLabels--en .rdBnLabel {
+    font-size: clamp(.6rem, 2.2vw, .72rem);
+  }
+
+  .rd-page .rd .actionGroup {
+    position: relative;
+    z-index: 2;
+    padding-top: 2rem;
+  }
+
+  .rd-page .rd .action {
+    box-sizing: border-box;
+    margin: 2.5rem auto;
+    padding-inline: clamp(1.5rem, 6vw, 2rem);
+  }
+
+  .rd-page .rd .action > img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: none !important;
+    object-fit: contain;
+  }
+
+  .rd-page .rd .action .actionText {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: none;
+    max-height: none !important;
+    min-height: 0;
+    justify-content: flex-start;
+    padding: 1.5rem;
+  }
+
+  .rd-page .rd .action .actionText p {
+    margin-bottom: 0;
+    padding-top: 1rem;
+    font-size: .9rem;
+    line-height: 1.65;
+  }
+
+  .rd-page .rd .rdFooter {
+    display: grid;
+    grid-template: minmax(clamp(32rem, 125vw, 40rem), auto) / minmax(0, 1fr);
+    overflow: visible;
+  }
+
+  .rd-page .rd .rdFooter .clouth,
+  .rd-page .rd .rdFooter .rdFooter_text {
+    grid-area: 1 / 1;
+  }
+
+  .rd-page .rd .rdFooter .clouth {
+    position: relative;
+    min-height: clamp(32rem, 125vw, 40rem);
+    padding-top: 0;
+    z-index: 0;
+  }
+
+  .rd-page .rd .rdFooter .clouth1 {
+    position: absolute;
+    left: -12%;
+    bottom: -5rem;
+    width: 82%;
+    height: auto;
+    z-index: 2;
+  }
+
+  .rd-page .rd .rdFooter .clouth2 {
+    position: absolute;
+    right: -18%;
+    bottom: -2rem;
+    width: 120%;
+    max-width: none;
+    height: auto;
+    transform: none;
+    z-index: 1;
+  }
+
+  .rd-page .rd .rdFooter .rdFooter_text {
+    position: relative;
+    inset: auto;
+    align-self: start;
+    box-sizing: border-box;
+    width: calc(100% - 3rem);
+    max-width: none;
+    margin: 0 1.5rem;
+    padding: 2rem clamp(1.5rem, 8vw, 3rem);
+    align-items: flex-start;
+    text-align: left;
+    line-height: 1.7;
+  }
+
+  .rd-page--en .rd .rdFooter .rdFooter_text {
+    letter-spacing: 1px;
+  }
+
+  .rd-page .rd .rdFooter .rdFooter_btnLink {
+    align-self: flex-end;
+  }
+}
+
+@media (min-width: 768px) {
+  .rd-page .rd {
+    padding-bottom: 6rem;
+  }
+
+  .rd-page .rd .rd_bn .text {
+    /* Keep the introductory copy above the four white field labels, as in
+       the supplied desktop composition. */
+    top: 2rem;
+  }
+
+  .rd-page .rd .action > img {
+    flex: 0 0 164px;
+    align-self: stretch;
+    width: 164px;
+    height: auto;
+    max-height: none;
+    object-fit: cover;
+  }
+
+  .rd-page .rd .action .actionText {
+    flex: 0 1 350px;
+    box-sizing: border-box;
+    width: 350px;
+    min-height: 133px;
+    max-height: none;
+  }
+
+  .rd-page .rd .rdFooter .clouth1 {
+    bottom: -2rem;
+  }
+
+  .rd-page .rd .rdFooter .clouth2 {
+    right: 0;
+    bottom: -2rem;
+    z-index: 1;
+  }
+
+  .rd-page--en .rd .rdFooter .rdFooter_text {
+    right: 18rem;
+    width: 420px;
+    max-width: 420px;
+    padding: 2rem 3rem;
+    font-size: .9rem;
+    letter-spacing: 5px;
+    text-align: left;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rd-page .rd .rd-decor-float {
+    animation: none;
+    translate: none;
+  }
+
+  .rd-page .rd .rdBnLabels {
+    transition: none !important;
+  }
+
+  .rd-page .rd .rdBnLetter {
+    opacity: 1;
+    transform: none;
+    animation: none;
   }
 }
